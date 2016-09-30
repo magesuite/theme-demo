@@ -1,0 +1,7 @@
+{
+    "open": "external",
+    "host": "local.dev",
+    "proxy": {
+        "target": "http://local.dev"
+    }
+}
