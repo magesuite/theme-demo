@@ -14,59 +14,49 @@ loadTasks( path.join( 'gulp', 'tasks' ) );
 /**
  *  Task for building entire project.
  */
-gulp.task( 'build', ( callback ) => {
-    sequence( 'templates:twig', [
-        'fonts',
-        'json',
-        'scripts:compile',
-        'scripts:vendors',
-        'scripts:copy',
-        'sprites:png',
-        'images',
-        'sprites:svg',
-        'templates:copy'
-    ], 'styles:compile', 'namespace', callback );
-} );
+gulp.task( 'build', ( done ) => {
+    sequence(
+        'maintain:clean',
+        'build:sprites:png',
+        [
+            'build:sprites:svg',
+            'build:scripts',
+            'build:styles',
 
-/**
- *  Task for cleaning and building entire project.
- */
-gulp.task( 'compile', ( callback ) => {
-    sequence( 'clean', 'build', callback );
+            'copy:fonts',
+            'copy:images',
+            'copy:misc',
+            'copy:twig',
+            'copy:vendors',
+
+            'merge:vendors',
+        ],
+        done
+    );
 } );
 
 /**
  *  Task for project linting.
  */
-gulp.task( 'lint', ( callback ) => {
-    sequence( [ 'scripts:lint', 'styles:lint' ], callback );
+gulp.task( 'lint', ( done ) => {
+    sequence(
+        [
+            'lint:scripts',
+            'lint:styles',
+        ],
+        done
+    );
 } );
 
 /**
  *  Task that fires project linting on every commit attempt.
  */
-gulp.task( 'pre-commit', ( callback ) => {
-    sequence( 'lint', callback );
+gulp.task( 'pre-commit', ( done ) => {
+    sequence( 'lint', done );
 } );
 
 /**
  *  Default task
  */
 gulp.task( 'default', [ 'compile' ] );
-
-/**
- * Full production gulp command for everything and copy for parent Project
- *
- * Compile the Scripts and CSS, copy the templates to view directory
- */
-gulp.task( 'prod', ( callback ) => {
-    sequence( 'clean', 'clean_prod', 'build', 'namespace',
-        [
-            'scripts:copy_compiled',
-            'styles:copy_compiled',
-            'templates:copy_compiled',
-            'images:copy_compiled',
-            'fonts:copy_compiled'
-        ], callback );
-} );
 

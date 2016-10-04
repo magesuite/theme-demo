@@ -14,7 +14,7 @@ export default {
     /**
      * Target directory for normal and retina sprites.
      */
-    imgDest: path.join( path.dist, 'images/' ),
+    imgDest: path.join( paths.dist, 'web/images/' ),
     /**
      * Target directory for SASS file.
      */
@@ -24,7 +24,7 @@ export default {
      * @see https://github.com/twolfson/gulp.spritesmith#documentation
      */
     spritesmith: {
-        retinaSrcFilter: path.src + 'sprites/png/*@2x.png',
+        retinaSrcFilter: path.join( paths.src, 'sprites/png/*@2x.png' ),
         imgName: 'sprites.png',
         imgPath: '/images/sprites.png',
         retinaImgName: 'sprites2x.png',

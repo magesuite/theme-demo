@@ -9,10 +9,10 @@ import paths from '../../paths';
 export default {
     src: [
         // Images except sprites
-        path.join( paths.src, '**/*.{gif,png,jpg,webp}' ),
+        path.join( paths.src, 'images/**/*.{gif,png,jpg,webp,svg}' ),
         '!' + path.join( paths.src, 'sprites/png/**/*.{png}' ),
     ],
-    dest: path.join( paths.src, 'images/' ),
+    dest: path.join( paths.src, 'web/images/' ),
     /**
      * Configuration for imagemin image minifier.
      * @see https://github.com/sindresorhus/gulp-imagemin#imageminoptions

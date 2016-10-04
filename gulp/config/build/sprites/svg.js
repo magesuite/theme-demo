@@ -7,7 +7,7 @@ import paths from '../../../paths';
  */
 export default {
     src: path.join( paths.src, 'sprites/svg/*.svg' ),
-    dest: path.join( paths.dist, 'images/' ),
+    dest: path.join( paths.dist, 'web/images/' ),
     /**
      * Gulp-svg-sprite configuration.
      * @see https://github.com/jkphl/gulp-svg-sprite#api
