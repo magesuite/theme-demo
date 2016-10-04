@@ -21,16 +21,7 @@
     "node_modules"
   ],
   "files": [
-    "src/bundle.ts",
-    "src/pages/default/_default.data.ts",
-    "src/pages/homepage/_homepage.data.ts",
-    "typings/globals/jquery/index.d.ts",
-    "typings/globals/jquerymobile/index.d.ts",
-    "typings/globals/mobile-detect/index.d.ts",
-    "typings/globals/modernizr/index.d.ts",
-    "typings/globals/nouislider/index.d.ts",
-    "typings/globals/vue/index.d.ts",
-    "typings/index.d.ts"
+    "src/bundle.ts"
   ],
   "atom": {
     "rewriteTsconfig": true

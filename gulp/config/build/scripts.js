@@ -64,7 +64,7 @@ const settings = {
         /**
          * JavaScript bundle destination directory.
          */
-        dest: path.join( paths.dist, 'bundle.js' ),
+        dest: path.join( paths.dist, 'web/bundle.js' ),
         format: 'umd',
         moduleName: names.moduleId,
         moduleId: names.moduleId,

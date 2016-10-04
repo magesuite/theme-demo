@@ -13,7 +13,7 @@ export default {
         path.join( paths.src, '**/*.{css,scss,sass}' ),
     ],
     src: path.join( paths.src, '**/*.{css,scss,sass}' ),
-    dest: paths.dist,
+    dest: path.join( paths.dist, 'web/' ),
     postcss: [
         flexbugs(),
         autoprefixer(

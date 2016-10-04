@@ -28,7 +28,7 @@ module.exports = function() {
         isWatching = true;
 
         this.gulp.watch( [
-            settings.src,
+            settings.watch,
         ], [ 'build:sprites:png', browserSync.reload ] );
     }
 
