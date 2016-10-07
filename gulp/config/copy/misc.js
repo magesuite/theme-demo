@@ -22,7 +22,7 @@ export default {
     src: [
         // Preview images.
         path.join( paths.src, '*.{png,jpg,jpeg}' ),
-        // JSON except data for templates.
+        // JSON.
         path.join( paths.src, '**/*.json' ),
         // PHP files
         path.join( paths.src, '**/*.{php,phtml}' ),

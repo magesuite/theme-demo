@@ -1,5 +1,7 @@
 import path from 'path';
 
+const templateInfo = require( '../src/composer.json' );
+
 /**
  * Default paths for a project.
  */
@@ -13,7 +15,7 @@ export default {
      * Path to distribution directory relative to gulpfile.babel.js file.
      * @type {String}
      */
-    dist: path.resolve( '../../../app/design/frontend/creativestyle/magento2-template-boilerplate' ),
+    dist: path.resolve( '../../' + templateInfo.name ),
     /**
      * Path to temporary directory relative to gulpfile.babel.js file.
      * @type {String}
