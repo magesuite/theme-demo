@@ -6,6 +6,10 @@ import paths from '../../paths';
  * Config for vendor JS files compilation task.
  */
 export default {
+    watch: [
+        path.join( paths.src, 'vendors/**/*.js' ),
+        '!' + path.join( paths.src, 'vendors/**/_*.js' ),
+    ],
     src: [
         path.join( paths.src, 'vendors/**/*.js' ),
         '!' + path.join( paths.src, 'vendors/**/_*.js' ),

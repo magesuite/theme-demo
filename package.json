@@ -1,5 +1,5 @@
 {
-  "name": "travador",
+  "name": "magento2-template-boilerplate",
   "version": "1.0.0",
   "description": "Boilerplate containing a complete foundation to kick start a magento 2 template developement.",
   "main": "gulpfile.babel.js",

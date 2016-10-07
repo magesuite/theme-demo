@@ -1,7 +1,5 @@
 {
-    "open": "external",
-    "host": "local.dev",
     "proxy": {
-        "target": "http://local.dev"
+        "target": "http://m2c.dev"
     }
 }

@@ -7,6 +7,11 @@ import paths from '../../paths';
  *  Configuration for images task.
  */
 export default {
+    watch: [
+        // Images except sprites
+        path.join( paths.src, 'images/**/*.{gif,png,jpg,webp,svg}' ),
+        '!' + path.join( paths.src, 'sprites/png/**/*.{png}' ),
+    ],
     src: [
         // Images except sprites
         path.join( paths.src, 'images/**/*.{gif,png,jpg,webp,svg}' ),

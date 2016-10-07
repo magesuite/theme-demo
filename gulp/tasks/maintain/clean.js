@@ -8,5 +8,10 @@ import settings from '../../config/maintain/clean';
  * @return {Promise} Gulp promise for proper task completition timing.
  */
 module.exports = function() {
-    return del( settings.src );
+    return del(
+        settings.src,
+        {
+            force: true
+        }
+     );
 };

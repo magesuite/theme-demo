@@ -7,10 +7,12 @@ import paths from '../../paths';
  */
 export default {
     watch: [
+        // Preview images.
+        path.join( paths.src, '*.{png,jpg,jpeg}' ),
         // JSON except data for templates.
         path.join( paths.src, '**/*.json' ),
         // PHP files
-        path.join( paths.src, '**/*.php' ),
+        path.join( paths.src, '**/*.{php,phtml}' ),
         // XML files
         path.join( paths.src, '**/*.xml' ),
         // CSV files
@@ -18,10 +20,12 @@ export default {
     ],
 
     src: [
+        // Preview images.
+        path.join( paths.src, '*.{png,jpg,jpeg}' ),
         // JSON except data for templates.
-        path.join( paths.src, 'src', '**/*.json' ),
+        path.join( paths.src, '**/*.json' ),
         // PHP files
-        path.join( paths.src, '**/*.php' ),
+        path.join( paths.src, '**/*.{php,phtml}' ),
         // XML files
         path.join( paths.src, '**/*.xml' ),
         // CSV files

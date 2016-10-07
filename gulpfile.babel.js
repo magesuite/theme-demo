@@ -6,6 +6,8 @@ import path from 'path';
 import loadTasks from 'gulp-task-loader';
 import sequence from 'run-sequence';
 
+import environment from './gulp/environment';
+
 /**
  * Load tasks from gulp/tasks directory using gulp-task-loader.
  * @see https://github.com/hontas/gulp-task-loader
@@ -44,6 +46,18 @@ gulp.task( 'lint', ( done ) => {
             'lint:scripts',
             'lint:styles',
         ],
+        done
+    );
+} );
+
+/**
+ *  Task for serving files of the pattern library.
+ */
+gulp.task( 'serve', ( done ) => {
+    environment.watch = true;
+    sequence(
+        'build',
+        'maintain:serve',
         done
     );
 } );

@@ -7,6 +7,9 @@ import paths from '../../../paths';
  * @type {Object}
  */
 export default {
+    watch: [
+        path.join( paths.src, 'sprites/png/*.png' ),
+    ],
     /**
      * Path to source files.
      */
