@@ -17,6 +17,8 @@ export default {
         path.join( paths.src, '**/*.xml' ),
         // CSV files
         path.join( paths.src, '**/*.csv' ),
+        // Require.js configs.
+        path.join( paths.src, '**/requirejs-config.js' ),
     ],
 
     src: [
@@ -30,6 +32,8 @@ export default {
         path.join( paths.src, '**/*.xml' ),
         // CSV files
         path.join( paths.src, '**/*.csv' ),
+        // Require.js configs.
+        path.join( paths.src, '**/requirejs-config.js' ),
     ],
     dest: paths.dist,
 };

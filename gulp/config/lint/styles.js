@@ -16,6 +16,7 @@ const settings = {
          */
         path.join( paths.src, '**/*.{css,scss,sass}' ),
         '!' + path.join( paths.src, 'vendors/**/*.{css,scss,sass}' ),
+        '!' + path.join( paths.src, 'utilities/_sprites.scss' ),
     ],
     processors: [
         stylelint( { syntax: 'scss' } ),

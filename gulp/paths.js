@@ -1,3 +1,4 @@
+/* eslint-env node */
 import path from 'path';
 
 const templateInfo = require( '../src/composer.json' );
@@ -15,7 +16,7 @@ export default {
      * Path to distribution directory relative to gulpfile.babel.js file.
      * @type {String}
      */
-    dist: path.resolve( '../../' + templateInfo.name ),
+    dist: path.resolve( '../../../app/design/frontend/' + templateInfo.name ),
     /**
      * Path to temporary directory relative to gulpfile.babel.js file.
      * @type {String}

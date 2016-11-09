@@ -13,7 +13,7 @@ export default {
          * Lint all TypeScript files.
          */
         path.join( paths.src, '**/*.ts' ),
-        '!' + path.join( paths.src, '**/*.ts' ),
+        '!' + path.join( paths.src, 'vendors/**/*.ts' ),
     ],
     tslint: {
         formatter: 'verbose',

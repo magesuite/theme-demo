@@ -10,14 +10,12 @@ export default {
     watch: [
         // Images except sprites
         path.join( paths.src, 'images/**/*.{gif,png,jpg,webp,svg}' ),
-        '!' + path.join( paths.src, 'sprites/png/**/*.{png}' ),
     ],
     src: [
         // Images except sprites
         path.join( paths.src, 'images/**/*.{gif,png,jpg,webp,svg}' ),
-        '!' + path.join( paths.src, 'sprites/png/**/*.{png}' ),
     ],
-    dest: path.join( paths.src, 'web/images/' ),
+    dest: path.join( paths.dist, 'web/images/' ),
     /**
      * Configuration for imagemin image minifier.
      * @see https://github.com/sindresorhus/gulp-imagemin#imageminoptions

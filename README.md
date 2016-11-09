@@ -16,8 +16,7 @@ This boilerplate's goal is to take apply our current workflow into Magento 2 tem
 5. Push the project to your own custom repository,
 6. Install the project in Magento 2 using Composer,
 7. In your Magento 2 installation go inside your template path `/vendor/your_vendor_name/your_template_name`,
-8. Run `npm install` and `gulp build` - the actual template will be built in separate directory inside `/vendor/your_vendor_name/` and you should be able to enable it in your Magento 2 admin panel.
-9. There may be a situation where building the template with `gulp` is not possible, because of that you should create a separate repository and push the code from *generated* template directory to it.
+8. Run `npm install` and `gulp build` - the actual template will be built into  `/app/design/frontend/your_vendor_name/your_template_name` and you should be able to enable it in your Magento 2 admin panel.
 
 #### Configuring browserSync
 Browsersync is responsible for automatically refreshing the browser window each time you make a change in your code. There is a sample configuration file for it included in the `browserSync.json.sample` file you can duplicate, rename to `browserSync.json` so it can be loaded by our gulp scrips.
