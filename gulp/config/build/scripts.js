@@ -35,7 +35,11 @@ const settings = {
              * Rollup typescript plugin configuration.
              * @see https://github.com/rollup/rollup-plugin-typescript
              */
-            typescript(),
+            typescript(
+                {
+                    include: '../../**/*.ts',
+                }
+             ),
             commonjs(),
             globals(),
             html( {
