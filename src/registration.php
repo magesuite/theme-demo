@@ -5,6 +5,6 @@
  */
 \Magento\Framework\Component\ComponentRegistrar::register(
     \Magento\Framework\Component\ComponentRegistrar::THEME,
-    'frontend/Creativestyle/template-boilerplate',
+    'frontend/Creativestyle/boilerplate',
     __DIR__
 );
