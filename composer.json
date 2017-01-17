@@ -1,6 +1,6 @@
 {
-    "name": "creativestyle/template-builder-boilerplate",
-    "description": "Magento 2 template builder.",
+    "name": "creativestyle/theme-boilerplate",
+    "description": "Magento 2 theme boilerplate.",
     "license": [
         "OSL-3.0",
         "AFL-3.0"
