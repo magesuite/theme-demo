@@ -1,6 +1,6 @@
 {
-    "name": "creativestyle/template-boilerplate",
-    "description": "Magento 2 template boilerplate",
+    "name": "creativestyle/theme-boilerplate",
+    "description": "Magento 2 theme boilerplate",
     "version": "0.0.1",
     "type": "magento2-theme",
     "license": [
@@ -11,8 +11,7 @@
         "php": "~5.6.0|7.0.2|~7.0.6",
         "magento/theme-frontend-blank": "100.1.*",
         "magento/framework": "100.1.*",
-        "creativestyle/magento2-template-creativeshop": "dev-develop",
-        "aheadworks/module-layered-navigation": "dev-master"
+        "creativestyle/theme-creativeshop": "dev-develop"
     },
     "autoload": {
         "files": [
