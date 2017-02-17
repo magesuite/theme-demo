@@ -1,6 +1,7 @@
 /**
  * Responsive breakpoints used by include-media vendor library.
  */
+$breakpoints: () !default;
 $breakpoints: map-merge(
     $breakpoints,
     (
