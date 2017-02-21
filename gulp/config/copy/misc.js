@@ -11,14 +11,14 @@ export default {
         path.join( paths.src, '*.{png,jpg,jpeg}' ),
         // JSON except data for templates.
         path.join( paths.src, '**/*.json' ),
-        // PHP files
-        path.join( paths.src, '**/*.{php,phtml,html}' ),
         // XML files
         path.join( paths.src, '**/*.xml' ),
         // CSV files
         path.join( paths.src, '**/*.csv' ),
         // Require.js configs.
         path.join( paths.src, '**/requirejs-config.js' ),
+        // Less styles.
+        path.join( paths.src, '**/*.less' ),
     ],
 
     src: [
@@ -27,13 +27,15 @@ export default {
         // JSON.
         path.join( paths.src, '**/*.json' ),
         // PHP files
-        path.join( paths.src, '**/*.{php,phtml,html}' ),
+        path.join( paths.src, '**/*.php' ),
         // XML files
         path.join( paths.src, '**/*.xml' ),
         // CSV files
         path.join( paths.src, '**/*.csv' ),
         // Require.js configs.
         path.join( paths.src, '**/requirejs-config.js' ),
+        // Less styles.
+        path.join( paths.src, '**/*.less' ),
     ],
     dest: paths.dist,
 };

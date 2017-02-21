@@ -8,7 +8,6 @@ import util from 'gulp-util';
 
 import environment from '../../environment';
 import paths from '../../paths';
-import names from '../../names';
 // Variable storing bundle cache for faster compilation in watch mode.
 let cache;
 
@@ -39,7 +38,7 @@ const settings = {
                 {
                     include: '../../**/*.ts',
                 }
-             ),
+            ),
             commonjs(),
             globals(),
             html( {
@@ -64,8 +63,8 @@ const settings = {
          */
         dest: path.join( paths.dist, 'web/bundle.js' ),
         format: 'umd',
-        moduleName: names.moduleId,
-        moduleId: names.moduleId,
+        moduleName: 'bundle',
+        moduleId: 'bundle',
         globals: {
             'jQuery': 'jQuery',
             '$': 'jQuery',

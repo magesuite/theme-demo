@@ -8,7 +8,7 @@ import paths from '../../paths';
  * Returns information for styles building.
  * @returns {object} Styles building task information.
  */
-export default {
+const config = {
     watch: [
         path.join( paths.src, '**/*.{css,scss,sass}' ),
     ],
@@ -32,8 +32,11 @@ export default {
             }
         ),
     ],
+    cleancss: {},
     sass: {
         precision: 10,
         errLogToConsole: true,
     },
 };
+
+export default config;
