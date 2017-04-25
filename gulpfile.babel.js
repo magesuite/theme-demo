@@ -1,5 +1,5 @@
 /**
- *  redcoon's Gulp tasker configuration
+ * creativeshop Gulp tasker configuration
  */
 import gulp from 'gulp';
 import path from 'path';
@@ -19,17 +19,18 @@ loadTasks( path.join( 'gulp', 'tasks' ) );
 gulp.task( 'build', ( done ) => {
     sequence(
         'maintain:clean',
-        'build:sprites:png',
         [
             'build:sprites:svg',
             'build:scripts',
             'build:styles',
 
+            'copy:templates',
             'copy:fonts',
             'copy:images',
             'copy:misc',
             'copy:twig',
             'copy:vendors',
+            'copy:scripts',
 
             'merge:vendors',
         ],
@@ -51,12 +52,22 @@ gulp.task( 'lint', ( done ) => {
 } );
 
 /**
- *  Task for serving files of the pattern library.
+ *  Task for watching project files.
  */
-gulp.task( 'serve', ( done ) => {
+gulp.task( 'watch', ( done ) => {
     environment.watch = true;
     sequence(
         'build',
+        done
+    );
+} );
+
+/**
+ *  Task for serving project files.
+ */
+gulp.task( 'serve', ( done ) => {
+    sequence(
+        'watch',
         'maintain:serve',
         done
     );
@@ -65,7 +76,7 @@ gulp.task( 'serve', ( done ) => {
 /**
  *  Task that fires project linting on every commit attempt.
  */
-gulp.task( 'pre-commit', ( done ) => {
+gulp.task( 'pre-push', ( done ) => {
     sequence( 'lint', done );
 } );
 
@@ -73,4 +84,3 @@ gulp.task( 'pre-commit', ( done ) => {
  *  Default task
  */
 gulp.task( 'default', [ 'compile' ] );
-

@@ -35,10 +35,10 @@ const parsedDepenedencies = {};
 function handleDependency( dependency ) {
     const dependencyArray = dependency.split( /[\\/\\]/ );
     const packageName = dependencyArray[ 0 ];
-    const templateFile = dependencyArray[ dependencyArray.length - 1 ];
-    const templateCPPath = path.join( settings.componentsPath, packageName, 'src', templateFile );
-    const templateSourcePath = path.join( paths.src, 'components', packageName, templateFile );
-    const templateDestPath = path.join( paths.dist, 'components', packageName, templateFile );
+    const templateName = dependencyArray[ dependencyArray.length - 1 ];
+    const templateCPPath = path.join( settings.componentsPath, packageName, 'src', templateName );
+    const templateSourcePath = path.join( paths.src, 'components', packageName, templateName );
+    const templateDestPath = path.join( paths.dist, 'components', packageName, templateName );
 
     if ( fs.existsSync( templateSourcePath ) === false ) {
         try {
@@ -62,7 +62,7 @@ function parseDepenedencies( file ) {
     parsedFiles[ file ] = true;
 
     const fileContents = fs.readFileSync( file, 'utf8' );
-    const includePattern = /{%[^\(%}]*locate\s*\(\s*['"]([^'"]+)['"]/gmi;
+    const includePattern = /{%[^\(%}]*locate\(\s*['"]([^'"]+)['"]/gmi;
 
     let dependencyMatch = includePattern.exec( fileContents );
     let dependency;

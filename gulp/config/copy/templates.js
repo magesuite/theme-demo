@@ -8,11 +8,11 @@ import paths from '../../paths';
 export default {
     watch: [
         // PHP and HTML templates.
-        path.join( paths.src, '**/*.{phtml,html}' ),
+        path.join( paths.src, '**/*.html' ),
     ],
     src: [
         // PHP and HTML templates.
-        path.join( paths.src, '**/*.{phtml,html}' ),
+        path.join( paths.src, '**/*.html' ),
     ],
     dest: paths.dist,
     htmlmin: {
@@ -21,5 +21,6 @@ export default {
         minifyCSS: true,
         minifyJS: true,
         quoteCharacter: '\'',
+        preventAttributesEscaping: true,
     },
 };
