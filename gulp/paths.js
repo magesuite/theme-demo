@@ -16,7 +16,7 @@ export default {
      * Path to distribution directory relative to gulpfile.babel.js file.
      * @type {String}
      */
-    dist: 'dist/',
+    dist: path.resolve('../../../app/design/frontend/' + templateInfo.name),
     /**
      * Path to temporary directory relative to gulpfile.babel.js file.
      * @type {String}
