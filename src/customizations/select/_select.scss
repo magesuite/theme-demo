@@ -1,0 +1,84 @@
+.#{$namespace}html-select {
+    $root: &;
+
+    &__trigger {
+        @extend .cs-input__select;
+        font-weight: 400 !important;
+        background: none !important;
+        border-color: $colorAlto !important;
+
+        &-text {
+            font-size: 1.4rem;
+            color: $colorMineShaft;
+            line-height: 2.7rem;
+        }
+
+        #{$root}--open & {
+            border-top-color: $colorCeruleanBlue !important;
+            border-left-color: $colorCeruleanBlue !important;
+            border-right-color: $colorCeruleanBlue !important;
+        }
+
+        &:hover {
+            border-color: $colorCeruleanBlue !important;
+
+            #{$root}--open & {
+                border-bottom-color: $colorAlto !important;
+                box-shadow: none !important;
+            }
+        }
+    }
+
+    &__trigger-caret {
+        border-left-color: lighten($colorAlto, 8%);
+    }
+
+    &__trigger-caret-arrow {
+        #{$root}--open & {
+            &:before,
+            &:after {
+                background-color: $colorCeruleanBlue;
+            }
+        }
+    }
+
+    &__menu {
+        border-color: $colorCeruleanBlue;
+        background-color: #fff;
+        font-size: 1.4rem;
+        line-height: 1;
+
+        &-item {
+            &--header {
+                #{$root}__menu-item-text {
+                    @extend #{$root}__menu-link;
+                    text-transform: uppercase;
+                    font-size: 1.1rem;
+                    font-weight: 700;
+                }
+            }
+        }
+
+        &-link {
+            color: $colorMineShaft;
+            background-color: #fff;
+
+            #{$root}__menu-item--selected & {
+                color: $colorCeruleanBlue;
+                background-color: #fff;
+            }
+
+            &:hover,
+            &:focus,
+            #{$root}__menu-item--focused & {
+                color: #fff !important;
+                background-color: $colorCeruleanBlue !important;
+                text-decoration: none !important;
+            }
+        }
+
+        &-text {
+            line-height: 4rem;
+        }
+    }
+}

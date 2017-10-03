@@ -1,0 +1,70 @@
+.#{$namespace}progress-bar {
+    $root: &;
+
+    &__item {
+        &:after {
+            background: $colorGallery;
+        }
+
+        &._active,
+        &._complete {
+            &:after {
+                background: $colorGold;
+            }
+
+            #{$root}__indicator-wrapper {
+                background: $colorGold;
+            }
+
+            #{$root}__item-text {
+                color: $colorMineShaft;
+                font-weight: 400;
+            }
+        }
+
+        &:hover {
+            #{$root}__indicator-wrapper {
+                background: lighten($colorGold, 25%);
+
+                &:after {
+                    background: lighten($colorGold, 25%);
+                }
+            }
+
+            &:after {
+                background: lighten($colorGold, 25%);
+            }
+        }
+    }
+
+    &__indicator-wrapper {
+        background: $colorGallery;
+        transform: skew(-18deg);
+        font-weight: 700;
+        font-size: 1.4rem;
+        border-radius: 3px;
+
+        #{$root}__item:first-child & {
+            &:after {
+                border-top-left-radius: 3px;
+                border-bottom-left-radius: 3px;
+            }
+        }
+
+        #{$root}__item:last-child & {
+            &:after {
+                border-top-right-radius: 3px;
+                border-bottom-right-radius: 3px;
+            }
+        }
+    }
+
+    &__indicator {
+        transform: skew(18deg);
+    }
+
+    &__item-text {
+        color: $colorGray;
+        font-size: 1.4rem;
+    }
+}

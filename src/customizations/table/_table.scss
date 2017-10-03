@@ -1,0 +1,108 @@
+.#{$namespace}table {
+    $root: &;
+    $rootNoChangeMobile: #{$root}--no-change-mobile;
+    font-size: 1rem;
+
+    &--tablet-small {
+        @include media('<laptop') {
+            border: none;
+            font-size: 1.4rem;
+        }
+
+        #{$root}__col {
+            @include media('<laptop') {
+                font-size: 1.4rem;
+            }
+
+            &:before {
+                @include media('<laptop') {
+                    color: $colorMineShaft;
+                    font-weight: 700;
+                }
+            }
+
+            &--actions {
+                @include media('<laptop') {
+                    border-bottom: 1px solid $colorAlto;
+                }
+            }
+        }
+    }
+
+    &--cart {
+        @include media('>=tablet') {
+            border-top: 1px solid $colorAlto;
+        }
+    }
+
+    &__head {
+        border-bottom: 2px solid $colorAlto;
+    }
+
+    &__col-head {
+        @extend .#{$namespace}t-headline;
+        @extend .#{$namespace}t-headline--size_4;
+    }
+
+    &__col {
+        font-size: 1.4rem;
+        color: $colorDoveGray;
+        font-weight: 300;
+        border-bottom: 1px solid $colorAlto;
+
+        #{$root}:not(#{$rootNoChangeMobile}) & {
+            &:before {
+                @include media('<tablet') {
+                    color: $colorMineShaft;
+                    font-weight: 700;
+                }
+            }
+        }
+
+        @include media('>=laptop') {
+            font-size: 1.4rem;
+        }
+
+        &--attention {
+            font-weight: 700;
+            color: $colorMineShaft;
+        }
+
+        &--actions {
+            @include media('<tablet') {
+                border-bottom: 1px solid $colorAlto;
+            }
+        }
+
+        &.price {
+            .price {
+                font-weight: 400;
+                font-size: 1.4rem;
+            }
+        }
+
+        &.subtotal,
+        &.total {
+            .price {
+                color: $colorMineShaft;
+                font-size: 1.4rem;
+            }
+        }
+    }
+
+    &__tbody {
+        border-bottom: 1px solid $colorAlto;
+    }
+
+    &__foot {
+        font-size: 1.4rem;
+        @include media('<tablet') {
+            background: $colorGallery;
+        }
+    }
+}
+
+.#{$namespace}table-border {
+    $root: &;
+    border-right: 0.1rem solid #d1d1d1 !important;
+}

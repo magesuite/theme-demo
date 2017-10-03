@@ -1,0 +1,18 @@
+/**
+ * Footer-list component customization that is often included in footer component.
+ * export-once mixin makes sure it is only included once in the styles.
+ */
+
+.#{$namespace}footer-list {
+    $root: &;
+
+    &__link {
+        font-size: 1.2rem;
+        color: $colorGallery;
+
+        &:visited,
+        &:hover {
+            color: $colorGallery;
+        }
+    }
+}

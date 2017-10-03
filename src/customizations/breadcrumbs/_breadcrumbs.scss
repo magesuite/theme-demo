@@ -1,0 +1,30 @@
+.#{$namespace}breadcrumbs {
+    color: $colorGray;
+    font-size: 1.18rem;
+    font-weight: 400;
+
+    &__item {
+        &:last-child {
+            color: $colorMineShaft;
+        }
+
+        &:not(:last-child):after {
+            line-height: 1;
+            color: $colorGray;
+        }
+    }
+
+    &__link {
+        color: $colorGray;
+        font-size: 1.2rem;
+
+        &:visited {
+            color: $colorGray;
+        }
+
+        &:hover {
+            text-decoration: none;
+            color: $colorMineShaft;
+        }
+    }
+}

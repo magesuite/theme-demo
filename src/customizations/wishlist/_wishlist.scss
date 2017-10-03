@@ -1,0 +1,7 @@
+.#{$namespace}wishlist {
+    font-size: 1rem;
+
+    &__buttons {
+        border-top: 1px solid $colorAlto;
+    }
+}

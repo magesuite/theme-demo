@@ -1,0 +1,32 @@
+.#{$namespace}box-addtocart {
+    border-top: none;
+
+    &__label {
+        line-height: 48px;
+
+        @include media('>=tablet') {
+            line-height: 1;
+        }
+    }
+
+    &__stock-text {
+        font-size: 1.2rem;
+        color: $colorDoveGray;
+
+        &--unavailable {
+            color: $colorCrimson;
+        }
+    }
+
+    &__stock-icon {
+        width: 1.1rem;
+
+        &--available {
+            fill: $colorApple;
+        }
+
+        &--unavailable {
+            fill: $colorCrimson;
+        }
+    }
+}

@@ -1,0 +1,34 @@
+.#{$namespace}header-user-area {
+    font-size: 1rem;
+
+    &__section {
+        &:hover {
+            text-decoration: none;
+        }
+    }
+
+    &__link {
+        &:hover {
+            text-decoration: none;
+        }
+    }
+
+    &__icon {
+        fill: $colorCeruleanBlue;
+
+        &:hover {
+            fill: $colorCeruleanBlueHover;
+        }
+    }
+
+    &__label {
+        text-decoration: none;
+        font-size: 1rem;
+        color: $colorDoveGray;
+        text-transform: uppercase;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}

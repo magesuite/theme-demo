@@ -1,0 +1,11 @@
+.#{$namespace}special-attributes {
+    color: $colorGray;
+
+    &__icon {
+        fill: $colorGray;
+
+        &--package {
+            stroke: $colorGray;
+        }
+    }
+}
