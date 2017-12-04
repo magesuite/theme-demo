@@ -1,0 +1,85 @@
+//If you want to keep creativeshop setting remove all below section
+
+@import '../../../node_modules/creative-patterns/packages/components/grid-layout/src/grid-layout';
+
+$bricksPerRow: (
+    phone: 1,
+    phone-lg: 2,
+    tablet: 3,
+    laptop: 4,
+    laptop-lg: 4,
+    desktop: 4,
+    tv: 4
+);
+
+$bricksPerRowInColumn: (
+    phone: 1,
+    phone-lg: 2,
+    tablet: 2,
+    laptop: 3,
+    laptop-lg: 3,
+    desktop: 3,
+    tv: 3
+);
+
+$bricksHeight: (
+    phone: 336px,
+    phone-lg: 336px,
+    tablet: 406px,
+    laptop: 406px,
+    laptop-lg: 406px,
+    desktop: 406px,
+    tv: 406px
+);
+
+.#{$namespace}grid-layout {
+    @include gridLayout($bricksPerRow, $bricksHeight, 0);
+}
+
+.#{$namespace}grid-layout_in-column {
+    @include gridLayout($bricksPerRowInColumn, $bricksHeight, 0);
+}
+//If you want to keep creativeshop setting remove all above section
+
+.#{$namespace}grid-layout,
+.#{$namespace}grid-layout_in-column {
+    $root: &;
+
+    &:after {
+        background-color: $colorWhite;
+    }
+
+    &__brick {
+        &:after {
+            background-color: $colorGallery;
+        }
+    }
+
+    &__teaser {
+        &-headline {
+            #{$root}__teaser--scheme-light & {
+                color: $colorWhite;
+            }
+
+            @media screen and (min-width: 1200px) {
+                font-size: 4rem;
+            }
+        }
+
+        &-subheadline {
+            #{$root}__teaser--scheme-light & {
+                color: $colorWhite;
+            }
+
+            @media screen and (min-width: 1200px) {
+                font-size: 2.7rem;
+            }
+        }
+
+        &-text {
+            #{$root}__teaser--scheme-light & {
+                color: $colorWhite;
+            }
+        }
+    }
+}

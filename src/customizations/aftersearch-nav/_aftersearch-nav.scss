@@ -1,0 +1,176 @@
+.#{$namespace}aftersearch-nav {
+    $root: &;
+
+    &__filter {
+        @include media('>=tablet') {
+            border-bottom: 1px solid $colorAlto;
+        }
+    }
+
+    &__filters-trigger {
+        background-color: $colorGallery;
+        box-shadow: 0 4px 3px -2px rgba(0, 0, 0, 0.15);
+        @extend .#{$namespace}t-headline;
+        @extend .#{$namespace}t-headline--size_3;
+
+        &.#{$namespace}collapse__trigger--in {
+            background-color: $colorCeruleanBlue;
+            color: $colorWhite;
+            box-shadow: 0 4px 3px -2px rgba(0, 0, 0, 0.25); //stylelint-disable-line
+        }
+
+        &-icon {
+            .#{$namespace}collapse__trigger--in & {
+                fill: $colorWhite;
+            }
+        }
+    }
+
+    &__filter-title {
+        border-top: 1px solid $colorAlto;
+        font-size: 1.2rem;
+        font-weight: 700;
+        text-decoration: none;
+        text-transform: uppercase;
+
+        @include media('<tablet') {
+            background-color: $colorGallery;
+        }
+    }
+
+    &__filter-input,
+    &__filter-input:visited {
+        font-size: 1.29rem;
+    }
+
+    &__filter-count {
+        color: $colorGray;
+    }
+
+    &__filter-arrow {
+        &:before,
+        &:after {
+            background: $colorCeruleanBlue;
+        }
+
+        #{$root}__filter.active &,
+        #{$root}__filter-title[aria-expanded='true'] &,
+        .#{$namespace}filter-horizontal__trigger--in & {
+            &:before {
+                background: $colorGray;
+            }
+
+            &:after {
+                background: $colorGray;
+            }
+        }
+    }
+
+    &__price-label {
+        font-size: 11px;
+        color: $colorGray;
+        text-transform: lowercase;
+    }
+
+    &__currency {
+        color: $colorGray;
+        font-size: 1.4rem;
+    }
+
+    &__button-list {
+        @include media('<tablet') {
+            background-color: $colorGallery;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.35);
+        }
+    }
+
+    /* STATE block */
+    &__state {
+        border-top: 1px solid $colorGallery;
+        border-bottom: 1px solid $colorGallery;
+
+        &-link,
+        &-link:visited {
+            border: 1px solid $colorCeruleanBlue;
+            border-radius: 3px;
+            color: $colorMineShaft;
+
+            &:hover {
+                border-color: $colorCeruleanBlueHover;
+                color: $colorCeruleanBlueHover;
+                text-decoration: none;
+
+                #{$root}__state-remove {
+                    background-color: $colorCeruleanBlue;
+                }
+
+                #{$root}__state-remove-icon {
+                    fill: $colorWhite;
+                }
+            }
+        }
+
+        &-label {
+            font-weight: 700;
+        }
+
+        &-remove {
+            border: none;
+            border-right: 1px solid $colorCeruleanBlue;
+        }
+
+        &-remove-icon {
+            fill: $colorCeruleanBlue;
+        }
+    }
+
+    /* Horizontal */
+    &--horizontal-full {
+        #{$root}__filters {
+            @include media('>=tablet') {
+                border-top: 1px solid $colorGallery;
+                border-bottom: 1px solid $colorGallery;
+            }
+        }
+
+        #{$root}__filter-arrow {
+            @include media('>=tablet') {
+                &:before,
+                &:after {
+                    background: $colorMineShaft !important;
+                }
+            }
+        }
+
+        #{$root}__filter-title {
+            @include media('>=tablet') {
+                background-color: $colorGallery;
+                font-size: 1.1rem;
+                border-top: none;
+
+                &:hover {
+                    background-color: darken($colorGallery, 8%);
+                }
+
+                &[aria-expanded='true'] {
+                    background-color: $colorWhite;
+                    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.17);
+                }
+            }
+        }
+
+        #{$root}__filter-content {
+            @include media('>=tablet') {
+                background-color: $colorWhite;
+
+                &.active {
+                    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.17);
+
+                    &:before {
+                        background-color: $colorWhite;
+                    }
+                }
+            }
+        }
+    }
+}

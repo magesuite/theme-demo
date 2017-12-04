@@ -1,0 +1,24 @@
+.#{$namespace}star-rating {
+    $root: &;
+
+    &__star {
+        font-size: 1.58rem;
+        color: $colorAlto;
+
+        &--half-active:before,
+        &--active:before {
+            color: $colorGold;
+        }
+    }
+
+    &__text {
+        font-size: 1.2rem;
+        color: $colorGray;
+    }
+
+    &--big {
+        #{$root}__star {
+            font-size: 2rem;
+        }
+    }
+}

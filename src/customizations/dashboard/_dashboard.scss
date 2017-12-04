@@ -1,0 +1,7 @@
+.#{$namespace}dashboard {
+    font-size: 1rem;
+
+    &__bottom {
+        border-top: 2px solid $colorAlto;
+    }
+}

@@ -1,0 +1,16 @@
+.#{$namespace}page-bottom {
+    &__text {
+        font-size: 1.2rem;
+        color: $colorDoveGray;
+
+        &--small {
+            font-size: 1rem;
+        }
+    }
+
+    &__divider {
+        &:after {
+            background: $colorAlto;
+        }
+    }
+}

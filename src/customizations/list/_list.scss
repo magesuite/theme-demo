@@ -1,0 +1,57 @@
+.#{$namespace}list {
+    $root: &;
+
+    &--menu {
+        border-bottom: 1px solid $colorGallery;
+    }
+
+    &--menu-dark {
+        border-bottom: 1px solid $colorAlto;
+    }
+
+    &__item {
+        font-size: 1.4rem;
+
+        &--menu {
+            font-size: 1.4rem;
+            color: $colorDoveGray;
+            border-right: 1px solid $colorGallery;
+        }
+
+        &--menu-dark {
+            border-right: 1px solid $colorAlto !important;
+
+            #{$root}__link {
+                font-weight: 700;
+            }
+
+            &--check {
+                &:before {
+                    background-image: url('images/check-green.png');
+                }
+            }
+        }
+    }
+
+    &__link {
+        color: $colorDoveGray !important;
+        text-decoration: none;
+
+        &:hover,
+        &:visited,
+        &:active {
+            color: $colorDoveGray !important;
+            text-decoration: none;
+        }
+    }
+
+    &__bullet {
+        &--tick {
+            fill: $colorApple;
+        }
+
+        &--close {
+            fill: $colorDoveGray;
+        }
+    }
+}

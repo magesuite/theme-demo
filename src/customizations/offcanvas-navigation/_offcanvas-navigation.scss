@@ -1,0 +1,48 @@
+.#{$namespace}offcanvas-navigation {
+    $root: &;
+
+    &__item {
+        & + & {
+            border-top: 1px $colorAlto solid;
+        }
+
+        &:last-of-type {
+            border-bottom: 1px $colorAlto solid;
+        }
+    }
+
+    &__icon {
+        fill: $colorCeruleanBlue;
+    }
+
+    &__link {
+        font-size: 1.4rem;
+        text-transform: uppercase;
+        font-weight: 700;
+
+        &,
+        &:hover,
+        &:visited {
+            color: $colorMineShaft;
+        }
+
+        &--sign-in,
+        &--sign-out {
+            &,
+            &:hover,
+            &:visited {
+                color: $colorCeruleanBlue;
+            }
+        }
+
+        &--parent {
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+    }
+
+    &__product-qty {
+        font-weight: 400;
+        color: $colorDoveGray;
+    }
+}

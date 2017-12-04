@@ -1,0 +1,32 @@
+.#{$namespace}info-block {
+    $root: &;
+    font-size: 1rem;
+
+    &--paypal-details {
+        #{$root}__box-title {
+            @extend .#{$namespace}t-headline;
+            @extend .#{$namespace}t-headline--size_4;
+        }
+
+        #{$root}__line {
+            @extend .#{$namespace}t-text;
+            @extend .#{$namespace}t-text--look_light;
+        }
+    }
+
+    &--paypal-items {
+        #{$root}__title-span {
+            @extend .#{$namespace}t-headline;
+            @extend .#{$namespace}t-headline--size_2;
+            @extend .#{$namespace}t-headline--look_light;
+        }
+    }
+
+    &__toolbar {
+        font-size: 1.4rem;
+    }
+}
+
+dl {
+    font-size: 1.4rem;
+}

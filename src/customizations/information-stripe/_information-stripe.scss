@@ -1,0 +1,44 @@
+.#{$namespace}information-stripe {
+    &__wrapper {
+        font-size: 1.1em;
+    }
+
+    &__list,
+    &__wrapper > ul {
+        fill: $colorGray;
+        font-size: 1em;
+    }
+
+    &__item,
+    &__wrapper > ul > li {
+        transform: skew(-18deg);
+        border-right: 0.2rem solid $colorWhite;
+    }
+
+    &__phone-number {
+        color: $colorMineShaft;
+        font-weight: 700;
+    }
+
+    &__account-link {
+        color: $colorCeruleanBlue;
+        font-size: 1.1rem;
+        font-weight: 400;
+    }
+
+    &__account-icon {
+        width: 1.8rem;
+        height: 1em;
+        padding-right: 0.5rem;
+        fill: $colorGray;
+    }
+
+    &__item-text,
+    &__phone-label,
+    &__phone-number,
+    &__phone-hours,
+    &__account-link,
+    &__wrapper > ul > li > span {
+        transform: skew(18deg);
+    }
+}

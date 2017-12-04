@@ -1,0 +1,16 @@
+/* Used to visualize attributes of a product in M2's PDP */
+
+.#{$namespace}attributes-list {
+    $root: &;
+
+    &__list {
+        @extend .#{$namespace}list;
+        font-size: 1.4rem;
+    }
+
+    &__bullet {
+        &--tick {
+            fill: $colorApple;
+        }
+    }
+}

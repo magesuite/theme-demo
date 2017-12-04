@@ -1,0 +1,43 @@
+/**
+ * Footer component customization.
+ * @see /Magento_Theme/templates/footer/columns.phtml for templates.
+ */
+
+.#{$namespace}footer {
+    $root: &;
+    font-size: 1rem;
+    color: $colorWhite;
+    background-color: $colorBlack;
+
+    &__column {
+        &--newsletter {
+            border-top: 1px solid $colorGray;
+        }
+    }
+
+    &__column-title {
+        font-size: 1.2rem;
+        color: $colorGray;
+        font-weight: 400;
+        text-transform: uppercase;
+        letter-spacing: 0.08rem;
+        border-top: 1px solid $colorGray;
+
+        &:before,
+        &:after {
+            background-color: $colorGray !important;
+        }
+
+        #{$root}__column:first-child & {
+            border-top: none;
+        }
+
+        @include media('>=tablet') {
+            border-top: none;
+        }
+    }
+
+    &__list {
+        color: $colorGallery;
+    }
+}

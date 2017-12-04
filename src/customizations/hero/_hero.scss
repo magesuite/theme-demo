@@ -1,0 +1,151 @@
+.#{$namespace}hero {
+    $root: &;
+
+    &__slide {
+        background-color: $colorWhite;
+
+        &--scheme-dark {
+            background-color: $colorWhite;
+        }
+
+        &--scheme-light:not(#{$root}__slide--image-uploaded) {
+            background-color: $colorMineShaft;
+        }
+    }
+
+    &__content {
+        color: $colorAlto;
+        font-weight: 300;
+    }
+
+    &__headline {
+        line-height: 110%;
+        font-weight: 900;
+        color: $colorMineShaft;
+        font-size: 5vw;
+
+        #{$root}__slide--scheme-light & {
+            color: $colorWhite;
+        }
+
+        @include media('>=tablet') {
+            font-size: 4vw;
+        }
+
+        @include media('>=laptop') {
+            font-size: 5.3rem;
+            line-height: 5rem;
+        }
+
+        @include media('>=desktop') {
+            font-size: 6rem;
+        }
+
+        @include media('>=tv') {
+            font-size: 6.5rem;
+            margin-bottom: 1rem;
+        }
+    }
+
+    &__subheadline {
+        line-height: 110%;
+        font-weight: 400;
+        color: $colorMineShaft;
+        font-size: 3.9vw;
+
+        #{$root}__slide--scheme-light & {
+            color: $colorWhite;
+        }
+
+        @include media('>=tablet') {
+            font-size: 3.1vw;
+        }
+
+        @include media('>=laptop') {
+            font-size: 3.3rem;
+            line-height: 1.25;
+        }
+
+        @include media('>=desktop') {
+            font-size: 3.8rem;
+        }
+
+        @include media('>=tv') {
+            font-size: 4.5rem;
+            margin-bottom: 1rem;
+        }
+    }
+
+    &__text {
+        font-size: 4vw;
+        font-weight: 400;
+        color: $colorMineShaft;
+        line-height: 110%;
+
+        #{$root}__slide--scheme-light & {
+            color: $colorWhite;
+        }
+
+        @include media('>=tablet') {
+            font-size: 2vw;
+        }
+
+        @include media('>=laptop') {
+            font-size: 1.8rem;
+        }
+
+        @include media('>=desktop') {
+            line-height: 1.1;
+        }
+    }
+
+    &__nav {
+        background: $colorWhite;
+        border-radius: 6px;
+        background-color: $colorWhite;
+        box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.35);
+
+        &:hover,
+        &:active,
+        &:focus {
+            background: $colorWhite;
+            border: none;
+            box-shadow: 1px 2px 1px -1px rgba(0, 0, 0, 0.35);
+        }
+
+        &-icon {
+            fill: $colorCeruleanBlue;
+        }
+    }
+
+    &__pagination {
+        &-item {
+            border-radius: 2px;
+            background-color: $colorGallery;
+            transform: skew(-18deg);
+            border: none;
+
+            &:hover,
+            &:focus,
+            &:active {
+                background-color: $colorGallery;
+                border: none;
+                box-shadow: none;
+
+                @include media('>=tablet') {
+                    background: $colorWhite;
+                }
+            }
+
+            &--active {
+                background: $colorGold;
+
+                &:hover,
+                &:focus,
+                &:active {
+                    background: $colorGold;
+                }
+            }
+        }
+    }
+}

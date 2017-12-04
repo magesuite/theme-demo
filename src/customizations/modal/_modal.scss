@@ -1,0 +1,37 @@
+.#{$namespace}modal {
+    $root: &;
+
+    &__title {
+        border-bottom: 1px solid $colorAlto;
+    }
+
+    &__inner {
+        background: $colorWhite !important;
+    }
+
+    &__footer {
+        border-top: 1px solid $colorAlto !important;
+    }
+
+    .#{$namespace}form__field .field-tooltip .field-tooltip-content {
+        background: $colorWhite;
+        font-size: 1.1rem;
+        color: $colorApple;
+    }
+
+    &.confirm {
+        #{$root}__content {
+            @extend .#{$namespace}t-headline;
+            @extend .#{$namespace}t-headline--size_2;
+            @extend .#{$namespace}t-headline--look_light;
+        }
+    }
+
+    &__block-authentication-section {
+        &:nth-child(2n + 2) {
+            @include media('>=tablet') {
+                border-left: 1px solid $colorAlto;
+            }
+        }
+    }
+}

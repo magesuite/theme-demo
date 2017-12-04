@@ -1,0 +1,57 @@
+//Use this file if you want to customize gutters
+
+.#{$namespace}items-grid {
+    $root: &;
+
+    $mobileGutter: 0.75rem;
+    $tabletUpGutter: 1rem;
+
+    width: calc(100% + (2 * #{$mobileGutter}));
+    margin: 0 -#{$mobileGutter};
+
+    @include media('>=tablet') {
+        width: calc(100% + (2 * #{$tabletUpGutter}));
+        margin: 0 -#{$tabletUpGutter};
+    }
+
+    &__item {
+        margin: 0 $mobileGutter 2 * $mobileGutter;
+
+        &:after {
+            border-top: 1px solid $colorAlto;
+        }
+
+        @include media('>=phone-lg') {
+            width: calc((100% / 2) - (2 * #{$mobileGutter}));
+
+            #{$root}--in-column & {
+                width: calc((100% / 2) - (2 * #{$mobileGutter}));
+            }
+        }
+
+        @include media('>=tablet') {
+            margin: 0 $tabletUpGutter 2 * $tabletUpGutter;
+            width: calc((100% / 3) - (2 * #{$tabletUpGutter}));
+
+            #{$root}--in-column & {
+                width: calc((100% / 2) - (2 * #{$tabletUpGutter}));
+            }
+        }
+
+        @include media('>=laptop') {
+            width: calc((100% / 4) - (2 * #{$tabletUpGutter}));
+
+            #{$root}--in-column & {
+                width: calc((100% / 3) - (2 * #{$tabletUpGutter}));
+            }
+        }
+
+        @include media('>=desktop') {
+            width: calc((100% / 4) - (2 * #{$tabletUpGutter}));
+
+            #{$root}--in-column & {
+                width: calc((100% / 3) - (2 * #{$tabletUpGutter}));
+            }
+        }
+    }
+}

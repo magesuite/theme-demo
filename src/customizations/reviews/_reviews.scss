@@ -1,0 +1,70 @@
+.#{$namespace}reviews {
+    &__title {
+        background: $colorGallery;
+    }
+
+    &__label {
+        line-height: 4rem;
+    }
+
+    &__item {
+        border-bottom: 1px solid $colorAlto;
+    }
+
+    &__legend {
+        @extend .#{$namespace}t-headline--size_2;
+    }
+
+    &__legend-product-name {
+        font-weight: 700;
+    }
+
+    &__rate-feedback {
+        font-size: 1.08rem;
+        font-weight: 700;
+        color: $colorGray;
+    }
+
+    //Single review in user area style below
+
+    &__subtitle {
+        @extend .#{$namespace}t-headline;
+        @extend .#{$namespace}t-headline--size_3;
+    }
+
+    &__content {
+        @extend .#{$namespace}t-text;
+    }
+
+    &__single-name {
+        @extend .#{$namespace}t-headline;
+        @extend .#{$namespace}t-headline--size_2;
+    }
+
+    &__rating-average-label {
+        @extend .#{$namespace}t-text;
+    }
+}
+
+.review-control-vote {
+    background: $colorWhite;
+    border-radius: 3px;
+
+    @include media('>=tablet') {
+        background: $colorGallery;
+    }
+
+    &:before,
+    label:before {
+        font-size: 4rem;
+        line-height: 1;
+    }
+
+    &:before {
+        color: $colorAlto;
+    }
+
+    label:before {
+        color: $colorGold;
+    }
+}

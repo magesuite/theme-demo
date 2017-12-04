@@ -1,0 +1,66 @@
+.#{$namespace}cart-item {
+    $root: &;
+    border-top: 1px solid $colorAlto;
+
+    tbody:nth-child(3) & {
+        border-top: none;
+    }
+
+    @include media('>=laptop') {
+        border-top: none;
+    }
+
+    &__name {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: $colorMineShaft;
+    }
+
+    &__name a {
+        font-size: 1.5rem;
+        font-weight: 700;
+        text-decoration: none;
+        color: $colorMineShaft;
+
+        &__name {
+            a {
+                font-size: 1.4rem;
+            }
+        }
+    }
+
+    &__options-label {
+        @extend .#{$namespace}t-headline;
+        @extend .#{$namespace}t-headline--size_4;
+    }
+
+    &__options-value {
+        @extend .#{$namespace}t-text;
+        @extend .#{$namespace}t-text--look_light;
+    }
+
+    &__price,
+    &__subtotal {
+        .price {
+            font-weight: 300;
+            font-size: 1.4rem;
+            color: $colorDoveGray;
+        }
+    }
+
+    &__price,
+    &__subtotal,
+    &__qty {
+        @include media('<laptop') {
+            &:before {
+                font-size: 1rem;
+                text-transform: uppercase;
+            }
+            @include media('>=phone-lg') {
+                &:before {
+                    font-size: 1.1rem;
+                }
+            }
+        }
+    }
+}

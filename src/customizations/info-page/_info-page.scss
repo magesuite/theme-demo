@@ -1,0 +1,23 @@
+.#{$namespace}info-page {
+    &__section {
+        @include media('>=tablet') {
+            &:nth-child(2n + 2) {
+                border-left: 1px solid $colorAlto;
+            }
+        }
+    }
+
+    &__inner {
+        border-top: 2px solid $colorGallery;
+    }
+
+    &__subheadline {
+        font-size: 1.8rem;
+        font-weight: 700;
+    }
+
+    &__text {
+        font-size: 1.5rem;
+        color: $colorDoveGray;
+    }
+}

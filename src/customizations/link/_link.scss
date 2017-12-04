@@ -1,0 +1,47 @@
+.#{$namespace}link {
+    @include link($colorCeruleanBlue, 1.4rem);
+    text-transform: none;
+    font-weight: 300;
+
+    &--look {
+        &_text {
+            color: $colorDoveGray;
+            text-decoration: none;
+
+            &:visited,
+            &:hover {
+                color: $colorDoveGray;
+            }
+        }
+    }
+
+    &--size {
+        &_300 {
+            font-size: 1.2rem;
+        }
+    }
+
+    &--separator {
+        margin-right: 0.5rem;
+
+        &:after {
+            background: $colorAlto;
+        }
+    }
+
+    &__icon {
+        fill: rgba(0, 0, 0, 0.25);
+
+        &--big {
+            fill: $colorCeruleanBlue;
+
+            &:hover {
+                fill: $colorCeruleanBlueHover;
+            }
+        }
+
+        &--edit {
+            fill: $colorCeruleanBlue;
+        }
+    }
+}
