@@ -1,7 +1,7 @@
 {
-    "name": "theme-boilerplate",
+    "name": "theme-brh",
     "version": "1.0.0",
-    "description": "Boilerplate M2C theme",
+    "description": "Theme BRH parent",
     "scripts": {
         "build": "gulp build --env production",
         "serve": "gulp serve",

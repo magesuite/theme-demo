@@ -1,6 +1,3 @@
-// Color definitions extracted from project designs with names generated using
-// Name that color.
-// @see http://chir.ag/projects/name-that-color/
+// We need to name color more by their position in that project. Variable should have default flah here
 
-// - page background
-$colorWhite: #fff;
+$colorWhite: #fff !default;
