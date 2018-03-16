@@ -1,18 +1,22 @@
 .#{$namespace}headline {
-    font-size: 1rem;
+    text-align: center;
 
     &__title {
-        @extend .#{$namespace}t-headline;
-        @extend .#{$namespace}t-headline--size_1;
+        font-size: 2.8rem;
+        font-weight: 700;
+        color: $color-headline;
+        text-transform: none;
+        display: block;
 
         &:before,
         &:after {
-            background-color: $colorAlto;
+            display: none;
         }
     }
 
     &__subtitle {
-        color: $colorGray;
-        font-size: 1.3em;
+        color: $color-subheadline;
+        font-size: 1.8rem;
+        font-weight: 300;
     }
 }
