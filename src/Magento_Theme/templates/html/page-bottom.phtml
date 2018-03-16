@@ -1,0 +1,68 @@
+<?php
+/** @var \Creativestyle\FrontendExtension\Helper\Store $storeHelper */
+$storeHelper = $this->helper('Creativestyle\FrontendExtension\Helper\Store');
+$currentStoreId = $storeHelper->getCurrentStoreId();
+?>
+
+<div class="cs-page-bottom">
+    <div class="cs-page-bottom__group cs-page-bottom__group--logo">
+        <div class="cs-footer__socials">
+            <?php echo $this->getLayout()
+                ->createBlock('Magento\Cms\Block\Block')
+                ->setCacheKey('page-bottom-logo_'.$currentStoreId)
+                ->setCacheLifetime(86400)
+                ->setBlockId('page-bottom-logo')
+                ->toHtml();
+            ?>
+        </div>
+    </div>
+
+    <span class="cs-page-bottom__divider | cs-hide-mobile"></span>
+
+    <div class="cs-page-bottom__group cs-page-bottom__group--shipping">
+        <div class="cs-footer__socials">
+            <?php echo $this->getLayout()
+                ->createBlock('Magento\Cms\Block\Block')
+                ->setCacheKey('page-bottom-logo_'.$currentStoreId)
+                ->setCacheLifetime(86400)
+                ->setBlockId('page-bottom-logo')
+                ->toHtml();
+            ?>
+        </div>
+        <p class="cs-page-bottom__text | cs-hide-mobile">
+            <?php echo __('Shipping methods:'); ?>
+        </p>
+        <svg class="cs-page-bottom__logo cs-page-bottom__logo--hermes">
+            <use xlink:href="#hermes"></use>
+        </svg>
+        <svg class="cs-page-bottom__logo cs-page-bottom__logo--dhl">
+            <use xlink:href="#dhl"></use>
+        </svg>
+
+    </div>
+
+    <span class="cs-page-bottom__divider | cs-hide-mobile"></span>
+
+    <div class="cs-page-bottom__group cs-page-bottom__group--payment">
+        <p class="cs-page-bottom__text | cs-hide-mobile">
+            <?php echo __('Payment methods:'); ?>
+        </p>
+        <svg class="cs-page-bottom__logo cs-page-bottom__logo--paypal">
+            <use xlink:href="#paypal"></use>
+        </svg>
+        <svg class="cs-page-bottom__logo cs-page-bottom__logo--visa">
+            <use xlink:href="#visa"></use>
+        </svg>
+        <svg class="cs-page-bottom__logo cs-page-bottom__logo--mastercard">
+            <use xlink:href="#mastercard"></use>
+        </svg>
+        <svg class="cs-page-bottom__logo cs-page-bottom__logo--s-u">
+            <use xlink:href="#sofort_uberweisung"></use>
+        </svg>
+        <svg class="cs-page-bottom__logo cs-page-bottom__logo--klarna">
+            <use xlink:href="#klarna"></use>
+        </svg>
+
+    </div>
+
+</div>
