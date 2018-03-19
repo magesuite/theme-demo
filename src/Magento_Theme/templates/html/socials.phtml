@@ -1,0 +1,18 @@
+<?php
+/** @var \Creativestyle\FrontendExtension\Helper\Store $storeHelper */
+$storeHelper = $this->helper('Creativestyle\FrontendExtension\Helper\Store');
+$currentStoreId = $storeHelper->getCurrentStoreId();
+
+?>
+
+<div class="cs-page-bottom__column cs-page-bottom__column--socials">
+    <div class="cs-page-bottom__list">
+        <?php echo $this->getLayout()
+            ->createBlock('Magento\Cms\Block\Block')
+            ->setCacheKey('pagebottom_socials_'.$currentStoreId)
+            ->setCacheLifetime(86400)
+            ->setBlockId('pagebottom_socials')
+            ->toHtml();
+        ?>
+    </div>
+</div>

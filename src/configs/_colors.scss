@@ -1,6 +1,16 @@
+$colorWhite: #fff;
+$colorConcrete: #f3f3f3;
+$colorEdward: #adb9b7;
+$colorStTropaz: #2a5ca6;
+$colorThunderbird: #ca321e;
+
 // We need to name color more by their position in that project. Variable should have default flah here
 
-$colorWhite: #fff !default;
+//Language switcher
+$color-language-switcher-bg: #f3f3f3 !default;
+
+//Page bottom
+$color-pagebottom-text: #a6a6a6 !default;
 
 //Headline
 $color-headline: #000 !default;

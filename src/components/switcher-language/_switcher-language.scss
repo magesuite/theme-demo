@@ -1,0 +1,183 @@
+.cs-switcher-language {
+    $root: &;
+
+    border-radius: 4px;
+    background-color: $color-language-switcher-bg;
+    width: 6.5rem;
+    height: 3.6rem;
+
+    @include media('>=laptop') {
+        &:before {
+            display: none;
+        }
+    }
+
+    @include media('<tablet') {
+        .cs-page-bottom & {
+            display: none;
+        }
+    }
+
+    .switcher-options {
+        width: 100%;
+    }
+
+    &__trigger {
+        width: 100%;
+
+        @include media('<laptop') {
+            padding: 0;
+            font-size: 1.1rem;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        @include media('>=laptop') {
+            margin-left: 0;
+            font-size: 1.1rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            padding: 0;
+        }
+
+        &-span {
+            display: flex;
+            align-items: center;
+            padding: 0.8rem 0.6rem;
+            color: $colorDoveGray;
+
+            &:after {
+                display: block;
+                content: '';
+                width: 0;
+                height: 0;
+                border-left: 0.3rem solid transparent;
+                border-right: 0.3rem solid transparent;
+                border-top: 0.4rem solid $colorEdward;
+                box-sizing: border-box;
+                margin-left: 0.4rem;
+            }
+
+            &:before {
+                display: block;
+                content: '';
+                width: 1.9rem;
+                height: 1.7rem;
+                border-radius: 4px;
+                box-sizing: border-box;
+                background-size: cover;
+                background-position: center;
+                margin-right: 0.6rem;
+            }
+
+            &.view-de {
+                &:before {
+                    background-image: url('images/de.svg');
+                }
+            }
+
+            &.view-en {
+                &:before {
+                    background-image: url('images/en.svg');
+                }
+            }
+        }
+
+        &-icon {
+            display: none;
+        }
+
+        &.active {
+            background: transparent;
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+            border: none;
+
+            @include media('<laptop') {
+                padding: 0;
+            }
+
+            @include media('>=laptop') {
+                padding: 0;
+            }
+
+            &:before {
+                border-bottom: 1px solid $colorEdward;
+            }
+
+            #{$root}__trigger-span {
+                margin-top: 0;
+            }
+
+            #{$root}__trigger-span {
+                &:after {
+                    transform: rotate(180deg);
+                }
+            }
+        }
+    }
+
+    &__list {
+        width: 6.5rem;
+        font-size: 1.1rem;
+        border-bottom-left-radius: 4px;
+        border-bottom-right-radius: 4px;
+        border: none;
+        background: $color-language-switcher-bg;
+
+        @include media('>=laptop') {
+            left: 0;
+            background: $color-language-switcher-bg;
+        }
+
+        &-item {
+            margin: 0;
+            padding: 0;
+        }
+
+        &-item-link {
+            display: flex;
+            color: $colorDoveGray !important;
+            text-transform: uppercase;
+            font-weight: 700;
+            font-size: 1.1rem;
+
+            &:before {
+                display: block;
+                content: '';
+                width: 1.9rem;
+                height: 1.7rem;
+                border-radius: 4px;
+                box-sizing: border-box;
+                background-size: cover;
+                background-position: center;
+                margin-right: 0.6rem;
+            }
+
+            .view-de & {
+                &:before {
+                    background-image: url('images/de.svg');
+                }
+            }
+
+            .view-en & {
+                &:before {
+                    background-image: url('images/en.svg');
+                }
+            }
+
+            &:hover {
+                color: $colorDoveGray;
+            }
+
+            @include media('<laptop') {
+                font-size: 1.1rem;
+                padding: 0.8rem 0.6rem;
+            }
+
+            @include media('>=laptop') {
+                padding: 0.8rem 0.6rem;
+            }
+        }
+    }
+}

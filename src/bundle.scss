@@ -24,6 +24,8 @@
 // Components
 // =============================================================================
 
+@import 'components/switcher-language/switcher-language';
+
 // =============================================================================
 // Customizations
 // =============================================================================
@@ -36,7 +38,7 @@
 //@import 'customizations/breadcrumbs/breadcrumbs';
 //@import 'customizations/bundle-box/bundle-box';
 //@import 'customizations/button/button';
-//@import 'customizations/button-social/button-social';
+@import 'customizations/button-social/button-social';
 //
 //@import 'customizations/calendar/calendar';
 //@import 'customizations/cart-item/cart-item';
@@ -87,7 +89,7 @@
 //
 //@import 'customizations/offcanvas-navigation/offcanvas-navigation';
 //
-//@import 'customizations/page-bottom/page-bottom';
+@import 'customizations/page-bottom/page-bottom';
 //@import 'customizations/pager/pager';
 //@import 'customizations/pagination/pagination';
 //@import 'customizations/password-strength-meter/password-strength-meter';

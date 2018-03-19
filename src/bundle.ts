@@ -12,5 +12,11 @@
 import 'vendors';
 import $ from 'jquery';
 
+import '../../theme-creativeshop/src/components/collapse/collapse';
+
 import AddressAutofill from './customizations/address-autofill/address-autofill';
 export { AddressAutofill };
+
+import '../../theme-creativeshop/src/customizations/navigation/navigation';
+import '../../theme-creativeshop/src/customizations/offcanvas-navigation/offcanvas-navigation';
+import '../../theme-creativeshop/src/customizations/offcanvas/offcanvas';

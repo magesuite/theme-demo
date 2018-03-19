@@ -1,5 +1,19 @@
 <?xml version="1.0"?>
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
+
+        <!--Refactor page bottom-->
+        <referenceContainer name="page.bottom.wrapper" htmlTag="div" htmlClass="cs-container  cs-container--viewport-width cs-container--page-bottom"/>
+
+        <referenceContainer name="page.bottom.inner" htmlTag="div" htmlClass="cs-container__inner cs-page-bottom">
+            <container name="page.bottom.right" htmlTag="div" htmlClass="cs-page-bottom__right">
+                <block class="Magento\Framework\View\Element\Template" name="page.bottom.socials" template="Magento_Theme::html/socials.phtml"/>
+            </container>
+        </referenceContainer>
+
+
+        <!--Move language switcher into page bottom-->
+        <move element="store_language" destination="page.bottom.right" after="-"/>
+
     </body>
 </page>
