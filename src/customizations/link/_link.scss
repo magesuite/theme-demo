@@ -1,7 +1,12 @@
 .#{$namespace}link {
-    @include link($colorCeruleanBlue, 1.4rem);
+    @include link($colorPictonBlue, 1.4rem);
     text-transform: none;
     font-weight: 300;
+
+    &--cart {
+        font-weight: 700;
+        font-size: 1.1rem;
+    }
 
     &--look {
         &_text {
@@ -33,15 +38,15 @@
         fill: rgba(0, 0, 0, 0.25);
 
         &--big {
-            fill: $colorCeruleanBlue;
+            fill: $colorPictonBlue;
 
             &:hover {
-                fill: $colorCeruleanBlueHover;
+                fill: $colorPictonBlue;
             }
         }
 
         &--edit {
-            fill: $colorCeruleanBlue;
+            fill: $colorPictonBlue;
         }
     }
 }

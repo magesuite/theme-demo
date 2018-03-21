@@ -1,6 +1,5 @@
 .#{$namespace}input {
     $root: &;
-    $boxShadow: inset 0 1px 2px rgba(0, 0, 0, 0.15);
     font-size: 1rem;
 
     &.required,
@@ -47,20 +46,20 @@
     input[type='date'],
     &__input[type='date'],
     &__input {
+        font-family: $base-font-family;
         color: $colorMineShaft;
-        border-color: darken($colorAlto, 3%);
-        border-style: solid;
         background-color: $colorWhite;
-        border-radius: 3px;
+        border-radius: 5px;
+        border: 0.2rem solid $colorBorderAlto;
         height: 4rem;
-        box-shadow: $boxShadow;
-        font-size: 1.4rem;
+        box-shadow: none;
+        font-size: 1.3rem;
 
         &:hover:not(:disabled):not(:focus),
         &:focus,
         &:active {
-            border-color: $colorCeruleanBlue;
-            box-shadow: $boxShadow;
+            box-shadow: none;
+            border-color: $colorAlto;
         }
 
         &.mage-error,
@@ -75,10 +74,6 @@
 
     &__textarea {
         @extend #{$root}__input;
-
-        &:not([disabled]):focus {
-            box-shadow: $boxShadow;
-        }
     }
 
     /* stylelint-enable */
@@ -93,7 +88,6 @@
         &:not([disabled]):focus {
             background-image: url('images/dropdown-arrows-bg-open.png');
             border-color: $colorCeruleanBlue;
-            box-shadow: $boxShadow;
         }
 
         &:disabled {
@@ -126,8 +120,6 @@
     select {
         @extend #{$root}__select;
     }
-
-    // For now only checkout fields have tick icon. There is no way to set modifier class for input because input template is in html and used globally
     &__icon {
         width: 1.7rem;
         height: 1.7rem;
@@ -172,11 +164,6 @@
         }
     }
 
-    &__button {
-        border-top-right-radius: 3px;
-        border-bottom-right-radius: 3px;
-    }
-
     ::placeholder {
         color: $colorGray;
     }
@@ -193,7 +180,6 @@
                 width: 1.65rem;
                 height: 1.65rem;
                 border: 1px solid darken($colorGallery, 8%);
-                box-shadow: $boxShadow;
                 line-height: 1.6rem;
             }
 

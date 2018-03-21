@@ -15,5 +15,7 @@
         <!--Move language switcher into page bottom-->
         <move element="store_language" destination="page.bottom.right" after="-"/>
 
+        <referenceBlock name="information-stripe" remove="true"/>
+
     </body>
 </page>

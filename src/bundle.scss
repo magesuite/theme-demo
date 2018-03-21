@@ -33,13 +33,14 @@
 //@import 'customizations/aftersearch-nav/aftersearch-nav';
 //@import 'customizations/attributes-list/attributes-list';
 //
+@import 'customizations/badge/badge';
 //@import 'customizations/box-addtocart/box-addtocart';
 //@import 'customizations/brand-carousel/brand-carousel';
 //@import 'customizations/breadcrumbs/breadcrumbs';
 //@import 'customizations/bundle-box/bundle-box';
-//@import 'customizations/button/button';
 @import 'customizations/button-social/button-social';
-//
+@import 'customizations/button/button';
+//@import 'customizations/button-social/button-social';
 //@import 'customizations/calendar/calendar';
 //@import 'customizations/cart-item/cart-item';
 //@import 'customizations/cart-summary/cart-summary';
@@ -61,9 +62,9 @@
 //@import 'customizations/grid-layout/grid-layout';
 //@import 'customizations/grid-product/grid-product';
 //
-//@import 'customizations/header/header';
-//@import 'customizations/header-search/header-search';
-//@import 'customizations/header-user-area/header-user-area';
+@import 'customizations/header/header';
+@import 'customizations/header-search/header-search';
+@import 'customizations/header-user-area/header-user-area';
 @import 'customizations/headline/headline';
 //@import 'customizations/hero/hero';
 //
@@ -71,21 +72,21 @@
 //@import 'customizations/info-block/info-block';
 //@import 'customizations/info-page/info-page';
 //@import 'customizations/information-stripe/information-stripe';
-//@import 'customizations/input/input';
+@import 'customizations/input/input';
 //@import 'customizations/items-grid/items-grid';
 //
 //@import 'customizations/layered-nav/layered-nav';
 //@import 'customizations/links-block-addto/links-block-addto';
-//@import 'customizations/link/link';
+@import 'customizations/link/link';
 //@import 'customizations/list/list';
 //@import 'customizations/login-page/login-page';
 //
 //@import 'customizations/messages/messages';
-//@import 'customizations/minicart/minicart';
-//@import 'customizations/minicart-product/minicart-product';
+@import 'customizations/minicart/minicart';
+@import 'customizations/minicart-product/minicart-product';
 //@import 'customizations/modal/modal';
 //
-//@import 'customizations/navigation/navigation';
+@import 'customizations/navigation/navigation';
 //
 //@import 'customizations/offcanvas-navigation/offcanvas-navigation';
 //

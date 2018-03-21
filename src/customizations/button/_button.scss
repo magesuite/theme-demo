@@ -1,97 +1,73 @@
 .#{$namespace}button {
     $root: &;
-    font-size: 1.4rem;
-    border-radius: 3px;
-    padding: 0.9rem 2.2rem 0.9rem 1.5rem;
-    min-width: 12.2rem;
+    border-radius: 0.5rem;
+    border-color: $colorPictonBlue;
+    background: $colorPictonBlue;
     color: $colorWhite;
-    border-color: $colorCeruleanBlue;
-    background: $colorCeruleanBlue;
-    font-weight: 700;
-    min-height: 4rem;
-
-    @include media('>=phone-lg') {
-        padding: 0.9rem 3.5rem 0.9rem 2.5rem;
-    }
 
     &:focus,
     &:active {
         color: $colorWhite;
-        border-color: $colorCeruleanBlueHover;
-        background-color: $colorCeruleanBlueHover;
-        box-shadow: none;
-    }
-
-    &:visited {
-        color: $colorWhite;
-    }
-
-    &:focus {
-        outline: none;
+        border-color: $colorPictonBlue;
+        background-color: $colorPictonBlue;
     }
 
     &--look {
         &_default {
-            border: 1px solid $colorCeruleanBlue;
+            border: 0.2rem solid $colorBorderPictonBlue;
             color: $colorWhite;
-            border-color: $colorCeruleanBlue;
-            background-color: $colorCeruleanBlue;
 
             &:hover,
             &:active,
             &:focus {
-                border: 1px solid $colorCeruleanBlueHover;
-                color: $colorWhite;
-                border-color: $colorCeruleanBlueHover;
-                background-color: $colorCeruleanBlueHover;
+                border: 0.2rem solid $colorBorderPictonBlue;
+                color: $colorPictonBlue;
+                background-color: $colorWhite;
             }
 
             &:visited {
                 color: $colorWhite;
-                border-color: $colorCeruleanBlue;
-                background: $colorCeruleanBlue;
+                border-color: $colorPictonBlue;
+                background: $colorPictonBlue;
 
                 &:hover,
                 &:active,
                 &:focus {
-                    border: 1px solid $colorCeruleanBlueHover;
-                    color: $colorWhite;
-                    border-color: $colorCeruleanBlueHover;
-                    background-color: $colorCeruleanBlueHover;
+                    border: 0.2rem solid $colorBorderPictonBlue;
+                    color: $colorPictonBlue;
+                    background-color: $colorWhite;
                 }
             }
         }
 
         &_light {
-            border: 1px solid $colorCeruleanBlue;
-            background-color: transparent;
-            color: $colorCeruleanBlue;
-            border-color: $colorCeruleanBlue;
+            border: 0.2rem solid $colorPictonBlue;
+            background-color: $colorWhite;
+            color: $colorPictonBlue;
+            border-color: $colorPictonBlue;
 
             &:hover,
             &:active,
             &:focus {
-                border: 1px solid $colorCeruleanBlueHover;
-                background-color: $colorCeruleanBlueHover;
-                border-color: $colorCeruleanBlueHover;
+                border: 0.2rem solid $colorPictonBlue;
+                background-color: $colorPictonBlue;
                 color: $colorWhite;
 
                 #{$root}__icon {
-                    fill: $colorWhite;
+                    fill: $colorPictonBlue;
                 }
             }
 
             &:visited {
-                background-color: transparent;
-                color: $colorCeruleanBlue;
-                border-color: $colorCeruleanBlue;
+                background-color: $colorWhite;
+                color: $colorPictonBlue;
+                border-color: $colorBorderPictonBlue;
 
                 &:hover,
                 &:active,
                 &:focus {
-                    border: 1px solid $colorCeruleanBlueHover;
-                    background-color: $colorCeruleanBlueHover;
-                    border-color: $colorCeruleanBlueHover;
+                    border: 0.2rem solid $colorPictonBlue;
+                    background-color: $colorPictonBlue;
                     color: $colorWhite;
 
                     #{$root}__icon {
@@ -101,7 +77,7 @@
             }
 
             #{$root}__icon {
-                fill: $colorCeruleanBlue;
+                fill: $colorPictonBlue;
             }
         }
 
@@ -116,34 +92,42 @@
             border-radius: 3px;
 
             &:hover {
-                border: 1px solid $colorCeruleanBlueHover;
+                border: 1px solid $colorPictonBlue;
 
                 #{$root}__remove-icon {
-                    fill: $colorCeruleanBlueHover;
+                    fill: $colorPictonBlue;
                 }
             }
         }
 
         &_on-input {
             min-width: 5rem;
-            transform: skew(-18deg) translateX(1rem);
-            border-radius: 0;
+            transform: skew(0) translateX(0);
             border: none;
+            border-left: 0.1rem solid $colorBorderAlto;
+            border-radius: 0;
+            background-color: transparent;
 
             &:hover {
                 border: none;
+                border-left: 0.1rem solid transparent;
+                background: $colorPictonBlue;
+
+                #{$root}__icon {
+                    transform: skew(0deg) translate(-50%, -50%);
+                }
             }
 
             #{$root}__icon {
-                transform: skew(18deg) translate(-50%, -50%);
+                transform: skew(0deg) translate(-50%, -50%);
             }
 
             &[disabled] {
                 &:hover {
-                    background-color: $colorCeruleanBlueHover;
+                    background-color: $colorPictonBlue;
 
                     &:before {
-                        background-color: $colorCeruleanBlueHover;
+                        background-color: $colorPictonBlue;
                     }
                 }
             }
@@ -156,6 +140,7 @@
             font-size: 1.2rem;
             min-height: 3rem;
             min-width: 11rem;
+
             @include media('>=phone-lg') {
                 padding: 0.8rem 3rem 0.8rem 2.5rem;
             }
@@ -163,17 +148,13 @@
     }
 
     &--type {
-        //This type is very specific to creativeshop and probably should be reset to normal button/after should be set to display: none
         &_long {
             min-width: 17rem;
             padding-right: 6rem;
             text-indent: 2rem;
 
             &:after {
-                border-top-right-radius: 3px;
-                border-bottom-right-radius: 3px;
-                background: $colorCeruleanBlueHover;
-                transform: skew(-18deg) translateX(1rem);
+                display: none;
             }
         }
 
@@ -187,34 +168,35 @@
         }
 
         &_more-content {
-            margin: 2rem 0;
-            padding: 1.4rem 3.5rem 1.4rem 2.5rem;
-            min-width: 27rem;
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: $colorCeruleanBlue;
-            background: transparent;
-            border: none;
-            border-radius: 4px;
-            box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.3);
+            font-weight: 400;
+            color: $colorWhite;
+            background: $colorPictonBlue;
+            border: 0.2rem solid $colorPictonBlue;
+            border-radius: 0.5rem;
+            box-shadow: none;
+            min-width: 18rem;
+            height: 4rem;
+            padding: 0.9rem 3.5rem 3rem 2.5rem;
 
             &:hover,
             &:active,
             &:focus {
-                color: $colorWhite;
-                background: $colorCeruleanBlue;
-                box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.3);
+                color: $colorPictonBlue;
+                background: $colorWhite;
+                border: 0.2rem solid $colorBorderPictonBlue;
+                box-shadow: none;
             }
 
             &:visited {
-                color: $colorCeruleanBlue;
+                color: $colorWhite;
 
                 &:hover,
                 &:active,
                 &:focus {
-                    color: $colorWhite;
-                    background: $colorCeruleanBlue;
-                    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.3);
+                    color: $colorPictonBlue;
+                    background: $colorWhite;
+                    border: 0.2rem solid $colorBorderPictonBlue;
+                    box-shadow: none;
                 }
             }
 
@@ -236,7 +218,7 @@
         right: 1rem;
 
         &--search {
-            width: 1.6rem;
+            width: 2.4rem;
             height: 2.2rem;
         }
 

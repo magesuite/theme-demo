@@ -1,25 +1,43 @@
 .#{$namespace}header-search {
     $root: &;
     background-color: $colorWhite;
-    fill: $colorCeruleanBlue;
+    fill: $colorPictonBlue;
 
     &__input {
-        border-radius: 3px 0 0 3px;
+        border-radius: 0.5rem !important;
+
+        &:focus + #{$root}__button {
+            .ajax-loading & {
+                #{$root}__button-icon {
+                    transform: skew(0) translate(-5rem, -30%);
+                }
+
+                #{$root}__autocomplete-loader {
+                    transform: skew(0) translate3d(0, 0, 0);
+                    right: 1.3rem;
+                }
+            }
+        }
     }
 
     &__submit {
-        border-radius: 0 3px 3px 0;
+        border-radius: 0.5rem;
+    }
+
+    &__autocomplete-loader {
+        right: 1rem;
     }
 
     &__autocomplete {
-        border: 1px solid $colorAlto;
+        border: 0.2rem solid $colorBorderAlto;
         background-color: $colorWhite;
-        border-bottom-left-radius: 3px;
-        border-bottom-right-radius: 3px;
-        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.17);
+        border-bottom-left-radius: 0.5rem;
+        border-bottom-right-radius: 0.5rem;
+        box-shadow: none;
+        margin-top: -0.7rem;
 
         .autocomplete-list {
-            border-top: 1px solid $colorAlto;
+            border-top: 0.2rem solid $colorBorderAlto;
         }
 
         dl dt {
@@ -40,7 +58,7 @@
             }
 
             &.title-product ~ dd:not(:empty) {
-                border-bottom: 1px solid $colorAlto;
+                border-bottom: 0.2rem solid $colorBorderAlto;
 
                 &:last-child {
                     border-bottom: none;

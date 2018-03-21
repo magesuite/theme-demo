@@ -1,34 +1,88 @@
 .#{$namespace}header-user-area {
-    font-size: 1rem;
+    font-size: 1.3rem;
+    padding: 0 1.5rem;
+
+    @include media('>=laptop') {
+        padding: 0 0.75rem;
+    }
 
     &__section {
+        display: flex;
+        align-items: center;
+        padding: 0.2rem 0.75rem;
+        width: min-content;
+
         &:hover {
             text-decoration: none;
+        }
+
+        &--minicart {
+            border: 0.2rem solid $colorBorderPictonBlue;
+            border-radius: 0.5rem;
+            position: relative;
+
+            .#{$namespace}header-user-area__label {
+                padding-right: 3rem;
+            }
         }
     }
 
     &__link {
+        display: flex;
+        align-items: center;
+
         &:hover {
             text-decoration: none;
+        }
+
+        > span.counter {
+            display: flex;
+            align-items: center;
         }
     }
 
     &__icon {
-        fill: $colorCeruleanBlue;
+        fill: $colorPictonBlue;
 
         &:hover {
-            fill: $colorCeruleanBlueHover;
+            fill: $colorPictonBlue;
+        }
+
+        &--minicart {
+            width: 2.2rem;
+            height: 3.2rem;
         }
     }
 
     &__label {
+        color: $colorSilverChalice;
         text-decoration: none;
-        font-size: 1rem;
-        color: $colorDoveGray;
-        text-transform: uppercase;
+        font-size: 12px;
+        text-transform: capitalize;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        display: none;
 
         &:hover {
             text-decoration: none;
+        }
+
+        @include media('>=tablet') {
+            display: block;
+        }
+
+        &--minicart {
+            padding-right: 3rem;
+        }
+    }
+
+    &__badge {
+        top: -0.5rem;
+        left: 80%;
+
+        @include media('>=tablet') {
+            top: 0.9rem;
+            left: calc(100% - 3rem);
         }
     }
 }

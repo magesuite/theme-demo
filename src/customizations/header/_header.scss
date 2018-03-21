@@ -1,18 +1,21 @@
 .#{$namespace}header {
     $root: &;
-    font-size: 1rem;
+
+    @include media('<tablet') {
+        padding-top: 6rem;
+    }
 
     &__content {
         background: $colorWhite;
 
         @include media('>=laptop') {
-            border-bottom: 1px solid $colorGallery;
+            border-bottom: 0.1rem solid $colorGallery;
         }
     }
 
     &__burger {
         &:after {
-            background: $colorCeruleanBlue;
+            background: $colorPictonBlue;
         }
 
         &--active {
@@ -20,7 +23,7 @@
             &:active,
             &:focus,
             &:hover {
-                background: $colorCeruleanBlue;
+                background: $colorPictonBlue;
             }
 
             #{$root}__burger-icon {
@@ -37,7 +40,17 @@
         &,
         &:before,
         &:after {
-            background: $colorCeruleanBlue;
+            background: $colorPictonBlue;
         }
+    }
+
+    &__search {
+        @include media('>=tablet') {
+            left: 33%;
+        }
+    }
+
+    &__user-area {
+        flex: 0 1 30%;
     }
 }
