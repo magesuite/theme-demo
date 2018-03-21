@@ -1,5 +1,6 @@
 .#{$namespace}headline {
     text-align: center;
+    letter-spacing: -0.05rem;
 
     &__title {
         font-size: 2.8rem;
@@ -15,8 +16,9 @@
     }
 
     &__subtitle {
-        color: $color-subheadline;
-        font-size: 1.8rem;
+        color: $colorDustyGray;
+        font-size: 1.5rem;
         font-weight: 300;
+        line-height: 4rem;
     }
 }

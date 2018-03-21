@@ -5,12 +5,12 @@
 .#{$namespace}badge {
     $root: &;
     font-size: 1rem;
-    border-radius: 2px;
+    border-radius: 50%;
     text-align: center;
     color: $colorWhite;
-    background: $colorGray;
+    background: $colorCrimson;
     box-shadow: 0 0 0 1px $colorWhite;
-    transform: skew(-15deg);
+    transform: skew(0);
 
     &--attention {
         background-color: $colorCrimson;
@@ -26,14 +26,14 @@
     }
 
     &--info {
-        background-color: $colorGold;
+        background-color: $colorPictonBlue;
 
         &:before {
-            background-color: $colorGold;
+            background-color: $colorPictonBlue;
         }
 
         #{$root}__span {
-            color: $colorMineShaft;
+            color: $colorWhite;
         }
     }
 
@@ -110,6 +110,7 @@
     &__span {
         color: $colorWhite;
         font-weight: 700;
-        transform: skew(15deg);
+        transform: skew(0);
+        padding-top: 0.1rem;
     }
 }

@@ -1,22 +1,68 @@
 .#{$namespace}navigation {
     $root: &;
+    width: 60%;
+    margin: auto;
 
     &__flyout {
-        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.15);
+        box-shadow: none;
+
+        &--visible {
+            border: 0.2rem solid $colorBorderAlto;
+            border-radius: 0.5rem;
+        }
     }
 
     &__item {
+        border: 0.2rem solid $colorWhite;
+
         &:hover {
+            border: 0.2rem solid $colorBorderAlto;
+            border-bottom-color: $colorWhite;
+            border-top-left-radius: 0.5rem;
+            border-top-right-radius: 0.5rem;
+
             > #{$root}__link {
-                color: $colorCeruleanBlue;
+                color: initial;
+            }
+        }
+
+        &:first-of-type {
+            .#{$namespace}navigation__flyout--visible {
+                border-top-left-radius: 0;
+            }
+        }
+
+        &:last-of-type {
+            .#{$namespace}navigation__flyout--visible {
+                border-top-right-radius: 0;
+            }
+        }
+
+        &--active {
+            .#{$namespace}navigation__link {
+                &:after {
+                    content: '';
+                    width: 100%;
+                    position: absolute;
+                    height: 1rem;
+                    background: $colorWhite;
+                    bottom: -0.1rem;
+                    left: 0;
+                    z-index: 2000;
+                }
             }
         }
     }
 
     &__link {
+        font-size: 1.4rem;
+        text-transform: capitalize;
+        color: $colorWoodsmoke;
+        position: relative;
+
         &:hover {
             text-decoration: none;
-            color: $colorCeruleanBlue;
+            color: $colorPictonBlue;
         }
 
         &--category {
@@ -27,7 +73,7 @@
     &__products {
         &-header {
             @extend .#{$namespace}navigation__category;
-            border-bottom: 1px solid $colorAlto;
+            border-bottom: 0.1rem solid $colorAlto;
             font-weight: 700;
             text-transform: uppercase;
             font-size: 0.9em;
@@ -36,5 +82,11 @@
 
     &__overlay {
         background-color: #000;
+    }
+
+    .active {
+        > #{$root}__link {
+            color: initial;
+        }
     }
 }
