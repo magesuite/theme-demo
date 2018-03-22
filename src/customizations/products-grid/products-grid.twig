@@ -1,0 +1,96 @@
+{% set items = [] %}
+{% set teasersConfig = '' %}
+
+{% set columnsConfig = '{
+    "phone": 1,
+    "phoneLg": 2,
+    "tablet": 3,
+    "laptop": 4,
+    "laptopLg": 4,
+    "desktop": 4,
+    "tv": 4
+}' %}
+
+{% for product in products %}
+
+    {% set bottomAddons = [] %}
+    {% set productMix = 'cs-products-grid__item' %}
+    {% set showDetails = '<a href="' ~ product.url ~ '">
+                            <button | cs-button cs-button--type_wide">
+                                <span class="cs-button__span">' ~ translate('Details') ~ '</span>
+                            </button>
+                        </a>' %}
+
+    {% set bottomAddons = bottomAddons|merge( [ {
+        content: showDetails
+    } ] ) %}
+
+    {% set content %}
+        {% include locate( 'grid-product/grid-product.twig' ) with {
+            namespace: 'cs-',
+            lazyload: true,
+            showWrapper: true,
+            tag: 'div',
+            url: product.url,
+            image: {
+                src: product.image,
+                alt: product.name,
+            },
+            name: product.name,
+
+            addons: {
+                bottom: bottomAddons
+            },
+            hotspots: {
+                after: {
+                    name: showDetails
+                }
+            }
+        } %}
+    {% endset %}
+
+    {% set items = items|merge( [ {
+        mix: productMix,
+        content: content
+    } ] ) %}
+{% endfor %}
+
+{% if hero is defined %}
+    {% set teasersConfig = '[
+        {
+            "id": 1,
+            "mobile": false,
+            "size": {
+                "x": 2,
+                "y": 1
+            },
+            "gridPosition": {
+                "x": "' ~ hero.position ~ '",
+                "y": 1
+            }
+        }
+    ]' %}
+
+    {% set hero = hero|merge( {
+        button: {
+            label: hero.button.label,
+            class: 'cs-button cs-button--type_long cs-button--look_default | cs-products-grid__button',
+            labelClass: 'cs-button__span',
+            icon: {
+                class: 'cs-button__icon | cs-products-grid__button-icon',
+                src: '#arrow_next'
+            }
+        },
+        mix: 'cs-grid-layout__brick--x2 cs-grid-layout__brick--teaser | cs-products-grid__hero',
+        teaserId: 1
+    } ) %}
+{% endif %}
+
+
+{% include locate( 'components/products-grid/products-grid.twig' ) with {
+    namespace: 'cs-',
+    items: items,
+    hero: hero,
+    columnsConfig: columnsConfig,
+    teasersConfig: teasersConfig
+} %}
