@@ -4,12 +4,15 @@
     border-color: $colorPictonBlue;
     background: $colorPictonBlue;
     color: $colorWhite;
+    font-weight: 400;
+    font-size: 1.5rem;
 
     &:focus,
-    &:active {
-        color: $colorWhite;
-        border-color: $colorPictonBlue;
-        background-color: $colorPictonBlue;
+    &:active,
+    &:hover {
+        color: $colorPictonBlue;
+        background-color: $colorWhite;
+        border: 0.2rem solid $colorBorderPictonBlue;
     }
 
     &--look {
@@ -161,9 +164,35 @@
         &_cart {
             @extend .cs-button--look_default;
             @extend .cs-button--type_long;
+            background: $colorWhite;
+            color: $colorPictonBlue;
+
+            #{$root}__icon {
+                fill: $colorPictonBlue;
+            }
 
             &:after {
                 width: 6.5rem;
+            }
+        }
+
+        &_cart-short {
+            border: 0.2rem solid $colorBorderAlto;
+            background-color: $colorWhite;
+            border-color: $colorBorderAlto;
+            min-width: min-content;
+            padding: 0;
+            width: 5rem;
+
+            #{$root}__icon {
+                fill: $colorPictonBlue;
+            }
+
+            &:hover,
+            &:active,
+            &:focus {
+                border: 0.2rem solid $colorPictonBlue;
+                background-color: $colorWhite;
             }
         }
 

@@ -1,5 +1,3 @@
-//If you want to keep creativeshop setting remove all below section
-
 @import '../../../node_modules/creative-patterns/packages/components/grid-layout/src/grid-layout';
 
 $bricksPerRow: (
@@ -23,13 +21,13 @@ $bricksPerRowInColumn: (
 );
 
 $bricksHeight: (
-    phone: 336px,
-    phone-lg: 336px,
-    tablet: 406px,
-    laptop: 406px,
-    laptop-lg: 406px,
-    desktop: 406px,
-    tv: 406px
+    phone: 36px,
+    phone-lg: 356px,
+    tablet: 426px,
+    laptop: 426px,
+    laptop-lg: 426px,
+    desktop: 426px,
+    tv: 426px
 );
 
 .#{$namespace}grid-layout {

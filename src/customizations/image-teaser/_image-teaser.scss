@@ -70,6 +70,8 @@
     }
 
     &__subheadline {
+        color: $color-teaser-dark-schema-subheadline;
+
         #{$root}__slide--scheme-light & {
             color: $colorWhite;
         }
