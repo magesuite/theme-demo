@@ -44,6 +44,10 @@
                 font-weight: 700 !important;
             }
         }
+
+        .#{$namespace}minicart-product__options-group--price & {
+            transform: translateY(-0.4rem);
+        }
     }
 
     &__price {

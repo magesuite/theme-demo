@@ -16,8 +16,6 @@
     }
 
     &__headline {
-        //Below are styles specific for creativeshop template, probably should be removed in child template
-
         #{$root}__slide--scheme-light & {
             color: $colorWhite;
         }
@@ -30,16 +28,12 @@
             #{$root}__wrapper--content-display-inside
             #{$root}__content-wrapper--content-display-scenario-2
             & {
-            background-color: $colorGold;
+            background-color: transparent;
 
             &:after {
-                //Style specific for creativeshop template, probably should be removed in child template
-                background: $colorGold;
-                transform: skew(-18deg);
+                display: none;
             }
         }
-
-        //End of style very specific to creativeshop template
 
         #{$root}__wrapper--content-display-inside & {
             font-weight: 700;
@@ -106,6 +100,6 @@
     }
 
     &__number--current {
-        color: $colorGold;
+        color: $colorCeruleanBlue;
     }
 }

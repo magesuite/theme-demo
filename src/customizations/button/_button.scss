@@ -10,9 +10,9 @@
     &:focus,
     &:active,
     &:hover {
-        color: $colorPictonBlue;
-        background-color: $colorWhite;
-        border: 0.2rem solid $colorBorderPictonBlue;
+        color: $colorWhite;
+        background-color: $colorAlto;
+        border: 0.2rem solid $colorAlto;
     }
 
     &--look {
@@ -23,9 +23,9 @@
             &:hover,
             &:active,
             &:focus {
-                border: 0.2rem solid $colorBorderPictonBlue;
-                color: $colorPictonBlue;
-                background-color: $colorWhite;
+                border: 0.2rem solid $colorAlto;
+                color: $colorWhite;
+                background-color: $colorAlto;
             }
 
             &:visited {
@@ -36,9 +36,9 @@
                 &:hover,
                 &:active,
                 &:focus {
-                    border: 0.2rem solid $colorBorderPictonBlue;
-                    color: $colorPictonBlue;
-                    background-color: $colorWhite;
+                    border: 0.2rem solid $colorAlto;
+                    color: $colorWhite;
+                    background-color: $colorAlto;
                 }
             }
         }
@@ -210,9 +210,9 @@
             &:hover,
             &:active,
             &:focus {
-                color: $colorPictonBlue;
-                background: $colorWhite;
-                border: 0.2rem solid $colorBorderPictonBlue;
+                color: $colorWhite;
+                background: $colorAlto;
+                border: 0.2rem solid $colorAlto;
                 box-shadow: none;
             }
 
@@ -222,9 +222,9 @@
                 &:hover,
                 &:active,
                 &:focus {
-                    color: $colorPictonBlue;
-                    background: $colorWhite;
-                    border: 0.2rem solid $colorBorderPictonBlue;
+                    color: $colorWhite;
+                    background: $colorAlto;
+                    border: 0.2rem solid $colorAlto;
                     box-shadow: none;
                 }
             }
