@@ -64,7 +64,7 @@
     }
 
     &__subheadline {
-        color: $color-teaser-dark-schema-subheadline;
+        color: $color-teaser-dark-scheme-subheadline;
 
         #{$root}__slide--scheme-light & {
             color: $colorWhite;
@@ -92,14 +92,114 @@
     }
 
     &__nav {
-        background-color: $colorWhite;
+        border-radius: 0;
+        box-shadow: none;
+        transform: translateY(-4.5rem);
+
+        @include media('>=tablet') {
+            width: 5rem;
+            height: 5rem;
+        }
+
+        &:hover:not(#{$root}__nav--disabled) {
+            transform: translateY(-4.5rem) scale(1.15);
+        }
+
+        &:hover,
+        &:active,
+        &:focus {
+            border: none;
+            box-shadow: none;
+        }
+
+        &--disabled {
+            &:hover {
+                transform: translateY(-4.5rem) !important;
+            }
+        }
+
+        &-icon {
+            fill: $color-pagination-arrow;
+
+            #{$root}__nav--large & {
+                width: 2.3rem;
+                height: 1.9rem;
+
+                @include media('>=phone-lg') {
+                    width: 2.3rem;
+                    height: 1.9rem;
+                }
+
+                @include media('>=tablet') {
+                    width: 2.3rem;
+                    height: 1.9rem;
+                }
+            }
+        }
+
+        &--prev {
+            border-bottom-right-radius: 4px;
+            border-top-right-radius: 4px;
+            border-left: 1px solid $colorConcrete;
+            left: 0;
+        }
+
+        &--next {
+            border-bottom-left-radius: 4px;
+            border-top-left-radius: 4px;
+            border-right: 1px solid $colorConcrete;
+            right: 0;
+        }
     }
 
-    &__nav-icon {
-        fill: $colorCeruleanBlue;
+    &__pagination {
+        &-item {
+            border-radius: 50%;
+            background-color: $colorConcrete;
+            transform: skew(0deg);
+            width: 0.5rem;
+            height: 0.5rem;
+            border: 0.6rem solid $colorConcrete;
+            margin-right: 1rem;
+
+            &:hover,
+            &:focus,
+            &:active {
+                background-color: $color-pagination-active;
+                border: 0.6rem solid $color-pagination-active;
+                box-shadow: none;
+
+                @include media('>=tablet') {
+                    background-color: $color-pagination-active;
+                }
+            }
+
+            &--active {
+                background-color: $color-pagination-active;
+                border: 0.6rem solid $colorConcrete;
+                box-shadow: none;
+
+                &:hover,
+                &:focus,
+                &:active {
+                    background-color: $color-pagination-active;
+                }
+            }
+        }
+
+        &-button {
+            width: 1.2rem;
+            height: 1.2rem;
+
+            &:hover {
+                width: 1.2rem;
+                height: 1.2rem;
+                border: none;
+            }
+        }
     }
 
     &__number--current {
-        color: $colorCeruleanBlue;
+        color: $color-pagination-arrow;
     }
 }

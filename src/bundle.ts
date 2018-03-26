@@ -26,3 +26,4 @@ import '../../theme-creativeshop/src/customizations/hero/hero';
 import '../../theme-creativeshop/src/customizations/item-cloner/item-cloner';
 import '../../theme-creativeshop/src/customizations/navigation/navigation';
 import '../../theme-creativeshop/src/customizations/products-promo/products-promo';
+import '../../theme-creativeshop/src/customizations/image-teaser/image-teaser';
