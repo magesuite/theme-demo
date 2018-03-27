@@ -1,15 +1,15 @@
 .#{$namespace}minicart {
     background: $colorWhite;
-    color: $colorWoodsmoke;
+    color: $color-text-dark;
 
     .action.close {
         top: 0;
-        color: $colorWoodsmoke;
+        color: $color-text-dark;
     }
 
     &__title {
         padding: 1rem 1.5rem;
-        border-bottom: 0.2rem solid $colorBorderAlto;
+        border-bottom: 0.2rem solid $color-border-second;
         @extend .#{$namespace}t-headline;
         @extend .#{$namespace}t-headline--size_2;
         @extend .#{$namespace}t-headline--look_light;
@@ -34,11 +34,11 @@
     }
 
     &__list-item {
-        border-bottom: 0.1rem solid $colorAlto;
+        border-bottom: 0.1rem solid $color-second;
     }
 
     &__buttons {
-        border-top: 0.1rem solid $colorAlto;
+        border-top: 0.1rem solid $color-second;
         box-shadow: none;
     }
 
@@ -60,13 +60,13 @@
 
     &__buttons {
         box-shadow: none;
-        border-color: $colorBorderAlto;
+        border-color: $color-border-second;
     }
 }
 
 .minicart-wrapper .block-minicart {
     box-shadow: none;
-    border: 0.2rem solid $colorBorderAlto;
+    border: 0.2rem solid $color-border-second;
     border-radius: 0.5rem;
     margin: 0.2rem 0 0;
     right: -0.3rem;

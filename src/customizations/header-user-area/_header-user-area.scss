@@ -14,10 +14,14 @@
 
         &:hover {
             text-decoration: none;
+
+            .#{$namespace}header-user-area__label {
+                color: $color-text-hover;
+            }
         }
 
         &--minicart {
-            border: 0.2rem solid $colorBorderPictonBlue;
+            border: 0.2rem solid $color-border-first;
             border-radius: 0.5rem;
             position: relative;
 
@@ -42,20 +46,24 @@
     }
 
     &__icon {
-        fill: $colorPictonBlue;
+        fill: $color-icon-second;
 
         &:hover {
-            fill: $colorPictonBlue;
+            fill: $color-icon-second;
         }
 
         &--minicart {
             width: 2.2rem;
             height: 3.2rem;
         }
+
+        &--my-account {
+            fill: $color-icon-first;
+        }
     }
 
     &__label {
-        color: $colorSilverChalice;
+        color: $color-text-light;
         text-decoration: none;
         font-size: 12px;
         text-transform: capitalize;
@@ -65,6 +73,7 @@
 
         &:hover {
             text-decoration: none;
+            color: $color-text-hover;
         }
 
         @include media('>=tablet') {

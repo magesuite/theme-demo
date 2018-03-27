@@ -7,12 +7,24 @@
     $root: &;
 
     &__link {
-        font-size: 1.2rem;
-        color: $colorGallery;
+        font-size: 1.4rem;
+        color: $color-footer-text;
 
         &:visited,
         &:hover {
-            color: $colorGallery;
+            text-decoration: none;
         }
+
+        &:visited {
+            color: $color-footer-text;
+        }
+
+        &:hover {
+            color: $color-footer-text-hover;
+        }
+    }
+
+    &__item {
+        margin-bottom: 0.5rem;
     }
 }

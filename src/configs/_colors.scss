@@ -12,6 +12,12 @@ $color-language-switcher-bg: #f3f3f3 !default;
 //Page bottom
 $color-pagebottom-text: #a6a6a6 !default;
 
+//Footer
+$color-footer-background: #fff;
+$color-footer-text: #151616;
+$color-footer-text-hover: #35abdf;
+$color-footer-text-light: #a7aaaa;
+
 //Headline
 $color-headline: #000 !default;
 $color-subheadline: #010000 !default;
@@ -24,15 +30,26 @@ $color-teaser-dark-schema-text: #8a8a8a !default;
 $color-teaser-light-schema-headline: #fff !default;
 $color-teaser-light-schema-text: #fff !default;
 
+//Icons
+$color-icon-first: #00316e;
+$color-icon-second: #35abdf;
+
 //Borders
-$colorAlto: #d1d1d1;
-$colorPictonBlue: #35abdf;
-$colorBorderPictonBlue: rgba(53, 171, 223, 0.6);
-$colorBorderAlto: rgba(209, 209, 209, 0.3);
+$color-first: #35abdf;
+$color-border-first: rgba(53, 171, 223, 0.6);
+$color-second: #d1d1d1;
+$color-border-second: rgba(209, 209, 209, 0.3);
 
 // Text
-$colorSilverChalice: #a4a4a4;
-$colorWoodsmoke: #151616;
+$color-text-light: #a4a4a4;
+$color-text-dark: #151616;
+$color-text-hover: #35abdf;
 
 // Badges
 $colorMercury: #e8e8e8;
+
+// Buttons
+$colorButton: #35abdf;
+
+//Link
+$color-link: #35abdf;

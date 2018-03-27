@@ -1,0 +1,45 @@
+<?php
+// @codingStandardsIgnoreFile
+
+$newsletter = __('Register for the newsletter and get access to special offer');
+?>
+<div class="cs-footer__column cs-footer__column--newsletter">
+    <div class="cs-footer__newsletter">
+        <svg class="cs-footer__newsletter-icon">
+            <use xlink:href="#newsletter"></use>
+        </svg>
+        <div class="cs-footer__column-title cs-footer__column-title--clear "><?php echo $newsletter ?></div>
+    </div>
+    <div class="cs-footer__list">
+        <form
+            class="cs-form | subscribe"
+            novalidate
+            action="<?php /* @escapeNotVerified */ echo $block->getFormActionUrl() ?>"
+            method="post"
+            data-mage-init='{"validation": {"errorClass": "mage-error"}}'
+            id="newsletter-validate-detail"
+        >
+            <div class="cs-form__field | cs-input | newsletter">
+                <div class="cs-input__control">
+                    <input
+                        name="email"
+                        type="email"
+                        id="newsletter"
+                        class="cs-input__input"
+                        placeholder="<?php /* @escapeNotVerified */ echo __('Email address') ?>"
+                        data-validate="{required:true, 'validate-email':true}"
+                    />
+
+                </div>
+                <div class="cs-input__button cs-input__button--newsletter">
+                    <button class="cs-button cs-button--look_default cs-button--type_wide" type="submit">
+                        <span><?=__('Subscribe');?></span>
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <span class="cs-footer__info">
+        <?php /* @escapeNotVerified */ echo __('Please enter a valid e-mail address (eg: johndoe@domain.com)')?>
+    </span>
+</div>

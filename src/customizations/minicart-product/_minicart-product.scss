@@ -3,12 +3,12 @@
         font-size: 1.4rem;
         font-weight: 400;
         text-decoration: none;
-        color: $colorWoodsmoke;
+        color: $color-text-dark;
 
         &:visited,
         &:hover {
             text-decoration: none;
-            color: $colorWoodsmoke;
+            color: $color-text-dark;
         }
     }
 
@@ -29,13 +29,13 @@
         .minicart-price {
             font-size: 1.1rem !important;
             font-weight: 700 !important;
-            color: $colorWoodsmoke !important;
+            color: $color-text-dark !important;
         }
     }
 
     &__options-value {
         font-size: 1.1rem;
-        color: $colorWoodsmoke;
+        color: $color-text-dark;
         font-weight: 700;
 
         &--price-minicart {

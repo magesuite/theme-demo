@@ -50,7 +50,7 @@
         color: $colorMineShaft;
         background-color: $colorWhite;
         border-radius: 5px;
-        border: 0.2rem solid $colorBorderAlto;
+        border: 0.2rem solid $color-border-second;
         height: 4rem;
         box-shadow: none;
         font-size: 1.3rem;
@@ -59,7 +59,7 @@
         &:focus,
         &:active {
             box-shadow: none;
-            border-color: $colorAlto;
+            border-color: $color-second;
         }
 
         &.mage-error,
@@ -225,7 +225,7 @@
 
             &:before {
                 border-width: 1px;
-                border-color: $colorAlto;
+                border-color: $color-second;
                 border-style: solid;
                 width: 2rem;
                 height: 2rem;
@@ -241,6 +241,24 @@
                 border-color: $colorCrimson;
             }
         }
+    }
+
+    &__button {
+        &--newsletter {
+            background: $colorButton;
+            width: 100%;
+            top: auto;
+            left: 0;
+            border-radius: 0.5rem;
+        }
+    }
+}
+
+.newsletter {
+    margin-bottom: 6rem;
+
+    .#{$namespace}input__control {
+        margin-bottom: 1rem;
     }
 }
 
