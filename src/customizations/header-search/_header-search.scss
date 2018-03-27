@@ -1,7 +1,7 @@
 .#{$namespace}header-search {
     $root: &;
     background-color: $colorWhite;
-    fill: $colorPictonBlue;
+    fill: $color-icon-second;
 
     &__input {
         border-radius: 0.5rem !important;
@@ -29,7 +29,7 @@
     }
 
     &__autocomplete {
-        border: 0.2rem solid $colorBorderAlto;
+        border: 0.2rem solid $color-border-second;
         background-color: $colorWhite;
         border-bottom-left-radius: 0.5rem;
         border-bottom-right-radius: 0.5rem;
@@ -37,7 +37,7 @@
         margin-top: -0.7rem;
 
         .autocomplete-list {
-            border-top: 0.2rem solid $colorBorderAlto;
+            border-top: 0.2rem solid $color-border-second;
         }
 
         dl dt {
@@ -58,7 +58,7 @@
             }
 
             &.title-product ~ dd:not(:empty) {
-                border-bottom: 0.2rem solid $colorBorderAlto;
+                border-bottom: 0.2rem solid $color-border-second;
 
                 &:last-child {
                     border-bottom: none;

@@ -1,0 +1,38 @@
+<?php
+/** @var \Creativestyle\FrontendExtension\Helper\Store $storeHelper */
+$storeHelper = $this->helper('Creativestyle\FrontendExtension\Helper\Store');
+$customerHelper = $this->helper('Creativestyle\FrontendExtension\Helper\Customer');
+$currentStoreId = $storeHelper->getCurrentStoreId();
+?>
+<div class="cs-footer__columns">
+    <div class="cs-footer__column | cs-collapse cs-collapse--only-mobile">
+
+        <?php echo $this->getLayout()
+        ->createBlock('Magento\Cms\Block\Block')
+        ->setCacheKey('footer_links_1'.$currentStoreId)
+        ->setCacheLifetime(86400)
+        ->setBlockId('footer_links_1')
+        ->toHtml();
+    ?>
+    </div>
+
+    <div class="cs-footer__column | cs-collapse cs-collapse--only-mobile">
+    <?php echo $this->getLayout()
+        ->createBlock('Magento\Cms\Block\Block')
+        ->setCacheKey('footer_links_2'.$currentStoreId)
+        ->setCacheLifetime(86400)
+        ->setBlockId('footer_links_2')
+        ->toHtml();
+    ?>
+    </div>
+    <div class="cs-footer__column | cs-collapse cs-collapse--only-mobile">
+    <?php echo $this->getLayout()
+        ->createBlock('Magento\Cms\Block\Block')
+        ->setCacheKey('footer_links_3'.$currentStoreId)
+        ->setCacheLifetime(86400)
+        ->setBlockId('footer_links_3')
+        ->toHtml();
+    ?>
+    </div>
+
+</div>

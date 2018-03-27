@@ -1,76 +1,77 @@
 .#{$namespace}button {
     $root: &;
     border-radius: 0.5rem;
-    border-color: $colorPictonBlue;
-    background: $colorPictonBlue;
+    border-color: $color-first;
+    background: $color-first;
     color: $colorWhite;
     font-weight: 400;
     font-size: 1.5rem;
+    padding: 0.75rem 2.5rem;
 
     &:focus,
     &:active,
     &:hover {
         color: $colorWhite;
-        background-color: $colorAlto;
-        border: 0.2rem solid $colorAlto;
+        background-color: $color-second;
+        border: 0.2rem solid $color-second;
     }
 
     &--look {
         &_default {
-            border: 0.2rem solid $colorBorderPictonBlue;
+            border: 0.2rem solid $color-border-first;
             color: $colorWhite;
 
             &:hover,
             &:active,
             &:focus {
-                border: 0.2rem solid $colorAlto;
+                border: 0.2rem solid $color-second;
                 color: $colorWhite;
-                background-color: $colorAlto;
+                background-color: $color-second;
             }
 
             &:visited {
                 color: $colorWhite;
-                border-color: $colorPictonBlue;
-                background: $colorPictonBlue;
+                border-color: $color-first;
+                background: $color-first;
 
                 &:hover,
                 &:active,
                 &:focus {
-                    border: 0.2rem solid $colorAlto;
+                    border: 0.2rem solid $color-second;
                     color: $colorWhite;
-                    background-color: $colorAlto;
+                    background-color: $color-second;
                 }
             }
         }
 
         &_light {
-            border: 0.2rem solid $colorPictonBlue;
+            border: 0.2rem solid $color-first;
             background-color: $colorWhite;
-            color: $colorPictonBlue;
-            border-color: $colorPictonBlue;
+            color: $color-first;
+            border-color: $color-first;
 
             &:hover,
             &:active,
             &:focus {
-                border: 0.2rem solid $colorPictonBlue;
-                background-color: $colorPictonBlue;
+                border: 0.2rem solid $color-first;
+                background-color: $color-first;
                 color: $colorWhite;
 
                 #{$root}__icon {
-                    fill: $colorPictonBlue;
+                    fill: $color-first;
                 }
             }
 
             &:visited {
                 background-color: $colorWhite;
-                color: $colorPictonBlue;
-                border-color: $colorBorderPictonBlue;
+                color: $color-first;
+                border-color: $color-border-first;
 
                 &:hover,
                 &:active,
                 &:focus {
-                    border: 0.2rem solid $colorPictonBlue;
-                    background-color: $colorPictonBlue;
+                    border: 0.2rem solid $color-first;
+                    background-color: $color-first;
                     color: $colorWhite;
 
                     #{$root}__icon {
@@ -80,7 +81,7 @@
             }
 
             #{$root}__icon {
-                fill: $colorPictonBlue;
+                fill: $color-first;
             }
         }
 
@@ -95,10 +96,10 @@
             border-radius: 3px;
 
             &:hover {
-                border: 1px solid $colorPictonBlue;
+                border: 1px solid $color-first;
 
                 #{$root}__remove-icon {
-                    fill: $colorPictonBlue;
+                    fill: $color-first;
                 }
             }
         }
@@ -107,14 +108,14 @@
             min-width: 5rem;
             transform: skew(0) translateX(0);
             border: none;
-            border-left: 0.1rem solid $colorBorderAlto;
+            border-left: 0.1rem solid $color-border-second;
             border-radius: 0;
             background-color: transparent;
 
             &:hover {
                 border: none;
                 border-left: 0.1rem solid transparent;
-                background: $colorPictonBlue;
+                background: $color-first;
 
                 #{$root}__icon {
                     transform: skew(0deg) translate(-50%, -50%);
@@ -127,10 +128,10 @@
 
             &[disabled] {
                 &:hover {
-                    background-color: $colorPictonBlue;
+                    background-color: $color-first;
 
                     &:before {
-                        background-color: $colorPictonBlue;
+                        background-color: $color-first;
                     }
                 }
             }
@@ -165,10 +166,10 @@
             @extend .cs-button--look_default;
             @extend .cs-button--type_long;
             background: $colorWhite;
-            color: $colorPictonBlue;
+            color: $color-first;
 
             #{$root}__icon {
-                fill: $colorPictonBlue;
+                fill: $color-first;
             }
 
             &:after {
@@ -177,21 +178,21 @@
         }
 
         &_cart-short {
-            border: 0.2rem solid $colorBorderAlto;
+            border: 0.2rem solid $color-border-second;
             background-color: $colorWhite;
-            border-color: $colorBorderAlto;
+            border-color: $color-border-second;
             min-width: min-content;
             padding: 0;
             width: 5rem;
 
             #{$root}__icon {
-                fill: $colorPictonBlue;
+                fill: $color-first;
             }
 
             &:hover,
             &:active,
             &:focus {
-                border: 0.2rem solid $colorPictonBlue;
+                border: 0.2rem solid $color-first;
                 background-color: $colorWhite;
             }
         }
@@ -199,20 +200,20 @@
         &_more-content {
             font-weight: 400;
             color: $colorWhite;
-            background: $colorPictonBlue;
-            border: 0.2rem solid $colorPictonBlue;
+            background: $color-first;
+            border: 0.2rem solid $color-first;
             border-radius: 0.5rem;
             box-shadow: none;
-            min-width: 18rem;
+            min-width: 16.5rem;
             height: 4rem;
-            padding: 0.9rem 3.5rem 3rem 2.5rem;
+            padding: 0.75rem 2rem;
 
             &:hover,
             &:active,
             &:focus {
                 color: $colorWhite;
-                background: $colorAlto;
-                border: 0.2rem solid $colorAlto;
+                background: $color-second;
+                border: 0.2rem solid $color-second;
                 box-shadow: none;
             }
 
@@ -223,8 +224,8 @@
                 &:active,
                 &:focus {
                     color: $colorWhite;
-                    background: $colorAlto;
-                    border: 0.2rem solid $colorAlto;
+                    background: $color-second;
+                    border: 0.2rem solid $color-second;
                     box-shadow: none;
                 }
             }
@@ -247,8 +248,9 @@
         right: 1rem;
 
         &--search {
-            width: 2.4rem;
-            height: 2.2rem;
+            width: 1.8rem;
+            height: 1.8rem;
+            fill: $color-icon-first;
         }
 
         &--plus {

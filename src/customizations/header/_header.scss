@@ -15,7 +15,7 @@
 
     &__burger {
         &:after {
-            background: $colorPictonBlue;
+            background: $color-icon-second;
         }
 
         &--active {
@@ -23,14 +23,14 @@
             &:active,
             &:focus,
             &:hover {
-                background: $colorPictonBlue;
+                background: $color-icon-second;
             }
 
             #{$root}__burger-icon {
                 &,
                 &:before,
                 &:after {
-                    background: $colorWhite;
+                    background: $color-icon-second;
                 }
             }
         }
@@ -40,13 +40,13 @@
         &,
         &:before,
         &:after {
-            background: $colorPictonBlue;
+            background: $color-icon-second;
         }
     }
 
     &__search {
         @include media('>=tablet') {
-            left: 33%;
+            left: 31%;
         }
     }
 

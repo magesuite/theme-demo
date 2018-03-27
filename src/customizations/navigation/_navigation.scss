@@ -7,7 +7,7 @@
         box-shadow: none;
 
         &--visible {
-            border: 0.2rem solid $colorBorderAlto;
+            border: 0.2rem solid $color-border-second;
             border-radius: 0.5rem;
         }
     }
@@ -16,7 +16,7 @@
         border: 0.2rem solid $colorWhite;
 
         &:hover {
-            border: 0.2rem solid $colorBorderAlto;
+            border: 0.2rem solid $color-border-second;
             border-bottom-color: $colorWhite;
             border-top-left-radius: 0.5rem;
             border-top-right-radius: 0.5rem;
@@ -57,23 +57,23 @@
     &__link {
         font-size: 1.4rem;
         text-transform: capitalize;
-        color: $colorWoodsmoke;
+        color: $color-text-dark;
         position: relative;
 
         &:hover {
             text-decoration: none;
-            color: $colorPictonBlue;
+            color: $color-text-hover;
         }
 
         &--category {
-            border-color: $colorAlto;
+            border-color: $color-second;
         }
     }
 
     &__products {
         &-header {
             @extend .#{$namespace}navigation__category;
-            border-bottom: 0.1rem solid $colorAlto;
+            border-bottom: 0.1rem solid $color-second;
             font-weight: 700;
             text-transform: uppercase;
             font-size: 0.9em;
