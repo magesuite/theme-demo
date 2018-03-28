@@ -5,10 +5,10 @@ $newsletter = __('Register for the newsletter and get access to special offer');
 ?>
 <div class="cs-footer__column cs-footer__column--newsletter">
     <div class="cs-footer__newsletter">
-        <svg class="cs-footer__newsletter-icon">
-            <use xlink:href="#newsletter"></use>
-        </svg>
-        <div class="cs-footer__column-title cs-footer__column-title--clear "><?php echo $newsletter ?></div>
+        <div class="cs-footer__icon-wrapper">
+            <img src="<?php /* @escapeNotVerified */ echo $block->getViewFileUrl('images/newsletter.png'); ?>" alt="Newsletter">
+        </div>
+        <div class="cs-footer__column-title cs-footer__column-title--clear cs-footer__column-title--newsletter"><?php echo $newsletter ?></div>
     </div>
     <div class="cs-footer__list">
         <form
@@ -39,7 +39,4 @@ $newsletter = __('Register for the newsletter and get access to special offer');
             </div>
         </form>
     </div>
-    <span class="cs-footer__info">
-        <?php /* @escapeNotVerified */ echo __('Please enter a valid e-mail address (eg: johndoe@domain.com)')?>
-    </span>
 </div>

@@ -17,7 +17,7 @@
         &--newsletter {
             border-top: none;
             width: 76%;
-            margin: auto;
+            margin: 0 auto;
 
             @include media('<tablet') {
                 width: 90%;
@@ -42,8 +42,8 @@
         color: $color-footer-text;
         font-weight: 700;
         letter-spacing: 0;
-        border-top: none;
         text-transform: lowercase;
+        border-top: 0.2rem solid $color-border-second;
 
         &:first-letter {
             text-transform: uppercase;
@@ -55,11 +55,16 @@
         }
 
         #{$root}__column:first-child & {
-            border-top: none;
+            border-top: 0.2rem solid $color-border-second;
         }
 
         @include media('>=tablet') {
-            border-top: none;
+            border-top: none !important;
+        }
+
+        &--newsletter {
+            border-top: none !important;
+            padding: 0;
         }
     }
 
@@ -68,20 +73,44 @@
     }
 
     &__right {
-        order: -1;
-        flex-basis: 27%;
+        flex-basis: 35%;
+        padding-top: 2rem;
+        border-top: 0.2rem solid $color-border-second;
+
+        @include media('>=tablet') {
+            padding-top: 0;
+            order: -1;
+            border: none;
+        }
+
+        .#{$namespace}footer__list {
+            padding: 0;
+        }
     }
 
     &__left {
-        flex-basis: 73%;
+        flex-basis: 65%;
     }
 
     &__wrapper {
-        border-bottom: 0.1rem solid $colorAlto;
+        flex-direction: column;
+
+        @include media('>=tablet') {
+            border-bottom: 0.2rem solid $color-border-second;
+            flex-direction: row;
+        }
     }
 
     &__newsletter {
         display: flex;
+        align-items: flex-start;
+        margin-bottom: 1rem;
+
+        @include media('<tablet') {
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
     }
 
     &__newsletter-icon {
@@ -89,14 +118,34 @@
         width: 5rem;
     }
 
-    &__info {
-        width: 100%;
-        display: block;
-        font-size: 1.1rem;
-        color: $color-footer-text-light;
+    &__icon-wrapper {
+        height: 4rem;
+        width: 5.5rem;
+        margin-right: 1rem;
 
-        @include media('<tablet') {
-            margin: 0.5rem 0;
+        img {
+            height: auto;
+            width: auto;
+            max-width: 100% !important;
+            max-height: 100% !important;
         }
+
+        @include media('>=phone-lg') {
+            width: 4rem;
+        }
+
+        @include media('>=tablet') {
+            width: 10rem;
+        }
+
+        @include media('>=laptop') {
+            height: 5rem;
+            width: 8rem;
+        }
+    }
+
+    .#{$namespace}form {
+        min-height: 9.5rem;
+        max-height: 25rem;
     }
 }
