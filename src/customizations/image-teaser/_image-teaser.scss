@@ -74,11 +74,11 @@
 
     &__text {
         line-height: 1.18;
-        color: $colorDoveGray;
+        color: $color-teaser-dark-scheme-text;
         font-weight: 400;
 
         #{$root}__slide--scheme-light & {
-            color: $colorWhite;
+            color: $color-teaser-light-scheme-text;
         }
 
         @include media('<laptop') {

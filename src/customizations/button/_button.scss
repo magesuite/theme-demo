@@ -8,6 +8,13 @@
     font-size: 1.5rem;
     padding: 0.75rem 2.5rem;
 
+    //Basic design do not have arrow on buttons so padding should be the same from both sides.
+    padding: 0.9rem 1.5rem;
+
+    @include media('>=phone-lg') {
+        padding: 0.9rem 2.5rem;
+    }
+
     &:focus,
     &:active,
     &:hover {
