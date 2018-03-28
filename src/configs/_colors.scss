@@ -3,6 +3,7 @@ $colorConcrete: #f3f3f3;
 $colorEdward: #adb9b7;
 $colorStTropaz: #2a5ca6;
 $colorThunderbird: #ca321e;
+$colorDustyGray: #989898;
 
 // We need to name color more by their position in that project. Variable should have default flah here
 
@@ -14,8 +15,7 @@ $color-pagebottom-text: #a6a6a6 !default;
 
 //Headline
 $color-headline: #000 !default;
-$color-subheadline: #010000 !default;
-$colorDustyGray: #989898;
+$color-subheadline: #989898 !default;
 
 //Image teasers
 $color-teaser-dark-scheme-headline: #000 !default;
@@ -28,8 +28,6 @@ $color-teaser-light-scheme-text: #fff !default;
 $color-pagination-arrow: #35abdf !default;
 $color-pagination-active: #182b5f !default;
 $color-pagination-active-hero: #35abdf !default;
-
-
 
 //Hero
 $color-hero-dark-scheme-headline: #000 !default;
