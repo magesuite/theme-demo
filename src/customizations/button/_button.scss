@@ -30,6 +30,7 @@
             }
 
             &:visited {
+                border: 0.2rem solid $color-second;
                 color: $colorWhite;
                 border-color: $color-first;
                 background: $color-first;

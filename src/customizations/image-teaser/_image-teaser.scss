@@ -64,6 +64,7 @@
     }
 
     &__subheadline {
+        padding-left: 0;
         color: $color-teaser-dark-scheme-subheadline;
 
         #{$root}__slide--scheme-light & {

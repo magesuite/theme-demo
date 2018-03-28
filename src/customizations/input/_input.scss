@@ -65,6 +65,9 @@
         &.mage-error,
         ._error & {
             border-color: $colorCrimson;
+            margin-bottom: 6rem;
+            font-size: 1.1rem;
+            color: $color-text-light !important;
         }
 
         &:disabled {
@@ -247,7 +250,7 @@
         &--newsletter {
             background: $colorButton;
             width: 100%;
-            top: auto;
+            top: 5rem;
             left: 0;
             border-radius: 0.5rem;
         }
@@ -255,8 +258,6 @@
 }
 
 .newsletter {
-    margin-bottom: 6rem;
-
     .#{$namespace}input__control {
         margin-bottom: 1rem;
     }
