@@ -88,7 +88,10 @@
 
     &__cta {
         .#{$namespace}button--type_long {
-            font-size: 1.19rem;
+            font-size: 1.5rem;
+            max-width: 18.5rem;
+            text-indent: 0;
+            padding: 0.9rem 2.5rem;
         }
     }
 
