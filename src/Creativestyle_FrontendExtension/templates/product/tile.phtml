@@ -15,27 +15,14 @@
             $addToCart = '';
             $addToCartText = __('Add to cart');
             $addToCartUrl = $productHelper->getAddToCartUrl($product->getId());
-            $oldPrice = $product->getPriceInfo()->getPrice('regular_price')->getAmount()->getValue();
-            $finalPrice = $product->getPriceInfo()->getPrice('final_price')->getAmount()->getValue();
-            $pricingHelper = $this->helper('Magento\Framework\Pricing\Helper\Data');
 
-            $showDetails = '<a href="'. $product->getProductUrl() .'">
-                                    <button class="cs-button cs-button--type_wide">
-                                        <span class="cs-button__span">' . __('Details') . '</span>
-                                    </button>
-                                </a>';
-
-            $addToCart =
-            '<div class="cs-grid-product__info">
-                <div class="price-box"> <span class="price"> '. $pricingHelper->currency($oldPrice,true,false) . ' </span></div>
+            $addToCart = '
+            <div class="cs-grid-product__info"> ' . $block->getProductPrice($product) . '
                 <form data-role="tocart-form" action="' . $addToCartUrl . '" method="post">
                     <input type="hidden" name="product" value="' . $postParams['data']['product'] . '">' . $block->getBlockHtml('formkey') . '
                     <button type="submit"
-                            title="' . $block->escapeHtml($addToCartText) . '"
-                            class="tocart | cs-button cs-button--type_cart-short">
-                        <svg class="cs-button__icon cs-button__icon--cart">
-                            <use xlink:href="#cart"></use>
-                        </svg>
+                        title="' . $block->escapeHtml($addToCartText) . '"
+                        class="tocart | cs-button--type_grid-tocart">
                     </button>
                 </form>
             </div>';
@@ -76,14 +63,7 @@
                     'height' => '270'
                 ],
                 'name' => $helper->productAttribute($product, $product->getName(), 'name'),
-                'addons' => [
-                    'bottom' => [
-                        [
-                            'mix' => 'cs-grid-product__addon--show-details',
-                            'content' => $showDetails
-                        ]
-                    ]
-                ],
+                'priceMoved' => true,
                 'hotspots' => [
                     'after' => [
                         'name' =>  $addToCart
