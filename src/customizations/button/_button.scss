@@ -185,23 +185,39 @@
             }
         }
 
-        &_cart-short {
-            border: 0.2rem solid $color-border-second;
+        &_grid-tocart {
+            @extend .#{$namespace}button;
+            @extend .#{$namespace}button--look_default;
+            @extend .#{$namespace}button--size_300;
+
+            border: 0.2rem solid $color-second;
             background-color: $colorWhite;
             border-color: $color-border-second;
             min-width: min-content;
             padding: 0;
             width: 5rem;
-
-            #{$root}__icon {
-                fill: $color-first;
-            }
+            height: 3.5rem;
+            position: relative;
 
             &:hover,
             &:active,
             &:focus {
-                border: 0.2rem solid $color-first;
+                border: 0.2rem solid $color-border-first;
                 background-color: $colorWhite;
+            }
+
+            &:after {
+                content: '';
+                position: absolute;
+                background: url('images/cart.svg');
+                width: 2.3rem;
+                height: 2.2rem;
+                top: 15%;
+                left: 25%;
+            }
+
+            .#{$namespace}button__span {
+                display: none;
             }
         }
 

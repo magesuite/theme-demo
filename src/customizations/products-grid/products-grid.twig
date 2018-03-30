@@ -13,17 +13,8 @@
 
 {% for product in products %}
 
-    {% set bottomAddons = [] %}
     {% set productMix = 'cs-products-grid__item' %}
-    {% set showDetails = '<a href="' ~ product.url ~ '">
-                            <button | cs-button cs-button--type_wide">
-                                <span class="cs-button__span">' ~ translate('Details') ~ '</span>
-                            </button>
-                        </a>' %}
-
-    {% set bottomAddons = bottomAddons|merge( [ {
-        content: showDetails
-    } ] ) %}
+    {% set bottompart = product.addToCartButtonHtml %}
 
     {% set content %}
         {% include locate( 'grid-product/grid-product.twig' ) with {
@@ -37,13 +28,14 @@
                 alt: product.name,
             },
             name: product.name,
-
-            addons: {
-                bottom: bottomAddons
-            },
+            priceMoved: true,
             hotspots: {
                 after: {
-                    name: showDetails
+                    name: '
+                    <div class="cs-grid-product__info">
+                        ' ~ product.price ~ '
+                        ' ~ bottompart ~'
+                    </div>'
                 }
             }
         } %}
