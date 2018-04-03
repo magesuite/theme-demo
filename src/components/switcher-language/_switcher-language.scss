@@ -70,13 +70,13 @@
                 margin-right: 0.6rem;
             }
 
-            &.view-de {
+            &[class*="de"] {
                 &:before {
                     background-image: url('images/de.svg');
                 }
             }
 
-            &.view-en {
+            &[class*="en"] {
                 &:before {
                     background-image: url('images/en.svg');
                 }
@@ -154,13 +154,13 @@
                 margin-right: 0.6rem;
             }
 
-            .view-de & {
+            *[class*="de"] & {
                 &:before {
                     background-image: url('images/de.svg');
                 }
             }
 
-            .view-en & {
+            *[class*="en"] & {
                 &:before {
                     background-image: url('images/en.svg');
                 }
