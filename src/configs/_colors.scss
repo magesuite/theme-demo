@@ -14,10 +14,10 @@ $color-language-switcher-bg: #f3f3f3 !default;
 $color-pagebottom-text: #a6a6a6 !default;
 
 //Footer
-$color-footer-background: #fff;
-$color-footer-text: #151616;
-$color-footer-text-hover: #35abdf;
-$color-footer-text-light: #a7aaaa;
+$color-footer-background: #fff !default;
+$color-footer-text: #151616 !default;
+$color-footer-text-hover: #35abdf !default;
+$color-footer-text-light: #a7aaaa !default;
 
 //Headline
 $color-headline: #000 !default;
@@ -44,19 +44,36 @@ $color-hero-light-scheme-subheadline: #fff !default;
 $color-hero-light-scheme-text: #fff !default;
 
 //Icons
-$color-icon-first: #00316e;
-$color-icon-second: #35abdf;
+$color-icon-first: #00316e !default;
+$color-icon-second: #35abdf !default;
 
-//Borders
-$color-first: #35abdf;
-$color-border-first: rgba(53, 171, 223, 0.6);
-$color-second: #d1d1d1;
-$color-border-second: rgba(209, 209, 209, 0.3);
+//Buttons
+$color-button-default-text: #fff !default;
+$color-button-default-background: #35abdf !default;
+$color-button-default-border: #35abdf !default;
+$color-button-default-text-hover: #fff !default;
+$color-button-default-hover: rgba(53, 171, 223, 0.6)  !default;
+$color-button-default-background-hover: #d1d1d1  !default;
+$color-button-default-border-hover: rgba(209, 209, 209, 0.3)  !default;
+
+$color-button-light-text: #fff !default;
+$color-button-light-background: #35abdf !default;
+$color-button-light-border: #35abdf !default;
+$color-button-light-text-hover: #fff;
+$color-button-light-hover: rgba(53, 171, 223, 0.6)  !default;
+$color-button-light-background-hover: #d1d1d1  !default;
+$color-button-light-border-hover: rgba(209, 209, 209, 0.3)  !default;
+
+
+$color-first: #35abdf !default;
+$color-border-first: rgba(53, 171, 223, 0.6)  !default;
+$color-second: #d1d1d1  !default;
+$color-border-second: rgba(209, 209, 209, 0.3)  !default;
 
 // Text
-$color-text-light: #a4a4a4;
-$color-text-dark: #151616;
-$color-text-hover: #35abdf;
+$color-text-light: #a4a4a4  !default;
+$color-text-dark: #151616  !default;
+$color-text-hover: #35abdf  !default;
 
 // Badges
 $colorMercury: #e8e8e8;
@@ -65,4 +82,4 @@ $colorMercury: #e8e8e8;
 $colorButton: #35abdf;
 
 //Link
-$color-link: #35abdf;
+$color-link: #35abdf !default;

@@ -1,92 +1,84 @@
 .#{$namespace}button {
     $root: &;
     border-radius: 0.5rem;
-    border-color: $color-first;
-    background: $color-first;
-    color: $colorWhite;
+    border-color: $color-button-default-border;
+    background: $color-button-default-background;
+    color: $color-button-default-text;
     font-weight: 400;
     font-size: 1.5rem;
-    padding: 0.75rem 2.5rem;
-
     //Basic design do not have arrow on buttons so padding should be the same from both sides.
     padding: 0.9rem 1.5rem;
 
     @include media('>=phone-lg') {
-        padding: 0.9rem 2.5rem;
+        padding: 0.9rem 2.9rem;
     }
 
     &:focus,
     &:active,
     &:hover {
-        color: $colorWhite;
-        background-color: $color-second;
-        border: 0.2rem solid $color-second;
+        color: $color-button-default-text-hover;
+        background-color: $color-button-default-background-hover;
+        border: 0.2rem solid $color-button-default-border-hover;
     }
 
     &--look {
         &_default {
-            border: 0.2rem solid $color-border-first;
-            color: $colorWhite;
+            border: 0.2rem solid $color-button-default-border;
+            color: $color-button-default-text;
+            background: $color-button-default-background;
 
             &:hover,
             &:active,
             &:focus {
-                border: 0.2rem solid $color-second;
-                color: $colorWhite;
-                background-color: $color-second;
+                border: 0.2rem solid $color-button-default-border-hover;
+                color: $color-button-default-text-hover;
+                background-color: $color-button-default-background-hover;
             }
 
             &:visited {
-                border: 0.2rem solid $color-second;
-                color: $colorWhite;
-                border-color: $color-first;
-                background: $color-first;
+                border: 0.2rem solid $color-button-default-border;
+                color: $color-button-default-text;
+                border-color: $color-button-default-border;
+                background: $color-button-default-background;
 
                 &:hover,
                 &:active,
                 &:focus {
-                    border: 0.2rem solid $color-second;
-                    color: $colorWhite;
-                    background-color: $color-second;
+                    border: 0.2rem solid $color-button-default-border-hover;
+                    color: $color-button-default-text-hover;
+                    background-color: $color-button-default-background-hover;
                 }
             }
         }
 
         &_light {
-            border: 0.2rem solid $color-first;
-            background-color: $colorWhite;
-            color: $color-first;
-            border-color: $color-first;
+            border: 0.2rem solid $color-button-light-border;
+            color: $color-button-light-text;
+            background: $color-button-light-background;
 
             &:hover,
             &:active,
             &:focus {
-                border: 0.2rem solid $color-first;
-                background-color: $color-first;
-                color: $colorWhite;
-
-                #{$root}__icon {
-                    fill: $color-first;
-                }
+                border: 0.2rem solid $color-button-light-border-hover;
+                color: $color-button-light-text-hover;
+                background-color: $color-button-light-background-hover;
             }
 
             &:visited {
-                background-color: $colorWhite;
-                color: $color-first;
-                border-color: $color-border-first;
+                border: 0.2rem solid $color-button-light-border;
+                color: $color-button-light-text;
+                border-color: $color-button-light-border;
+                background: $color-button-light-background;
 
                 &:hover,
                 &:active,
                 &:focus {
-                    border: 0.2rem solid $color-first;
-                    background-color: $color-first;
-                    color: $colorWhite;
-
-                    #{$root}__icon {
-                        fill: $colorWhite;
-                    }
+                    border: 0.2rem solid $color-button-light-border-hover;
+                    color: $color-button-light-text-hover;
+                    background-color: $color-button-light-background-hover;
                 }
             }
+
 
             #{$root}__icon {
                 fill: $color-first;
