@@ -153,12 +153,22 @@
             border: 0.5rem solid $colorWhite;
             margin-right: 1rem;
 
+            @include media('<tablet') {
+                background-color: $colorConcrete;
+                border: 0.5rem solid $colorConcrete;
+            }
+
             &:hover,
             &:focus,
             &:active {
                 background-color: $color-pagination-active-hero;
                 border: 0.5rem solid $color-pagination-active-hero;
                 box-shadow: none;
+
+                @include media('<tablet') {
+                    background-color: $colorConcrete;
+                    border: 0.5rem solid darken($colorConcrete, 10%);
+                }
 
                 @include media('>=tablet') {
                     background-color: $color-pagination-active-hero;
@@ -169,6 +179,10 @@
                 background-color: $color-pagination-active-hero;
                 border: 0.5rem solid $colorWhite;
                 box-shadow: none;
+
+                @include media('<tablet') {
+                    border: 0.5rem solid $colorConcrete;
+                }
 
                 &:hover,
                 &:focus,
