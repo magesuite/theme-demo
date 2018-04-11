@@ -45,41 +45,43 @@ $color-hero-light-scheme-text: #fff !default;
 
 //Icons
 $color-icon-first: #00316e !default;
+$color-icon-first-hover: #002758 !default;
 $color-icon-second: #35abdf !default;
+$color-icon-second-hover: #139ec5 !default;
 
-//Buttons
+// Buttons
 $color-button-default-text: #fff !default;
 $color-button-default-background: #35abdf !default;
 $color-button-default-border: #35abdf !default;
 $color-button-default-text-hover: #fff !default;
-$color-button-default-hover: rgba(53, 171, 223, 0.6)  !default;
-$color-button-default-background-hover: #d1d1d1  !default;
-$color-button-default-border-hover: rgba(209, 209, 209, 0.3)  !default;
+$color-button-default-hover: #139ec5 !default;
+$color-button-default-background-hover: #139ec5 !default;
+$color-button-default-border-hover: #139ec5 !default;
 
-$color-button-light-text: #fff !default;
-$color-button-light-background: #35abdf !default;
-$color-button-light-border: #35abdf !default;
-$color-button-light-text-hover: #fff !default;
-$color-button-light-hover: rgba(53, 171, 223, 0.6)  !default;
-$color-button-light-background-hover: #d1d1d1  !default;
-$color-button-light-border-hover: rgba(209, 209, 209, 0.3)  !default;
-
+$color-button-light-text: #464646 !default;
+$color-button-light-background: #fff !default;
+$color-button-light-border: #d0d0d0 !default;
+$color-button-light-text-hover: #139ec5 !default;
+$color-button-light-hover: #139ec5 !default;
+$color-button-light-background-hover: #fff !default;
+$color-button-light-border-hover: #139ec5 !default;
 
 $color-first: #35abdf !default;
-$color-border-first: rgba(53, 171, 223, 0.6)  !default;
-$color-second: #d1d1d1  !default;
-$color-border-second: rgba(209, 209, 209, 0.3)  !default;
+$color-border-first: rgba(53, 171, 223, 0.6) !default;
+$color-second: #d1d1d1 !default;
+$color-border-second: rgba(209, 209, 209, 0.3) !default;
 
 // Text
-$color-text-light: #a4a4a4  !default;
-$color-text-dark: #151616  !default;
-$color-text-hover: #35abdf  !default;
+$color-text-light: #a4a4a4 !default;
+$color-text-dark: #151616 !default;
+$color-text-hover: #35abdf !default;
 
 // Badges
 $colorMercury: #e8e8e8;
 
-// Buttons
-$colorButton: #35abdf;
+// Lines
+$color-line: #e5e5e5;
 
 //Link
 $color-link: #35abdf !default;
+$color-link-hover: #139ec5 !default;

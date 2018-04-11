@@ -4,6 +4,7 @@
     border-color: $color-button-default-border;
     background: $color-button-default-background;
     color: $color-button-default-text;
+
     font-weight: 400;
     font-size: 1.5rem;
     //Basic design do not have arrow on buttons so padding should be the same from both sides.
@@ -17,26 +18,26 @@
     &:active,
     &:hover {
         color: $color-button-default-text-hover;
-        background-color: $color-button-default-background-hover;
-        border: 0.2rem solid $color-button-default-border-hover;
+        background-color: $color-button-default-hover;
+        border: 0.1rem solid $color-button-default-hover;
     }
 
     &--look {
         &_default {
-            border: 0.2rem solid $color-button-default-border;
+            border: 0.1rem solid $color-button-default-border;
             color: $color-button-default-text;
             background: $color-button-default-background;
 
             &:hover,
             &:active,
             &:focus {
-                border: 0.2rem solid $color-button-default-border-hover;
+                border: 0.1rem solid $color-button-default-border-hover;
                 color: $color-button-default-text-hover;
                 background-color: $color-button-default-background-hover;
             }
 
             &:visited {
-                border: 0.2rem solid $color-button-default-border;
+                border: 0.1rem solid $color-button-default-border;
                 color: $color-button-default-text;
                 border-color: $color-button-default-border;
                 background: $color-button-default-background;
@@ -44,7 +45,7 @@
                 &:hover,
                 &:active,
                 &:focus {
-                    border: 0.2rem solid $color-button-default-border-hover;
+                    border: 0.1rem solid $color-button-default-border-hover;
                     color: $color-button-default-text-hover;
                     background-color: $color-button-default-background-hover;
                 }
@@ -52,33 +53,40 @@
         }
 
         &_light {
-            border: 0.2rem solid $color-button-light-border;
+            border: 0.1rem solid $color-button-light-border;
+            background-color: $color-button-light-background;
             color: $color-button-light-text;
-            background: $color-button-light-background;
+            border-color: $color-button-light-border;
 
             &:hover,
             &:active,
             &:focus {
-                border: 0.2rem solid $color-button-light-border-hover;
+                border: 0.1rem solid $color-button-light-border-hover;
                 color: $color-button-light-text-hover;
                 background-color: $color-button-light-background-hover;
+
+                #{$root}__icon {
+                    fill: $color-first;
+                }
             }
 
             &:visited {
-                border: 0.2rem solid $color-button-light-border;
+                background-color: $color-button-light-background;
                 color: $color-button-light-text;
                 border-color: $color-button-light-border;
-                background: $color-button-light-background;
 
                 &:hover,
                 &:active,
                 &:focus {
-                    border: 0.2rem solid $color-button-light-border-hover;
-                    color: $color-button-light-text-hover;
+                    border: 0.1rem solid $color-button-light-border-hover;
                     background-color: $color-button-light-background-hover;
+                    color: $color-button-light-text-hover;
+
+                    #{$root}__icon {
+                        fill: $colorWhite;
+                    }
                 }
             }
-
 
             #{$root}__icon {
                 fill: $color-first;
@@ -108,14 +116,11 @@
             min-width: 5rem;
             transform: skew(0) translateX(0);
             border: none;
-            border-left: 0.1rem solid $color-border-second;
             border-radius: 0;
-            background-color: transparent;
 
             &:hover {
                 border: none;
-                border-left: 0.1rem solid transparent;
-                background: $color-first;
+                background: $color-button-default-background;
 
                 #{$root}__icon {
                     transform: skew(0deg) translate(-50%, -50%);
@@ -127,11 +132,13 @@
             }
 
             &[disabled] {
+                background-color: transparent;
+
                 &:hover {
-                    background-color: $color-first;
+                    background-color: $color-button-default-background-hover;
 
                     &:before {
-                        background-color: $color-first;
+                        background-color: $color-button-default-background-hover;
                     }
                 }
             }
@@ -182,9 +189,9 @@
             @extend .#{$namespace}button--look_default;
             @extend .#{$namespace}button--size_300;
 
-            border: 0.2rem solid $color-second;
-            background-color: $colorWhite;
-            border-color: $color-border-second;
+            border: 0.1rem solid $color-button-light-border;
+            background-color: $color-button-light-background;
+            border-color: $color-button-light-border;
             min-width: min-content;
             padding: 0;
             width: 5rem;
@@ -194,14 +201,14 @@
             &:hover,
             &:active,
             &:focus {
-                border: 0.2rem solid $color-border-first;
+                border: 0.1rem solid $color-button-light-border-hover;
                 background-color: $colorWhite;
             }
 
             &:after {
                 content: '';
                 position: absolute;
-                background: url('images/cart.svg');
+                background: url('images/cart.svg') no-repeat;
                 width: 2.3rem;
                 height: 2.2rem;
                 top: 15%;
@@ -216,20 +223,20 @@
         &_more-content {
             font-weight: 400;
             color: $colorWhite;
-            background: $color-first;
-            border: 0.2rem solid $color-first;
+            background: $color-button-default-background;
+            border: 0.1rem solid $color-button-default-border;
             border-radius: 0.5rem;
             box-shadow: none;
             min-width: 16.5rem;
             height: 4rem;
-            padding: 0.75rem 2rem;
+            padding: 0.8rem 2rem;
 
             &:hover,
             &:active,
             &:focus {
                 color: $colorWhite;
-                background: $color-second;
-                border: 0.2rem solid $color-second;
+                background: $color-button-default-background-hover;
+                border: 0.1rem solid $color-button-default-border-hover;
                 box-shadow: none;
             }
 
@@ -240,8 +247,8 @@
                 &:active,
                 &:focus {
                     color: $colorWhite;
-                    background: $color-second;
-                    border: 0.2rem solid $color-second;
+                    background: $color-button-default-background-hover;
+                    border: 0.1rem solid $color-button-default-border-hover;
                     box-shadow: none;
                 }
             }
@@ -301,7 +308,7 @@
         fill: $colorGray;
 
         &:hover {
-            fill: $colorCeruleanBlue;
+            fill: $color-first;
         }
     }
 }

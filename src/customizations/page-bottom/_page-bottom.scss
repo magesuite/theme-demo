@@ -7,14 +7,14 @@
     flex-flow: column wrap;
     align-items: flex-start;
 
-    @include media( '>=tablet' ) {
+    @include media('>=tablet') {
         justify-content: space-between;
         padding: 3.3rem 0;
         flex-direction: row;
         align-items: center;
     }
 
-    @include media( '>=laptop' ) {
+    @include media('>=laptop') {
         flex-wrap: nowrap;
     }
 
@@ -36,14 +36,14 @@
         display: flex;
         align-items: center;
 
-        @include media( '>=phone-lg' ) {
+        @include media('>=phone-lg') {
             width: auto;
         }
 
         &--logo {
             padding-right: 6rem;
 
-            @include media( '<laptop' ) {
+            @include media('<laptop') {
                 display: none;
             }
 
@@ -68,13 +68,13 @@
         }
 
         &--shipping {
-            @include media( '<tablet' ) {
+            @include media('<tablet') {
                 padding: 1.5rem 0 0.8rem;
             }
         }
 
         &--payment {
-            @include media( '<tablet' ) {
+            @include media('<tablet') {
                 padding: 0.7rem 0 1.5rem;
             }
         }
@@ -85,7 +85,7 @@
         margin: 0;
         color: $color-pagebottom-text;
 
-        @include media( '<tablet' ) {
+        @include media('<tablet') {
             display: none;
         }
     }
@@ -97,7 +97,7 @@
         margin-left: 1.5rem;
         margin-bottom: 0;
 
-        @include media( '<tablet' ) {
+        @include media('<tablet') {
             width: 100%;
         }
     }

@@ -9,8 +9,9 @@
     text-align: center;
     color: $colorWhite;
     background: $colorCrimson;
-    box-shadow: 0 0 0 1px $colorWhite;
+    box-shadow: 0 0 0 0.1rem $colorWhite !important;
     transform: skew(0);
+    padding: 0.1rem 0.15rem 0.2rem 0.2rem;
 
     &--attention {
         background-color: $colorCrimson;
@@ -109,7 +110,7 @@
 
     &__span {
         color: $colorWhite;
-        font-weight: 700;
+        font-weight: 400;
         transform: skew(0);
         padding-top: 0.1rem;
     }

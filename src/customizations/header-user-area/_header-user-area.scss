@@ -1,79 +1,67 @@
 .#{$namespace}header-user-area {
     font-size: 1.3rem;
-    padding: 0 1.5rem;
-
-    @include media('>=laptop') {
-        padding: 0 0.75rem;
-    }
+    padding: 0 0.5rem;
+    flex: 0;
 
     &__section {
-        display: flex;
-        align-items: center;
-        padding: 0.2rem 0.75rem;
+        padding: 0.5rem 1.8rem 0;
         width: min-content;
+        border-left: 0.1rem solid $color-border-second;
 
         &:hover {
             text-decoration: none;
 
-            .#{$namespace}header-user-area__label {
-                color: $color-text-hover;
+            .#{$namespace}header-user-area__icon--my-account {
+                fill: $color-icon-first-hover;
+            }
+
+            .#{$namespace}header-user-area__icon--minicart {
+                fill: $color-icon-second-hover;
             }
         }
 
         &--minicart {
-            border: 0.2rem solid $color-border-first;
-            border-radius: 0.5rem;
-            position: relative;
+            @include media('>=laptop') {
+                padding-right: 0;
 
-            .#{$namespace}header-user-area__label {
-                padding-right: 3rem;
+                &:hover {
+                    svg {
+                        color: $color-text-hover;
+                    }
+                }
             }
         }
-    }
 
-    &__link {
-        display: flex;
-        align-items: center;
-
-        &:hover {
-            text-decoration: none;
-        }
-
-        > span.counter {
-            display: flex;
-            align-items: center;
+        &--my-account {
+            .#{$namespace}header-user-area__icon--my-account {
+                &:hover {
+                    fill: $color-icon-first-hover;
+                }
+            }
         }
     }
 
     &__icon {
         fill: $color-icon-second;
 
-        &:hover {
-            fill: $color-icon-second;
-        }
-
-        &--minicart {
-            width: 2.2rem;
-            height: 3.2rem;
-        }
-
         &--my-account {
             fill: $color-icon-first;
+
+            &:hover {
+                fill: $color-icon-first-hover;
+            }
         }
     }
 
     &__label {
         color: $color-text-light;
         text-decoration: none;
-        font-size: 12px;
+        font-size: 1rem;
         text-transform: capitalize;
-        padding-left: 1rem;
-        padding-right: 1rem;
-        display: none;
+        padding-top: 0.5rem;
 
         &:hover {
             text-decoration: none;
-            color: $color-text-hover;
         }
 
         @include media('>=tablet') {
@@ -86,12 +74,7 @@
     }
 
     &__badge {
-        top: -0.5rem;
-        left: 80%;
-
-        @include media('>=tablet') {
-            top: 0.9rem;
-            left: calc(100% - 3rem);
-        }
+        display: block;
+        left: 65%;
     }
 }

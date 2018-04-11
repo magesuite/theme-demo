@@ -6,7 +6,6 @@
 $breakpoints: () !default;
 $breakpoints: map-merge(
     $breakpoints,
-
     (
         phone: 23.13em,
         phone-lg: 30em,
