@@ -1,5 +1,14 @@
 .#{$namespace}t-headline {
-    @include t-headline($colorMineShaft, $base-font-family, 2.8rem, 2rem, 1.8rem, 1.4rem, 1.2rem, 1rem);
+    @include t-headline(
+        $color-text-dark,
+        $base-font-family,
+        2.8rem,
+        2rem,
+        1.8rem,
+        1.4rem,
+        1.2rem,
+        1rem
+    );
     text-transform: none;
 
     &--look {

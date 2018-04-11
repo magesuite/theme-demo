@@ -3,18 +3,51 @@
     background-color: $colorWhite;
     fill: $color-icon-second;
 
+    &__button-icon {
+        display: none;
+    }
+
+    &__button {
+        width: 4rem;
+        height: 3rem;
+        border-radius: 0.5rem;
+        top: 0.5rem;
+        right: 0.4rem;
+
+        .#{$namespace}button {
+            padding: 0 !important;
+            width: 4rem;
+            height: 3rem;
+            text-transform: uppercase;
+            font-size: 1.2rem;
+            min-height: 3rem;
+            min-width: 4rem;
+        }
+
+        span.#{$namespace}visually-hidden {
+            height: auto;
+            margin: auto;
+            overflow: hidden;
+            position: static;
+            width: auto;
+        }
+    }
+
     &__input {
         border-radius: 0.5rem !important;
+        padding-left: 4rem !important;
+        background: url('images/magnifier.svg') no-repeat 1rem 0.9rem !important;
+        background-size: 1.7rem 1.8rem !important;
+        padding-bottom: 0.5rem;
 
         &:focus + #{$root}__button {
             .ajax-loading & {
                 #{$root}__button-icon {
-                    transform: skew(0) translate(-5rem, -30%);
+                    transform: skew(0deg) translate(-8rem, -50%);
                 }
 
                 #{$root}__autocomplete-loader {
-                    transform: skew(0) translate3d(0, 0, 0);
-                    right: 1.3rem;
+                    transform: skew(0deg) translate3d(0, 0, 0);
                 }
             }
         }
@@ -25,19 +58,25 @@
     }
 
     &__autocomplete-loader {
+        top: 0.6rem;
+        left: 50%;
+        transform: translatex(-50%);
+        display: none !important;
         right: 1rem;
     }
 
     &__autocomplete {
-        border: 0.2rem solid $color-border-second;
+        border: 0.1rem solid $color-line;
         background-color: $colorWhite;
-        border-bottom-left-radius: 0.5rem;
-        border-bottom-right-radius: 0.5rem;
+        border-radius: 0.5rem;
         box-shadow: none;
-        margin-top: -0.7rem;
+        margin-top: -4.4rem;
+        padding-top: 4.5rem;
+        width: 102% !important;
+        left: -1%;
 
         .autocomplete-list {
-            border-top: 0.2rem solid $color-border-second;
+            border-top: 0.1rem solid $color-line;
         }
 
         .autocomplete-list-title {
@@ -62,7 +101,7 @@
             }
 
             &.title-product ~ dd:not(:empty) {
-                border-bottom: 0.2rem solid $color-border-second;
+                border-bottom: 0.1rem solid $color-line;
 
                 &:last-child {
                     border-bottom: none;
@@ -86,7 +125,7 @@
             .product-item {
                 .product-name {
                     font-size: 1.4rem;
-                    color: $colorBlack;
+                    color: $color-text-dark;
                     font-weight: 300;
                 }
 

@@ -1,6 +1,7 @@
 .#{$namespace}input {
     $root: &;
     font-size: 1rem;
+    font-family: $base-font-family;
 
     &.required,
     &._required,
@@ -50,7 +51,7 @@
         color: $colorMineShaft;
         background-color: $colorWhite;
         border-radius: 5px;
-        border: 0.2rem solid $color-border-second;
+        border: 0.1rem solid $color-border-second;
         height: 4rem;
         box-shadow: none;
         font-size: 1.3rem;
@@ -123,6 +124,7 @@
     select {
         @extend #{$root}__select;
     }
+
     &__icon {
         width: 1.7rem;
         height: 1.7rem;
@@ -248,7 +250,7 @@
 
     &__button {
         &--newsletter {
-            background: $colorButton;
+            background: $color-button-default-background;
             width: 100%;
             top: 5rem;
             left: 0;

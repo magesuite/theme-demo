@@ -9,6 +9,10 @@
         background: $colorWhite;
 
         @include media('>=laptop') {
+            height: 6.3rem;
+        }
+
+        @include media('>=laptop') {
             border-bottom: 0.1rem solid $colorGallery;
         }
     }
@@ -46,7 +50,13 @@
 
     &__search {
         @include media('>=tablet') {
-            left: 31%;
+            left: 41%;
+            top: 2.2rem;
+        }
+
+        @include media('>=laptop') {
+            left: 34%;
+            top: 2.8rem;
         }
     }
 

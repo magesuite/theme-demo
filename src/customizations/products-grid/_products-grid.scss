@@ -40,7 +40,12 @@ $fontSizeBaseSubheadline: 9vw;
      * @param $heroSizeByBreakpoint { map } - hero size (how many tiles it take) for each breakpoint
      * REMOVE INCLUDE FROM YOUR TEMPLATE IF YOU WOULD LIKE TO KEEP CREATIVESHOP SETTINGS
     */
-    @include productsGrid($colsByBreakpoint, $heroSizeByBreakpoint, $fontSizeBaseHeadline, $fontSizeBaseSubheadline);
+    @include productsGrid(
+        $colsByBreakpoint,
+        $heroSizeByBreakpoint,
+        $fontSizeBaseHeadline,
+        $fontSizeBaseSubheadline
+    );
 
     &__hero {
         &-headline {
