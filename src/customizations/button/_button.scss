@@ -120,7 +120,7 @@
 
             &:hover {
                 border: none;
-                background: $color-button-default-background;
+                background: $color-button-default-background-hover;
 
                 #{$root}__icon {
                     transform: skew(0deg) translate(-50%, -50%);

@@ -1,6 +1,7 @@
 .#{$namespace}minicart {
     background: $colorWhite;
     color: $color-text-dark;
+    font-family: $base-font-family !important;
 
     .action.close {
         top: 0;
@@ -66,9 +67,9 @@
 
 .minicart-wrapper .block-minicart {
     box-shadow: none;
-    border: 0.2rem solid $color-border-second;
+    border: 0.1rem solid $color-border-second;
     border-radius: 0.5rem;
-    margin: 0.2rem 0 0;
+    margin: 2rem 0 0;
     right: -0.3rem;
 
     @include media('>=laptop') {
@@ -80,6 +81,15 @@
     }
 
     &:after {
-        display: none;
+        box-shadow: none;
+        border: 0.1rem solid $color-border-second;
+
+        @include media('>=laptop') {
+            right: 2rem;
+        }
     }
+}
+
+#btn-minicart-close {
+    display: none;
 }
