@@ -18,6 +18,10 @@
             .#{$namespace}header-user-area__icon--minicart {
                 fill: $color-icon-second-hover;
             }
+
+            .#{$namespace}badge--info {
+                background-color: $color-icon-second-hover;
+            }
         }
 
         &--minicart {

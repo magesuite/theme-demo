@@ -38,23 +38,24 @@ $shouldAutoopen = $cHelper->getMinicartFlag();
         href="<?php /* @escapeNotVerified */ echo $block->getShoppingCartUrl(); ?>"
         data-bind="scope: 'minicart_content'"
     >
-        <span class="counter qty empty"
-              data-bind="css: { empty: !!getCartParam('summary_count') == false }, blockLoader: isLoading">
+        <div data-bind="css: { 'minicart-non-empty': getCartParam('summary_count') > 0 }" >
+            <span class="counter qty empty"
+                data-bind="css: { empty: !!getCartParam('summary_count') == false }, blockLoader: isLoading">
 
-            <span
-                class="cs-header-user-area__badge | cs-badge cs-badge--info cs-badge--short"
-                data-bind="css: { 'cs-header-user-area__badge--visible': getCartParam('summary_count') > 0 }"
-            >
-                <span class="cs-badge__span"><!-- ko text: getCartParam('summary_count') --><!-- /ko --></span>
+                <span
+                    class="cs-header-user-area__badge | cs-badge cs-badge--info cs-badge--short"
+                    data-bind="css: { 'cs-header-user-area__badge--visible': getCartParam('summary_count') > 0 }"
+                >
+                    <span class="cs-badge__span"><!-- ko text: getCartParam('summary_count') --><!-- /ko --></span>
+                </span>
             </span>
-        </span>
-        <span class="cs-header-user-area__icon-wrapper">
-            <svg class="cs-header-user-area__icon cs-header-user-area__icon--minicart">
-                <use xlink:href="#cart"></use>
-            </svg>
-        </span>
-
-        <span class="cs-header-user-area__label"><?= __('Cart'); ?></span>
+            <span class="cs-header-user-area__icon-wrapper">
+                <svg class="cs-header-user-area__icon cs-header-user-area__icon--minicart">
+                    <use xlink:href="#cart"></use>
+                </svg>
+            </span>
+            <span class="cs-header-user-area__label"><?= __('Cart'); ?></span>
+        </div>
     </a>
     <?php if ($block->getIsNeedToDisplaySideBar()): ?>
         <div class="block block-minicart empty"
