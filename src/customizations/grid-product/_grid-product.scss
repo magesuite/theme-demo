@@ -36,7 +36,7 @@
     }
 
     &__name {
-        font-weight: 300;
+        font-weight: 400;
         font-size: 1.531rem;
         color: $color-text-dark;
     }
@@ -78,5 +78,13 @@
         justify-content: space-between;
         align-items: center;
         margin-bottom: 2rem;
+        position: relative;
+
+        .baseprice {
+            position: absolute;
+            top: 3rem;
+            font-size: 1.1rem;
+            color: $color-text-medium-light;
+        }
     }
 }

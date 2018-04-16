@@ -97,9 +97,17 @@
 .minicart-non-empty {
     .cs-header-user-area__icon--minicart {
         fill: $color-icon-active;
+
+        &:hover {
+            fill: $color-icon-active;
+        }
     }
 
     .cs-badge--info {
         background-color: $color-icon-active;
+
+        &:hover {
+            background-color: $color-icon-active;
+        }
     }
 }
