@@ -23,4 +23,10 @@
             }
         }
     }
+
+    &--spacious {
+        @include media('>=tablet') {
+            padding-top: 0rem;
+        }
+    }
 }

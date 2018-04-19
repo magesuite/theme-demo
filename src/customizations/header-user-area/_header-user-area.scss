@@ -27,12 +27,6 @@
         &--minicart {
             @include media('>=laptop') {
                 padding-right: 0;
-
-                &:hover {
-                    svg {
-                        color: $color-text-hover;
-                    }
-                }
             }
         }
 

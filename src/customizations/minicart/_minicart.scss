@@ -99,7 +99,7 @@
         fill: $color-icon-active;
 
         &:hover {
-            fill: $color-icon-active;
+            fill: $color-icon-active !important;
         }
     }
 
@@ -107,7 +107,7 @@
         background-color: $color-icon-active;
 
         &:hover {
-            background-color: $color-icon-active;
+            background-color: $color-icon-active !important;
         }
     }
 }
