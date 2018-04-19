@@ -13,7 +13,7 @@
         }
 
         @include media('>=laptop') {
-            border-bottom: 0.1rem solid $colorGallery;
+            border-bottom: 0.2rem solid $colorGallery;
         }
     }
 
