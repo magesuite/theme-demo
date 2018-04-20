@@ -72,6 +72,7 @@
         box-shadow: none;
         margin-top: -4.4rem;
         padding-top: 4.5rem;
+        padding-bottom: 0.1rem;
         width: 102% !important;
         left: -1%;
 
@@ -172,6 +173,29 @@
         .price {
             .price-box__price {
                 line-height: 1.6rem;
+            }
+        }
+
+        .price-box {
+            .price {
+                color: $color-text-dark !important;
+            }
+
+            .old-price {
+                .price {
+                    color: $color-text-dark !important;
+                    line-height: 1.1rem !important;
+                }
+            }
+
+            .special-price {
+                color: $colorRose !important;
+
+                &.active {
+                    .price {
+                        color: $colorRose !important;
+                    }
+                }
             }
         }
     }

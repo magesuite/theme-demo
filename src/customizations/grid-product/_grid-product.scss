@@ -1,9 +1,10 @@
 .#{$namespace}grid-product {
     $root: &;
 
+    background: $colorWhite;
+
     &:before {
-        border-top-left-radius: 0.5rem;
-        border-top-right-radius: 0.5rem;
+        border-radius: 0.5rem;
     }
 
     &--show-details:before {
@@ -11,27 +12,12 @@
     }
 
     &__main {
-        border-top-left-radius: 0.5rem;
-        border-top-right-radius: 0.5rem;
+        border-radius: 0.5rem;
 
         &:hover {
             .#{$namespace}grid-product__name-link {
                 color: $color-link-hover !important;
             }
-        }
-    }
-
-    &__addons {
-        border-bottom-left-radius: 0.5rem;
-        border-bottom-right-radius: 0.5rem;
-        padding-bottom: 3rem;
-
-        #{$root}--show-details & {
-            box-shadow: 1px 3px 4.5rem 0 rgba(30, 48, 67, 0.34);
-        }
-
-        &__bottom {
-            width: 100%;
         }
     }
 
@@ -44,16 +30,6 @@
 
     &__name-link {
         color: $colorMineShaft;
-    }
-
-    &__addon {
-        &--in-stock {
-            color: $colorApple;
-        }
-
-        &--out-of-stock {
-            color: $colorCrimson;
-        }
     }
 
     &--shadow {
@@ -78,7 +54,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-bottom: 2rem;
+        margin-bottom: 0.8rem;
         position: relative;
 
         .baseprice {
