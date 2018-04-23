@@ -21,8 +21,8 @@ $bricksPerRowInColumn: (
 );
 
 $bricksHeight: (
-    phone: 36px,
-    phone-lg: 356px,
+    phone: 376px,
+    phone-lg: 376px,
     tablet: 436px,
     laptop: 436px,
     laptop-lg: 436px,
@@ -36,48 +36,4 @@ $bricksHeight: (
 
 .#{$namespace}grid-layout_in-column {
     @include gridLayout($bricksPerRowInColumn, $bricksHeight, 0);
-}
-//If you want to keep creativeshop setting remove all above section
-
-.#{$namespace}grid-layout,
-.#{$namespace}grid-layout_in-column {
-    $root: &;
-
-    &:after {
-        background-color: $colorWhite;
-    }
-
-    &__brick {
-        &:after {
-            background-color: $colorGallery;
-        }
-    }
-
-    &__teaser {
-        &-headline {
-            #{$root}__teaser--scheme-light & {
-                color: $colorWhite;
-            }
-
-            @media screen and (min-width: 1200px) {
-                font-size: 4rem;
-            }
-        }
-
-        &-subheadline {
-            #{$root}__teaser--scheme-light & {
-                color: $colorWhite;
-            }
-
-            @media screen and (min-width: 1200px) {
-                font-size: 2.7rem;
-            }
-        }
-
-        &-text {
-            #{$root}__teaser--scheme-light & {
-                color: $colorWhite;
-            }
-        }
-    }
 }

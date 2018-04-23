@@ -1,5 +1,7 @@
 .#{$namespace}image-teaser {
     $root: &;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
 
     &__slide {
         &--scheme-light:not(#{$root}__slide--image-uploaded) {

@@ -74,4 +74,47 @@ $fontSizeBaseSubheadline: 9vw;
             }
         }
     }
+
+    &__item {
+        &:before {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 1px;
+            height: 100%;
+            background-color: $colorConcrete;
+            z-index: 6;
+            content: '';
+        }
+
+        @include media('>=phone-lg', '<tablet') {
+            &:nth-child(2n + 2) {
+                &:before {
+                    display: block;
+                }
+            }
+        }
+
+        @include media('>=tablet', '<laptop') {
+            &:nth-child(3n + 2),
+            &:nth-child(3n + 3) {
+                &:before {
+                    display: block;
+                }
+            }
+        }
+
+        @include media('>=laptop') {
+            &:before {
+                display: block;
+            }
+
+            &:nth-child(4n + 1) {
+                &:before {
+                    display: none;
+                }
+            }
+        }
+    }
 }
