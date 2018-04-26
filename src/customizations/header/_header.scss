@@ -8,6 +8,10 @@
     &__content {
         background: $colorWhite;
 
+        @include media('<tablet') {
+            padding-right: 0.5rem;
+        }
+
         @include media('>=laptop') {
             height: 6.3rem;
         }
