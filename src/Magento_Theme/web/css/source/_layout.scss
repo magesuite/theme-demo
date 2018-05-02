@@ -1,0 +1,52 @@
+.page-layout-1column {
+    .product-info-main {
+        width: 100%;
+
+        @include media('>=tablet') {
+            position: static;
+            width: 45%;
+            padding-top: 0;
+        }
+
+        @include media('>=laptop') {
+            width: 50%;
+        }
+
+        @include media('>=laptop-lg') {
+            width: 53rem;
+        }
+    }
+}
+
+.#{$namespace}product-gallery__container {
+    order: 1 !important;
+    min-height: 100px;
+
+    @include media('>=laptop') {
+        overflow: hidden;
+        margin: 0;
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    @include media('>=laptop-lg') {
+        width: 100%;
+    }
+
+    .#{$namespace}container__main-column {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+
+        @include media('>=tablet') {
+            width: 100%;
+            flex-wrap: nowrap;
+        }
+
+        @include media('>=laptop') {
+            width: 100%;
+            padding-right: 0;
+        }
+    }
+}

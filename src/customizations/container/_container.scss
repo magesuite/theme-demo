@@ -9,6 +9,7 @@
 
     &--breadcrumbs {
         background-image: none;
+        background-color: $colorGallery;
     }
 
     &--hero {
@@ -27,6 +28,14 @@
     &--spacious {
         @include media('>=tablet') {
             padding-top: 0rem;
+        }
+    }
+
+    &__main-column {
+        &--space-top {
+            @include media('>=laptop') {
+                padding-top: 4rem;
+            }
         }
     }
 }

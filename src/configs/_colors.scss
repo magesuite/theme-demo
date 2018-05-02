@@ -5,6 +5,9 @@ $colorStTropaz: #2a5ca6;
 $colorThunderbird: #ca321e;
 $colorDustyGray: #989898;
 $colorRose: #e20079;
+$colorGallery: #eeeeee; //container contrast
+$colorBoulder: #7a7a7a;
+$colorGreenHaze: #00c744;
 
 // We need to name color more by their position in that project. Variable should have default flah here
 
@@ -74,7 +77,6 @@ $color-border-second: rgba(209, 209, 209, 0.3) !default;
 
 // Text
 $color-text-light: #a4a4a4 !default;
-$color-text-medium-light: #a9a9a9;
 $color-text-dark: #151616 !default;
 $color-text-hover: #35abdf !default;
 
@@ -82,11 +84,14 @@ $color-text-hover: #35abdf !default;
 $colorMercury: #e8e8e8;
 
 //Icons
-$color-icon-active: #e20079;
+$color-icon-active: #e20079 !default;
 
 // Lines
-$color-line: #e5e5e5;
+$color-line: #e5e5e5 !default;
 
 //Link
 $color-link: #35abdf !default;
 $color-link-hover: #139ec5 !default;
+
+//Prices
+$color-special-price: $colorRose !default;

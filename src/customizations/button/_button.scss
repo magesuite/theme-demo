@@ -170,13 +170,55 @@
         }
 
         &_cart {
-            @extend .cs-button--look_default;
-            @extend .cs-button--type_long;
-            background: $colorWhite;
-            color: $color-first;
+            border: 0.1rem solid $color-button-default-border;
+            color: $color-button-default-text;
+            background: $color-button-default-background;
+            padding-left: 5rem;
+            padding-right: 2.9rem;
+            min-height: 4.1rem;
+
+            &:hover,
+            &:active,
+            &:focus {
+                border: 0.1rem solid $color-button-default-border-hover;
+                color: $color-button-default-text-hover;
+                background-color: $color-button-default-background-hover;
+            }
+
+            &:visited {
+                border: 0.1rem solid $color-button-default-border;
+                color: $color-button-default-text;
+                border-color: $color-button-default-border;
+                background: $color-button-default-background;
+
+                &:hover,
+                &:active,
+                &:focus {
+                    border: 0.1rem solid $color-button-default-border-hover;
+                    color: $color-button-default-text-hover;
+                    background-color: $color-button-default-background-hover;
+                }
+            }
+
+            &:before {
+                content: '';
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 0;
+                border-bottom-left-radius: 3px;
+                border-top-left-radius: 3px;
+                width: 5rem;
+                height: 100%;
+                background-color: $color-button-default-background-hover;
+            }
 
             #{$root}__icon {
-                fill: $color-first;
+                fill: $colorWhite;
+                position: absolute;
+                left: 2rem;
+                top: 50%;
+                transform: translateY(-50%);
             }
 
             &:after {

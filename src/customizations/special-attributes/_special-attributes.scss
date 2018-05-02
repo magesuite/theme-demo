@@ -1,11 +1,10 @@
 .#{$namespace}special-attributes {
-    color: $colorGray;
+    padding: 2.5rem 0 3rem;
+    border-top: 1px solid $color-line;
+    border-bottom: 2px solid $color-line;
 
-    &__icon {
-        fill: $colorGray;
-
-        &--package {
-            stroke: $colorGray;
-        }
+    ul {
+        padding-left: 0;
+        margin-bottom: 0;
     }
 }

@@ -13,21 +13,58 @@
     }
 
     .special-price {
-        color: $colorRose;
+        color: $color-special-price;
 
         &.active {
             .price {
-                color: $colorRose;
+                color: $color-special-price;
             }
         }
     }
 }
 
 .#{$namespace}price--pdp {
-    border-bottom: 1px solid $colorAlto;
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    margin-right: 2rem;
+
+    .price-container {
+        margin-bottom: 0.3rem !important;
+    }
 
     .old-price .price {
         font-size: 1.2rem !important;
+    }
+
+    .price {
+        font-size: 2.9rem !important;
+        font-weight: 600 !important;
+    }
+
+    .special-price .price {
+        color: $color-special-price;
+    }
+
+    .price-box {
+        @include media('>=phone-lg') {
+            margin-top: 0 !important;
+        }
+
+        @include media('>=tablet') {
+            transform: translateY(-0.3rem);
+        }
+    }
+
+    .baseprice {
+        transform: translateY(-0.3rem);
+    }
+
+    .baseprice,
+    .baseprice .price {
+        color: $color-second !important;
+        font-size: 1.2rem !important;
+        font-weight: 400 !important;
     }
 }
 
@@ -36,7 +73,7 @@
     .special-price,
     .#{$namespace}item-cloner--visible & {
         .price {
-            color: $colorRose;
+            color: $color-special-price;
         }
     }
 }

@@ -1,31 +1,26 @@
 .#{$namespace}product-description {
     $root: &;
 
+    &__nav {
+        display: none;
+    }
+
     &__item {
-        border-bottom: 1rem solid $colorWhite;
+        border-bottom: none;
 
         @include media('>=tablet') {
-            border-bottom: 1px solid $colorAlto;
-
-            &:last-child {
-                border-bottom: none;
-            }
+            border-bottom: none;
         }
 
-        &--bottom {
-            @include media('>=tablet') {
-                background: $colorWhite;
-            }
+        @include media('>=laptop') {
+            margin-right: 0;
         }
     }
 
     &__headline {
-        @include media('<tablet') {
-            font-size: 1.4rem;
-        }
-
-        .counter {
-            font-weight: 300;
+        @include media('>=tablet') {
+            font-size: 2.9rem !important;
+            text-align: center;
         }
     }
 }
