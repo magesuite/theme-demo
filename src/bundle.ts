@@ -20,6 +20,9 @@ export { AddressAutofill };
 import { init as collapsibleText } from '../../theme-creativeshop/src/components/collapsible-text/collapsible-text';
 collapsibleText();
 
+import { QtyIncrementCollection } from '../../theme-creativeshop/src/customizations/qty-increment/qty-increment';
+new QtyIncrementCollection();
+
 import '../../theme-creativeshop/src/customizations/aftersearch-nav/aftersearch-nav';
 import '../../theme-creativeshop/src/customizations/brand-carousel/brand-carousel';
 import '../../theme-creativeshop/src/customizations/header-search/header-search';

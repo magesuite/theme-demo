@@ -2,9 +2,17 @@
     $root: &;
     min-height: 20rem;
 
+    @include media('>=tablet', '<laptop') {
+        min-height: 30rem;
+    }
+
+    @include media('>=laptop') {
+        min-height: 39rem;
+    }
+
     &__container {
         margin-bottom: 3rem;
-        padding: 0;
+        padding: 2rem 0 0;
 
         @include media('>=tablet', '<laptop') {
             margin-top: 2rem;
@@ -28,104 +36,105 @@
             width: calc(100% - 53rem);
         }
     }
+
 }
 
 .fotorama {
-    $root: &;
+$root: &;
 
-    &__stage__frame &__img {
-        max-width: 39rem;
-        max-height: 39rem;
-        top: 1rem !important;
-        transform: translate3d(-50%, 0%, 0) !important;
+&__stage__frame &__img {
+    max-width: 39rem;
+    max-height: 39rem;
+    top: 1rem !important;
+    transform: translate3d(-50%, 0%, 0) !important;
 
-        @include media('>=tablet', '<laptop') {
-            max-width: 30rem !important;
-            max-height: 30rem !important;
-        }
+    @include media('>=tablet', '<laptop') {
+        max-width: 30rem !important;
+        max-height: 30rem !important;
+    }
+}
+
+&__nav--thumbs &__nav__frame {
+    width: 7.6rem !important;
+    height: 7.6rem !important;
+}
+
+&__stage {
+    @include media('>=tablet') {
+        max-height: 39rem !important;
+    }
+}
+
+&__nav-wrap--vertical {
+    width: 7.6rem;
+    padding: 1rem 0;
+}
+
+&__thumb {
+    width: 5.7rem !important;
+    height: 5.7rem !important;
+    margin: 0.8rem !important;
+}
+
+&__arr--prev {
+    .fotorama__arr__arr {
+        background-image: url('images/arrow_prev.svg') !important;
+    }
+}
+
+&__arr--next {
+    .fotorama__arr__arr {
+        background-image: url('images/arrow_next.svg') !important;
+    }
+}
+
+&__nav {
+    @include media('<tablet') {
+        width: 100% !important;
+        padding: 2rem 0 0;
+        height: auto !important;
+        text-align: center;
     }
 
-    &__nav--thumbs &__nav__frame {
-        width: 7.6rem !important;
-        height: 7.6rem !important;
-    }
+    &__frame {
+        box-sizing: border-box !important;
 
-    &__stage {
-        @include media('>=tablet') {
-            max-height: 39rem !important;
-        }
-    }
-
-    &__nav-wrap--vertical {
-        width: 7.6rem;
-        padding: 1rem 0;
-    }
-
-    &__thumb {
-        width: 5.7rem !important;
-        height: 5.7rem !important;
-        margin: 0.8rem !important;
-    }
-
-    &__arr--prev {
-        .fotorama__arr__arr {
-            background-image: url('images/arrow_prev.svg') !important;
-        }
-    }
-
-    &__arr--next {
-        .fotorama__arr__arr {
-            background-image: url('images/arrow_next.svg') !important;
-        }
-    }
-
-    &__nav {
         @include media('<tablet') {
-            width: 100% !important;
-            padding: 2rem 0 0;
-            height: auto !important;
-            text-align: center;
-        }
+            box-sizing: border-box;
+            border-radius: 50%;
+            background-color: $colorMercury;
+            transform: skew(0deg);
+            width: 1.2rem !important;
+            height: 1.2rem !important;
+            border: 0.5rem solid $colorMercury;
+            margin-right: 1rem;
 
-        &__frame {
-            box-sizing: border-box !important;
+            &.fotorama__active {
+                background-color: $color-pagination-active;
+                border: 0.5rem solid $color-pagination-active;
 
-            @include media('<tablet') {
-                box-sizing: border-box;
-                border-radius: 50%;
-                background-color: $colorMercury;
-                transform: skew(0deg);
-                width: 1.2rem !important;
-                height: 1.2rem !important;
-                border: 0.5rem solid $colorMercury;
-                margin-right: 1rem;
-
-                &.fotorama__active {
+                @include media('>=tablet') {
                     background-color: $color-pagination-active;
-                    border: 0.5rem solid $color-pagination-active;
-
-                    @include media('>=tablet') {
-                        background-color: $color-pagination-active;
-                    }
-                }
-
-                &:hover {
-                    background-color: $color-pagination-arrow;
-                    border: 0.5rem solid $color-pagination-arrow;
-
-                    @include media('>=tablet') {
-                        background-color: $color-pagination-active;
-                    }
                 }
             }
 
-            &--thumb {
-                border: 1px solid $color-line;
+            &:hover {
+                background-color: $color-pagination-arrow;
+                border: 0.5rem solid $color-pagination-arrow;
 
-                &[data-active='true'] {
-                    border-color: $color-icon-first;
+                @include media('>=tablet') {
+                    background-color: $color-pagination-active;
                 }
+            }
+        }
+
+        &--thumb {
+            border: 1px solid $color-line;
+
+            &[data-active='true'] {
+                border-color: $color-icon-first;
             }
         }
     }
+}
 }
