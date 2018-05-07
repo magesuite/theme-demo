@@ -1,71 +1,90 @@
 .#{$namespace}product-sale-block {
-    background: $colorWhite;
-    border-top: 1px solid $colorAlto;
+    border-top: none;
 
     @include media('>=laptop') {
-        border: 1px solid $colorAlto;
-        border-radius: 3px;
-        box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.27);
+        border: none;
+        border-radius: 0;
+        box-shadow: none;
+        padding-top: 0.7rem;
+        padding-right: 0;
+        margin-top: 0;
     }
 
     &__item {
-        border-top: 1px solid $colorAlto;
-    }
-
-    &__category {
-        font-size: 1.2rem;
-        color: $colorDoveGray;
+        border-top: none;
     }
 
     &__name {
         h1,
         .page-title {
-            @extend .cs-t-headline;
-            @extend .cs-t-headline--size_2;
+            font-size: 2.9rem !important;
+            line-height: 1.3 !important;
+            padding-bottom: 1.6rem;
+            font-weight: 500 !important;
         }
     }
 
-    &__banner {
-        background-color: $colorMineShaft;
-        color: $colorWhite;
-        font-size: 1.15rem;
+    &__no-review {
+        display: none;
     }
 
-    &__share-icon {
-        fill: $colorCeruleanBlue;
-    }
+    &__add-line {
+        flex-wrap: nowrap;
+        margin-top: 3rem;
+        justify-content: space-between;
+        display: flex;
+        position: relative;
 
-    &__share-text {
-        font-size: 1.2rem;
-        color: $colorDoveGray;
+        @include media('>=tablet', '<laptop') {
+            flex-wrap: wrap;
+        }
 
-        &:hover {
-            text-decoration: none;
+        @include media('<phone-lg') {
+            flex-wrap: wrap;
+        }
+
+        @include media('>=tablet') {
+            margin-top: 4rem;
         }
     }
 
-    &__stock-text {
-        font-size: 1.2rem;
-        color: $colorDoveGray;
+    .product-add-form,
+    .product-add-form form {
+        @include media('>=tablet', '<laptop') {
+            width: 100%;
+        }
 
-        &--unavailable {
-            color: $colorCrimson;
+        @include media('<phone-lg') {
+            width: 100%;
         }
     }
 
-    &__stock-icon {
-        &--available {
-            fill: $colorApple;
+    &__shipping {
+        width: 100%;
+        text-align: right;
+        color: $colorGreenHaze;
+        font-size: 1.3rem;
+        font-weight: 400;
+        transform: translateY(-0.3rem);
+        margin-top: 2.8rem;
+
+        @include media('>=phone-lg') {
+            margin-top: 0.8rem;
         }
 
-        &--unavailable {
-            fill: $colorCrimson;
+        @include media('>=tablet') {
+            margin-top: 2.8rem;
+        }
+
+        @include media('>=laptop') {
+            margin-top: 0;
         }
     }
 
-    &__option-checkbox {
-        .price-wrapper {
-            font-weight: 700;
-        }
+    &__shipping-icon {
+        fill: currentColor;
+        width: 1.1rem;
+        height: 0.9rem;
+        transform: translateY(0.1rem);
     }
 }

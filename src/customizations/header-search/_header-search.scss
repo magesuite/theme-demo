@@ -189,11 +189,11 @@
             }
 
             .special-price {
-                color: $colorRose !important;
+                color: $color-special-price !important;
 
                 &.active {
                     .price {
-                        color: $colorRose !important;
+                        color: $color-special-price !important;
                     }
                 }
             }

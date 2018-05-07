@@ -3,20 +3,22 @@
         color: $colorDoveGray;
 
         li {
+            padding: 0.2rem 1.5rem 0.2rem 2rem;
+            color: $colorBoulder;
+            position: relative;
+            font-size: 1.5rem;
+
             &:before {
-                background-image: url('images/check@2x.png');
-                background-size: 1.2rem auto;
+                background-image: none;
+                content: '•';
+                color: $color-link;
+                display: inline-block;
+                width: 1rem;
+                line-height: 1rem;
+                position: absolute;
+                top: 0.5rem;
+                left: 0;
             }
         }
-    }
-
-    ol {
-        list-style: decimal inside;
-        color: $colorDoveGray;
-    }
-
-    strong {
-        color: $colorMineShaft;
-        font-weight: 700;
     }
 }

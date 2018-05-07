@@ -1,5 +1,24 @@
 .#{$namespace}box-addtocart {
     border-top: none;
+    width: 100%;
+    margin: 0;
+
+    @include media('>=tablet', '<laptop') {
+        height: 4.1rem;
+    }
+
+    @include media('<phone-lg') {
+        height: 4.1rem;
+    }
+
+    &__fieldset {
+        display: flex;
+        justify-content: space-between;
+
+        @include media('>=laptop-lg') {
+            width: 37rem;
+        }
+    }
 
     &__label {
         line-height: 48px;
@@ -9,24 +28,53 @@
         }
     }
 
-    &__stock-text {
-        font-size: 1.2rem;
-        color: $colorDoveGray;
+    &__stock {
+        display: none;
+    }
 
-        &--unavailable {
-            color: $colorCrimson;
+    &__label {
+        display: none;
+    }
+
+    &__qty-wrapper {
+        padding: 0;
+
+        @include media('>=tablet', '<laptop') {
+            position: absolute;
+            top: 1.5rem;
+            right: 0;
+        }
+
+        @include media('<phone-lg') {
+            position: absolute;
+            top: 1.5rem;
+            right: 0;
         }
     }
 
-    &__stock-icon {
-        width: 1.1rem;
+    &__qty-increment {
+        margin: 0;
+    }
 
-        &--available {
-            fill: $colorApple;
+    &__actions {
+        margin-bottom: 0;
+        margin-left: 2rem;
+
+        @include media('>=tablet', '<laptop') {
+            margin-top: 2rem;
+            margin-left: 0;
+            width: 100%;
         }
 
-        &--unavailable {
-            fill: $colorCrimson;
+        @include media('<phone-lg') {
+            margin-top: 2rem;
+            margin-left: 0;
+            width: 100%;
+        }
+
+        @include media('>=laptop-lg') {
+            margin-left: 0;
+            min-width: 23rem;
         }
     }
 }

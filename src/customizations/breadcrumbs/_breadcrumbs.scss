@@ -1,30 +1,37 @@
 .#{$namespace}breadcrumbs {
-    color: $colorGray;
-    font-size: 1.18rem;
+    color: $color-text-light;
+    font-size: 1.1rem;
     font-weight: 400;
+    padding-bottom: 0.5rem;
+    padding-top: 0.7rem;
 
     &__item {
+        font-size: 1.1rem;
+
         &:last-child {
-            color: $colorMineShaft;
+            color: $color-text-light;
+
+            &:hover {
+                color: $color-text-light;
+            }
         }
 
         &:not(:last-child):after {
-            line-height: 1;
-            color: $colorGray;
+            color: $color-text-light;
+            transform: translateY(-50%) skew(20deg);
         }
     }
 
     &__link {
-        color: $colorGray;
-        font-size: 1.2rem;
+        color: $color-text-light;
+        font-size: 1.1rem;
 
         &:visited {
-            color: $colorGray;
+            color: $color-text-light;
         }
 
         &:hover {
-            text-decoration: none;
-            color: $colorMineShaft;
+            color: $color-text-hover;
         }
     }
 }
