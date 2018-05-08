@@ -1,25 +1,40 @@
+//In parent theme we have more general modifications, usually connected with structure. Also colors are placed here bceuae then they are replace in config/colors.scss file
 .#{$namespace}image-teaser {
     $root: &;
-    margin-bottom: 1rem;
-    margin-top: 1rem;
+    font-family: $font-family;
 
     &__slide {
-        &--scheme-light:not(#{$root}__slide--image-uploaded) {
-            background-color: $colorMineShaft;
+        //Do not center text and image when text is outside image
+        #{$root}__wrapper--content-display-outside & {
+            align-content: flex-start;
+            @include media('>=tablet') {
+                margin-bottom: 0;
+            }
         }
     }
 
+    &__slide-link {
+        text-decoration: none;
+    }
+
     &__content-wrapper {
-        color: $colorMineShaft;
+        color: $color-teaser-dark-scheme-headline;
 
         #{$root}__wrapper--content-display-outside & {
             background-color: transparent;
+
+            @include media('>=tablet') {
+                padding-bottom: 0;
+            }
         }
     }
 
     &__headline {
+        text-transform: none;
+        color: $color-teaser-dark-scheme-headline;
+
         #{$root}__slide--scheme-light & {
-            color: $colorWhite;
+            color: $color-teaser-light-scheme-headline;
         }
 
         #{$root}:not(#{$root}--items-in-row-1)
@@ -38,62 +53,25 @@
         }
 
         #{$root}__wrapper--content-display-inside & {
-            font-weight: 700;
             text-transform: none;
-        }
-
-        #{$root}__wrapper--content-display-outside & {
-            font-weight: 700;
-
-            @include media('>=laptop') {
-                #{$root}--items-in-row-2 & {
-                    font-size: 2.43rem;
-                }
-
-                #{$root}--items-in-row-3 & {
-                    font-size: 2.1rem;
-                }
-
-                #{$root}--items-in-row-4 & {
-                    font-size: 1.95rem;
-                }
-
-                #{$root}--items-in-row-6 & {
-                    font-size: 1.74rem;
-                }
-            }
         }
     }
 
     &__subheadline {
-        padding-left: 0;
         color: $color-teaser-dark-scheme-subheadline;
+        text-decoration: none;
 
         #{$root}__slide--scheme-light & {
-            color: $colorWhite;
+            color: $color-teaser-light-scheme-subheadline;
         }
     }
 
     &__text {
-        line-height: 1.18;
         color: $color-teaser-dark-scheme-text;
-        font-weight: 400;
+        text-decoration: none;
 
         #{$root}__slide--scheme-light & {
             color: $color-teaser-light-scheme-text;
-        }
-
-        @include media('<laptop') {
-            font-size: 1.45rem;
-        }
-    }
-
-    &__cta {
-        .#{$namespace}button--type_long {
-            font-size: 1.5rem;
-            max-width: 18.5rem;
-            text-indent: 0;
-            padding: 0.9rem 2.5rem;
         }
     }
 

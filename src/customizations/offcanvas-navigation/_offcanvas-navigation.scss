@@ -9,21 +9,27 @@
         &:last-of-type {
             border-bottom: 1px $colorAlto solid;
         }
+
+        &-lang-switcher {
+            display: none;
+        }
     }
 
     &__icon {
-        fill: $colorCeruleanBlue;
+        fill: $color-first;
     }
 
     &__link {
         font-size: 1.4rem;
-        text-transform: uppercase;
-        font-weight: 700;
+        text-transform: none;
+        font-weight: 400;
+        color: $color-link;
 
         &,
         &:hover,
         &:visited {
-            color: $colorMineShaft;
+            color: $color-link-hover;
+            text-decoration: none;
         }
 
         &--sign-in,
@@ -31,13 +37,13 @@
             &,
             &:hover,
             &:visited {
-                color: $colorCeruleanBlue;
+                color: $color-link-hover;
             }
         }
 
         &--parent {
-            font-weight: 700;
-            text-transform: capitalize;
+            font-weight: 400;
+            text-transform: none;
         }
     }
 

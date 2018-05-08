@@ -11,6 +11,9 @@ $colorGreenHaze: #00c744;
 
 // We need to name color more by their position in that project. Variable should have default flah here
 
+//Background
+$color-background-contrast: $colorGallery !default;
+
 //Language switcher
 $color-language-switcher-bg: #f3f3f3 !default;
 
@@ -32,6 +35,7 @@ $color-teaser-dark-scheme-headline: #000 !default;
 $color-teaser-dark-scheme-subheadline: #1c1c1c !default;
 $color-teaser-dark-scheme-text: #8a8a8a !default;
 $color-teaser-light-scheme-headline: #fff !default;
+$color-teaser-light-scheme-subheadline: #fff !default;
 $color-teaser-light-scheme-text: #fff !default;
 
 //Pagination
@@ -78,6 +82,7 @@ $color-border-second: rgba(209, 209, 209, 0.3) !default;
 // Text
 $color-text-light: #a4a4a4 !default;
 $color-text-dark: #151616 !default;
+$color-paragraph: $colorBoulder !default;
 $color-text-hover: #35abdf !default;
 
 // Badges

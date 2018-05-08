@@ -1,7 +1,7 @@
 .#{$namespace}input {
     $root: &;
     font-size: 1rem;
-    font-family: $base-font-family;
+    font-family: $font-family;
 
     &.required,
     &._required,
@@ -47,7 +47,7 @@
     input[type='date'],
     &__input[type='date'],
     &__input {
-        font-family: $base-font-family;
+        font-family: $font-family;
         color: $colorMineShaft;
         background-color: $colorWhite;
         border-radius: 5px;

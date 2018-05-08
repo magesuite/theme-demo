@@ -2,6 +2,8 @@
     $root: &;
     $sliderWidth: 100%;
     $navArrowSize: 5rem;
+    padding-top: $base-space;
+    padding-bottom: $base-space;
 
     &__nav {
         border-radius: 0;
