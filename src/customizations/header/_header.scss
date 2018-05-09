@@ -7,6 +7,7 @@
 
     &__content {
         background: $colorWhite;
+        max-width: 113rem;
 
         @include media('<tablet') {
             padding-right: 0.5rem;

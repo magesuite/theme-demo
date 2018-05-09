@@ -1,5 +1,5 @@
 .#{$namespace}t-text {
-    @include t-text(1.4rem, $base-font-family, $colorDoveGray, $colorDoveGray);
+    @include t-text(1.4rem, $font-family, $colorDoveGray, $colorDoveGray);
 
     &:hover,
     &:visited {

@@ -32,5 +32,8 @@
         <referenceContainer name="product.details.container" htmlTag="div" htmlClass="cs-container" />
 
 
+        <move element="cc-content.container" destination="content" before="product.details.container" />
+
+
     </body>
 </page>

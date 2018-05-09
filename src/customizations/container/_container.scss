@@ -1,5 +1,23 @@
 .#{$namespace}container {
     $root: &;
+    max-width: 135rem;
+
+    @include media('>=laptop-lg') {
+        margin: 0 auto;
+    }
+
+    & & {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    &__inner {
+        max-width: 113rem;
+    }
+
+    &--viewport-width {
+        max-width: 100%;
+    }
 
     &--contrast {
         @include media('>=laptop') {
@@ -10,6 +28,28 @@
     &--breadcrumbs {
         background-image: none;
         background-color: $colorGallery;
+        max-width: 100%;
+    }
+
+    &--edge-to-edge {
+        width: calc(100% + 3rem);
+        margin: 0 -1.5rem;
+        max-width: 135rem;
+
+        @include media('>=laptop') {
+            width: calc(100% + 3rem);
+            margin: 0 -1.5rem;
+        }
+
+        @media (min-width: 1350px) {
+            width: 133.5rem;
+            margin: 0 -11rem !important;
+        }
+
+        @media (min-width: 1380px) {
+            width: 135rem;
+            margin: 0 -11rem !important;
+        }
     }
 
     &--hero {
