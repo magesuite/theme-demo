@@ -2,6 +2,8 @@
 .#{$namespace}image-teaser {
     $root: &;
     font-family: $font-family;
+    margin-bottom: $base-space;
+    margin-top: $base-space;
 
     &__slide {
         //Do not center text and image when text is outside image
