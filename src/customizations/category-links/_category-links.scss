@@ -5,7 +5,7 @@
     &__subtitle {
         font-weight: 700;
         text-transform: uppercase;
-        border-bottom: 1px solid $colorAlto;
+        border-bottom: 1px solid $color-line;
     }
 
     &__list-wrapper {
@@ -22,7 +22,7 @@
             border: none;
 
             &:before {
-                border-left: 1px solid $colorAlto;
+                border-left: 1px solid $color-line;
             }
         }
 

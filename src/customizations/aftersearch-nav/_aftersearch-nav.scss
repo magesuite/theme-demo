@@ -3,7 +3,7 @@
 
     &__filter {
         @include media('>=tablet') {
-            border-bottom: 1px solid $colorAlto;
+            border-bottom: 1px solid $color-line;
         }
     }
 
@@ -27,7 +27,7 @@
     }
 
     &__filter-title {
-        border-top: 1px solid $colorAlto;
+        border-top: 1px solid $color-line;
         font-size: 1.2rem;
         font-weight: 700;
         text-decoration: none;

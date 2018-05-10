@@ -23,7 +23,7 @@
 
             &--actions {
                 @include media('<laptop') {
-                    border-bottom: 1px solid $colorAlto;
+                    border-bottom: 1px solid $color-line;
                 }
             }
         }
@@ -31,7 +31,7 @@
 
     &--cart {
         @include media('>=tablet') {
-            border-top: 1px solid $colorAlto;
+            border-top: 1px solid $color-line;
         }
     }
 
@@ -46,9 +46,9 @@
 
     &__col {
         font-size: 1.4rem;
-        color: $colorDoveGray;
+        color: $colorGray;
         font-weight: 300;
-        border-bottom: 1px solid $colorAlto;
+        border-bottom: 1px solid $color-line;
 
         #{$root}:not(#{$rootNoChangeMobile}) & {
             &:before {
@@ -70,7 +70,7 @@
 
         &--actions {
             @include media('<tablet') {
-                border-bottom: 1px solid $colorAlto;
+                border-bottom: 1px solid $color-line;
             }
         }
 
@@ -91,7 +91,7 @@
     }
 
     &__tbody {
-        border-bottom: 1px solid $colorAlto;
+        border-bottom: 1px solid $color-line;
     }
 
     &__foot {

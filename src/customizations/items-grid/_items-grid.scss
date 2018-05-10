@@ -18,7 +18,7 @@
         margin: 0 $mobileGutter 2 * $mobileGutter;
 
         &:after {
-            border-top: 1px solid $colorAlto;
+            border-top: 1px solid $color-line;
         }
 
         @include media('>=phone-lg') {

@@ -1,102 +1,125 @@
-$colorWhite: #fff;
-$colorConcrete: #f3f3f3;
-$colorEdward: #adb9b7;
-$colorStTropaz: #2a5ca6;
-$colorThunderbird: #ca321e;
-$colorDustyGray: #989898;
+//Main colors
 $colorRose: #e20079;
-$colorGallery: #eeeeee; //container contrast
-$colorBoulder: #7a7a7a;
-$colorGreenHaze: #00c744;
+$colorScooter: #28b1d7;
+$colorEasternBlue: #139ec5;
+$colorMidnightBlue: #00316e;
+$colorPrussianBlue: #002758;
 
-// We need to name color more by their position in that project. Variable should have default flah here
+//Additional colors
+$colorGreenHaze: #00c744; //color success texts
+$colorThunderbird: #ca321e; //color error texts, also you tube button
+$colorYellowOrange: #ffaf47; //color-warning
+
+//Greys palette
+$colorWoodsmoke: #151616;
+$colorBoulder: #777777;
+$colorGray: #8e8e8e;
+$colorAlto: #d0d0d0;
+$colorMercury: #e5e5e5;
+$colorGallery: #eeeeee;
+$colorConcrete: #f3f3f3;
+$colorWhite: #fff;
+
+$colorStTropaz: #2a5ca6; //social buttons - facebook button
+
+// We need to name color more by their position in that project. Variable should have default flag here
+
+//Main colors
+$color-first: $colorScooter !default;
+$color-first-hover: $colorEasternBlue !default;
 
 //Background
 $color-background-contrast: $colorGallery !default;
 
 //Language switcher
-$color-language-switcher-bg: #f3f3f3 !default;
+$color-language-switcher-bg: $colorConcrete !default;
 
 //Page bottom
-$color-pagebottom-text: #a6a6a6 !default;
+$color-pagebottom-text: $colorGray !default;
 
 //Footer
-$color-footer-background: #fff !default;
-$color-footer-text: #151616 !default;
-$color-footer-text-hover: #35abdf !default;
-$color-footer-text-light: #a7aaaa !default;
+$color-footer-background: $colorWhite !default;
+$color-footer-text: $colorWoodsmoke !default;
+$color-footer-text-hover: $colorScooter !default;
+$color-footer-text-light: $colorGray !default;
 
 //Headline
-$color-headline: #000 !default;
-$color-subheadline: #989898 !default;
+$color-headline: $colorWoodsmoke !default;
+$color-subheadline: $colorGray !default;
 
 //Image teasers
-$color-teaser-dark-scheme-headline: #000 !default;
-$color-teaser-dark-scheme-subheadline: #1c1c1c !default;
-$color-teaser-dark-scheme-text: #8a8a8a !default;
-$color-teaser-light-scheme-headline: #fff !default;
-$color-teaser-light-scheme-subheadline: #fff !default;
-$color-teaser-light-scheme-text: #fff !default;
+$color-teaser-dark-scheme-headline: $colorWoodsmoke !default;
+$color-teaser-dark-scheme-subheadline: $colorWoodsmoke !default;
+$color-teaser-dark-scheme-text: $colorGray !default;
+$color-teaser-light-scheme-headline: $colorWhite !default;
+$color-teaser-light-scheme-subheadline: $colorWhite !default;
+$color-teaser-light-scheme-text: $colorWhite !default;
 
 //Pagination
-$color-pagination-arrow: #35abdf !default;
-$color-pagination-active: #182b5f !default;
-$color-pagination-active-hero: #35abdf !default;
+$color-pagination-arrow: $colorScooter !default;
+$color-pagination-active: $colorPrussianBlue !default;
+$color-pagination-active-hero: $colorScooter !default;
 
 //Hero
-$color-hero-dark-scheme-headline: #000 !default;
-$color-hero-dark-scheme-subheadline: #1c1c1c !default;
-$color-hero-dark-scheme-text: #1c1c1c !default;
-$color-hero-light-scheme-headline: #fff !default;
-$color-hero-light-scheme-subheadline: #fff !default;
-$color-hero-light-scheme-text: #fff !default;
+$color-hero-dark-scheme-headline: $colorWoodsmoke !default;
+$color-hero-dark-scheme-subheadline: $colorWoodsmoke !default;
+$color-hero-dark-scheme-text: $colorWoodsmoke !default;
+$color-hero-light-scheme-headline: $colorWhite !default;
+$color-hero-light-scheme-subheadline: $colorWhite !default;
+$color-hero-light-scheme-text: $colorWhite !default;
 
 //Icons
-$color-icon-first: #00316e !default;
-$color-icon-first-hover: #002758 !default;
-$color-icon-second: #35abdf !default;
-$color-icon-second-hover: #139ec5 !default;
+$color-icon-first: $colorMidnightBlue !default;
+$color-icon-first-hover: $colorPrussianBlue !default;
+$color-icon-second: $colorScooter !default;
+$color-icon-second-hover: $colorEasternBlue !default;
+
+$color-icon-active: $colorRose !default;
 
 // Buttons
-$color-button-default-text: #fff !default;
-$color-button-default-background: #35abdf !default;
-$color-button-default-border: #35abdf !default;
-$color-button-default-text-hover: #fff !default;
-$color-button-default-hover: #139ec5 !default;
-$color-button-default-background-hover: #139ec5 !default;
-$color-button-default-border-hover: #139ec5 !default;
+$color-button-default-text: $colorWhite !default;
+$color-button-default-background: $colorScooter !default;
+$color-button-default-border: $colorScooter !default;
+$color-button-default-text-hover: $colorWhite !default;
+$color-button-default-hover: $colorEasternBlue !default;
+$color-button-default-background-hover: $colorEasternBlue !default;
+$color-button-default-border-hover: $colorEasternBlue !default;
 
-$color-button-light-text: #464646 !default;
-$color-button-light-background: #fff !default;
-$color-button-light-border: #d0d0d0 !default;
-$color-button-light-text-hover: #139ec5 !default;
-$color-button-light-hover: #139ec5 !default;
-$color-button-light-background-hover: #fff !default;
-$color-button-light-border-hover: #139ec5 !default;
-
-$color-first: #35abdf !default;
-$color-border-first: rgba(53, 171, 223, 0.6) !default;
-$color-second: #d1d1d1 !default;
-$color-border-second: rgba(209, 209, 209, 0.3) !default;
+$color-button-light-text: $colorWoodsmoke !default;
+$color-button-light-background: $colorWhite !default;
+$color-button-light-border: $colorAlto !default;
+$color-button-light-text-hover: $colorEasternBlue !default;
+$color-button-light-hover: $colorEasternBlue !default;
+$color-button-light-background-hover: $colorWhite !default;
+$color-button-light-border-hover: $colorEasternBlue !default;
 
 // Text
-$color-text-light: #a4a4a4 !default;
-$color-text-dark: #151616 !default;
-$color-paragraph: $colorBoulder !default;
-$color-text-hover: #35abdf !default;
+$color-text-dark: $colorWoodsmoke !default;
+$color-paragraph: $colorGray !default;
 
 // Badges
-$colorMercury: #e8e8e8;
-
-//Icons
-$color-icon-active: #e20079 !default;
 
 // Lines
-$color-line: #e5e5e5 !default;
+$color-line: $colorMercury !default;
 
 //Link
-$color-link: #35abdf !default;
-$color-link-hover: #139ec5 !default;
+$color-link: $colorScooter !default;
+$color-link-hover: $colorEasternBlue !default;
 
 //Prices
 $color-special-price: $colorRose !default;
+$color-base-price: $colorAlto !default;
+
+//Inputs
+$color-input-border: $colorAlto !default;
+$color-input-text: $colorWoodsmoke !default;
+$color-input-label: $colorWoodsmoke !default;
+
+//Additional colors - messages, warnings
+$color-success: $colorGreenHaze !default;
+$color-error: $colorThunderbird !default;
+$color-warning: $colorYellowOrange !default;
+
+//Dashboard - checkout
+$color-dashboard-menu-link: $colorWoodsmoke;
+$color-dashboard-menu-indicator: $colorMidnightBlue;

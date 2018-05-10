@@ -9,6 +9,14 @@
     color: $color-footer-text;
     background-color: $color-footer-background;
 
+    &__wrapper {
+        border-top: 1px solid $color-line;
+
+        .cms-home & {
+            border-top: none;
+        }
+    }
+
     &__column {
         @include media('>=laptop') {
             width: 33%;
@@ -43,7 +51,7 @@
         font-weight: 700;
         letter-spacing: 0;
         text-transform: lowercase;
-        border-top: 0.2rem solid $color-border-second;
+        border-top: 0.2rem solid $color-line;
 
         &:first-letter {
             text-transform: uppercase;
@@ -55,7 +63,7 @@
         }
 
         #{$root}__column:first-child & {
-            border-top: 0.2rem solid $color-border-second;
+            border-top: 0.2rem solid $color-line;
         }
 
         @include media('>=tablet') {
@@ -75,7 +83,7 @@
     &__right {
         flex-basis: 35%;
         padding-top: 2rem;
-        border-top: 0.2rem solid $color-border-second;
+        border-top: 0.2rem solid $color-line;
 
         @include media('>=tablet') {
             padding-top: 0;
@@ -96,7 +104,7 @@
         flex-direction: column;
 
         @include media('>=tablet') {
-            border-bottom: 0.2rem solid $color-border-second;
+            border-bottom: 0.2rem solid $color-line;
             flex-direction: row;
         }
     }

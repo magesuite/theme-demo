@@ -1,70 +1,133 @@
 .#{$namespace}progress-bar {
     $root: &;
 
-    &__item {
-        &:after {
-            background: $colorGallery;
-        }
-
-        &._active,
-        &._complete {
-            &:after {
-                background: $colorGold;
-            }
-
-            #{$root}__indicator-wrapper {
-                background: $colorGold;
-            }
-
-            #{$root}__item-text {
-                color: $colorMineShaft;
-                font-weight: 400;
-            }
-        }
-
-        &:hover {
-            #{$root}__indicator-wrapper {
-                background: lighten($colorGold, 25%);
-
-                &:after {
-                    background: lighten($colorGold, 25%);
-                }
-            }
-
-            &:after {
-                background: lighten($colorGold, 25%);
-            }
-        }
+    &__item-text {
+        color: $colorBoulder;
+        font-weight: 700;
     }
 
-    &__indicator-wrapper {
-        background: $colorGallery;
-        transform: skew(-18deg);
-        font-weight: 700;
-        font-size: 1.4rem;
-        border-radius: 3px;
+    &__item {
+        width: 18.5rem;
+        border-right: 2px solid $colorWhite;
 
-        #{$root}__item:first-child & {
+        &:after {
+            height: 1rem;
+            background: $colorMercury;
+            top: 0.9rem;
+            z-index: 0;
+        }
+
+        &:first-child {
             &:after {
                 border-top-left-radius: 3px;
                 border-bottom-left-radius: 3px;
             }
         }
 
-        #{$root}__item:last-child & {
+        &:last-child {
             &:after {
                 border-top-right-radius: 3px;
                 border-bottom-right-radius: 3px;
             }
         }
+
+        &:hover {
+            &:after {
+                background: $color-first-hover;
+            }
+
+            #{$root}__indicator-wrapper {
+                background: $color-first-hover;
+            }
+
+            #{$root}__indicator {
+                color: $colorWhite !important;
+            }
+
+            #{$root}__item-text {
+                color: $colorWoodsmoke !important;
+                font-weight: 400;
+            }
+        }
+
+        &._complete,
+        &._active {
+            &:after {
+                background: $color-first;
+            }
+
+            #{$root}__indicator-wrapper {
+                background: $color-first;
+            }
+
+            #{$root}__indicator {
+                color: $colorWhite !important;
+            }
+
+            #{$root}__item-text {
+                color: $colorWoodsmoke;
+                font-weight: 400;
+            }
+        }
+
+        &._complete {
+            #{$root}__indicator {
+                &:before {
+                    padding-top: 1.4rem;
+                    content: '';
+                    background-image: url('images/check-white.svg');
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    width: 1.2rem;
+                    height: 1.2rem;
+                }
+            }
+        }
+
+        @include media('>=laptop') {
+            &:hover {
+                #{$root}__indicator-wrapper {
+                    background: $color-first-hover;
+
+                    &:after {
+                        background: $color-first-hover;
+                    }
+                }
+
+                &:after {
+                    background: $color-first-hover;
+                }
+            }
+        }
+    }
+
+    &__indicator-wrapper {
+        width: 3rem;
+        height: 3rem;
+        transform: skew(0deg);
+        font-weight: 700;
+        border-radius: 50%;
+        z-index: 1;
+        background: $colorMercury;
     }
 
     &__indicator {
-        transform: skew(18deg);
+        transform: skew(0deg);
+
+        &:before {
+            padding-top: 0.5rem;
+        }
     }
 
     &__item-text {
         color: $colorGray;
-        font-size: 1.4rem;
+        font-size: 1.5rem;
+        cursor: pointer;
+        font-weight: 400;
+
+        #{$root}__item:hover & {
+            color: $colorWoodsmoke;
+        }
     }
 }

@@ -4,7 +4,7 @@
     &__section {
         @include media('>=tablet') {
             &:nth-child(2n + 1) {
-                border-right: 1px solid $colorAlto;
+                border-right: 1px solid $color-line;
             }
         }
     }

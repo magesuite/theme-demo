@@ -44,7 +44,7 @@
             display: flex;
             align-items: center;
             padding: 0.8rem 0.6rem;
-            color: $colorDoveGray;
+            color: $colorGray;
 
             &:after {
                 display: block;
@@ -53,7 +53,7 @@
                 height: 0;
                 border-left: 0.3rem solid transparent;
                 border-right: 0.3rem solid transparent;
-                border-top: 0.4rem solid $colorEdward;
+                border-top: 0.4rem solid $colorGray;
                 box-sizing: border-box;
                 margin-left: 0.4rem;
             }
@@ -102,7 +102,7 @@
             }
 
             &:before {
-                border-bottom: 1px solid $colorEdward;
+                border-bottom: 1px solid $colorMercury;
             }
 
             #{$root}__trigger-span {
@@ -137,7 +137,7 @@
 
         &-item-link {
             display: flex;
-            color: $colorDoveGray !important;
+            color: $colorGray !important;
             text-transform: uppercase;
             font-weight: 700;
             font-size: 1.1rem;
@@ -167,7 +167,7 @@
             }
 
             &:hover {
-                color: $colorDoveGray;
+                color: $colorGray;
             }
 
             @include media('<laptop') {

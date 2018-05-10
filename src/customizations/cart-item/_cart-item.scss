@@ -1,6 +1,6 @@
 .#{$namespace}cart-item {
     $root: &;
-    border-top: 1px solid $colorAlto;
+    border-top: 1px solid $color-line;
 
     tbody:nth-child(3) & {
         border-top: none;
@@ -44,7 +44,7 @@
         .price {
             font-weight: 300;
             font-size: 1.4rem;
-            color: $colorDoveGray;
+            color: $colorGray;
         }
     }
 
@@ -53,12 +53,12 @@
     &__qty {
         @include media('<laptop') {
             &:before {
-                font-size: 1rem;
+                font-size: 1.2rem;
                 text-transform: uppercase;
             }
             @include media('>=phone-lg') {
                 &:before {
-                    font-size: 1.1rem;
+                    font-size: 1.3rem;
                 }
             }
         }

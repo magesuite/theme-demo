@@ -2,7 +2,7 @@
     $root: &;
 
     @include media('>=tablet') {
-        border-bottom: 1px solid $colorAlto;
+        border-bottom: 1px solid $color-line;
     }
 
     .page-title-wrapper {
@@ -29,7 +29,7 @@
     &__sorter-direction {
         &-btn {
             &:first-child {
-                border-right: 1px solid $colorAlto;
+                border-right: 1px solid $color-line;
             }
         }
 
@@ -45,7 +45,7 @@
 
     &__main {
         @include media('>=tablet') {
-            border-left: 1px solid $colorAlto;
+            border-left: 1px solid $color-line;
         }
     }
 

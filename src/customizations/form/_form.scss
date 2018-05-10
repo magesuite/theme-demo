@@ -4,7 +4,7 @@
 
     &__fieldset-inner {
         @include media('>=laptop') {
-            border-bottom: 1px solid $colorAlto;
+            border-bottom: 1px solid $color-line;
         }
     }
 

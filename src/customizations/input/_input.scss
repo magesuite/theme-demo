@@ -8,20 +8,19 @@
     &.required-entry {
         #{$root}__label {
             &:after {
-                color: $colorCrimson;
-                font-size: 1.2rem;
+                color: $color-error;
             }
         }
     }
 
     &__label {
-        font-size: 1.2rem;
+        font-size: 1.3rem;
         font-weight: 700;
-        color: $colorMineShaft;
+        color: $color-input-label;
 
         &--big {
             font-size: 1.5rem;
-            font-weight: 400 !important; /* stylelint-disable-line declaration-no-important */
+            font-weight: 400 !important;
         }
     }
 
@@ -48,27 +47,30 @@
     &__input[type='date'],
     &__input {
         font-family: $font-family;
-        color: $colorMineShaft;
+        color: $color-input-text;
         background-color: $colorWhite;
-        border-radius: 5px;
-        border: 0.1rem solid $color-border-second;
+        border-radius: 4px;
+        border: 0.1rem solid $color-input-border;
         height: 4rem;
         box-shadow: none;
-        font-size: 1.3rem;
+        font-size: 1.4rem;
 
         &:hover:not(:disabled):not(:focus),
         &:focus,
         &:active {
             box-shadow: none;
-            border-color: $color-second;
+            border-color: $color-input-border;
         }
 
         &.mage-error,
         ._error & {
-            border-color: $colorCrimson;
-            margin-bottom: 6rem;
-            font-size: 1.1rem;
-            color: $color-text-light !important;
+            border-color: $color-error;
+            font-size: 1.2rem;
+            color: $color-paragraph !important;
+
+            .newsletter & {
+                margin-top: 6rem;
+            }
         }
 
         &:disabled {
@@ -79,8 +81,6 @@
     &__textarea {
         @extend #{$root}__input;
     }
-
-    /* stylelint-enable */
 
     &__select {
         @extend #{$root}__input;
@@ -135,7 +135,7 @@
 
         .#{$namespace}checkout__step-content #{$root}--success & {
             display: block;
-            fill: $colorApple;
+            fill: $color-success;
         }
 
         .#{$namespace}checkout__step-content .mage-error &,
@@ -146,7 +146,7 @@
 
         .#{$namespace}checkout__step-content #{$root}--warning & {
             display: block;
-            fill: $colorGold;
+            fill: $color-warning;
         }
     }
 
@@ -230,7 +230,7 @@
 
             &:before {
                 border-width: 1px;
-                border-color: $color-second;
+                border-color: $color-input-border;
                 border-style: solid;
                 width: 2rem;
                 height: 2rem;
@@ -243,7 +243,7 @@
         &._error #{$root}__label,
         #{$root}__checkbox.mage-error + #{$root}__label {
             &:before {
-                border-color: $colorCrimson;
+                border-color: $color-error;
             }
         }
     }
@@ -263,28 +263,6 @@
     .#{$namespace}input__control {
         margin-bottom: 1rem;
     }
-}
-
-._has-datepicker ~ .ui-datepicker-trigger {
-    @extend .#{$namespace}button;
-    @extend .#{$namespace}button--look_default;
-    @extend .#{$namespace}button--look_on-input;
-    @extend .#{$namespace}input__button;
-
-    &:before {
-        color: $colorWhite;
-        transform: skew(18deg) translateX(-0.4rem);
-    }
-}
-
-.customer-dob {
-    border-top-right-radius: 3px;
-    border-bottom-right-radius: 3px;
-}
-
-.#{$namespace}input .field-tooltip .field-tooltip-content {
-    @extend .#{$namespace}input__note;
-    background: $colorWhite;
 }
 
 //Below is style for input ad select for payone creditcard iframes it has to be inserted (uncommented) in admin in Payone->General->Payment Creditcard:

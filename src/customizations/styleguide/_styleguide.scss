@@ -5,14 +5,14 @@
         color: darken($colorAlto, 15%);
         font-weight: 700;
         font-size: 4rem;
-        border-bottom: 1px solid $colorAlto;
+        border-bottom: 1px solid $color-line;
     }
 
     &__title {
         color: darken($colorAlto, 15%);
         font-weight: 300;
         font-size: 3.5rem;
-        border-bottom: 1px solid $colorAlto;
+        border-bottom: 1px solid $color-line;
     }
 
     &__container {

@@ -1,65 +1,47 @@
 .#{$namespace}bundle-box {
     $root: &;
 
-    &__title {
-        @extend .#{$namespace}t-headline;
-        @extend .#{$namespace}t-headline--size_2;
-        @extend .#{$namespace}t-headline--look_bordered;
-    }
-
     &__summary-content {
-        border-bottom: 1px solid $colorAlto;
+        border-bottom: 1px solid $color-line;
     }
 
     &__product-name {
-        font-size: 1.6rem;
-        font-weight: 700;
-
         .required & {
             &:after {
-                color: $colorCrimson;
+                color: $color-error;
             }
         }
     }
 
     .product-name {
-        font-size: 1.5rem;
-        font-weight: 400;
-        color: $colorMineShaft;
+        color: $color-headline;
     }
 
     .price {
-        font-weight: 700;
-        color: $colorCeruleanBlue;
+        color: $color-special-price;
     }
 
     .price-notice {
-        color: $colorMineShaft;
+        color: $color-headline;
         font-size: 1.4rem;
     }
 
     &__required {
-        font-size: 1.3rem;
-
         &:before {
-            color: $colorCrimson;
+            color: $color-error;
         }
     }
 
     &__field {
-        border-top: 1px solid $colorAlto;
-
-        &:first-of-type {
-            border-top: none;
-        }
+        border-top: 1px solid $color-line;
     }
 
     &__availability {
-        font-size: 1.2rem;
-        color: $colorDoveGray;
+        font-size: 1.4rem;
+        color: $color-paragraph;
 
         &--unavailable {
-            color: $colorCrimson;
+            color: $color-error;
         }
     }
 }

@@ -3,49 +3,38 @@
 
     &__sidebar-inner {
         @include media('>=tablet') {
-            box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.27);
+            box-shadow: 0 1px 11px 0 rgba(0, 0, 0, 0.18);
         }
-    }
-
-    &__subheadline {
-        @extend .#{$namespace}t-headline;
-        @extend .#{$namespace}t-headline--size_2;
-    }
-
-    &__auth-subheadline {
-        @extend .#{$namespace}t-headline;
-        @extend .#{$namespace}t-headline--size_2;
-        @extend .#{$namespace}t-headline--look_light;
     }
 
     &__step-content {
         &--rates {
             @include media('>=tablet') {
-                box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.27);
+                box-shadow: 0 1px 11px 0 rgba(0, 0, 0, 0.18);
             }
         }
     }
 
     &__step-form {
         @include media('>=tablet') {
-            box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.27);
+            box-shadow: 0 1px 11px 0 rgba(0, 0, 0, 0.18);
         }
     }
 
     &__address {
         border-radius: 3px;
-        border: 1px solid $colorAlto;
+        border: 1px solid $color-line;
 
         &.selected-item {
-            border: 1px solid $colorCeruleanBlue;
+            border: 1px solid $color-first;
 
             .#{$namespace}input__label:before,
             .#{$namespace}input__label:after {
-                border-color: $colorCeruleanBlue;
+                border-color: $color-first;
             }
 
             .#{$namespace}input__label:after {
-                background-color: $colorCeruleanBlue;
+                background-color: $color-first;
             }
         }
     }
@@ -57,7 +46,7 @@
     }
 
     &__separator {
-        background: $colorAlto;
+        background: $color-line;
     }
 
     .table-checkout-shipping-method {
@@ -72,13 +61,8 @@
         @extend .#{$namespace}t-headline--look_light;
 
         &--bordered {
-            border-top: 1px solid $colorAlto;
+            border-top: 1px solid $color-line;
         }
-    }
-
-    &__summary-title,
-    &__summary-text {
-        @extend .#{$namespace}t-text;
     }
 
     &__summary-edit {
@@ -93,11 +77,11 @@
         }
 
         .grand {
-            border-top: 1px solid $colorAlto;
+            border-top: 1px solid $color-line;
 
             th,
             td {
-                color: $colorMineShaft;
+                color: $colorWoodsmoke;
                 font-weight: 700 !important;
                 font-size: 1.5rem !important;
             }
@@ -141,17 +125,12 @@
         font-weight: 700;
     }
 
-    .payment-group .step-title {
-        @extend .#{$namespace}t-headline;
-        @extend .#{$namespace}t-headline--size_2;
-    }
-
     &__place-order {
-        border-bottom: 2px solid $colorAlto;
+        border-bottom: 2px solid $color-line;
     }
 
     &__agreements {
         font-size: 1.2rem;
-        border-top: 2px solid $colorAlto;
+        border-top: 2px solid $color-line;
     }
 }
