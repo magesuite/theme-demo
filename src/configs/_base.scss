@@ -2,7 +2,7 @@ $namespace: 'cs-';
 
 $font-family: 'Nunito', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
     Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    Arial, sans-serif;
+    Arial, sans-serif !default;
 
 //Base space between content constructor elements. Here it is divided by 2, because there is top and bottom space in components
 $base-space: 2.5rem !default;
