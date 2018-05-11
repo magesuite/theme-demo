@@ -50,3 +50,37 @@
         }
     }
 }
+
+a {
+    color: $color-link;
+
+    &:visited {
+        color: $color-link;
+    }
+
+    &:hover {
+        color: $color-link-hover;
+    }
+}
+
+.#{$namespace}checkout-header {
+    margin: 1rem auto;
+    min-height: 4rem;
+    @include media('>=tablet') {
+        margin: 1.5rem auto 1rem;
+    }
+
+    .#{$namespace}logo {
+        padding-left: 1.5rem;
+        @include media('>=laptop') {
+            padding-left: 0;
+        }
+
+        img {
+            margin: 1.7rem auto;
+            @include media('>=tablet') {
+                margin: 1.5rem 0;
+            }
+        }
+    }
+}

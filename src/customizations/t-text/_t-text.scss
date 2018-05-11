@@ -1,92 +1,71 @@
 .#{$namespace}t-text {
-    @include t-text(1.4rem, $font-family, $colorDoveGray, $colorDoveGray);
+    @include t-text(1.5rem, $font-family, $color-paragraph, $color-paragraph);
 
     &:hover,
     &:visited {
-        text-decoration: none;
-        color: $colorDoveGray;
+        color: $color-paragraph;
     }
 
     &--look {
-        &_light {
-            line-height: 2.5rem;
-        }
-
         &_success {
-            color: $colorApple;
+            color: $color-success;
 
             &:hover {
-                color: $colorApple;
+                color: $color-success;
             }
         }
 
         &_error {
-            color: $colorCrimson;
+            color: $color-error;
 
             &:hover {
-                color: $colorCrimson;
+                color: $color-error;
             }
         }
 
         &_link {
-            color: $colorCeruleanBlue;
+            color: $color-link;
 
             &:hover {
-                color: $colorCeruleanBlue;
+                color: $color-link-hover;
             }
         }
 
         &_attention {
-            font-weight: 700;
-            color: $colorMineShaft;
-        }
-
-        &_label {
-            text-transform: uppercase;
+            color: $color-paragraph;
         }
     }
 
     &--size {
         &_200 {
-            font-size: 1rem;
-        }
-
-        &_250 {
             font-size: 1.1rem;
         }
 
-        &_300 {
+        &_250 {
             font-size: 1.2rem;
         }
 
-        &_400 {
-            font-size: 1.4rem;
+        &_300 {
+            font-size: 1.3rem;
         }
-    }
 
-    &--type {
-        &_wide {
-            width: 100%;
+        &_400 {
+            font-size: 1.5rem;
         }
     }
 
     &__span {
-        color: $colorDoveGray;
+        color: $color-paragraph;
 
         &:hover,
         &:visited {
-            text-decoration: none;
-            color: $colorDoveGray;
+            color: $color-paragraph;
         }
 
         &--look {
-            &_attention {
-                font-weight: 700;
-            }
-
             &_link {
-                color: $colorCeruleanBlue;
-                font-weight: 300;
+                color: $color-link;
+                font-weight: 400;
             }
         }
     }

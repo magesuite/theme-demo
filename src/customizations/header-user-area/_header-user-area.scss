@@ -6,7 +6,7 @@
     &__section {
         padding: 0.5rem 1.8rem 0;
         width: min-content;
-        border-left: 0.1rem solid $color-border-second;
+        border-left: 0.1rem solid $color-line;
 
         &:hover {
             text-decoration: none;
@@ -52,7 +52,7 @@
     }
 
     &__label {
-        color: $color-text-light;
+        color: $color-paragraph;
         text-decoration: none;
         font-size: 1rem;
         text-transform: capitalize;

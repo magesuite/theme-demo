@@ -137,14 +137,14 @@
                 }
 
                 .old-price .price {
-                    color: $colorDoveGray;
+                    color: $colorGray;
                     text-decoration: line-through;
                     font-size: 90%;
                     font-weight: 700;
                 }
 
                 .special-price .price {
-                    color: $colorCrimson;
+                    color: $color-special-price;
                 }
             }
 
@@ -196,6 +196,15 @@
                         color: $color-special-price !important;
                     }
                 }
+            }
+        }
+
+        .product-image-box {
+            img {
+                max-height: 100%;
+                width: auto;
+                margin: 0 auto;
+                display: block;
             }
         }
     }

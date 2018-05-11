@@ -1,8 +1,7 @@
 .#{$namespace}title-block {
     $root: &;
-    font-size: 1rem;
 
     &--bordered {
-        border-bottom: 1px solid $colorAlto;
+        border-bottom: 1px solid $color-line;
     }
 }

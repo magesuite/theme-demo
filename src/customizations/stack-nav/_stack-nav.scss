@@ -1,11 +1,12 @@
 .#{$namespace}stack-nav {
-    font-size: 1rem;
     $root: &;
+
+    .delimiter {
+        display: none !important;
+    }
 
     &__trigger {
         background-color: $colorGallery;
-        @extend .#{$namespace}t-headline;
-        @extend .#{$namespace}t-headline--size_3;
     }
 
     &__content {
@@ -14,19 +15,16 @@
         }
 
         @include media('>=tablet') {
-            border-radius: 4px;
-            background-color: $colorWhite;
-            box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.27);
+            border-radius: 5px;
+            box-shadow: 0 1px 11px 0 rgba(0, 0, 0, 0.1);
         }
     }
 
     &__nav {
         #{$root}__list li a,
         #{$root}__list li strong {
-            font-size: 1.4rem;
-            border-left: none;
-            color: $colorDoveGray;
-            font-weight: 300;
+            color: $color-dashboard-menu-link;
+            padding: 0.6rem 1.8rem 0.6rem 2.5rem;
         }
 
         #{$root}__list li a:hover {
@@ -38,27 +36,24 @@
         }
 
         #{$root}__list li strong {
-            border-left: none;
-            border-color: transparent;
-            font-weight: 300;
-            color: $colorMineShaft;
+            color: $color-dashboard-menu-link;
         }
 
         // Current item
         #{$root}__list li.current strong {
-            border-left: none;
-            border-color: transparent;
-            font-weight: 700;
-            position: relative;
+            font-size: 1.5rem;
 
             &:after {
-                border-left: 10px solid transparent;
-                border-right: 10px solid transparent;
-                border-top: 35px solid $colorGold;
+                display: none;
             }
 
             &:before {
-                background: $colorGold;
+                background: $color-dashboard-menu-indicator;
+                border-radius: 8px;
+                width: 1.2rem;
+                left: -0.5rem;
+                top: 0.2rem;
+                height: calc(100% - 0.4rem);
             }
         }
     }

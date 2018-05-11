@@ -10,7 +10,7 @@
 
     &__title {
         padding: 1rem 1.5rem;
-        border-bottom: 0.2rem solid $color-border-second;
+        border-bottom: 0.2rem solid $color-line;
         @extend .#{$namespace}t-headline;
         @extend .#{$namespace}t-headline--size_2;
         @extend .#{$namespace}t-headline--look_light;
@@ -26,7 +26,7 @@
     }
 
     &__title-qty {
-        color: $colorDoveGray;
+        color: $colorGray;
         font-size: 1.4rem;
     }
 
@@ -35,11 +35,11 @@
     }
 
     &__list-item {
-        border-bottom: 0.1rem solid $color-second;
+        border-bottom: 0.1rem solid $color-line;
     }
 
     &__buttons {
-        border-top: 0.1rem solid $color-second;
+        border-top: 0.1rem solid $color-line;
         box-shadow: none;
     }
 
@@ -61,13 +61,13 @@
 
     &__buttons {
         box-shadow: none;
-        border-color: $color-border-second;
+        border-color: $color-line;
     }
 }
 
 .minicart-wrapper .block-minicart {
     box-shadow: none;
-    border: 0.1rem solid $color-border-second;
+    border: 0.1rem solid $color-line;
     border-radius: 0.5rem;
     margin: 1.2rem 0 0;
     right: -0.3rem;
@@ -82,7 +82,7 @@
 
     &:after {
         box-shadow: none;
-        border: 0.1rem solid $color-border-second;
+        border: 0.1rem solid $color-line;
 
         @include media('>=laptop') {
             right: 2rem;

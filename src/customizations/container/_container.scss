@@ -66,8 +66,10 @@
     }
 
     &--spacious {
-        @include media('>=tablet') {
-            padding-top: 0rem;
+        .catalog-product-view & {
+            @include media('>=tablet') {
+                padding-top: 0rem;
+            }
         }
     }
 
