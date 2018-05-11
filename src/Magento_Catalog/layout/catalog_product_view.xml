@@ -18,6 +18,8 @@
         <referenceBlock name="product.info.share" remove="true"/>
         <referenceBlock name="product.info.addto" remove="true"/>
         <referenceBlock name="reviews.tab" remove="true"/>
+        <referenceBlock name="reviews.summary" remove="true"/>
+
 
         <move element="product.info.special.attributes" destination="product.info.main" after="page.main.title"/>
 

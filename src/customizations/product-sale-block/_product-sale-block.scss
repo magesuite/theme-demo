@@ -88,4 +88,8 @@
         height: 0.9rem;
         transform: translateY(0.1rem);
     }
+
+    .#{$namespace}star-rating {
+        display: none !important;
+    }
 }
