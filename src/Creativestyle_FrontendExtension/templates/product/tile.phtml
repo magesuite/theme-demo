@@ -2,21 +2,21 @@
 <li class="<?php echo /* @escapeNotVerified */ $viewModeClass; ?>__brick <?php if($showHeroProduct): ?><?php echo $viewModeClass; ?>__brick--teaser <?php echo $viewModeClass; ?>__brick--x2 <?php echo $viewModeClass; ?>__brick--y2<?php endif; ?>">
     <div class="cs-grid-product <?php if($showHeroProduct): ?>cs-grid-product--hero<?php endif; ?>">
         <?php
-            $productImageSrcset = $productImageUrl . ' 1x, ' . $productImageUrl2x . ' 2x';
-            $productNameStripped = $block->stripTags($product->getName(), null, true);
-            $getIsSalable = $salabilityStatus[$product->getId()];
-            $newBadge = $badgeHelper->isNew($product);
-            $newBadgeText = 'New';
-            $discount = $badgeHelper->getSalePercentage($product);
-            $isPopular = $indicatorsHelper->getPopularIconFlag($product->getId());
-            $postParams = $block->getAddToCartPostParams($product);
-            $showDetails = '';
-            $productHelper = $this->helper('Creativestyle\FrontendExtension\Helper\Product');
-            $addToCart = '';
-            $addToCartText = __('Add to cart');
-            $addToCartUrl = $productHelper->getAddToCartUrl($product->getId());
+        $productImageSrcset = $productImageUrl . ' 1x, ' . $productImageUrl2x . ' 2x';
+        $productNameStripped = $block->stripTags($product->getName(), null, true);
+        $getIsSalable = $salabilityStatus[$product->getId()];
+        $newBadge = $badgeHelper->isNew($product);
+        $newBadgeText = 'New';
+        $discount = $badgeHelper->getSalePercentage($product);
+        $isPopular = $indicatorsHelper->getPopularIconFlag($product->getId());
+        $postParams = $block->getAddToCartPostParams($product);
+        $showDetails = '';
+        $productHelper = $this->helper('Creativestyle\FrontendExtension\Helper\Product');
+        $addToCart = '';
+        $addToCartText = __('Add to cart');
+        $addToCartUrl = $productHelper->getAddToCartUrl($product->getId());
 
-            $addToCart = '
+        $addToCart = '
             <div class="cs-grid-product__info"> ' . $block->getProductPrice($product) . '
                 <form data-role="tocart-form" action="' . $addToCartUrl . '" method="post">
                     <input type="hidden" name="product" value="' . $postParams['data']['product'] . '">' . $block->getBlockHtml('formkey') . '
@@ -27,49 +27,49 @@
                 </form>
             </div>';
 
-            if( $discount ) {
-                $badges[] = [
-                    'content' => '<span class="cs-badge cs-badge--discount">
+        if( $discount ) {
+            $badges[] = [
+                'content' => '<span class="cs-badge cs-badge--discount">
                         <span class="cs-badge__span">'  . $discount . '%</span>
                     </span>'
-                ];
+            ];
 
-            }
+        }
 
-            if ( $newBadge ) {
-                $badges[] = [
-                    'content' => '<span class="cs-badge cs-badge--new">
+        if ( $newBadge ) {
+            $badges[] = [
+                'content' => '<span class="cs-badge cs-badge--new">
                         <span class="cs-badge__span">' . __($newBadgeText) . '</span>
                     </span>'
-                ];
-            }
+            ];
+        }
 
-            if ( $isPopular ) {
-                $badges[] = [
-                    'content' => '<span class="cs-badge cs-badge--positive">
+        if ( $isPopular ) {
+            $badges[] = [
+                'content' => '<span class="cs-badge cs-badge--positive">
                         <span class="cs-badge__span">' . __('Popular') . '</span>
                     </span>'
-                ];
-            }
-
-            $data = [
-                'lazyload' => $iterator > 9,
-                'url' => $product->getProductUrl(),
-                'image' => [
-                    'src' => $productImageUrl,
-                    'srcset' => $productImageSrcset,
-                    'alt' => $productNameStripped,
-                    'width' => '216',
-                    'height' => '270'
-                ],
-                'name' => $helper->productAttribute($product, $product->getName(), 'name'),
-                'priceMoved' => true,
-                'hotspots' => [
-                    'after' => [
-                        'name' =>  $addToCart
-                    ],
-                ]
             ];
+        }
+
+        $data = [
+            'lazyload' => $iterator > 9,
+            'url' => $product->getProductUrl(),
+            'image' => [
+                'src' => $productImageUrl,
+                'srcset' => $productImageSrcset,
+                'alt' => $productNameStripped,
+                'width' => '216',
+                'height' => '270'
+            ],
+            'name' => $helper->productAttribute($product, $product->getName(), 'name'),
+            'priceMoved' => true,
+            'hotspots' => [
+                'after' => [
+                    'name' =>  $addToCart
+                ],
+            ]
+        ];
 
         ?>
         <?=$this->getLayout()->createBlock(

@@ -28,10 +28,10 @@
         }
 
         #{$root}__list li a:hover {
-            background-color: darken($colorGallery, 5%);
+            background-color: $color-select-hover;
 
             @include media('>=tablet') {
-                background-color: $colorGallery;
+                background-color: $color-select-hover;
             }
         }
 
