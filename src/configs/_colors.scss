@@ -6,6 +6,7 @@ $colorMidnightBlue: #00316e;
 $colorPrussianBlue: #002758;
 
 //Additional colors
+$colorHummingBird: #dff2fb;
 $colorGreenHaze: #00c744; //color success texts
 $colorThunderbird: #ca321e; //color error texts, also you tube button
 $colorYellowOrange: #ffaf47; //color-warning
@@ -114,6 +115,7 @@ $color-base-price: $colorAlto !default;
 $color-input-border: $colorAlto !default;
 $color-input-text: $colorWoodsmoke !default;
 $color-input-label: $colorWoodsmoke !default;
+$color-select-hover: $colorHummingBird !default;
 
 //Additional colors - messages, warnings
 $color-success: $colorGreenHaze !default;
@@ -121,5 +123,5 @@ $color-error: $colorThunderbird !default;
 $color-warning: $colorYellowOrange !default;
 
 //Dashboard - checkout
-$color-dashboard-menu-link: $colorWoodsmoke;
-$color-dashboard-menu-indicator: $colorMidnightBlue;
+$color-dashboard-menu-link: $colorWoodsmoke !default;
+$color-dashboard-menu-indicator: $colorMidnightBlue !default;
