@@ -51,28 +51,36 @@ $fontSizeBaseSubheadline: 9vw;
 
     &__hero {
         &-headline {
-            #{$root}__hero--scheme-light & {
-                color: $colorWhite !important;
-            }
+            color: $color-teaser-dark-scheme-headline;
+            font-size: 2.5rem !important;
 
-            @media screen and (min-width: 1200px) {
-                font-size: 4rem;
+            #{$root}__hero--scheme-light & {
+                color: $color-teaser-light-scheme-headline !important;
             }
         }
 
         &-subheadline {
-            #{$root}__hero--scheme-light & {
-                color: $colorWhite !important;
-            }
+            color: $color-teaser-dark-scheme-subheadline;
+            font-size: 1.8rem !important;
+            margin: 2rem 0 1.5rem;
 
-            @media screen and (min-width: 1200px) {
-                font-size: 2.7rem;
+            #{$root}__hero--scheme-light & {
+                color: $color-teaser-light-scheme-subheadline !important;
             }
         }
 
         &-text {
+            color: $color-teaser-dark-scheme-text;
+            line-height: 150%;
+
             #{$root}__hero--scheme-light & {
-                color: $colorWhite !important;
+                color: $color-teaser-light-scheme-text !important;
+            }
+        }
+
+        &-content-wrapper {
+            @include media('>=laptop') {
+                padding: 2.7rem 3rem 2.7rem 4.5rem;
             }
         }
     }
