@@ -1,5 +1,5 @@
 .#{$namespace}separator {
-    height: calc(($base-space * 2) + 5.1rem);
+    height: 5.1rem; //base space * 2 + 0.1rem
 
     &:after {
         background: $color-line;

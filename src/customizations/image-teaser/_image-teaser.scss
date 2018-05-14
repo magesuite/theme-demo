@@ -6,6 +6,8 @@
     margin-top: $base-space;
 
     &__slide {
+        margin-bottom: 0 !important; //ul > li has margin bottom in Magento styles
+
         //Do not center text and image when text is outside image
         #{$root}__wrapper--content-display-outside & {
             align-content: flex-start;
