@@ -6,11 +6,6 @@
 
         <referenceContainer name="product.media.container.column" htmlTag="div" htmlClass="cs-container__main-column cs-container__main-column--space-top" />
 
-        <referenceContainer name="product.info.main">
-            <block class="Magento\Catalog\Block\Product\View" name="sale.block.shipping" template="Magento_Catalog::product/view/shipping.phtml" after="-"/>
-        </referenceContainer>
-
-
         <move element="product.info.main" destination="product.media.container.column" after="-"/>
 
         <referenceContainer name="product.info.main" htmlTag="div" htmlClass="product-info-main cs-product-sale-block" />
@@ -20,12 +15,13 @@
         <referenceBlock name="reviews.tab" remove="true"/>
         <referenceBlock name="reviews.summary" remove="true"/>
 
-
         <move element="product.info.special.attributes" destination="product.info.main" after="page.main.title"/>
 
-
         <referenceContainer name="product.info.main" >
-            <container name="sale.block.add.line" htmlClass="cs-product-sale-block__add-line" htmlTag="div" after="page.main.title" />
+            <container name="sale.block.add.line" htmlClass="cs-product-sale-block__add-line" htmlTag="div" after="page.main.title">
+                <block class="Magento\Catalog\Block\Product\View" name="sale.block.shipping" template="Magento_Catalog::product/view/shipping.phtml" after="-"/>
+
+            </container>
         </referenceContainer>
 
         <move element="product.info" destination="sale.block.add.line" />
