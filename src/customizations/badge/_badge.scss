@@ -4,21 +4,20 @@
 
 .#{$namespace}badge {
     $root: &;
-    font-size: 1rem;
     border-radius: 50%;
     text-align: center;
     color: $colorWhite;
-    background: $colorCrimson;
+    background: $color-badge-discount;
     box-shadow: 0 0 0 0.1rem $colorWhite !important;
-    transform: skew(0);
+    transform: skew(0deg);
     padding: 0.1rem 0.15rem 0.2rem 0.2rem;
 
-    &--attention {
-        background-color: $colorCrimson;
+    &:before {
+        display: none;
+    }
 
-        &:before {
-            background-color: $colorCrimson;
-        }
+    &--attention {
+        background-color: $color-badge-discount;
 
         #{$root}__span {
             color: $colorWhite;
@@ -29,17 +28,13 @@
     &--info {
         background-color: $color-first;
 
-        &:before {
-            background-color: $color-first;
-        }
-
         #{$root}__span {
             color: $colorWhite;
         }
     }
 
     &--amount {
-        background-color: $colorCeruleanBlue;
+        background-color: $color-first;
 
         #{$root}__span {
             color: $colorWhite;
@@ -47,71 +42,55 @@
     }
 
     &--new {
-        background-color: $colorGold;
-
-        &:before {
-            background-color: $colorGold;
-        }
+        background-color: $color-badge-new;
 
         #{$root}__span {
-            color: $colorMineShaft;
+            color: $colorWhite;
         }
     }
 
     &--label {
-        transform: skew(-15deg);
-        line-height: 1;
-        box-shadow: none;
-        text-indent: -0.5rem;
-        border-radius: 3px;
+        transform: skew(0deg);
+        text-indent: 0;
+        border-radius: 50%;
 
         #{$root}__span {
-            font-size: 1.2rem;
-            text-transform: uppercase;
-            transform: skew(15deg);
-            font-weight: 400;
-        }
-
-        &#{$root}--new #{$root}__span {
+            font-size: 2.1rem;
+            text-transform: none;
+            transform: skew(0deg);
             font-weight: 700;
         }
     }
 
     &--label-big {
-        transform: skew(-15deg);
-        height: 2.7rem;
-        line-height: 1;
-        box-shadow: none;
-        border-radius: 3px;
+        transform: skew(0deg);
+        height: 5.9rem;
+        width: 5.9rem;
+        border-radius: 50%;
 
         #{$root}__span {
-            font-weight: 400;
-            font-size: 1.5rem;
-            text-transform: uppercase;
-            transform: skew(18deg);
+            font-weight: 700;
+            font-size: 2.1rem;
+            text-transform: none;
+            transform: skew(0deg);
+            line-height: 5.7rem;
         }
     }
 
     &--cut {
         #{$root}__span {
-            transform: skew(15deg);
-        }
-
-        &:before {
-            transform: skew(15deg);
-            border-top-left-radius: 3px;
-            border-bottom-left-radius: 3px;
+            transform: skew(0deg);
         }
 
         #{$root}__span {
-            transform: skew(15deg) translateX(-0.5rem);
+            transform: skew(0deg);
         }
     }
 
     &__span {
         color: $colorWhite;
-        font-weight: 400;
-        transform: skew(0);
+        font-weight: 700;
+        transform: skew(0deg);
         padding-top: 0.1rem;
     }
 }
