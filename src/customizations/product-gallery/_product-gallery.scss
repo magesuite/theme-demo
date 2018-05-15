@@ -35,20 +35,37 @@
             width: calc(100% - 53rem);
         }
     }
-}
 
-.fotorama {
-    $root: &;
-
-    &__stage__frame &__img {
-        max-width: 39rem;
-        max-height: 39rem;
-        top: 1rem !important;
+    .fotorama__stage__frame .fotorama__img {
+        top: 0 !important;
         transform: translate3d(-50%, 0%, 0) !important;
 
         @include media('>=tablet', '<laptop') {
             max-width: 30rem !important;
             max-height: 30rem !important;
+        }
+
+        @include media('>=tablet') {
+            max-width: 39rem;
+            max-height: 39rem;
+        }
+    }
+
+}
+
+.fotorama {
+    $root: &;
+
+    &__nav-wrap {
+        &--vertical {
+            box-sizing: border-box;
+
+            #{$root}__nav--thumbs {
+                // We gave the whole gallery max height, so container for thumbs also should have it
+                @include media('>=tablet') {
+                    max-height: 39rem;
+                }
+            }
         }
     }
 
@@ -65,7 +82,7 @@
 
     &__nav-wrap--vertical {
         width: 7.6rem;
-        padding: 1rem 0;
+        padding: 0;
     }
 
     &__thumb {
@@ -134,5 +151,38 @@
                 }
             }
         }
+    }
+}
+
+
+.fotorama--fullscreen {
+
+    .fotorama__stage {
+        padding: 2rem 0 !important;
+    }
+
+    .fotorama__stage__shaft {
+        padding-left: 0;
+    }
+
+    .fotorama__nav-wrap {
+        text-align: center;
+        margin-top: 2rem;
+    }
+
+    //.fotorama__fullscreen-icon {
+    //    top: -2rem;
+    //}
+    //
+    //.fotorama__zoom-in {
+    //    top: -2rem !important;
+    //}
+    //
+    //.fotorama__zoom-out {
+    //    top: 6rem !important;
+    //}
+
+    .fotorama__img--full {
+        top: 2rem;
     }
 }
