@@ -10,6 +10,9 @@ $colorHummingBird: #dff2fb;
 $colorGreenHaze: #00c744; //color success texts
 $colorThunderbird: #ca321e; //color error texts, also you tube button
 $colorYellowOrange: #ffaf47; //color-warning
+$colorHintOfYellow: #fbfef5; //success background color
+$colorRoseWhite: #fff8f8; //error background color
+$colorLightPearl: #fffcf2; //warning background color
 
 //Greys palette
 $colorWoodsmoke: #151616;
@@ -22,6 +25,7 @@ $colorConcrete: #f3f3f3;
 $colorWhite: #fff;
 
 $colorStTropaz: #2a5ca6; //social buttons - facebook button
+
 
 // We need to name color more by their position in that project. Variable should have default flag here
 
@@ -123,6 +127,9 @@ $color-select-hover: $colorHummingBird !default;
 $color-success: $colorGreenHaze !default;
 $color-error: $colorThunderbird !default;
 $color-warning: $colorYellowOrange !default;
+$color-success-background: $colorHintOfYellow !default;
+$color-error-background: $colorRoseWhite !default;
+$color-warning-background: $colorLightPearl !default;
 
 //Dashboard - checkout
 $color-dashboard-menu-link: $colorWoodsmoke !default;
