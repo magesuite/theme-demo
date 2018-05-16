@@ -75,6 +75,13 @@
             transform: skew(0deg);
             line-height: 5.7rem;
         }
+
+        &.#{$namespace}badge--attention {
+            #{$root}__span {
+                font-size: 1.8rem;
+                font-weight: 400;
+            }
+        }
     }
 
     &--cut {
