@@ -61,13 +61,13 @@
         }
 
         #{$root}--items-in-row-2
-        #{$root}__wrapper--content-display-inside
-        #{$root}__content-wrapper--content-display-scenario-1
-        &,
+            #{$root}__wrapper--content-display-inside
+            #{$root}__content-wrapper--content-display-scenario-1
+            &,
         #{$root}--items-in-row-2
-        #{$root}__wrapper--content-display-inside
-        #{$root}__content-wrapper--content-display-scenario-2
-        & {
+            #{$root}__wrapper--content-display-inside
+            #{$root}__content-wrapper--content-display-scenario-2
+            & {
             max-width: 100% !important;
         }
     }
