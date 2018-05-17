@@ -50,6 +50,12 @@
             max-height: 39rem;
         }
     }
+
+    .fotorama__stage {
+        @include media('>=tablet') {
+            max-height: 39rem !important;
+        }
+    }
 }
 
 .fotorama {
@@ -71,12 +77,6 @@
     &__nav--thumbs &__nav__frame {
         width: 7.6rem !important;
         height: 7.6rem !important;
-    }
-
-    &__stage {
-        @include media('>=tablet') {
-            max-height: 39rem !important;
-        }
     }
 
     &__nav-wrap--vertical {
@@ -154,9 +154,6 @@
 }
 
 .fotorama--fullscreen {
-    .fotorama__stage {
-        padding: 2rem 0 !important;
-    }
 
     .fotorama__stage__shaft {
         padding-left: 0;
@@ -164,22 +161,5 @@
 
     .fotorama__nav-wrap {
         text-align: center;
-        margin-top: 2rem;
-    }
-
-    //.fotorama__fullscreen-icon {
-    //    top: -2rem;
-    //}
-    //
-    //.fotorama__zoom-in {
-    //    top: -2rem !important;
-    //}
-    //
-    //.fotorama__zoom-out {
-    //    top: 6rem !important;
-    //}
-
-    .fotorama__img--full {
-        top: 2rem;
     }
 }
