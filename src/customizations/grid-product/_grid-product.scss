@@ -29,7 +29,7 @@
     }
 
     &__name-link {
-        color: $colorMineShaft;
+        color: $color-text-dark;
     }
 
     &--shadow {
@@ -60,6 +60,7 @@
         .baseprice {
             position: absolute;
             top: 2.8rem;
+            left: 0;
             font-size: 1.1rem;
             color: $color-base-price;
             font-weight: 400;

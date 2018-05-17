@@ -231,18 +231,18 @@
         }
 
         &_grid-tocart {
-            @extend .#{$namespace}button;
-            @extend .#{$namespace}button--look_default;
-            @extend .#{$namespace}button--size_300;
-
             border: 0.1rem solid $color-button-light-border;
             background-color: $color-button-light-background;
             border-color: $color-button-light-border;
-            min-width: min-content;
             padding: 0;
             width: 5rem;
             height: 3.5rem;
             position: relative;
+            min-width: 5rem;
+
+            @supports ( min-width: min-content ) {
+                min-width: min-content;
+            }
 
             &:hover,
             &:active,

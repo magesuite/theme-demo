@@ -10,6 +10,10 @@
             color: $color-text-dark;
             line-height: 1.7rem;
         }
+
+        .ie11 .#{$namespace}grid-product & {
+            transform: translateY(-0.3rem);
+        }
     }
 
     .special-price {

@@ -47,6 +47,12 @@
             @media (min-width: 1285px) {
                 left: calc(-#{$navArrowSize} / 2);
             }
+
+            &:hover,
+            &:active,
+            &:focus {
+                border-left: 1px solid $colorConcrete;
+            }
         }
 
         &--next {
@@ -56,6 +62,12 @@
 
             @media (min-width: 1285px) {
                 right: calc(-#{$navArrowSize} / 2);
+            }
+
+            &:hover,
+            &:active,
+            &:focus {
+                border-right: 1px solid $colorConcrete;
             }
         }
     }
