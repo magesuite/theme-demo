@@ -240,7 +240,7 @@
             position: relative;
             min-width: 5rem;
 
-            @supports ( min-width: min-content ) {
+            @supports (min-width: min-content) {
                 min-width: min-content;
             }
 
