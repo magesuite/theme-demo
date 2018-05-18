@@ -17,20 +17,22 @@ $shouldAutoopen = $cHelper->getMinicartFlag();
         href="<?php /* @escapeNotVerified */ echo $block->getShoppingCartUrl(); ?>"
         data-bind="scope: 'minicart_content'"
     >
-        <span class="counter qty empty">
-            <span class="cs-header-user-area__icon-wrapper">
-                <span
-                    class="cs-header-user-area__badge | cs-badge cs-badge--info cs-badge--short"
-                    data-bind="css: { 'cs-header-user-area__badge--visible': getCartParam('summary_count') > 0 }"
-                >
-                    <span class="cs-badge__span"><!-- ko text: getCartParam('summary_count') --><!-- /ko --></span>
+        <div data-bind="css: { 'minicart-non-empty': getCartParam('summary_count') > 0 }" >
+            <span class="counter qty empty">
+                <span class="cs-header-user-area__icon-wrapper">
+                    <span
+                        class="cs-header-user-area__badge | cs-badge cs-badge--info cs-badge--short"
+                        data-bind="css: { 'cs-header-user-area__badge--visible': getCartParam('summary_count') > 0 }"
+                    >
+                        <span class="cs-badge__span"><!-- ko text: getCartParam('summary_count') --><!-- /ko --></span>
+                    </span>
+                    <svg class="cs-header-user-area__icon cs-header-user-area__icon--minicart">
+                        <use xlink:href="#cart"></use>
+                    </svg>
                 </span>
-                <svg class="cs-header-user-area__icon cs-header-user-area__icon--minicart">
-                    <use xlink:href="#cart"></use>
-                </svg>
+                <span class="cs-header-user-area__label"><?= __('Cart'); ?></span>
             </span>
-            <span class="cs-header-user-area__label"><?= __('Cart'); ?></span>
-        </span>
+        </div>
     </a>
 
     <a

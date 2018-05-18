@@ -12,6 +12,16 @@
     transform: skew(0deg);
     padding: 0.1rem 0.15rem 0.2rem 0.2rem;
 
+    &--short {
+        max-width: min-content;
+
+        #{$root}__span {
+            max-width: min-content;
+            margin-left: 0.1rem;
+            margin-right: 0.1rem;
+        }
+    }
+
     &:before {
         display: none;
     }
