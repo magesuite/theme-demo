@@ -80,7 +80,11 @@ $fontSizeBaseSubheadline: 9vw;
 
         &-content-wrapper {
             @include media('>=laptop') {
-                padding: 2.7rem 3rem 2.7rem 4.5rem;
+                padding: 2.7rem 3rem;
+            }
+
+            @include media('>=laptop-lg') {
+                padding: 2.7rem 4.5rem;
             }
         }
     }
@@ -126,5 +130,9 @@ $fontSizeBaseSubheadline: 9vw;
                 }
             }
         }
+    }
+
+    &__button-icon {
+        display: none;
     }
 }

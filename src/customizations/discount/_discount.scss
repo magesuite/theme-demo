@@ -3,12 +3,11 @@
 
     &__title {
         &:after {
-            background-image: url('images/button-arrow-dark.png');
+            background-image: url('images/arrow_next.svg');
         }
     }
 
     &__text {
-        @extend .#{$namespace}t-text;
-        @extend .#{$namespace}t-text--size_300;
+        font-size: 1.4rem;
     }
 }

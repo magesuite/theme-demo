@@ -9,14 +9,24 @@
         border-left: 0.1rem solid $color-line;
 
         &:hover {
-            text-decoration: none;
-
             .#{$namespace}header-user-area__icon--my-account {
                 fill: $color-icon-first-hover;
             }
 
             .#{$namespace}header-user-area__icon--minicart {
                 fill: $color-icon-second-hover;
+            }
+
+            .minicart-non-empty {
+                .#{$namespace}header-user-area__icon--minicart {
+                    fill: $color-icon-active;
+                }
+            }
+
+            .minicart-non-empty {
+                .#{$namespace}badge--info {
+                    background-color: $color-icon-active;
+                }
             }
 
             .#{$namespace}badge--info {
@@ -29,14 +39,6 @@
                 padding-right: 0;
             }
         }
-
-        &--my-account {
-            .#{$namespace}header-user-area__icon--my-account {
-                &:hover {
-                    fill: $color-icon-first-hover;
-                }
-            }
-        }
     }
 
     &__icon {
@@ -44,10 +46,6 @@
 
         &--my-account {
             fill: $color-icon-first;
-
-            &:hover {
-                fill: $color-icon-first-hover;
-            }
         }
     }
 
