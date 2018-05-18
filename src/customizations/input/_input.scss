@@ -101,12 +101,12 @@
     &__radio[type='radio'] {
         &:checked + #{$root}__label:before,
         &:checked + #{$root}__label:after {
-            color: $colorCeruleanBlue;
-            border-color: $colorCeruleanBlue;
+            color: $color-radio;
+            border-color: $color-radio;
         }
 
         &:hover:not(:disabled) + #{$root}__label:before {
-            border-color: $colorCeruleanBlueHover;
+            border-color: $color-radio-hover;
         }
 
         &:checked + #{$root}__label:after,
@@ -116,7 +116,7 @@
             height: 0.7rem;
             top: 50%;
             left: 0.6rem;
-            background-color: $colorCeruleanBlue;
+            background-color: $color-radio;
         }
     }
 
@@ -180,6 +180,9 @@
 
     &--type-radio {
         #{$root}__label {
+
+            padding-left: 2.2rem;
+
             &:before {
                 width: 1.65rem;
                 height: 1.65rem;
@@ -206,11 +209,14 @@
 
         #{$root}__checkbox {
             &:hover:not(:disabled) + #{$root}__label:before {
-                border-color: $colorCeruleanBlue;
+                border-color: $color-checkbox-hover;
             }
 
             &:checked + #{$root}__label:before {
-                background-image: url('images/check@2x.png');
+                background-color: $color-checkbox;
+                background-image: url('images/checkbox-tick.svg');
+                background-repeat: no-repeat;
+                background-size: 1.1rem 0.9rem;
             }
 
             &[type='checkbox']:disabled + #{$root}__label:before {
@@ -231,10 +237,9 @@
                 border-width: 1px;
                 border-color: $color-input-border;
                 border-style: solid;
+                border-radius: 0.4rem;
                 width: 2rem;
                 height: 2rem;
-                box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.15),
-                    0 -1px 1px $colorWhite, 0 1px 0 $colorWhite;
                 background-size: 1rem auto;
             }
         }

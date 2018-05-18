@@ -1,9 +1,7 @@
 .#{$namespace}messages {
-
     $root: &;
 
     &__message {
-
         border-radius: 0.5rem;
 
         &--success {
@@ -54,7 +52,7 @@
             }
         }
     }
-    
+
     &__text {
         font-size: 1.4rem;
     }

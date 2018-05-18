@@ -16,7 +16,7 @@
 
             &:before {
                 @include media('<laptop') {
-                    color: $colorMineShaft;
+                    color: $color-paragraph;
                     font-weight: 700;
                 }
             }
@@ -36,24 +36,24 @@
     }
 
     &__head {
-        border-bottom: 2px solid $colorAlto;
+        border-bottom: 2px solid $color-line;
     }
 
     &__col-head {
-        @extend .#{$namespace}t-headline;
-        @extend .#{$namespace}t-headline--size_4;
+        @extend .#{$namespace}t-headline--size_5;
+        text-transform: uppercase !important;
     }
 
     &__col {
         font-size: 1.4rem;
-        color: $colorGray;
-        font-weight: 300;
+        color: $color-paragraph;
+        font-weight: 400;
         border-bottom: 1px solid $color-line;
 
         #{$root}:not(#{$rootNoChangeMobile}) & {
             &:before {
                 @include media('<tablet') {
-                    color: $colorMineShaft;
+                    color: $color-paragraph;
                     font-weight: 700;
                 }
             }
@@ -65,7 +65,7 @@
 
         &--attention {
             font-weight: 700;
-            color: $colorMineShaft;
+            color: $color-paragraph;
         }
 
         &--actions {
@@ -84,7 +84,7 @@
         &.subtotal,
         &.total {
             .price {
-                color: $colorMineShaft;
+                color: $color-paragraph;
                 font-size: 1.4rem;
             }
         }
@@ -99,6 +99,10 @@
         @include media('<tablet') {
             background: $colorGallery;
         }
+    }
+
+    tr {
+        line-height: 2.4;
     }
 }
 

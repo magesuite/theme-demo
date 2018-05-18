@@ -26,7 +26,6 @@ $colorWhite: #fff;
 
 $colorStTropaz: #2a5ca6; //social buttons - facebook button
 
-
 // We need to name color more by their position in that project. Variable should have default flag here
 
 //Main colors
@@ -122,6 +121,10 @@ $color-input-border: $colorAlto !default;
 $color-input-text: $colorWoodsmoke !default;
 $color-input-label: $colorWoodsmoke !default;
 $color-select-hover: $colorHummingBird !default;
+$color-radio: $colorScooter !default;
+$color-radio-hover: $colorEasternBlue !default;
+$color-checkbox: $colorScooter !default;
+$color-checkbox-hover: $colorScooter !default;
 
 //Additional colors - messages, warnings
 $color-success: $colorGreenHaze !default;
