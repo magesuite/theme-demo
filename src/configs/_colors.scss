@@ -10,6 +10,9 @@ $colorHummingBird: #dff2fb;
 $colorGreenHaze: #00c744; //color success texts
 $colorThunderbird: #ca321e; //color error texts, also you tube button
 $colorYellowOrange: #ffaf47; //color-warning
+$colorHintOfYellow: #fbfef5; //success background color
+$colorRoseWhite: #fff8f8; //error background color
+$colorLightPearl: #fffcf2; //warning background color
 
 //Greys palette
 $colorWoodsmoke: #151616;
@@ -118,11 +121,18 @@ $color-input-border: $colorAlto !default;
 $color-input-text: $colorWoodsmoke !default;
 $color-input-label: $colorWoodsmoke !default;
 $color-select-hover: $colorHummingBird !default;
+$color-radio: $colorScooter !default;
+$color-radio-hover: $colorEasternBlue !default;
+$color-checkbox: $colorScooter !default;
+$color-checkbox-hover: $colorScooter !default;
 
 //Additional colors - messages, warnings
 $color-success: $colorGreenHaze !default;
 $color-error: $colorThunderbird !default;
 $color-warning: $colorYellowOrange !default;
+$color-success-background: $colorHintOfYellow !default;
+$color-error-background: $colorRoseWhite !default;
+$color-warning-background: $colorLightPearl !default;
 
 //Dashboard - checkout
 $color-dashboard-menu-link: $colorWoodsmoke !default;
