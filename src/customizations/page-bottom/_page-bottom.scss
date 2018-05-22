@@ -44,6 +44,10 @@
             padding-right: 6rem;
             box-sizing: border-box;
 
+            @include media('<tablet') {
+                padding: 2.7rem 0;
+            }
+
             @include media('<laptop') {
                 display: none;
             }

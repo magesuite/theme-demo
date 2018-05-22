@@ -97,7 +97,7 @@
 
     .active {
         > #{$root}__link {
-            color: initial;
+            color: $color-link-hover;
         }
     }
 }
