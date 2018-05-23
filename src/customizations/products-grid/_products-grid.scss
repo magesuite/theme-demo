@@ -53,9 +53,16 @@ $fontSizeBaseSubheadline: 9vw;
         &-headline {
             color: $color-teaser-dark-scheme-headline;
             font-size: 2.5rem !important;
+            max-width: 100%;
 
             #{$root}__hero--scheme-light & {
                 color: $color-teaser-light-scheme-headline !important;
+            }
+
+            #{$root}__hero-content-wrapper--variant-3 &,
+            #{$root}__hero-content-wrapper--variant-4 & {
+                width: 100%;
+                text-align: center;
             }
         }
 
@@ -63,18 +70,32 @@ $fontSizeBaseSubheadline: 9vw;
             color: $color-teaser-dark-scheme-subheadline;
             font-size: 1.8rem !important;
             margin: 2rem 0 1.5rem;
+            max-width: 100%;
 
             #{$root}__hero--scheme-light & {
                 color: $color-teaser-light-scheme-subheadline !important;
+            }
+
+            #{$root}__hero-content-wrapper--variant-3 &,
+            #{$root}__hero-content-wrapper--variant-4 & {
+                width: 100%;
+                text-align: center;
             }
         }
 
         &-text {
             color: $color-teaser-dark-scheme-text;
             line-height: 150%;
+            max-width: 100%;
 
             #{$root}__hero--scheme-light & {
                 color: $color-teaser-light-scheme-text !important;
+            }
+
+            #{$root}__hero-content-wrapper--variant-3 &,
+            #{$root}__hero-content-wrapper--variant-4 & {
+                width: 100%;
+                text-align: center;
             }
         }
 

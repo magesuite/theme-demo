@@ -10,7 +10,8 @@
         }
 
         #{$root}--open & {
-            border-color: $color-select-border $color-select-border transparent $color-select-border !important;
+            border-color: $color-select-border $color-select-border transparent
+                $color-select-border !important;
         }
 
         &:hover {

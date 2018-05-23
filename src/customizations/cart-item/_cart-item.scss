@@ -2,65 +2,27 @@
     $root: &;
     border-top: 1px solid $color-line;
 
-    tbody:nth-child(3) & {
-        border-top: none;
-    }
-
-    @include media('>=laptop') {
-        border-top: none;
-    }
-
     &__name {
-        font-size: 1.5rem;
-        font-weight: 700;
-        color: $colorMineShaft;
+        color: $color-link;
+        font-weight: 400;
     }
 
     &__name a {
-        font-size: 1.5rem;
-        font-weight: 700;
-        text-decoration: none;
-        color: $colorMineShaft;
+        color: $color-link;
+        font-weight: 400;
+    }
 
-        &__name {
-            a {
-                font-size: 1.4rem;
-            }
+    &__price {
+        .price {
+            font-weight: 400;
+            color: $color-paragraph;
         }
     }
 
-    &__options-label {
-        @extend .#{$namespace}t-headline;
-        @extend .#{$namespace}t-headline--size_4;
-    }
-
-    &__options-value {
-        @extend .#{$namespace}t-text;
-        @extend .#{$namespace}t-text--look_light;
-    }
-
-    &__price,
     &__subtotal {
         .price {
-            font-weight: 300;
-            font-size: 1.4rem;
-            color: $colorGray;
-        }
-    }
-
-    &__price,
-    &__subtotal,
-    &__qty {
-        @include media('<laptop') {
-            &:before {
-                font-size: 1.2rem;
-                text-transform: uppercase;
-            }
-            @include media('>=phone-lg') {
-                &:before {
-                    font-size: 1.3rem;
-                }
-            }
+            font-weight: 700;
+            color: $color-text-dark !important;
         }
     }
 }

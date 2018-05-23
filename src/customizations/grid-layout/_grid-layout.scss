@@ -32,6 +32,15 @@ $bricksHeight: (
 
 .#{$namespace}grid-layout {
     @include gridLayout($bricksPerRow, $bricksHeight, 0);
+
+    // IE11 seems to not have enough space
+    &__brick {
+        @include media('>=laptop') {
+            .ie11 & {
+                width: calc((100% - 1px) / 4) !important;
+            }
+        }
+    }
 }
 
 .#{$namespace}grid-layout_in-column {
