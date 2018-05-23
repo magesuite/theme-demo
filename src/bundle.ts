@@ -23,6 +23,9 @@ collapsibleText();
 import { QtyIncrementCollection } from '../../theme-creativeshop/src/customizations/qty-increment/qty-increment';
 new QtyIncrementCollection();
 
+import Select from '../../theme-creativeshop/src/customizations/select/select';
+export { Select };
+
 import '../../theme-creativeshop/src/customizations/aftersearch-nav/aftersearch-nav';
 import '../../theme-creativeshop/src/customizations/brand-carousel/brand-carousel';
 import '../../theme-creativeshop/src/customizations/header-search/header-search';

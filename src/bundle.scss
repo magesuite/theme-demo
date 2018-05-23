@@ -60,17 +60,17 @@
 
 @import 'customizations/footer/footer';
 @import 'customizations/footer-list/footer-list';
-//@import 'customizations/form/form';
-//
+@import 'customizations/form/form';
+
 @import 'customizations/grid-layout/grid-layout';
 @import 'customizations/grid-product/grid-product';
-//
+
 @import 'customizations/header/header';
 @import 'customizations/header-search/header-search';
 @import 'customizations/header-user-area/header-user-area';
 @import 'customizations/headline/headline';
 @import 'customizations/hero/hero';
-//
+
 @import 'customizations/image-teaser/image-teaser';
 //@import 'customizations/info-block/info-block';
 @import 'customizations/info-page/info-page';
@@ -110,8 +110,8 @@
 //
 //@import 'customizations/review/review';
 //@import 'customizations/reviews/reviews';
-//
-//@import 'customizations/select/select';
+
+@import 'customizations/select/select';
 @import 'customizations/separator/separator';
 //@import 'customizations/side-nav/side-nav';
 @import 'customizations/special-attributes/special-attributes';

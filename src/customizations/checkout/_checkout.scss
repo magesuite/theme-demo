@@ -76,10 +76,7 @@
     }
 
     &__summary-edit {
-        padding-bottom: 1.5rem;
-    }
-
-    &__summary-edit {
+        padding-bottom: 1.5rem !important;
         font-weight: 700;
     }
 
@@ -165,9 +162,11 @@
         font-weight: 700;
     }
 
-    .#{$namespace}minicart__edit-link {
+    .#{$namespace}minicart__edit-link,
+    &__summary-edit .#{$namespace}button__wrapper span {
         font-weight: 400;
         font-size: 1.4rem;
+        font-family: $font-family;
     }
 
     .#{$namespace}minicart-product__name {
