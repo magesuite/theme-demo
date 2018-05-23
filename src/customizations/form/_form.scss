@@ -1,14 +1,9 @@
 .#{$namespace}form {
     $root: &;
-    font-size: 1rem;
 
     &__fieldset-inner {
         @include media('>=laptop') {
             border-bottom: 1px solid $color-line;
         }
-    }
-
-    &__group {
-        border: none;
     }
 }

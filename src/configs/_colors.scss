@@ -120,11 +120,13 @@ $color-base-price: $colorAlto !default;
 $color-input-border: $colorAlto !default;
 $color-input-text: $colorWoodsmoke !default;
 $color-input-label: $colorWoodsmoke !default;
-$color-select-hover: $colorHummingBird !default;
 $color-radio: $colorScooter !default;
 $color-radio-hover: $colorEasternBlue !default;
 $color-checkbox: $colorScooter !default;
 $color-checkbox-hover: $colorScooter !default;
+$color-select-border: $colorScooter !default;
+$color-select-hover: $colorHummingBird !default;
+$color-select-text-hover: $colorScooter !default;
 
 //Additional colors - messages, warnings
 $color-success: $colorGreenHaze !default;

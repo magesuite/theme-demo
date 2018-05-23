@@ -3,50 +3,40 @@
 
     &__trigger {
         @extend .cs-input__select;
-        font-weight: 400 !important;
-        background: none !important;
-        border-color: $colorAlto !important;
+        border-color: $color-input-border !important;
 
         &-text {
-            font-size: 1.4rem;
-            color: $colorMineShaft;
-            line-height: 2.7rem;
+            color: $color-input-text;
         }
 
         #{$root}--open & {
-            border-top-color: $colorCeruleanBlue !important;
-            border-left-color: $colorCeruleanBlue !important;
-            border-right-color: $colorCeruleanBlue !important;
+            border-color: $color-select-border $color-select-border transparent $color-select-border !important;
         }
 
         &:hover {
-            border-color: $colorCeruleanBlue !important;
+            border-color: $color-select-border !important;
 
             #{$root}--open & {
-                border-bottom-color: $colorAlto !important;
-                box-shadow: none !important;
+                border-bottom-color: transparent !important;
             }
         }
     }
 
     &__trigger-caret {
-        border-left-color: lighten($colorAlto, 8%);
+        border-left-color: transparent;
     }
 
     &__trigger-caret-arrow {
         #{$root}--open & {
             &:before,
             &:after {
-                background-color: $colorCeruleanBlue;
+                background-color: $color-select-border;
             }
         }
     }
 
     &__menu {
-        border-color: $colorCeruleanBlue;
-        background-color: #fff;
-        font-size: 1.4rem;
-        line-height: 1;
+        border-color: $color-select-border;
 
         &-item {
             &--header {
@@ -60,20 +50,17 @@
         }
 
         &-link {
-            color: $colorMineShaft;
-            background-color: #fff;
+            color: $color-input-text;
 
             #{$root}__menu-item--selected & {
-                color: $colorCeruleanBlue;
-                background-color: #fff;
+                color: $color-first-hover;
             }
 
             &:hover,
             &:focus,
             #{$root}__menu-item--focused & {
-                color: #fff !important;
-                background-color: $colorCeruleanBlue !important;
-                text-decoration: none !important;
+                color: $color-select-text-hover !important;
+                background-color: $color-select-hover !important;
             }
         }
 
