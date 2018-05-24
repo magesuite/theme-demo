@@ -80,10 +80,6 @@
         }
     }
 
-    &__column--newsletter__label {
-        font-size: 1.3rem;
-    }
-
     &__list {
         color: $color-footer-text;
     }
@@ -133,6 +129,10 @@
     &__newsletter-icon {
         height: 5rem;
         width: 5rem;
+    }
+
+    &__newsletter-info {
+        font-size: 1.3rem;
     }
 
     &__icon-wrapper {
