@@ -67,5 +67,14 @@
 
     &__user-area {
         flex: 0 1 30%;
+
+        .ie11 & {
+            width: 30%;
+            flex: 0 1 30%;
+
+            @include media('>=tablet') {
+                max-width: 16.7rem;
+            }
+        }
     }
 }
