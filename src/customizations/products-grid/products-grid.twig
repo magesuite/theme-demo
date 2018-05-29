@@ -15,6 +15,61 @@
 
     {% set productMix = 'cs-products-grid__item' %}
     {% set bottompart = product.addToCartButtonHtml %}
+    {% set badges = [] %}
+    {% set dailyDealHtml = '' %}
+
+    {% if product.dailyDealOffer is not empty and product.dailyDealOffer.deal and product.dailyDealOffer.displayType != 'none' %}
+        {% if product.dailyDealOffer.displayType == 'badge' %}
+            {% set itemsLimit = product.dailyDealOffer.items and product.dailyDealOffer.items > 0 ? '<span class="cs-badge">
+                <span class="cs-badge__span">' ~ translate('%1 item(s) left', product.dailyDealOffer.items) ~ '</span>
+            </span>' : '' %}
+
+            {% set badges = badges|merge( [ {
+            mix: 'cs-multiple-badges',
+            content: '<span class="cs-badge cs-badge--attention cs-badge--limited-offer">
+                            <span class="cs-badge__span">' ~ translate('Limited offer!') ~ ' </span>
+                        </span>' ~ itemsLimit
+            } ] ) %}
+        {% else %}
+            {% set dailyDealHtml %}
+                {% include locate( 'dailydeal/dailydeal.twig' ) with {
+                'namespace': 'cs-',
+                'mix': 'cs-dailydeal--tile',
+                'header': {
+                'show': true,
+                },
+                'items': {
+                'textBefore': '',
+                'textAfter': translate('items left'),
+                'amount': product.dailyDealOffer.items
+                },
+                'deal': {
+                'end': product.dailyDealOffer.to
+                }
+                } %}
+            {% endset %}
+        {% endif %}
+    {% endif %}
+
+    {% if product.getSalePercentage > 0 %}
+        {% set badges = badges|merge( [ {
+        content: '<div class="cs-grid-product__badge cs-badge cs-badge--discount">
+                            <span class="cs-badge__span">-' ~ product.getSalePercentage ~ '%</span>
+                    </div>' } ] ) %}
+    {% endif %}
+
+    {% if product.popularIconFlag %}
+        {% set badges = badges|merge( [ {
+        content: '<span class="cs-badge cs-badge--positive"><span class="cs-badge__span">' ~ translate('Bestseller') ~ '</span></span>'
+        } ] ) %}
+    {% endif %}
+
+    {% if product.getIsNewProduct %}
+        {% set badges = badges|merge( [ {
+        content: '<div class="cs-grid-product__badge cs-badge cs-badge--new">
+                            <span class="cs-badge__span">' ~ translate('New') ~ '</span>
+                    </div>' } ] ) %}
+    {% endif %}
 
     {% set content %}
         {% include locate( 'grid-product/grid-product.twig' ) with {
@@ -42,8 +97,8 @@
     {% endset %}
 
     {% set items = items|merge( [ {
-        mix: productMix,
-        content: content
+    mix: productMix,
+    content: content
     } ] ) %}
 {% endfor %}
 

@@ -12,6 +12,29 @@
     transform: skew(0deg);
     padding: 0.1rem 0.15rem 0.2rem 0.2rem;
 
+    .#{$namespace}grid-product__badge & {
+        height: 5.9rem;
+        width: 5.9rem;
+
+        #{$root}__span {
+            font-weight: 700;
+            font-size: 2.1rem;
+            text-transform: none;
+            transform: skew(0deg);
+            line-height: 5.7rem;
+            width: 100%;
+            padding-top: 0.3rem;
+        }
+    }
+
+    .#{$namespace}grid-product__badge &--discount {
+        #{$root}__span {
+            font-weight: 400;
+            font-size: 1.8rem;
+            padding-top: 0.4rem;
+        }
+    }
+
     &--short {
         max-width: min-content;
 

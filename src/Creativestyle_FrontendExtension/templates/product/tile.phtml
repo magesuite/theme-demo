@@ -6,15 +6,47 @@
         $productNameStripped = $block->stripTags($product->getName(), null, true);
         $getIsSalable = $salabilityStatus[$product->getId()];
         $newBadge = $badgeHelper->isNew($product);
-        $newBadgeText = 'New';
         $discount = $badgeHelper->getSalePercentage($product);
         $isPopular = $indicatorsHelper->getPopularIconFlag($product->getId());
         $postParams = $block->getAddToCartPostParams($product);
-        $showDetails = '';
-        $productHelper = $this->helper('Creativestyle\FrontendExtension\Helper\Product');
-        $addToCart = '';
         $addToCartText = __('Add to cart');
-        $addToCartUrl = $productHelper->getAddToCartUrl($product->getId());
+        $addToCartUrl = $csProductHelper->getAddToCartUrl($product->getId());
+        $dailyDealData = $dailyDealHelper->prepareOfferData($product);
+        $badges = [];
+        $dailyDealHtml = '';
+
+        if($dailyDealData && $dailyDealData['deal'] && $dailyDealData['displayType'] !== 'none') {
+            if($dailyDealData['displayType'] === 'badge') {
+                $itemsLimit = $dailyDealData['items'] && $dailyDealData['items'] > 0 ? '<span class="cs-badge">
+                    <span class="cs-badge__span">' . __('%1 item(s) left', $dailyDealData['items']) . '</span>
+                </span>' : '';
+                $badges[] = [
+                    'mix' => 'cs-multiple-badges',
+                    'content' => '<span class="cs-badge cs-badge--attention cs-badge--cut cs-badge--limited-offer">
+                            <span class="cs-badge__span">' . __('Limited offer!') . ' </span>
+                        </span>' . $itemsLimit
+                ];
+            } else {
+                $dailyDealHtml = $this->getLayout()->createBlock('Creativestyle\FrontendExtension\Block\Twig', 'grid-product-dailydeal-'.$iterator, [
+                        'data' => [
+                            'namespace' => 'cs-',
+                            'mix' => 'cs-dailydeal--tile',
+                            'header' => [
+                                'show' => true,
+                            ],
+                            'items' => [
+                                'textBefore' => '',
+                                'textAfter' => __('item(s) left'),
+                                'amount' => $dailyDealData['items']
+                            ],
+                            'deal' => [
+                                'end' => $dailyDealData['to']
+                            ]
+                        ]
+                    ]
+                )->setTemplate("dailydeal/dailydeal.twig")->toHtml();
+            }
+        }
 
         $addToCart = '
             <div class="cs-grid-product__info"> ' . $block->getProductPrice($product) . '
@@ -30,8 +62,8 @@
         if( $discount ) {
             $badges[] = [
                 'content' => '<span class="cs-badge cs-badge--discount">
-                        <span class="cs-badge__span">-'  . $discount . '%</span>
-                    </span>'
+                    <span class="cs-badge__span">'  . $discount . '%</span>
+                </span>'
             ];
 
         }
@@ -39,16 +71,16 @@
         if ( $newBadge ) {
             $badges[] = [
                 'content' => '<span class="cs-badge cs-badge--new">
-                        <span class="cs-badge__span">' . __($newBadgeText) . '</span>
-                    </span>'
+                    <span class="cs-badge__span">' . __('New') . '</span>
+                </span>'
             ];
         }
 
         if ( $isPopular ) {
             $badges[] = [
                 'content' => '<span class="cs-badge cs-badge--positive">
-                        <span class="cs-badge__span">' . __('Popular') . '</span>
-                    </span>'
+                    <span class="cs-badge__span">' . __('Popular') . '</span>
+                </span>'
             ];
         }
 
@@ -64,9 +96,11 @@
             ],
             'name' => $helper->productAttribute($product, $product->getName(), 'name'),
             'priceMoved' => true,
+            'badges' => $badges,
             'hotspots' => [
                 'after' => [
-                    'name' =>  $addToCart
+                    'name' =>  $addToCart,
+                    'badges' => $dailyDealHtml
                 ],
             ]
         ];
