@@ -282,9 +282,10 @@
         &--newsletter {
             background: $color-button-default-background;
             width: 100%;
-            top: 5rem;
-            left: 0;
             border-radius: 0.5rem;
+            position: static;
+            top: auto;
+            left: auto;
         }
     }
 }

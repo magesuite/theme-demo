@@ -16,11 +16,12 @@
         <move element="product.info.special.attributes" destination="product.info.main" after="page.main.title"/>
 
         <referenceContainer name="product.info.main" >
-            <container name="sale.block.add.line" htmlClass="cs-product-sale-block__add-line" htmlTag="div" after="page.main.title">
-                <block class="Magento\Catalog\Block\Product\View" name="sale.block.shipping" template="Magento_Catalog::product/view/shipping.phtml" after="-"/>
-
-            </container>
+            <container name="sale.block.add.line" htmlClass="cs-product-sale-block__add-line" htmlTag="div" after="page.main.title" />
         </referenceContainer>
+
+        <referenceBlock name="product.info.addtocart">
+            <block class="Magento\Catalog\Block\Product\View" name="sale.block.shipping" template="Magento_Catalog::product/view/shipping.phtml" after="-"/>
+        </referenceBlock>
 
         <move element="product.info" destination="sale.block.add.line" />
         <move element="product.info.price" destination="sale.block.add.line" before="-" />
