@@ -6,10 +6,27 @@
     }
 
     .page-title-wrapper {
+        @include media('<tablet') {
+            margin-bottom: 0;
+        }
+
         .page-title {
             @include media('<tablet') {
                 text-transform: uppercase;
                 font-size: 1.6rem;
+            }
+
+            @include media('>=tablet') {
+                font-size: 2.5rem;
+                margin: 0 auto;
+            }
+
+            @include media('>=laptop') {
+                font-size: 2.9rem;
+            }
+
+            &__span {
+                display: none;
             }
         }
     }

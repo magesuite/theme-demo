@@ -9,14 +9,12 @@
 
     &__filters-trigger {
         background-color: $colorGallery;
-        box-shadow: 0 4px 3px -2px rgba(0, 0, 0, 0.15);
-        @extend .#{$namespace}t-headline;
-        @extend .#{$namespace}t-headline--size_3;
+        box-shadow: none;
 
         &.#{$namespace}collapse__trigger--in {
-            background-color: $colorCeruleanBlue;
+            background-color: $color-filters-trigger;
             color: $colorWhite;
-            box-shadow: 0 4px 3px -2px rgba(0, 0, 0, 0.25); //stylelint-disable-line
+            box-shadow: none;
         }
 
         &-icon {
@@ -31,7 +29,6 @@
         font-size: 1.2rem;
         font-weight: 700;
         text-decoration: none;
-        text-transform: uppercase;
 
         @include media('<tablet') {
             background-color: $colorGallery;
@@ -40,7 +37,7 @@
 
     &__filter-input,
     &__filter-input:visited {
-        font-size: 1.29rem;
+        font-size: 1.29rem !important;
     }
 
     &__filter-count {
@@ -50,7 +47,7 @@
     &__filter-arrow {
         &:before,
         &:after {
-            background: $colorCeruleanBlue;
+            background: $color-first;
         }
 
         #{$root}__filter.active &,
@@ -134,27 +131,128 @@
         }
 
         #{$root}__filter-arrow {
-            @include media('>=tablet') {
-                &:before,
-                &:after {
-                    background: $colorMineShaft !important;
+            .ie11 & {
+                right: 1.2rem !important;
+            }
+
+            &:not(#{$root}__filter-arrow--tick) {
+                @include media('>=tablet') {
+                    position: absolute;
+                    width: 1rem;
+                    height: 0.4rem;
+                    top: 50%;
+                    right: 1.5rem;
+                    transform: translate3d(50%, -50%, 0);
+                    transform-origin: 50% 30%;
+                    transition: transform 0.25s ease;
+                    margin-top: 0;
+
+                    &:before,
+                    &:after {
+                        position: absolute;
+                        top: 0;
+                        width: 0.7rem;
+                        height: 0.2rem;
+                        background-color: $color-filters-arrow !important;
+                    }
+
+                    &:before {
+                        left: 0;
+                        transform: rotate(40deg);
+                        transform-origin: 0 50%;
+                    }
+
+                    &:after {
+                        right: 0;
+                        transform: rotate(-40deg);
+                        transform-origin: 100% 50%;
+                    }
                 }
+            }
+
+            &--tick {
+                background-image: url('images/check-green.svg');
+                background-repeat: no-repeat;
+                width: 1.4rem;
+                height: 1.8rem;
+                right: 1rem !important;
+
+                .ie11 & {
+                    @include media('>=tablet') {
+                        margin-top: -0.1rem;
+                    }
+                }
+
+                @include media('<tablet') {
+                    height: 1.4rem;
+                    top: 54%;
+                    right: 1.3rem !important;
+                }
+
+                &:before {
+                    display: none !important;
+                }
+
+                &:after {
+                    display: none !important;
+                }
+            }
+        }
+
+        // Open state of filter
+        #{$root}__filter-title[aria-expanded='true'] {
+            #{$root}__filter-arrow:not(#{$root}__filter-arrow--tick) {
+                @include media('>=tablet') {
+                    transform: rotateX(180deg) translate3d(50%, -50%, 0);
+
+                    &:before {
+                        opacity: 1;
+                        display: block !important;
+                    }
+                }
+            }
+
+            &:after {
+                content: '';
+                display: block;
+                position: absolute;
+                top: 100%;
+                width: calc(100% + 0.1rem);
+                left: 0;
+                height: 0.1rem;
+                margin-top: -0.1rem;
+                background: $colorWhite;
             }
         }
 
         #{$root}__filter-title {
             @include media('>=tablet') {
-                background-color: $colorGallery;
-                font-size: 1.1rem;
-                border-top: none;
+                background-color: $colorWhite;
+                font-size: 1.4rem;
+                font-weight: 400;
+                // border-top: none;
+
+                border: 0.1rem solid $color-filters;
+                border-radius: 0.4rem;
+                text-transform: none;
+                color: $color-filters-text;
+                padding: 1rem 2.5rem 1rem 1.8rem;
 
                 &:hover {
-                    background-color: darken($colorGallery, 8%);
+                    background-color: $colorWhite;
+                }
+
+                &:after {
+                    content: '';
+                    display: none;
                 }
 
                 &[aria-expanded='true'] {
                     background-color: $colorWhite;
-                    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.17);
+                    border-bottom: $colorWhite;
+                    box-shadow: none;
+                    border-bottom-left-radius: 0;
+                    border-bottom-right-radius: 0;
                 }
             }
         }
@@ -162,14 +260,32 @@
         #{$root}__filter-content {
             @include media('>=tablet') {
                 background-color: $colorWhite;
+                width: min-content;
+                min-width: 150%;
 
                 &.active {
-                    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.17);
+                    border-left: 0.1rem solid $color-filters;
+                    border-right: 0.1rem solid $color-filters;
+                    border-bottom: 0.1rem solid $color-filters;
+                    border-top-right-radius: 0.4rem;
+                    border-bottom-right-radius: 0.4rem;
+                    border-bottom-left-radius: 0.4rem;
+                    transform: translateY(-0.2rem);
+                    box-shadow: none;
+                    border-top: 0.1rem solid $color-filters;
+                    z-index: -1;
 
                     &:before {
                         background-color: $colorWhite;
+                        border-top-right-radius: 0.4rem;
                     }
                 }
+            }
+        }
+
+        #{$root}__price {
+            @include media('>=tablet') {
+                min-width: 20rem;
             }
         }
     }

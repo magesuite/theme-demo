@@ -50,20 +50,20 @@
             }
         }
 
-        @media (hover:none) {
+        @media (hover: none) {
             &:not(._active):hover {
                 &:after {
                     background: $colorMercury;
                 }
-    
+
                 #{$root}__indicator-wrapper {
                     background: $colorMercury;
                 }
-    
+
                 #{$root}__indicator {
                     color: inherit !important;
                 }
-    
+
                 #{$root}__item-text {
                     color: $colorGray !important;
                 }
