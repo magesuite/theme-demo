@@ -22,8 +22,5 @@
 
         <referenceBlock name="information-stripe" remove="true"/>
 
-        <!--That feature is not styled yet-->
-        <referenceBlock name="video.player" remove="true"/>
-
     </body>
 </page>

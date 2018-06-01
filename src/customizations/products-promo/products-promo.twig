@@ -7,6 +7,7 @@
             {% set productMix = 'cs-products-grid__item' %}
             {% set badges = [] %}
             {% set dailyDealHtml = '' %}
+            {% set bottompart = product.addToCartButtonHtml %}
 
 
             {% if product.dailyDealOffer is not empty and product.dailyDealOffer.deal and product.dailyDealOffer.displayType != 'none' %}
