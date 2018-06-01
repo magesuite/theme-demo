@@ -16,7 +16,7 @@
     &__sidebar-bottom {
         padding-right: 0;
         float: left;
-        
+
         @include media('>=tablet') {
             float: right;
         }
