@@ -88,36 +88,46 @@
 
         &-link,
         &-link:visited {
-            border: 1px solid $colorCeruleanBlue;
+            border: 1px solid $color-button-default-border;
             border-radius: 3px;
-            color: $colorMineShaft;
+            color: $color-text-dark;
 
             &:hover {
-                border-color: $colorCeruleanBlueHover;
-                color: $colorCeruleanBlueHover;
+                border-color: $color-button-default-border-hover;
+                color: $color-button-default-text-hover;
                 text-decoration: none;
 
                 #{$root}__state-remove {
-                    background-color: $colorCeruleanBlue;
+                    background-color: $color-button-default-background-hover;
+                    border-color: $color-button-default-border-hover;
                 }
 
                 #{$root}__state-remove-icon {
-                    fill: $colorWhite;
+                    fill: $colorWhite !important;
+                }
+
+                #{$root}__state-value,
+                #{$root}__state-label {
+                    color: $color-link-hover;
                 }
             }
         }
 
         &-label {
             font-weight: 700;
+            color: $color-link;
         }
 
         &-remove {
             border: none;
-            border-right: 1px solid $colorCeruleanBlue;
+            border-right: 1px solid $color-button-default-border;
+        }
+        &-value {
+            color: $color-link;
         }
 
         &-remove-icon {
-            fill: $colorCeruleanBlue;
+            fill: $color-icon-second !important;
         }
     }
 
@@ -230,8 +240,6 @@
                 background-color: $colorWhite;
                 font-size: 1.4rem;
                 font-weight: 400;
-                // border-top: none;
-
                 border: 0.1rem solid $color-filters;
                 border-radius: 0.4rem;
                 text-transform: none;
@@ -240,11 +248,6 @@
 
                 &:hover {
                     background-color: $colorWhite;
-                }
-
-                &:after {
-                    content: '';
-                    display: none;
                 }
 
                 &[aria-expanded='true'] {
@@ -287,6 +290,21 @@
             @include media('>=tablet') {
                 min-width: 20rem;
             }
+        }
+
+        #{$root}__filter-text {
+            @include media('>=tablet') {
+                color: $color-filters-text;
+                font-size: 1.4rem !important;
+
+                &:hover {
+                    color: $color-link-hover;
+                }
+            }
+        }
+
+        #{$root}__filter-count {
+            display: none;
         }
     }
 }

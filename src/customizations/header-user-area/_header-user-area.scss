@@ -71,7 +71,11 @@
 
     &__badge {
         display: block;
-        left: 65%;
+        left: 55%;
         z-index: 2;
+
+        @include media('>=laptop') {
+            left: 65%;
+        }
     }
 }
