@@ -84,4 +84,10 @@
             }
         }
     }
+
+    &__products-wrapper {
+        @include media('>=tablet') {
+            border-bottom: 0 !important;
+        }
+    }
 }

@@ -27,7 +27,7 @@
             border-top-right-radius: 0.5rem;
 
             > #{$root}__link {
-                color: initial;
+                color: $color-link-hover;
             }
         }
 
@@ -78,6 +78,11 @@
 
         &--subcategory {
             font-size: 1.3rem;
+
+            &:hover {
+                text-decoration: none;
+                color: $color-link-hover;
+            }
         }
     }
 
