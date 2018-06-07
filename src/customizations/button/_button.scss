@@ -347,3 +347,43 @@
         }
     }
 }
+
+.pccf.default .col-md-6 .btn,
+.col-md-6 button.pccf-popup-btn.action.primary {
+    border: 0.1rem solid $color-button-default-border !important;
+    color: $color-button-default-text !important;
+    background-color: $color-button-default-background !important;
+    background-image: none !important;
+    border-radius: 0.5rem !important;
+    border-color: $color-button-default-border;
+    font-weight: 400 !important;
+    font-size: 1.5rem !important;
+    padding: 0.9rem 1.5rem !important;
+
+    @include media('>=phone-lg') {
+        padding: 0.9rem 2.9rem !important;
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+        border: 0.1rem solid $color-button-default-border-hover !important;
+        color: $color-button-default-text-hover !important;
+        background-color: $color-button-default-background-hover !important;
+    }
+
+    &:visited {
+        border: 0.1rem solid $color-button-default-border !important;
+        color: $color-button-default-text !important;
+        border-color: $color-button-default-border !important;
+        background: $color-button-default-background !important;
+
+        &:hover,
+        &:active,
+        &:focus {
+            border: 0.1rem solid $color-button-default-border-hover !important;
+            color: $color-button-default-text-hover !important;
+            background-color: $color-button-default-background-hover !important;
+        }
+    }
+}
