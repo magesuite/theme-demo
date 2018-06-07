@@ -8,6 +8,10 @@
         width: min-content;
         border-left: 0.1rem solid $color-line;
 
+        @include media('<tablet') {
+            padding: 0.5rem 1rem 0;
+        }
+
         &:hover {
             .#{$namespace}header-user-area__icon--my-account {
                 fill: $color-icon-first-hover;
@@ -37,6 +41,7 @@
         &--minicart {
             @include media('>=laptop') {
                 padding-right: 0;
+                min-width: 5rem;
             }
         }
     }

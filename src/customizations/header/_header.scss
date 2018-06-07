@@ -23,6 +23,8 @@
     }
 
     &__burger {
+        margin-right: 0;
+
         &:after {
             background: $color-icon-second;
         }
@@ -66,15 +68,18 @@
     }
 
     &__user-area {
-        flex: 0 1 30%;
-
         .ie11 & {
-            width: 30%;
-            flex: 0 1 30%;
-
             @include media('>=tablet') {
-                max-width: 16.7rem;
+                flex: 0 1 16.7rem !important;
+                width: 16.7rem !important;
             }
+        }
+
+        flex: 0 1 10rem !important;
+
+        @include media('>=tablet') {
+            flex: 0 1 30% !important;
+            justify-content: flex-end;
         }
     }
 }

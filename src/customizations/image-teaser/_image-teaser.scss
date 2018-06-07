@@ -2,8 +2,43 @@
 .#{$namespace}image-teaser {
     $root: &;
     font-family: $font-family;
-    margin-bottom: $base-space;
-    margin-top: $base-space;
+    padding-bottom: $base-space;
+    padding-top: $base-space;
+    margin-top: 0;
+    margin-bottom: 0;
+
+    .#{$namespace}container--image-teaser
+        ~ .#{$namespace}container--image-teaser
+        & {
+        padding-top: 0;
+    }
+
+    // Bigger spaces between slides in some scenarios
+    @include media('>=tablet') {
+        &--items-in-row-2 {
+            &:not(#{$root}--slider) {
+                #{$root}__slide {
+                    width: calc(50% - 1rem);
+                }
+            }
+        }
+
+        &--items-in-row-3 {
+            &:not(#{$root}--slider) {
+                #{$root}__slide {
+                    width: calc(33.3% - 1.33rem);
+                }
+            }
+        }
+
+        &--items-in-row-4 {
+            &:not(#{$root}--slider) {
+                #{$root}__slide {
+                    width: calc(100% / 4 - 1.5rem);
+                }
+            }
+        }
+    }
 
     &__slide {
         margin-bottom: 0 !important; //ul > li has margin bottom in Magento styles

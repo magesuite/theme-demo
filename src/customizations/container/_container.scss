@@ -13,6 +13,10 @@
 
     &__inner {
         max-width: 113rem;
+
+        .ie11 & {
+            max-width: 113.8rem;
+        }
     }
 
     &--viewport-width {

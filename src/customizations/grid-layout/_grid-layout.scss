@@ -34,13 +34,18 @@ $bricksHeight: (
     @include gridLayout($bricksPerRow, $bricksHeight, 0);
 
     &__brick {
-        @include media('>=tablet') {
+        .#{$namespace}category-page__products-wrapper & {
             border: 1px solid $colorGallery;
-
-            &:after {
-                border-color: $colorGallery;
-            }
         }
+
+        &:after {
+            background-color: $colorGallery;
+        }
+
+        &:before {
+            background-color: $colorGallery;
+        }
+
         // IE11 seems to not have enough space
         @include media('>=laptop') {
             .ie11 & {
