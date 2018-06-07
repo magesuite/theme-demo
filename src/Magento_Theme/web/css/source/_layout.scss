@@ -84,3 +84,15 @@ a {
         }
     }
 }
+
+.catalog-category-view,
+.catalogsearch-result-index {
+    .page-wrapper {
+        background: $colorConcrete;
+    }
+
+    .#{$namespace}container--viewport-width,
+    .#{$namespace}category-page__cc-bottom {
+        background: $colorWhite;
+    }
+}

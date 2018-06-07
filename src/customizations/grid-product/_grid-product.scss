@@ -70,11 +70,5 @@
             color: $color-base-price;
             font-weight: 400;
         }
-
-        form {
-            .ie11 & {
-                padding-right: 0.2rem;
-            }
-        }
     }
 }

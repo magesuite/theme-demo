@@ -50,7 +50,18 @@
 
             .#{$namespace}input__label:after {
                 background-color: $color-first;
-                left: calc(50% - 0.1rem);
+                left: calc(50% - 0.15rem);
+
+                @media screen and (-webkit-min-device-pixel-ratio: 0) {
+                    @supports (background-attachment: local) {
+                        left: calc(50% - 0.1rem);
+                    }
+                }
+            }
+
+            .#{$namespace}input__label:before {
+                width: 1.7rem;
+                height: 1.7rem;
             }
         }
     }
