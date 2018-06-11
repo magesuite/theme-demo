@@ -40,6 +40,11 @@ $bricksHeight: (
 
         &:after {
             background-color: $colorGallery;
+
+            .#{$namespace}category-page__products-wrapper & {
+                height: 2px;
+                bottom: -2px;
+            }
         }
 
         &:before {
@@ -50,6 +55,14 @@ $bricksHeight: (
         @include media('>=laptop') {
             .ie11 & {
                 width: calc((100% - 1px) / 4) !important;
+            }
+        }
+    }
+
+    &__grid {
+        .#{$namespace}category-page__products-wrapper & {
+            &:after {
+                background-color: $colorGallery;
             }
         }
     }
