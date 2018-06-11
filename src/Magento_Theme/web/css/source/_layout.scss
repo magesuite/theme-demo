@@ -88,15 +88,24 @@ a {
 .catalog-category-view,
 .catalogsearch-result-index {
     .page-wrapper {
-        background: $colorConcrete;
+        background: $colorGallery;
     }
 
     .#{$namespace}container--viewport-width,
     .#{$namespace}category-page__cc-bottom {
         background: $colorWhite;
     }
-}
 
+    .page-title-wrapper {
+        @include media('>=tablet') {
+            margin-bottom: 3rem;
+        }
+    }
+
+    .ie11 & {
+        background: $colorGallery;
+    }
+}
 
 .pccform {
     margin-top: 3rem !important;

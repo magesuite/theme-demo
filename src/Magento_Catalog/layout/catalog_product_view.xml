@@ -32,5 +32,8 @@
         <move element="cc-content.container" destination="content" after="product.details.container" />
 
         <move element="page.messages" destination="product.media.container.wrapper" before="-" />
+
+        <referenceContainer name="product.carousels.container"  htmlClass="cs-container cs-container--carousels" />
+
     </body>
 </page>
