@@ -73,7 +73,9 @@
     }
 }
 
-
-.#{$namespace}container--carousels .#{$namespace}grid-product .baseprice {
-    top: 1.8rem;
+.#{$namespace}container--carousels .#{$namespace}grid-product,
+.cs-cart-page {
+    .baseprice {
+        top: 1.8rem;
+    }
 }

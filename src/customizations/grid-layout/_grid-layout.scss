@@ -60,8 +60,8 @@ $bricksHeight: (
     }
 
     &__grid {
-        .#{$namespace}category-page__products-wrapper & {
-            &:after {
+        &:after {
+            .#{$namespace}category-page__products-wrapper & {
                 background-color: $colorGallery;
             }
         }
