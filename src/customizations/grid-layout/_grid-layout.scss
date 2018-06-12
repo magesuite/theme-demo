@@ -33,6 +33,13 @@ $bricksHeight: (
 .#{$namespace}grid-layout {
     @include gridLayout($bricksPerRow, $bricksHeight, 0);
 
+    &:after {
+        .#{$namespace}category-page &,
+        .#{$namespace}background--contrast & {
+            display: none;
+        }
+    }
+
     &__brick {
         .#{$namespace}category-page__products-wrapper & {
             border: 1px solid $colorGallery;
@@ -55,14 +62,6 @@ $bricksHeight: (
         @include media('>=laptop') {
             .ie11 & {
                 width: calc((100% - 1px) / 4) !important;
-            }
-        }
-    }
-
-    &__grid {
-        &:after {
-            .#{$namespace}category-page__products-wrapper & {
-                background-color: $colorGallery;
             }
         }
     }

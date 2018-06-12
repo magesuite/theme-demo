@@ -189,7 +189,7 @@ switch ($type = $block->getType()) {
             'price' => $block->getProductPrice($item),
             'getIsNewProduct' => $csProductHelper->isNew($item),
             'getSalePercentage' => $csProductHelper->getSalePercentage($item),
-            'bottompart' => $addToCart,
+            'addToCartButtonHtml' => $addToCart,
             'dailyDealOffer' => $dailyDealData,
             'popularIconFlag' => $isPopular
         ];

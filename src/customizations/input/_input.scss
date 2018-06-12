@@ -20,7 +20,7 @@
         &--big {
             font-size: 1.6rem;
             font-weight: 400 !important;
-            padding-left: 3rem;
+            padding-left: 3rem !important;
         }
     }
 
@@ -243,6 +243,7 @@
                 background-image: url('images/checkbox-tick.svg');
                 background-repeat: no-repeat;
                 background-size: 1.1rem 0.9rem;
+                border-color: $color-checkbox;
             }
 
             &[type='checkbox']:disabled + #{$root}__label:before {
@@ -251,12 +252,12 @@
         }
 
         #{$root}__label {
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             color: $colorGray;
             font-weight: 400;
 
             .#{$namespace}link {
-                font-size: 1.2rem;
+                font-size: 1.3rem;
             }
 
             &:before {
