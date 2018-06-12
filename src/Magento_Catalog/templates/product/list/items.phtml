@@ -172,15 +172,13 @@ switch ($type = $block->getType()) {
         $dailyDealHtml = '';
 
         $addToCart = '
-            <div class="cs-grid-product__info"> ' . $block->getProductPrice($item) . '
                 <form data-role="tocart-form" action="' . $addToCartUrl . '" method="post">
                     <input type="hidden" name="product" value="' . $postParams['data']['product'] . '">' . $block->getBlockHtml('formkey') . '
                     <button type="submit"
                         title="' . $block->escapeHtml($addToCartText) . '"
                         class="tocart | cs-button--type_grid-tocart">
                     </button>
-                </form>
-            </div>';
+                </form>';
 
         $data = [
             'image' => $this->helper('Magento\Catalog\Helper\Image')->init($item, $image)->getUrl(),
