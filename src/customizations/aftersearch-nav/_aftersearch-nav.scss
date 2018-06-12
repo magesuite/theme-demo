@@ -67,6 +67,7 @@
         font-size: 11px;
         color: $colorGray;
         text-transform: lowercase;
+        width: 4.2rem;
     }
 
     &__currency {
@@ -233,7 +234,7 @@
                 display: block;
                 position: absolute;
                 top: 100%;
-                width: 100%;
+                width: 101%;
                 left: 0;
                 height: 0.1rem;
                 margin-top: -0.1rem;
@@ -284,6 +285,7 @@
                     box-shadow: none;
                     border-top: 0.1rem solid $color-filters-border-active;
                     z-index: -1;
+                    width: inherit;
 
                     &:before {
                         background-color: $colorWhite;
@@ -296,6 +298,7 @@
         #{$root}__price {
             @include media('>=tablet') {
                 min-width: 20rem;
+                max-width: 30rem;
             }
         }
 
