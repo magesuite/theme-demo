@@ -249,6 +249,10 @@
             &:focus {
                 border: 0.1rem solid $color-button-light-border-hover;
                 background-color: $colorWhite;
+
+                &:after {
+                    background: url('images/cart_white.svg') no-repeat !important;
+                }
             }
 
             &:after {

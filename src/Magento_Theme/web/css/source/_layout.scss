@@ -96,6 +96,10 @@ a {
         background: $colorWhite;
     }
 
+    .#{$namespace}footer {
+        background-color: $color-footer-background;
+    }
+
     .page-title-wrapper {
         @include media('>=tablet') {
             margin-bottom: 3rem;
