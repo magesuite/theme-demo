@@ -1,5 +1,4 @@
 #maincontent {
-
     .pccf.default {
         margin: 3rem auto !important;
     }
@@ -49,7 +48,8 @@
         font-size: 1rem;
     }
 
-    .pccf.default .text-center {
+    .pccf.default .text-center,
+    .pccf.default .text-center p {
         text-align: center;
     }
 
@@ -121,7 +121,7 @@
     }
 
     .pccf.default
-    select:not([multiple]).form-control:hover:not(:disabled):not(:focus),
+        select:not([multiple]).form-control:hover:not(:disabled):not(:focus),
     .pccf.default select:not([multiple]).form-control:focus:not(:disabled) {
         background-image: url('images/dropdown-arrows-bg-open.png');
         border-color: $color-input-border;
@@ -141,7 +141,7 @@
     }
 
     .pccf.default .radio label:before {
-        box-shadow: none
+        box-shadow: none;
     }
 
     .pccf.default .radio-inline.checked:after {
@@ -154,12 +154,18 @@
     }
 
     .pccf.default .checkbox-inline:before,
-    .pccf.default div.newsletter-checkbox input[type='checkbox'] + label:before {
+    .pccf.default
+        div.newsletter-checkbox
+        input[type='checkbox']
+        + label:before {
         border-radius: 4px;
     }
 
     .pccf.default .checkbox-inline.checked:before,
-    .pccf.default div.newsletter-checkbox input[type='checkbox']:checked + label:before {
+    .pccf.default
+        div.newsletter-checkbox
+        input[type='checkbox']:checked
+        + label:before {
         background-image: url('images/checkbox-tick.svg');
         background-color: $color-checkbox;
     }
@@ -182,24 +188,27 @@
 
     .pccf.default .checkbox-inline:before,
     .pccf.default .radio-inline:before,
-    .pccf.default div.newsletter-checkbox input[type='checkbox'] + label:before {
+    .pccf.default
+        div.newsletter-checkbox
+        input[type='checkbox']
+        + label:before {
         border: 1px solid $color-checkbox;
 
         .pccf.default .checkbox-inline:hover:before,
         .pccf.default .radio-inline:hover:before,
         .pccf.default
-        div.newsletter-checkbox
-        input[type='checkbox']
-        + label:hover:before {
+            div.newsletter-checkbox
+            input[type='checkbox']
+            + label:hover:before {
             border-color: $color-checkbox-hover;
         }
 
         .pccf.default .checkbox-inline.checked:before,
         .pccf.default .radio-inline.checked:before,
         .pccf.default
-        div.newsletter-checkbox
-        input[type='checkbox']:checked
-        + label:before {
+            div.newsletter-checkbox
+            input[type='checkbox']:checked
+            + label:before {
             background-image: url('images/checkbox-tick.svg');
         }
 
@@ -251,7 +260,6 @@
             background-image: url('images/brh-message-error-icon.svg');
         }
 
-
         .pccf.default .panel-default {
             border-color: $color-line;
         }
@@ -300,7 +308,5 @@
             background-color: $color-warning-background;
             border-color: $color-warning;
         }
-
     }
 }
-
