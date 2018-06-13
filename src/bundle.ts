@@ -39,3 +39,8 @@ import '../../theme-creativeshop/src/customizations/grid-layout/grid-layout';
 import '../../theme-creativeshop/src/customizations/navigation/navigation';
 import '../../theme-creativeshop/src/customizations/products-promo/products-promo';
 import '../../theme-creativeshop/src/customizations/image-teaser/image-teaser';
+import '../../theme-creativeshop/src/customizations/indicators/fast-shipping-init';
+import '../../theme-creativeshop/src/customizations/dailydeal/dailydeal';
+import '../../theme-creativeshop/src/customizations/plugincompany-contactforms/plugincompany-contactforms';
+import '../../theme-creativeshop/src/customizations/video-player/video-player';
+import '../../theme-creativeshop/src/customizations/searchresults-switcher/searchresults-switcher';
