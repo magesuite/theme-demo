@@ -268,6 +268,26 @@
             }
         }
 
+        #{$root}__show-more-trigger {
+            @include media('>=tablet') {
+                background: $color-button-default-background;
+                border-radius: 0.5rem;
+                color: $color-button-default-text;
+                border: 0.1rem solid $color-button-default-border;
+                text-transform: none;
+                font-size: 1.4rem;
+                font-weight: 400;
+                padding: 0.95rem 2.5rem 0.9rem 1.8rem;
+            }
+
+            &:focus,
+            &:hover {
+                border: 0.1rem solid $color-button-default-border-hover;
+                color: $color-button-default-text-hover;
+                background-color: $color-button-default-background-hover;
+            }
+        }
+
         #{$root}__filter-content {
             @include media('>=tablet') {
                 background-color: $colorWhite;

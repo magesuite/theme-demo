@@ -248,6 +248,7 @@
 
             &[type='checkbox']:disabled + #{$root}__label:before {
                 background: $colorGallery;
+                border-color: $color-checkbox;
             }
         }
 
