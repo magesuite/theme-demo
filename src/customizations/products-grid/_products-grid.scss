@@ -81,6 +81,11 @@ $fontSizeBaseSubheadline: 9vw;
                 width: 100%;
                 text-align: center;
             }
+
+            @include media('>=tablet') {
+                line-height: 120%;
+                margin-top: 1rem;
+            }
         }
 
         &-text {
@@ -102,10 +107,6 @@ $fontSizeBaseSubheadline: 9vw;
         &-content-wrapper {
             @include media('>=laptop') {
                 padding: 2.7rem 3rem;
-            }
-
-            @include media('>=laptop-lg') {
-                padding: 2.7rem 4.5rem;
             }
         }
     }
