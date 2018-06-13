@@ -109,6 +109,11 @@ $fontSizeBaseSubheadline: 9vw;
                 padding: 2.7rem 3rem;
             }
         }
+
+        &-image {
+            max-height: 100%;
+        }
+
     }
 
     &__item {
