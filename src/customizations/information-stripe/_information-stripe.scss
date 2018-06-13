@@ -1,44 +1,33 @@
 .#{$namespace}information-stripe {
-    &__wrapper {
-        font-size: 1.1em;
-    }
+    $root: &;
 
-    &__list,
-    &__wrapper > ul {
-        fill: $colorGray;
-        font-size: 1em;
-    }
-
-    &__item,
-    &__wrapper > ul > li {
-        transform: skew(-18deg);
-        border-right: 0.2rem solid $colorWhite;
-    }
-
-    &__phone-number {
-        color: $colorMineShaft;
-        font-weight: 700;
+    &__item:not(.cs-information-stripe__item--login) {
+        display: none !important;
     }
 
     &__account-link {
-        color: $colorCeruleanBlue;
+        &:hover {
+            text-decoration: none;
+
+            #{$root}__account-label {
+                color: $color-information-stripe-text-hover;
+            }
+
+            #{$root}__account-icon {
+                fill: $color-information-stripe-icon-hover;
+            }
+        }
+    }
+
+    &__account-label {
         font-size: 1.1rem;
-        font-weight: 400;
+        color: $color-information-stripe-text;
+        margin-right: 0.5rem;
     }
 
     &__account-icon {
-        width: 1.8rem;
-        height: 1em;
-        padding-right: 0.5rem;
-        fill: $colorGray;
-    }
-
-    &__item-text,
-    &__phone-label,
-    &__phone-number,
-    &__phone-hours,
-    &__account-link,
-    &__wrapper > ul > li > span {
-        transform: skew(18deg);
+        fill: $color-information-stripe-icon;
+        stroke: $color-information-stripe-icon;
+        height: 1.3rem;
     }
 }

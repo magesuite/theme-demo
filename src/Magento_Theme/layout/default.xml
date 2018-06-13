@@ -20,7 +20,5 @@
             </arguments>
         </referenceBlock>
 
-        <referenceBlock name="information-stripe" remove="true"/>
-
     </body>
 </page>
