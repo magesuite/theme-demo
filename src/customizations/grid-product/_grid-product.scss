@@ -18,6 +18,16 @@
     &__badges {
         right: 1.5rem;
         left: auto;
+
+        .ie11 & {
+            @include media('>=laptop-lg') {
+                right: 1.8rem;
+            }
+
+            @include media('>=desktop') {
+                right: 2.2rem;
+            }
+        }
     }
 
     &__main {
@@ -73,6 +83,16 @@
             font-size: 1.1rem;
             color: $color-base-price;
             font-weight: 400;
+        }
+
+        .ie11 & {
+            @include media('>=laptop-lg') {
+                padding-right: 0.8rem;
+            }
+
+            @include media('>=desktop') {
+                right: 1.1rem;
+            }
         }
     }
 }
