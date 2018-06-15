@@ -114,7 +114,7 @@
         &:hover:not(:disabled):not(:focus),
         &:not([disabled]):focus {
             background-image: url('images/dropdown-arrows-bg-open.png');
-            border-color: $colorCeruleanBlue;
+            border-color: $color-input-border;
         }
 
         &:disabled {
@@ -248,6 +248,7 @@
 
             &[type='checkbox']:disabled + #{$root}__label:before {
                 background: $colorGallery;
+                border-color: $color-checkbox;
             }
         }
 

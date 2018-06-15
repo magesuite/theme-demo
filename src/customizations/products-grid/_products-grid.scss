@@ -79,6 +79,11 @@ $fontSizeBaseSubheadline: 9vw;
                 width: 100%;
                 text-align: center;
             }
+
+            @include media('>=tablet') {
+                line-height: 120%;
+                margin-top: 1rem;
+            }
         }
 
         &--scheme-light {
@@ -109,10 +114,10 @@ $fontSizeBaseSubheadline: 9vw;
             @include media('>=laptop') {
                 padding: 2.7rem 3rem;
             }
+        }
 
-            @include media('>=laptop-lg') {
-                padding: 2.7rem 4.5rem;
-            }
+        &-image {
+            max-height: 100%;
         }
     }
 

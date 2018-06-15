@@ -24,6 +24,8 @@
     }
 
     &--contrast {
+        background: $colorGallery !important;
+
         @include media('>=laptop') {
             background-image: none;
         }

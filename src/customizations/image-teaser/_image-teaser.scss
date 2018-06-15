@@ -13,6 +13,13 @@
         padding-top: 0;
     }
 
+    // Smaller padding for the first teaser in top content constructor on categorypage
+    .#{$namespace}category-page__cc-top
+        .#{$namespace}container--image-teaser:first-child
+        & {
+        padding-top: 1rem;
+    }
+
     // Bigger spaces between slides in some scenarios
     @include media('>=tablet') {
         &--items-in-row-2 {

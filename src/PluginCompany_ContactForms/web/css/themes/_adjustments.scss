@@ -1,0 +1,312 @@
+#maincontent {
+    .pccf.default {
+        margin: 3rem auto !important;
+    }
+
+    .pccf.default .form-group {
+        margin: 0 auto 1.5rem !important;
+    }
+
+    .pccf.default button,
+    .pccf.default input,
+    .pccf.default select,
+    .pccf.default textarea {
+        font: $font-family;
+    }
+
+    .pccf.default h1,
+    .pccf.default h2,
+    .pccf.default h3,
+    .pccf.default h4,
+    .pccf.default h5,
+    .pccf.default h6 {
+        color: $color-headline;
+        text-transform: none !important;
+    }
+
+    .pccf.default h1 {
+        font-size: 2.9rem;
+    }
+
+    .pccf.default h2 {
+        font-size: 2.4rem;
+    }
+
+    .pccf.default h3 {
+        font-size: 1.9rem;
+    }
+
+    .pccf.default h4 {
+        font-size: 1.5rem;
+    }
+
+    .pccf.default h5 {
+        font-size: 1.2rem;
+    }
+
+    .pccf.default h6 {
+        font-size: 1rem;
+    }
+
+    .pccf.default .text-center,
+    .pccf.default .text-center p {
+        text-align: center;
+    }
+
+    .pccf.default legend {
+        color: $color-headline;
+        border-bottom: 1px solid $color-line;
+        text-transform: none;
+    }
+
+    .pccf.default label {
+        font-size: 1.4rem;
+        font-weight: 700;
+        color: $color-input-label;
+        margin-bottom: 0.2rem;
+    }
+
+    .pccf.default .control-label {
+        font-size: 1.4rem;
+        font-weight: 700;
+        color: $color-input-label;
+    }
+
+    .pccf .required-control .control-label:after {
+        color: $color-error;
+    }
+
+    .pccf.default input[type='checkbox'],
+    .pccf.default input[type='radio'] {
+        margin: 0;
+    }
+
+    .pccf.default .form-control {
+        font-family: $font-family;
+        color: $color-input-text;
+        background-color: $colorWhite;
+        border-radius: 4px;
+        border: 0.1rem solid $color-input-border;
+        height: 4rem;
+        box-shadow: none;
+        font-size: 1.4rem;
+    }
+
+    .pccf.default .form-control.mage-error {
+        border-color: $color-error;
+    }
+
+    .pccf.default .form-control:focus {
+        border-color: $color-input-border;
+        box-shadow: none;
+    }
+
+    .pccf.default .form-control:hover:not(:disabled):not(:focus) {
+        border-color: $color-input-border;
+        box-shadow: none;
+    }
+
+    .pccf.default .form-control:disabled {
+        border-color: $colorGallery;
+    }
+
+    .pccf.default select:not([multiple]).form-control {
+        font-size: 1.4rem;
+        background-image: url('images/dropdown-arrows-bg.png');
+        background-size: 3.2rem 3.2rem;
+    }
+
+    .pccf.default select:not([multiple]).form-control:disabled {
+        background-image: url('images/dropdown-arrows-bg.png');
+    }
+
+    .pccf.default
+        select:not([multiple]).form-control:hover:not(:disabled):not(:focus),
+    .pccf.default select:not([multiple]).form-control:focus:not(:disabled) {
+        background-image: url('images/dropdown-arrows-bg-open.png');
+        border-color: $color-input-border;
+    }
+
+    .pccf.default .checkbox label,
+    .pccf.default .radio label {
+        color: $color-input-label;
+        font-size: 1.4rem;
+        font-weight: 700;
+    }
+
+    .pccf.default .checkbox label:before,
+    .pccf.default .radio label:before {
+        box-shadow: none;
+        border: 1px solid $colorGallery;
+    }
+
+    .pccf.default .radio label:before {
+        box-shadow: none;
+    }
+
+    .pccf.default .radio-inline.checked:after {
+        background-color: $color-radio;
+    }
+
+    .pccf.default .checkbox label:hover:before,
+    .pccf.default .radio label:hover:before {
+        border-color: $color-radio;
+    }
+
+    .pccf.default .checkbox-inline:before,
+    .pccf.default
+        div.newsletter-checkbox
+        input[type='checkbox']
+        + label:before {
+        border-radius: 4px;
+    }
+
+    .pccf.default .checkbox-inline.checked:before,
+    .pccf.default
+        div.newsletter-checkbox
+        input[type='checkbox']:checked
+        + label:before {
+        background-image: url('images/checkbox-tick.svg');
+        background-color: $color-checkbox;
+    }
+
+    .pccf.default .checkbox label.checked:before {
+        background-image: url('images/checkbox-tick.svg');
+        background-color: $color-checkbox;
+    }
+
+    .pccf.default .radio label.checked:after {
+        background-color: $color-radio;
+    }
+
+    .pccf.default .checkbox-inline,
+    .pccf.default .radio-inline,
+    .pccf.default div.newsletter-checkbox input[type='checkbox'] + label {
+        font-size: 1.4rem;
+        color: $color-input-label;
+    }
+
+    .pccf.default .checkbox-inline:before,
+    .pccf.default .radio-inline:before,
+    .pccf.default
+        div.newsletter-checkbox
+        input[type='checkbox']
+        + label:before {
+        border: 1px solid $color-checkbox;
+
+        .pccf.default .checkbox-inline:hover:before,
+        .pccf.default .radio-inline:hover:before,
+        .pccf.default
+            div.newsletter-checkbox
+            input[type='checkbox']
+            + label:hover:before {
+            border-color: $color-checkbox-hover;
+        }
+
+        .pccf.default .checkbox-inline.checked:before,
+        .pccf.default .radio-inline.checked:before,
+        .pccf.default
+            div.newsletter-checkbox
+            input[type='checkbox']:checked
+            + label:before {
+            background-image: url('images/checkbox-tick.svg');
+        }
+
+        .pccf.default .radio-inline.checked:after {
+            background-color: $color-checkbox;
+        }
+
+        .pccf.default .help-block {
+            font-size: 1.4rem;
+            color: $color-paragraph;
+        }
+
+        .pccf.default .input-group-addon {
+            font-size: 1.4rem;
+            color: $color-paragraph;
+            background-color: $colorConcrete;
+            border: 1px solid $color-line;
+        }
+
+        .pccf.default.rtl .input-group-addon:first-child {
+            border-right: 1px solid $color-line;
+        }
+
+        .pccf.default.rtl .input-group-addon:last-child {
+            border-right: 1px solid $color-line;
+        }
+
+        .pccf.default .alert-success {
+            color: $color-success;
+            background-color: $color-success-background;
+            background-image: url('images/brh-message-success-icon.svg');
+        }
+
+        .pccf.default .alert-info {
+            color: $color-warning;
+            background-color: $color-warning-background;
+            background-image: url('images/message-info.png');
+        }
+
+        .pccf.default .alert-warning {
+            color: $color-warning;
+            background-color: $color-warning-background;
+            background-image: url('../../img/message-warning.png');
+        }
+
+        .pccf.default .alert-danger {
+            color: $color-error;
+            background-color: $color-error-background;
+            background-image: url('images/brh-message-error-icon.svg');
+        }
+
+        .pccf.default .panel-default {
+            border-color: $color-line;
+        }
+
+        .pccf.default .panel-default > .panel-heading {
+            color: $color-paragraph;
+            background-color: $colorConcrete;
+            border-color: $color-line;
+        }
+
+        .pccf.default .panel-primary {
+            border-color: $color-first;
+        }
+
+        .pccf.default .panel-primary > .panel-heading {
+            background-color: $color-first;
+            border-color: $color-first;
+        }
+
+        .pccf.default .panel-success {
+            border-color: $color-success;
+        }
+
+        .pccf.default .panel-success > .panel-heading {
+            color: $color-success;
+            background-color: $color-success-background;
+            border-color: $color-success;
+        }
+
+        .pccf.default .panel-info {
+            border-color: $color-warning;
+        }
+
+        .pccf.default .panel-info > .panel-heading {
+            color: $color-warning;
+            background-color: $color-warning-background;
+            border-color: $color-warning;
+        }
+
+        .pccf.default .panel-warning {
+            border-color: $color-warning;
+        }
+
+        .pccf.default .panel-warning > .panel-heading {
+            color: $color-warning;
+            background-color: $color-warning-background;
+            border-color: $color-warning;
+        }
+    }
+}
