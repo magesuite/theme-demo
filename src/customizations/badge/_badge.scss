@@ -35,12 +35,6 @@
         }
     }
 
-    .#{$namespace}category-page &--discount {
-        #{$root}__span {
-            padding-top: 0.2rem;
-        }
-    }
-
     &--short {
         max-width: min-content;
 
@@ -108,7 +102,7 @@
         border-radius: 50%;
 
         #{$root}__span {
-            font-weight: 700;
+            font-weight: 600;
             font-size: 2.1rem;
             text-transform: none;
             transform: skew(0deg);
