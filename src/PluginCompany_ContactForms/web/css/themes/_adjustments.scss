@@ -128,10 +128,11 @@
     }
 
     .pccf.default .checkbox label,
-    .pccf.default .radio label {
+    .pccf.default .radio label,
+    .pccf.default .radio-inline{
         color: $color-input-label;
         font-size: 1.4rem;
-        font-weight: 700;
+        font-weight: 400;
     }
 
     .pccf.default .checkbox label:before,
