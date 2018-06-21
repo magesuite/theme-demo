@@ -41,7 +41,7 @@
         &--items-in-row-4 {
             &:not(#{$root}--slider) {
                 #{$root}__slide {
-                    width: calc(100% / 4 - 1.5rem);
+                    width: calc(100% / 4 - 1rem);
                 }
             }
         }
@@ -49,6 +49,14 @@
 
     &__slide {
         margin-bottom: 0 !important; //ul > li has margin bottom in Magento styles
+
+        #{$root}--items-in-row-mobile-1 &,
+        #{$root}--items-in-row-mobile-2.cs-image-teaser--items-in-row-mobile-2:not(#{$root}--slider)
+        & {
+            @include media('<tablet') {
+                margin-bottom: 0.8rem;
+            }
+        }
 
         //Do not center text and image when text is outside image
         #{$root}__wrapper--content-display-outside & {

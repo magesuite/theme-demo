@@ -25,6 +25,7 @@ $colorConcrete: #f3f3f3;
 $colorWhite: #fff;
 
 $colorStTropaz: #2a5ca6; //social buttons - facebook button
+$colorAliceBlue: #f0f9ff;
 
 // We need to name color more by their position in that project. Variable should have default flag here
 
@@ -153,3 +154,13 @@ $color-information-stripe-text: $colorWoodsmoke !default;
 $color-information-stripe-text-hover: $colorEasternBlue !default;
 $color-information-stripe-icon: $colorWoodsmoke !default;
 $color-information-stripe-icon-hover: $colorEasternBlue !default;
+
+//Pagination
+$color-limiter: $colorScooter !default;
+$color-limiter-current: $colorGray !default;
+$color-limiter-background-current: $colorAliceBlue !default;
+$color-pagination: $colorScooter  !default;
+$color-pagination-current: $colorGray  !default;
+$color-pagination-border: $color-line  !default;
+$color-pagination-border-current: $colorScooter  !default;
+$color-pagination-arrow: $colorWoodsmoke !default;

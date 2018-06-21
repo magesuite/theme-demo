@@ -7,9 +7,23 @@
         }
     }
 
+    &__filter-options {
+        @include media('<tablet') {
+            background: $colorWhite;
+        }
+    }
+
     &__filters-trigger {
-        background-color: $colorGallery;
+        background-color: $colorWhite;
         box-shadow: none;
+
+        @include media('<tablet') {
+            padding-left: 2rem;
+        }
+
+        @include media('>=tablet') {
+            background-color: $colorGallery;
+        }
 
         &.#{$namespace}collapse__trigger--in {
             background-color: $color-filters-trigger;
@@ -31,7 +45,9 @@
         text-decoration: none;
 
         @include media('<tablet') {
-            background-color: $colorGallery;
+            background-color: $colorWhite;
+            text-transform: none;
+            font-size: 1.4rem;
         }
     }
 
@@ -132,8 +148,15 @@
         }
     }
 
+    #{$root}__rangeSlider-actions-box {
+        @include media('<tablet') {
+            padding-bottom: 1.5rem;
+        }
+    }
+
     /* Horizontal */
     &--horizontal-full {
+
         #{$root}__filters {
             @include media('>=tablet') {
                 border-top: none;
@@ -268,6 +291,12 @@
             }
         }
 
+        #{$root}__show-more-button {
+            @include media('<tablet') {
+                display: none;
+            }
+        }
+
         #{$root}__show-more-trigger {
             @include media('>=tablet') {
                 background: $color-button-default-background;
@@ -336,5 +365,6 @@
         #{$root}__filter-count {
             display: none;
         }
+
     }
 }

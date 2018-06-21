@@ -3,6 +3,11 @@
 
     @include media('<tablet') {
         padding-top: 6rem;
+
+        .catalog-category-view &,
+        .catalogsearch-result-index & {
+            padding-bottom: 1.5rem;
+        }
     }
 
     &__content {
