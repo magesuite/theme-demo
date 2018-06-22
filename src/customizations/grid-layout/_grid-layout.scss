@@ -33,6 +33,10 @@ $bricksHeight: (
 .#{$namespace}grid-layout {
     @include gridLayout($bricksPerRow, $bricksHeight, 0);
 
+    @include media('<tablet') {
+        width: 100%;
+    }
+
     &:after {
         .#{$namespace}category-page &,
         .#{$namespace}background--contrast & {
@@ -63,6 +67,12 @@ $bricksHeight: (
             .ie11 & {
                 width: calc((100% - 1px) / 4) !important;
             }
+        }
+    }
+
+    &__teaser-image {
+        @include media('<phone-lg') {
+            height: auto;
         }
     }
 }
