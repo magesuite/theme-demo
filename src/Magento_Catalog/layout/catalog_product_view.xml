@@ -28,12 +28,22 @@
 
         <referenceContainer name="product.details.container" htmlTag="div" htmlClass="cs-container" />
 
-
         <move element="cc-content.container" destination="content" after="product.details.container" />
 
         <move element="page.messages" destination="product.media.container.wrapper" before="-" />
 
         <referenceContainer name="product.carousels.container"  htmlClass="cs-container cs-container--carousels" />
 
+        <referenceBlock name="product.info.description">
+            <arguments>
+                <argument name="is_collapse_enabled" xsi:type="boolean">false</argument>
+            </arguments>
+        </referenceBlock>
+
+        <referenceBlock name="product.attributes">
+            <arguments>
+                <argument name="is_collapse_enabled" xsi:type="boolean">false</argument>
+            </arguments>
+        </referenceBlock>
     </body>
 </page>
