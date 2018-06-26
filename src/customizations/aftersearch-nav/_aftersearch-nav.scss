@@ -1,6 +1,12 @@
 .#{$namespace}aftersearch-nav {
     $root: &;
 
+    @include media('>=tablet') {
+        margin-top: 0;
+        padding-top: 2.4rem;
+        box-sizing: border-box;
+    }
+
     &__filter {
         @include media('>=tablet') {
             border-bottom: 1px solid $color-line;
@@ -77,6 +83,10 @@
                 background: $colorGray;
             }
         }
+
+        .ie11 & {
+            right: 1.2rem !important;
+        }
     }
 
     &__price-label {
@@ -102,6 +112,7 @@
     &__state {
         border-top: 1px solid $colorGallery;
         border-bottom: 1px solid $colorGallery;
+        padding-top: 0;
 
         &-link,
         &-link:visited {
@@ -170,22 +181,20 @@
             }
         }
 
-        #{$root}__filter-arrow {
-            .ie11 & {
-                right: 1.2rem !important;
-            }
+        #{$root}__filter {
 
-            &:not(#{$root}__filter-arrow--tick) {
+            #{$root}__filter-arrow {
                 @include media('>=tablet') {
                     position: absolute;
                     width: 1rem;
                     height: 0.4rem;
                     top: 50%;
-                    right: 1.5rem;
+                    right: 1.5rem !important;
                     transform: translate3d(50%, -50%, 0);
                     transform-origin: 50% 30%;
                     transition: transform 0.25s ease;
                     margin-top: 0;
+                    background: none;
 
                     &:before,
                     &:after {
@@ -210,42 +219,56 @@
                 }
             }
 
-            &--tick {
-                background-image: url('images/check-green.svg');
-                background-repeat: no-repeat;
-                width: 1.4rem;
-                height: 1.8rem;
-                right: 1rem !important;
+            &--checked {
+                #{$root}__filter-title[aria-expanded="false"] {
 
-                .ie11 & {
-                    @include media('>=tablet') {
-                        margin-top: -0.1rem;
+                    #{$root}__filter-arrow {
+                        top: 2.2rem;
+                        background-image: url('images/check-green.svg');
+                        background-repeat: no-repeat;
+                        width: 1.4rem !important;
+                        height: 1.8rem !important;
+                        right: 1.5rem !important;
+                        transition-duration: 0s;
+
+                        .ie11 & {
+                            @include media('>=tablet') {
+                                margin-top: -0.1rem;
+                            }
+                        }
+
+                        @include media('<tablet') {
+                            height: 1.4rem;
+                            top: 54%;
+                            right: 1.3rem !important;
+                        }
+
+                        &:before {
+                            display: none;
+                        }
+
+                        &:after {
+                            display: none;
+                        }
                     }
                 }
 
-                @include media('<tablet') {
-                    height: 1.4rem;
-                    top: 54%;
-                    right: 1.3rem !important;
-                }
-
-                &:before {
-                    display: none !important;
-                }
-
-                &:after {
-                    display: none !important;
-                }
             }
         }
 
         // Open state of filter
         #{$root}__filter-title[aria-expanded='true'] {
-            #{$root}__filter-arrow:not(#{$root}__filter-arrow--tick) {
+
+            &:after {
+                width: 100% !important;
+            }
+
+            #{$root}__filter-arrow {
                 @include media('>=tablet') {
                     transform: rotateX(180deg) translate3d(50%, -50%, 0);
 
-                    &:before {
+                    &:before,
+                    &:after {
                         opacity: 1;
                         display: block !important;
                     }
