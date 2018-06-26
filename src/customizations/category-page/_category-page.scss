@@ -214,6 +214,14 @@
         @include media('>=tablet') {
             border-left: none;
         }
+
+        > .#{$namespace}messages {
+            margin-top: 4rem;
+
+            @include media('>=tablet') {
+                margin-top: 5.5rem;
+            }
+        }
     }
 
     &--filters-full-top {
