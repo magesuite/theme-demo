@@ -3,7 +3,7 @@
 
     &__item {
         border: 1px solid $color-pagination-border;
-        background: $colorWhite;
+        background: transparent;
         border-radius: 5px;
         margin: 0 0.7rem;
         height: 3.5rem;
@@ -47,8 +47,9 @@
         &:hover,
         &:focus {
             text-decoration: none;
-            background: $color-limiter-background-current;
+            background: transparent;
             border-color: $color-pagination-border-current;
+            color: $color-pagination;
         }
     }
 
@@ -109,6 +110,7 @@
             width: 4.3rem;
             margin: 0;
             border-radius: 0;
+            background: $colorWhite;
 
             &:first-child {
                 border-top-left-radius: 5px;

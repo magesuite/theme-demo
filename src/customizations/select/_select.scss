@@ -34,6 +34,13 @@
                 background-color: $color-select-border;
             }
         }
+
+        .#{$namespace}category-page & {
+            &:before,
+            &:after {
+                background-color: $color-pagination-arrow !important;
+            }
+        }
     }
 
     &__menu {
@@ -47,6 +54,10 @@
                     font-size: 1.1rem;
                     font-weight: 700;
                 }
+            }
+
+            &-text {
+                line-height: 1.8rem;
             }
         }
 
