@@ -51,6 +51,10 @@
             border-color: $color-pagination-border-current;
             color: $color-pagination;
         }
+
+        &:visited {
+            color: $color-pagination;
+        }
     }
 
     &__separator {
