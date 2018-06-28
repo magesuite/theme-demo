@@ -52,7 +52,7 @@
 
         #{$root}--items-in-row-mobile-1 &,
         #{$root}--items-in-row-mobile-2.cs-image-teaser--items-in-row-mobile-2:not(#{$root}--slider)
-        & {
+            & {
             @include media('<tablet') {
                 margin-bottom: 0.8rem;
             }
@@ -144,6 +144,7 @@
         border-radius: 0;
         box-shadow: none;
         transform: translateY(-4.5rem);
+        margin-top: 0 !important;
 
         @include media('>=tablet') {
             width: 5rem;
@@ -223,9 +224,13 @@
             border: 0.6rem solid $colorConcrete;
             margin-right: 1rem;
 
-            &:hover,
             &:focus,
             &:active {
+                background-color: $colorConcrete;
+                border: 0.6rem solid $colorConcrete;
+            }
+
+            &:hover {
                 background-color: $color-pagination-active;
                 border: 0.6rem solid $color-pagination-active;
                 box-shadow: none;
