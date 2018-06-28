@@ -167,7 +167,6 @@
 
     /* Horizontal */
     &--horizontal-full {
-
         #{$root}__filters {
             @include media('>=tablet') {
                 border-top: none;
@@ -182,7 +181,6 @@
         }
 
         #{$root}__filter {
-
             #{$root}__filter-arrow {
                 @include media('>=tablet') {
                     position: absolute;
@@ -220,8 +218,7 @@
             }
 
             &--checked {
-                #{$root}__filter-title[aria-expanded="false"] {
-
+                #{$root}__filter-title[aria-expanded='false'] {
                     #{$root}__filter-arrow {
                         top: 2.2rem;
                         background-image: url('images/check-green.svg');
@@ -252,13 +249,11 @@
                         }
                     }
                 }
-
             }
         }
 
         // Open state of filter
         #{$root}__filter-title[aria-expanded='true'] {
-
             &:after {
                 width: 100% !important;
             }
@@ -388,6 +383,5 @@
         #{$root}__filter-count {
             display: none;
         }
-
     }
 }

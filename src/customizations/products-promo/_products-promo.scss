@@ -84,9 +84,13 @@
             border: 0.5rem solid $colorConcrete;
             margin-right: 1rem;
 
-            &:hover,
             &:focus,
             &:active {
+                background-color: $colorConcrete;
+                border: 0.5rem solid $colorConcrete;
+            }
+
+            &:hover {
                 background-color: $color-pagination-active;
                 border: 0.5rem solid $color-pagination-active;
                 box-shadow: none;

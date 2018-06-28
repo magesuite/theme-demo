@@ -16,7 +16,7 @@
     &__category {
         padding: 0.5rem;
 
-        &[data-category-identifier="only-mobile"] {
+        &[data-category-identifier='only-mobile'] {
             @include media('>=tablet') {
                 display: none;
             }

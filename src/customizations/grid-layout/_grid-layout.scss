@@ -32,6 +32,7 @@ $bricksHeight: (
 
 .#{$namespace}grid-layout {
     @include gridLayout($bricksPerRow, $bricksHeight, 0);
+    $root: &;
 
     @include media('<tablet') {
         width: 100%;
@@ -73,6 +74,42 @@ $bricksHeight: (
     &__teaser-image {
         @include media('<phone-lg') {
             height: auto;
+        }
+    }
+
+    &__teaser {
+        &--scheme-light {
+            #{$root}__teaser {
+                &-headline {
+                    color: $color-teaser-light-scheme-headline;
+                }
+
+                &-subheadline {
+                    color: $color-teaser-light-scheme-subheadline;
+                }
+
+                &-text {
+                    color: $color-teaser-light-scheme-text;
+                }
+            }
+        }
+
+        &-content {
+            &--variant-2 {
+                top: auto;
+                bottom: 0;
+                left: 0;
+                transform: none;
+                text-align: left;
+            }
+
+            &--variant-3 {
+                top: 50%;
+                left: 50%;
+                bottom: auto;
+                transform: translate3d(-50%, -50%, 0);
+                text-align: center;
+            }
         }
     }
 }

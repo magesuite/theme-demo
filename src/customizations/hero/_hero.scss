@@ -98,6 +98,7 @@
         border-radius: 0;
         box-shadow: none;
         transform: translateY(-50%) skew(0deg);
+        margin-top: 0 !important;
 
         @include media('>=tablet') {
             width: 5rem;
@@ -170,9 +171,18 @@
                 border: 0.5rem solid $colorConcrete;
             }
 
-            &:hover,
             &:focus,
             &:active {
+                background-color: $colorWhite;
+                border: 0.5rem solid $colorWhite;
+
+                @include media('<tablet') {
+                    background-color: $colorConcrete;
+                    border: 0.5rem solid $colorConcrete;
+                }
+            }
+
+            &:hover {
                 background-color: $color-pagination-active-hero;
                 border: 0.5rem solid $color-pagination-active-hero;
                 box-shadow: none;
