@@ -45,5 +45,9 @@
                 <argument name="is_collapse_enabled" xsi:type="boolean">false</argument>
             </arguments>
         </referenceBlock>
+
+        <referenceContainer name="cc-content.container">
+            <block class="Magento\Catalog\Block\Product\View\Attributes" name="product.warnings" template="Magento_Catalog::product/view/warnings.phtml"/>
+        </referenceContainer>
     </body>
 </page>
