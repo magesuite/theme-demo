@@ -49,5 +49,11 @@
         <referenceContainer name="cc-content.container">
             <block class="Magento\Catalog\Block\Product\View\Attributes" name="product.warnings" template="Magento_Catalog::product/view/warnings.phtml"/>
         </referenceContainer>
+
+        <!--remove special attributes and add product highlights-->
+        <referenceBlock name="product.info.special.attributes" remove="true" />
+        <referenceContainer name="product.details.specials" htmlTag="div" htmlClass="cs-product-sale-block__item">
+            <block class="Magento\Catalog\Block\Product\View\Attributes" name="product.info.highlights" template="Magento_Catalog::product/view/highlights.phtml" after="-"/>
+        </referenceContainer>
     </body>
 </page>
