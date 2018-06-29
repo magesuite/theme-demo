@@ -46,12 +46,8 @@
             </arguments>
         </referenceBlock>
 
-        <referenceBlock name="cc-content.container" after="-">
-            <block class="Magento\Catalog\Block\Product\View\Attributes" name="product.warnings" template="Magento_Catalog::product/view/warnings.phtml">
-                <arguments>
-                    <argument translate="true" name="title" xsi:type="string">More Information</argument>
-                </arguments>
-            </block>
-        </referenceBlock>
+        <referenceContainer name="cc-content.container">
+            <block class="Magento\Catalog\Block\Product\View\Attributes" name="product.warnings" template="Magento_Catalog::product/view/warnings.phtml"/>
+        </referenceContainer>
     </body>
 </page>
