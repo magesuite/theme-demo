@@ -143,7 +143,7 @@
     &__nav {
         border-radius: 0;
         box-shadow: none;
-        transform: translateY(-4.5rem);
+        transform: translateY(-50%);
         margin-top: 0 !important;
 
         @include media('>=tablet') {
@@ -152,7 +152,7 @@
         }
 
         &:hover:not(#{$root}__nav--disabled) {
-            transform: translateY(-4.5rem) scale(1.15);
+            transform: translateY(-50%) scale(1.15);
         }
 
         &:hover,
@@ -164,7 +164,7 @@
 
         &--disabled {
             &:hover {
-                transform: translateY(-4.5rem) !important;
+                transform: none !important;
             }
         }
 
@@ -215,6 +215,8 @@
     }
 
     &__pagination {
+        margin-top: 0;
+
         &-item {
             border-radius: 50%;
             background-color: $colorConcrete;
@@ -223,6 +225,18 @@
             height: 0.5rem;
             border: 0.6rem solid $colorConcrete;
             margin-right: 1rem;
+            margin-top: 2rem;
+
+            &:focus,
+            &:active,
+            &:hover {
+                @include media('<tablet') {
+                    background-color: $colorConcrete !important;
+                    border: 0.6rem solid $colorConcrete !important;
+                    outline: none;
+                }
+            }
+
 
             &:focus,
             &:active {
@@ -231,13 +245,14 @@
             }
 
             &:hover {
-                background-color: $color-pagination-active;
-                border: 0.6rem solid $color-pagination-active;
+                background-color: $colorConcrete;
+                border: 0.6rem solid $colorConcrete;
                 box-shadow: none;
 
                 @include media('>=tablet') {
                     background-color: $color-pagination-active;
-                }
+                    border: 0.6rem solid $color-pagination-active;
+                    box-shadow: none;                }
             }
 
             &--active {
@@ -248,7 +263,7 @@
                 &:hover,
                 &:focus,
                 &:active {
-                    background-color: $color-pagination-active;
+                    background-color: $color-pagination-active !important;
                 }
             }
         }
@@ -256,6 +271,7 @@
         &-button {
             width: 1.2rem;
             height: 1.2rem;
+            -webkit-tap-highlight-color: transparent;
 
             &:hover {
                 width: 1.2rem;
@@ -265,8 +281,13 @@
         }
     }
 
-    &__number--current {
-        color: $color-pagination-arrow;
+    &__number {
+        margin-top: 1rem;
+        display: inline-block;
+
+        &--current {
+            color: $color-pagination-arrow;
+        }
     }
 
     .#{$namespace}button__icon {

@@ -172,6 +172,16 @@
             }
 
             &:focus,
+            &:active,
+            &:hover {
+                @include media('<tablet') {
+                    background-color: $colorConcrete !important;
+                    border: 0.5rem solid $colorConcrete !important;
+                    outline: none;
+                }
+            }
+
+            &:focus,
             &:active {
                 background-color: $colorWhite;
                 border: 0.5rem solid $colorWhite;
@@ -209,7 +219,8 @@
                 &:hover,
                 &:focus,
                 &:active {
-                    background-color: $color-pagination-active-hero;
+                    background-color: $color-pagination-active-hero !important;
+                    border: 0.5rem solid $colorConcrete !important;
                 }
             }
         }
@@ -217,6 +228,7 @@
         &-button {
             width: 1.2rem;
             height: 1.2rem;
+            -webkit-tap-highlight-color: transparent;
 
             &:hover {
                 width: 1.2rem;
