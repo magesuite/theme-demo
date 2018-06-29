@@ -1,0 +1,40 @@
+.#{$namespace}warnings {
+    $root: &;
+
+    padding-bottom: 1.2rem;
+
+    &__item {
+        display: flex;
+        align-items: center;
+        padding: 1.2rem 0;
+
+        @include media('<tablet') {
+            padding-right: 1rem;
+        }
+    }
+
+    &__item-icon {
+        width: 10rem;
+        padding-right: 2.5rem;
+
+        @include media('<tablet') {
+            width: 8.5rem;
+            padding-right: 1rem;
+        }
+    }
+
+    &__item-description {
+        flex: 1;
+        font-size: 1.5rem;
+        color: $color-paragraph;
+        text-align: justify;
+        text-justify: inter-word;
+        display: flex;
+        align-items: center;
+
+        @include media('<phone-lg') {
+            font-size: 1.2rem;
+        }
+    }
+
+}

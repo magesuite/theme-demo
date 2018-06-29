@@ -1,0 +1,29 @@
+<?php
+// @codingStandardsIgnoreFile
+
+/**
+ * @var $block \Magento\Catalog\Block\Product\View\Attributes
+ */
+$storeHelper = $this->helper('Creativestyle\FrontendExtension\Helper\Store');
+$currentStoreId = $storeHelper->getCurrentStoreId();
+$helper = $this->helper('Magento\Catalog\Helper\Output');
+$product = $block->getProduct();
+?>
+
+
+<?php if ($ghs = explode(',', $product->getData('ghs'))) : ?>
+    <div class="cs-warnings">
+    <?php foreach ($ghs as $data): ?>
+        <div class="cs-warnings__item">
+            <?php echo $this->getLayout()
+                ->createBlock('Magento\Cms\Block\Block')
+                ->setCacheKey('ghs0'.($data-19).'_'.$currentStoreId)
+                ->setCacheLifetime(86400)
+                ->setBlockId('ghs0'.($data-19))
+                ->toHtml();
+            ?>
+        </div>
+    <?php endforeach; ?>
+    </div>
+
+<?php endif; ?>

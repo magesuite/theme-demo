@@ -45,5 +45,13 @@
                 <argument name="is_collapse_enabled" xsi:type="boolean">false</argument>
             </arguments>
         </referenceBlock>
+
+        <referenceBlock name="cc-content.container" after="-">
+            <block class="Magento\Catalog\Block\Product\View\Attributes" name="product.warnings" template="Magento_Catalog::product/view/warnings.phtml">
+                <arguments>
+                    <argument translate="true" name="title" xsi:type="string">More Information</argument>
+                </arguments>
+            </block>
+        </referenceBlock>
     </body>
 </page>
