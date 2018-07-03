@@ -11,7 +11,7 @@
     }
 
     &__container {
-        padding: 2rem 0 3rem;
+        padding: 2rem 0 0;
 
         @include media('>=tablet', '<laptop') {
             margin-top: 2rem;

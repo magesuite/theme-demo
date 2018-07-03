@@ -47,6 +47,11 @@
         }
     }
 
+    // That is an element I want to position buttons
+    &__carousel {
+        position: relative;
+    }
+
     &__slide {
         margin-bottom: 0 !important; //ul > li has margin bottom in Magento styles
 
@@ -237,7 +242,6 @@
                 }
             }
 
-
             &:focus,
             &:active {
                 background-color: $colorConcrete;
@@ -252,7 +256,8 @@
                 @include media('>=tablet') {
                     background-color: $color-pagination-active;
                     border: 0.6rem solid $color-pagination-active;
-                    box-shadow: none;                }
+                    box-shadow: none;
+                }
             }
 
             &--active {
