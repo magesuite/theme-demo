@@ -48,12 +48,12 @@
     &__totals {
         font-size: 1.4rem;
         font-weight: 400;
-        color: $colorGray;
+        color: $color-paragraph;
 
         th {
             padding-left: 0;
             font-weight: 400;
-            color: $colorGray;
+            color: $color-paragraph;
         }
 
         td {
@@ -69,7 +69,7 @@
             th,
             td {
                 padding-top: 1.4rem;
-                color: $colorMineShaft;
+                color: $color-text-dark;
             }
         }
     }
