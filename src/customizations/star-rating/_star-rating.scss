@@ -2,23 +2,15 @@
     $root: &;
 
     &__star {
-        font-size: 1.58rem;
-        color: $colorAlto;
 
         &--half-active:before,
         &--active:before {
-            color: $colorGold;
+            color: $colorMySin;
         }
     }
 
     &__text {
-        font-size: 1.2rem;
-        color: $colorGray;
+        color: $color-paragraph;
     }
 
-    &--big {
-        #{$root}__star {
-            font-size: 2rem;
-        }
-    }
 }

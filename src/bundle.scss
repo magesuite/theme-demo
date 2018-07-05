@@ -107,9 +107,9 @@
 @import 'customizations/warnings/warnings';
 
 @import 'customizations/qty-increment/qty-increment';
-//
-//@import 'customizations/review/review';
-//@import 'customizations/reviews/reviews';
+
+@import 'customizations/review/review';
+@import 'customizations/reviews/reviews';
 
 @import 'customizations/searchresults-switcher/searchresults-switcher';
 @import 'customizations/select/select';
@@ -117,7 +117,7 @@
 //@import 'customizations/side-nav/side-nav';
 @import 'customizations/special-attributes/special-attributes';
 @import 'customizations/stack-nav/stack-nav';
-//@import 'customizations/star-rating/star-rating';
+@import 'customizations/star-rating/star-rating';
 //@import 'customizations/swatches/swatches';
 //
 @import 'customizations/table/table';

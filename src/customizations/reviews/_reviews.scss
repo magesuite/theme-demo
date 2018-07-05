@@ -12,7 +12,11 @@
     }
 
     &__legend {
-        @extend .#{$namespace}t-headline--size_2;
+        margin-bottom: 1rem !important;
+
+        span {
+            color: $color-link;
+        }
     }
 
     &__legend-product-name {
@@ -24,26 +28,6 @@
         font-weight: 700;
         color: $colorGray;
     }
-
-    //Single review in user area style below
-
-    &__subtitle {
-        @extend .#{$namespace}t-headline;
-        @extend .#{$namespace}t-headline--size_3;
-    }
-
-    &__content {
-        @extend .#{$namespace}t-text;
-    }
-
-    &__single-name {
-        @extend .#{$namespace}t-headline;
-        @extend .#{$namespace}t-headline--size_2;
-    }
-
-    &__rating-average-label {
-        @extend .#{$namespace}t-text;
-    }
 }
 
 .review-control-vote {
@@ -51,7 +35,7 @@
     border-radius: 3px;
 
     @include media('>=tablet') {
-        background: $colorGallery;
+        background: $colorConcrete;
     }
 
     &:before,
@@ -61,10 +45,10 @@
     }
 
     &:before {
-        color: $colorAlto;
+        color: $color-line;
     }
 
     label:before {
-        color: $colorGold;
+        color: $colorMySin;
     }
 }

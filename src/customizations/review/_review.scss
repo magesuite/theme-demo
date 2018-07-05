@@ -2,15 +2,15 @@
     font-size: inherit;
 
     &__title {
-        color: $colorMineShaft;
+        color: $color-headline;
     }
 
     &__meta {
-        font-size: 1.25rem;
+        font-size: 1.3rem;
     }
 
     &__author {
-        color: $colorMineShaft;
+        color: $color-headline;
     }
 
     &__date {
@@ -22,6 +22,6 @@
     }
 
     &__content {
-        color: $colorGray;
+        color: $color-paragraph;
     }
 }
