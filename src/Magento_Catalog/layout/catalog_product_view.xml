@@ -10,8 +10,6 @@
         <referenceBlock name="product.category.name" remove="true"/>
         <referenceBlock name="product.info.share" remove="true"/>
         <referenceBlock name="product.info.addto" remove="true"/>
-        <referenceBlock name="reviews.tab" remove="true"/>
-        <referenceBlock name="reviews.summary" remove="true"/>
 
         <move element="product.info.special.attributes" destination="product.info.main" after="page.main.title"/>
 
@@ -55,5 +53,7 @@
         <referenceContainer name="product.details.specials" htmlTag="div" htmlClass="cs-product-sale-block__item">
             <block class="Magento\Catalog\Block\Product\View\Attributes" name="product.info.highlights" template="Magento_Catalog::product/view/highlights.phtml" after="-"/>
         </referenceContainer>
+
+        <move element="product.info.review" destination="product.info.main" before="product.details.specials" />
     </body>
 </page>
