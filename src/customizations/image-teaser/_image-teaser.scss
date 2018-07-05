@@ -20,12 +20,39 @@
         padding-top: 1rem;
     }
 
+    &--items-in-row-2 {
+        &:not(#{$root}--slider) {
+            #{$root}__slide {
+                //CMS teasers spaces
+                &:nth-child(n + 3) {
+                    margin-top: 0.8rem;
+                }
+            }
+        }
+    }
+
+    &--items-in-row-4 {
+        &:not(#{$root}--slider) {
+            #{$root}__slide {
+                //CMS teasers spaces
+                &:nth-child(n + 5) {
+                    margin-top: 0.8rem;
+                }
+            }
+        }
+    }
+
     // Bigger spaces between slides in some scenarios
     @include media('>=tablet') {
         &--items-in-row-2 {
             &:not(#{$root}--slider) {
                 #{$root}__slide {
                     width: calc(50% - 1rem);
+
+                    //CMS teasers spaces
+                    &:nth-child(n + 3) {
+                        margin-top: 2rem;
+                    }
                 }
             }
         }
@@ -34,6 +61,11 @@
             &:not(#{$root}--slider) {
                 #{$root}__slide {
                     width: calc(33.3% - 1.33rem);
+
+                    //CMS teasers spaces
+                    &:nth-child(n + 4) {
+                        margin-top: 2rem;
+                    }
                 }
             }
         }
@@ -42,6 +74,11 @@
             &:not(#{$root}--slider) {
                 #{$root}__slide {
                     width: calc(100% / 4 - 1rem);
+
+                    //CMS teasers spaces
+                    &:nth-child(n + 5) {
+                        margin-top: 1.33rem;
+                    }
                 }
             }
         }
