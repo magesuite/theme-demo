@@ -2,15 +2,34 @@
     $root: &;
 
     &__star {
+        margin-right: 0.3rem;
 
         &--half-active:before,
         &--active:before {
             color: $colorMySin;
         }
+
+        &--half-active:after {
+            left: 1rem;
+            text-indent: -1rem;
+        }
+
+        .#{$namespace}review__rating & {
+            font-size: 1.3rem;
+            margin-right: 0.1rem;
+
+            &:before{
+                transform: translateY(-25%);
+            }
+        }
+
+    }
+
+    &__stars {
+        overflow: visible;
     }
 
     &__text {
         color: $color-paragraph;
     }
-
 }
