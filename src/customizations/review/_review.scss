@@ -2,11 +2,20 @@
     font-size: inherit;
 
     &__title {
-        color: $color-headline;
+        color: $color-text-dark;
+        line-height: 3rem;
+    }
+
+    &__rating {
+        display: inline-block;
+        margin-bottom: 0;
+        margin-right: -0.5rem;
     }
 
     &__meta {
+        display: inline-block;
         font-size: 1.3rem;
+        margin: 0 0 1.5rem;
     }
 
     &__author {
@@ -14,11 +23,15 @@
     }
 
     &__date {
-        color: $colorGray;
+        color: $color-paragraph-light;
     }
 
-    &__meta-item {
+    &__meta-item:first-child {
+
+        padding-left: 1rem;
+        border-left: 1px solid $color-line;
         border-right: 1px solid $color-line;
+
     }
 
     &__content {
