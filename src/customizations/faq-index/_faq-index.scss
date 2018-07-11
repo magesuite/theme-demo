@@ -1,0 +1,57 @@
+.#{$namespace}faq-index {
+    $root: &;
+    
+    a { 
+        text-decoration: none;
+    }
+
+    &__title {
+        font-size: 1.8rem;
+        font-weight: 700;
+    }
+
+    &__voting-container {
+        font-size: 1.6rem;
+
+        .#{$namespace}t-text--look_attention,
+        .#{$namespace}t-text--look_attention:hover, {
+            font-weight: 400;
+        }
+    }
+
+    &__title a,
+    &__title a:visited {
+        color: $color-headline;
+
+    }
+
+    &__title a:hover {
+        color: $color-link-hover;
+    }
+
+    &__list-item a,
+    &__list-item a:visited {
+        color: $color-text-dark;
+    }
+
+    &__list-item:hover {
+        background: $color-select-hover;
+        border-color: $color-select-hover;
+    }
+
+    &__list-item:before {
+        display: none;
+    }
+
+    &__list-item-icon {
+        fill: $color-text-dark;
+    }
+
+    &__search-form {
+        .#{$namespace}button__icon--search {
+            fill: $color-text-dark;
+            width: 1.7rem;
+            height: 1.7rem;
+        }
+    }
+}
