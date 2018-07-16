@@ -59,4 +59,14 @@
             margin-right: 0 !important;
         }
     }
+
+   &--full-viewport {
+        max-width: none !important;
+        position: relative;
+        width: 100vw;
+        left: 50%;
+        right: 50%;
+        margin-left: -50vw !important;
+        margin-right: -50vw !important;
+    }
 }
