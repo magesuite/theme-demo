@@ -58,7 +58,7 @@
     &__list-item-icon {
         fill: $color-text-dark;
 
-        .#{$namespace}faq-index__list-item:hover & {
+        #{$root}__list-item:hover & {
             fill: $color-link-hover;
         }
     }
