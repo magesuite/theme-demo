@@ -11,9 +11,12 @@ $product = $block->getProduct();
 
 
 <?php if ($ghs = explode(',', $product->getData('ghs'))) : ?>
+    <div class="cs-headline cs-warnings__headline">
+        <h2 class="cs-headline__title"><?php /* @escapeNotVerified */  echo __('Warnings'); ?> </h2>
+    </div>
     <div class="cs-warnings">
-    <?php foreach ($ghs as $data): ?>
-        <div class="cs-warnings__item">
+        <div class="cs-warnings__icons-container">
+        <?php foreach ($ghs as $data): ?>        
             <?php echo $this->getLayout()
                 ->createBlock('Magento\Cms\Block\Block')
                 ->setCacheKey('ghs0'.($data-19).'_'.$currentStoreId)
@@ -21,8 +24,13 @@ $product = $block->getProduct();
                 ->setBlockId('ghs0'.($data-19))
                 ->toHtml();
             ?>
+        <?php endforeach; ?>
         </div>
-    <?php endforeach; ?>
+        <?php if (trim($product->getData('hazard_note'))): ?>
+            <div class="cs-warnings__description">
+                <?php echo($product->getData('hazard_note')); ?>
+            </div>
+        <?php endif; ?>
     </div>
 
 <?php endif; ?>

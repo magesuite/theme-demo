@@ -1,37 +1,41 @@
 .#{$namespace}warnings {
     $root: &;
-
     padding-bottom: 1.2rem;
     border-bottom: 1px solid $color-line;
 
-    &__item {
+    &__icons-container {
         display: flex;
         align-items: center;
+        flex-wrap: wrap;
         padding: 1.2rem 0;
+    }
 
-        @include media('<tablet') {
-            padding-right: 1rem;
+    &__icon {
+            width: 30%;
+            padding-right: 2%;
+
+        @include media('>=phone'){
+            width: 23%;
+            padding-right: 2%;
+        }
+
+        @include media('>phone-lg'){
+            width: 18%;
+            padding-right: 1%;
+        }
+
+        @include media('>=tablet') {
+            width: 10rem;
+            padding-right: 1.2rem;
         }
     }
 
-    &__item-icon {
-        width: 10rem;
-        padding-right: 2.5rem;
-
-        @include media('<tablet') {
-            width: 8.5rem;
-            padding-right: 1rem;
-        }
-    }
-
-    &__item-description {
-        flex: 1;
+    &__description {
         font-size: 1.5rem;
         color: $color-paragraph;
+        padding-bottom: 1.2rem;
         text-align: justify;
         text-justify: inter-word;
-        display: flex;
-        align-items: center;
 
         @include media('<phone-lg') {
             font-size: 1.2rem;
