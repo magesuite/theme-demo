@@ -63,6 +63,21 @@
                     </div>' } ] ) %}
             {% endif %}
 
+                {% set warningIcons ='' %}
+                {% for ghs in product.ghs %}
+                    {% set warningIcons = warningIcons ~
+                        '<svg class="cs-warnings__icon"><use href="#' ~ ghs|lower ~ '"></use></svg>'            
+                    %}
+                {% endfor %}
+
+                {% set warningLink = '' %}
+                {% if product.ghs|length > 0 %}
+                    {% set warningLink = '
+                        <a href="' ~ product.url ~ '#warnings-section" class="cs-grid-product__warning-text">
+                            ' ~ translate('hints') ~ '
+                        </a>'
+                    %}
+                {% endif %}
 
             {% set content %}
                 {% include locate( 'grid-product/grid-product.twig' ) with {
@@ -85,6 +100,15 @@
                             <div class="cs-grid-product__info">
                                 ' ~ product.price ~ '
                                 ' ~ bottompart ~'
+                            </div>',
+                            price: 
+                            '<div class="cs-grid-product__warning">
+                                <div class="cs-grid-product__warning-icons-wrapper">
+                                    ' ~ warningIcons ~ '
+                                </div>
+                                <div>
+                                    ' ~ warningLink ~ '
+                                </div>
                             </div>'
                         }
                     }

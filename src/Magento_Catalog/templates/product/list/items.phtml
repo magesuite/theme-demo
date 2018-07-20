@@ -170,6 +170,12 @@ switch ($type = $block->getType()) {
         $dailyDealData = $dailyDealHelper->prepareOfferData($item);
         $badges = [];
         $dailyDealHtml = '';
+        $ghs = explode(',', $item->getGhs());
+        if (strlen($ghs[0]) > 0){
+             $ghs = array_map(function ($item) { return 'ghs0' . ($item-19); }, $ghs);
+        } else {
+            $ghs = '';
+        }
 
         $addToCart = '
                 <form data-role="tocart-form" action="' . $addToCartUrl . '" method="post">
@@ -189,9 +195,10 @@ switch ($type = $block->getType()) {
             'getSalePercentage' => $csProductHelper->getSalePercentage($item),
             'addToCartButtonHtml' => $addToCart,
             'dailyDealOffer' => $dailyDealData,
-            'popularIconFlag' => $isPopular
+            'popularIconFlag' => $isPopular,
+            'ghs' => $ghs
         ];
-
+        
         array_push($products, $data );
         $iterator++;
     }
