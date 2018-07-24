@@ -44,7 +44,7 @@
         font-weight: 400;
         font-size: 1.531rem;
         color: $color-text-dark;
-        margin-bottom: 1rem;
+        margin: 0.3rem 0 0.7rem;
     }
 
     &__name-link {
@@ -90,6 +90,38 @@
             @include media('>=laptop-lg') {
                 padding-right: 0.8rem;
             }
+        }
+    }
+
+    &__warning {
+        display: flex;
+        height: 2.5rem;
+        margin-top: 1.25rem;
+
+        .#{$namespace}warnings__icon{
+            height: 2rem;
+            width: 2rem;
+            display: inline-block;
+            padding-right: 0.2rem;
+        }
+    }
+
+    &__warning-icons-wrapper {
+        margin-right: 0.3rem;
+    }
+
+    &__warning-text {
+        font-size: 1.1rem;
+        padding: 0.3rem 0;
+        &,
+        &:visited {
+            color: $color-paragraph-light;
+            text-decoration: none;
+        }
+
+        &:hover {
+            color: $color-link-hover;
+            text-decoration: none;
         }
     }
 }
