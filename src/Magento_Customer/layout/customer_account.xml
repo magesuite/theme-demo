@@ -4,6 +4,7 @@
     <body>
         <!--Remove unnecessary links in user area menu-->
         <referenceBlock name="customer-account-navigation-wish-list-link" remove="true"/>
+        <referenceBlock name="customer-account-navigation-downloadable-products-link" remove="true"/>
 
         <referenceContainer name="dashboard.bottom" remove="true" />
 

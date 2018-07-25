@@ -1,3 +1,7 @@
+<?php
+// modified the template to add space for warning icons
+?>
+
 <?php extract($block->getData()); ?>
 <li class="<?php echo /* @escapeNotVerified */ $viewModeClass; ?>__brick <?php if($showHeroProduct): ?><?php echo $viewModeClass; ?>__brick--teaser <?php echo $viewModeClass; ?>__brick--x2 <?php echo $viewModeClass; ?>__brick--y2<?php endif; ?>">
     <div class="cs-grid-product <?php if($showHeroProduct): ?>cs-grid-product--hero<?php endif; ?>">
@@ -58,6 +62,26 @@
                     </button>
                 </form>
             </div>';
+        
+        $ghs = explode(',', $product->getGhs());
+        if ( !$ghs or !$ghs[0] ) {
+            $warning = '<div class="cs-grid-product__warning"></div>';
+        } else {
+            $warning = '
+                <div class="cs-grid-product__warning">
+                    <div class="cs-grid-product__warning-icons-wrapper">';
+                    foreach ($ghs as $data) {
+                        $warningIcon = '<svg class="cs-warnings__icon"><use href="#ghs0' . ($data-19) . '"></use></svg>';
+                        $warning .= $warningIcon;
+                    }
+            $warning .= '
+                    </div>                
+                    <a href="' . $product->getProductUrl() . '#warnings-section" class="cs-grid-product__warning-text">
+                        ' . __('hints') . '
+                    </a> 
+                </div>';
+        }          
+
 
         if( $discount ) {
             $badges[] = [
@@ -100,7 +124,8 @@
             'hotspots' => [
                 'after' => [
                     'name' =>  $addToCart,
-                    'badges' => $dailyDealHtml
+                    'badges' => $dailyDealHtml,
+                    'price' => $warning
                 ],
             ]
         ];
