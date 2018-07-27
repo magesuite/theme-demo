@@ -74,7 +74,10 @@
     {% set warningIcons ='' %}
     {% for ghs in product.ghs %}
         {% set warningIcons = warningIcons ~
-            '<svg class="cs-warnings__icon"><use href="#' ~ ghs|lower ~ '"></use></svg>'            
+            '<svg class="cs-warnings__icon">
+                <use href="#' ~ ghs|lower ~ '" xlink:href="#' ~ ghs|lower ~ '">
+                </use>
+            </svg>'            
         %}
     {% endfor %}
 
