@@ -1,5 +1,14 @@
 .#{$namespace}cookie-message {
-    &__button {
-        font-size: 85%;
+    $root: &;
+
+    #{$root}__button {
+        @include media('>=phone-lg') {
+            padding: 0.9rem 2.5rem 1rem !important;
+        }
+
+        span {
+            vertical-align: middle;
+            vertical-align: -webkit-baseline-middle;
+        }
     }
 }
