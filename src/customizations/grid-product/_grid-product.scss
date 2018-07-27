@@ -125,3 +125,17 @@
         }
     }
 }
+
+// Item cloner tile should the same modification on ie11 for carousels on pdp
+.ie11 .catalog-product-view .#{$namespace}item-cloner {
+
+    .#{$namespace}grid-product {
+        padding-right: 0.3rem;
+    }
+
+    .#{$namespace}grid-product__info {
+        @include media('>=laptop-lg') {
+            padding-right: 0.8rem;
+        }
+    }
+}
