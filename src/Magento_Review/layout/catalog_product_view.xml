@@ -6,7 +6,7 @@
 
     <referenceContainer name="cc-content.container">
         <block class="Magento\Catalog\Block\Product\View" name="reviews.headline" as="reviews_headline" template="Magento_Review::headline.phtml"/>
-        <container name="reviews.wrapper" htmlTag="div" htmlClass="cs-reviews__wrapper" id="reviews" />
+        <container name="reviews.wrapper" htmlTag="div" htmlClass="cs-reviews__wrapper" htmlId="reviews" />
     </referenceContainer>
 
     <move element="reviews.tab" destination="reviews.wrapper"/> 
