@@ -19,7 +19,11 @@ $product = $block->getProduct();
         <?php $warning = ''; ?>
         <?php foreach ($ghs as $data): ?>        
             <?php
-            $warningIcon = '<svg class="cs-warnings__icon"><use href="#ghs0' . ($data-19) . '"></use></svg>';
+            $warningIcon = '
+                <svg class="cs-warnings__icon">
+                    <use href="#ghs0' . ($data-19) . '" xlink:href="#ghs0' . ($data-19) . '">
+                    </use>
+                </svg>';
             $warning .= $warningIcon;
             ?>
         <?php endforeach; ?>
