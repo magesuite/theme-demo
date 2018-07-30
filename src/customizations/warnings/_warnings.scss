@@ -11,15 +11,15 @@
     }
 
     &__icon {
-            width: 30%;
-            padding-right: 2%;
+        width: 30%;
+        padding-right: 2%;
 
-        @include media('>=phone'){
+        @include media('>=phone') {
             width: 23%;
             padding-right: 2%;
         }
 
-        @include media('>phone-lg'){
+        @include media('>phone-lg') {
             width: 18%;
             padding-right: 1%;
         }
