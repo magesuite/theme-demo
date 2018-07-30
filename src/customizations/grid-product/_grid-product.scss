@@ -98,7 +98,7 @@
         height: 2.5rem;
         margin-top: 1.25rem;
 
-        .#{$namespace}warnings__icon{
+        .#{$namespace}warnings__icon {
             height: 2rem;
             width: 2rem;
             display: inline-block;
@@ -128,7 +128,6 @@
 
 // Item cloner tile should the same modification on ie11 for carousels on pdp
 .ie11 .catalog-product-view .#{$namespace}item-cloner {
-
     .#{$namespace}grid-product {
         padding-right: 0.3rem;
     }
