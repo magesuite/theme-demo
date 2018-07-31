@@ -60,6 +60,7 @@
 
     &__form-wrapper {
         box-sizing: border-box;
+        width: 100%;
 
         @include media('>=tablet'){
             margin-left: 25%;
@@ -75,6 +76,14 @@
     &__content {
         @include media('>=phone-lg'){
             padding-left: 1rem;
+        }
+    }
+
+    &__form .#{$namespace}form__field--half{
+        min-width: unset;
+
+        @include media('>=tablet'){
+            min-width: 37rem;
         }
     }
 }
