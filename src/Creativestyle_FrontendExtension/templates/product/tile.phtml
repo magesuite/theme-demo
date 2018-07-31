@@ -71,7 +71,11 @@
                 <div class="cs-grid-product__warning">
                     <div class="cs-grid-product__warning-icons-wrapper">';
                     foreach ($ghs as $data) {
-                        $warningIcon = '<svg class="cs-warnings__icon"><use href="#ghs0' . ($data-19) . '"></use></svg>';
+                        $warningIcon = '
+                            <svg class="cs-warnings__icon">
+                                <use href="#ghs0' . ($data-19) . '" xlink:href="#ghs0' . ($data-19) . '">
+                                </use>
+                            </svg>';
                         $warning .= $warningIcon;
                     }
             $warning .= '

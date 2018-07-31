@@ -4,4 +4,22 @@
     &__trigger-icon {
         fill: $colorGray;
     }
+
+    & &__trigger {
+        &,
+        &--in {
+            &::before,
+            &::after {
+                background: $color-text-dark !important;
+            }
+        }
+
+        &:hover,
+        &--in:hover {
+            &::before,
+            &::after {
+                background: $color-first-hover !important;
+            }
+        }
+    }
 }

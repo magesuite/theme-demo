@@ -1,7 +1,7 @@
 .#{$namespace}faq-index {
     $root: &;
-    
-    a { 
+
+    a {
         text-decoration: none;
     }
 
@@ -14,7 +14,7 @@
         font-size: 1.6rem;
 
         .#{$namespace}t-text--look_attention,
-        .#{$namespace}t-text--look_attention:hover, {
+        .#{$namespace}t-text--look_attention:hover {
             font-weight: 400;
         }
     }
