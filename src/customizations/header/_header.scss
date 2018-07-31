@@ -87,4 +87,9 @@
             justify-content: flex-end;
         }
     }
+
+    &__logo {
+        height: 100%;
+        justify-content: start;
+    }
 }

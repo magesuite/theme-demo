@@ -1,8 +1,8 @@
 .#{$namespace}discount {
-    border-top: 0;
+    border-top: 1px solid $color-line;
 
-    @include media('<laptop') {
-        border-top: 1px solid $color-line;
+    @include media ('>=laptop'){
+        border-top: 0;
     }
 
     &__title {

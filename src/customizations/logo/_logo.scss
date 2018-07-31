@@ -1,0 +1,14 @@
+.#{$namespace}logo {
+    $root: &;
+
+    &__image{
+        width: auto;
+        height: 100%;
+        align-self: center;
+        max-height: 6.8rem;
+
+        @include media('>=tablet'){
+            height: auto;
+        }
+    }
+}
