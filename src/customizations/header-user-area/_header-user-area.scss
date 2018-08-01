@@ -83,4 +83,18 @@
             left: 65%;
         }
     }
+
+    .ui-dialog {
+        top: 4rem;
+        right: 0.5rem;
+
+        @include media('>=laptop') {
+            bottom: auto;
+            right: auto;
+        }
+    }
+
+    .#{$namespace}switcher-language {
+        order: -1;
+    }
 }

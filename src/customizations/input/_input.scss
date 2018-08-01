@@ -27,6 +27,19 @@
     &__label-icon-wrapper {
         top: 50%;
         transform: translateY(-50%);
+
+        &--flex {
+            display: flex !important;
+            width: 7.5rem;
+
+            #{$root}__label-icon {
+                max-width: 50%;
+
+                &:first-child {
+                    margin-right: 0.5rem;
+                }
+            }
+        }
     }
 
     &__control {
