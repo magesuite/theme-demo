@@ -9,7 +9,7 @@
             color: $colorMySin;
         }
 
-        &--half-active:after {
+        .#{$namespace}reviews-summary &--half-active:after {
             left: 1rem;
             text-indent: -1rem;
         }
