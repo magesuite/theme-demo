@@ -11,14 +11,7 @@
             </container>
         </referenceContainer>
 
-
-        <!--Move language switcher into page bottom-->
-        <move element="store_language" destination="page.bottom.right" after="-"/>
-        <referenceBlock name="store_language_nav">
-            <arguments>
-                <argument name="id_modifier" xsi:type="string">nav</argument>
-            </arguments>
-        </referenceBlock>
+        <move element="store_language" destination="header.user-area" />
 
     </body>
 </page>
