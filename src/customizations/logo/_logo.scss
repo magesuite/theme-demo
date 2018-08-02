@@ -10,5 +10,9 @@
         @include media('>=tablet') {
             height: auto;
         }
+
+        .ie11 & {
+            max-width: 100%;
+        }
     }
 }
