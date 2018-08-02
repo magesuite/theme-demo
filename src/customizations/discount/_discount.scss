@@ -1,7 +1,7 @@
 .#{$namespace}discount {
     border-top: 1px solid $color-line;
 
-    @include media ('>=laptop'){
+    @include media('>=laptop') {
         border-top: 0;
     }
 

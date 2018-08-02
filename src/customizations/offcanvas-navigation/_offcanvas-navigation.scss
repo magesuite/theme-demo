@@ -9,6 +9,10 @@
         &:last-of-type {
             border-bottom: 1px $colorAlto solid;
         }
+
+        &-lang-switcher {
+            padding: 2rem 1.8rem;
+        }
     }
 
     &__icon {
