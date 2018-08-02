@@ -84,17 +84,22 @@
         }
     }
 
-    .ui-dialog {
-        top: 4rem;
-        right: 0.5rem;
-
-        @include media('>=laptop') {
-            bottom: auto;
-            right: auto;
-        }
-    }
-
     .#{$namespace}switcher-language {
         order: -1;
+
+        @include media('<laptop') {
+            display: none;
+        }
+
+        .ui-dialog {
+            top: 4rem;
+            right: 0.5rem;
+
+            @include media('>=laptop') {
+                top: 3.6rem;
+                bottom: auto;
+                right: auto;
+            }
+        }
     }
 }

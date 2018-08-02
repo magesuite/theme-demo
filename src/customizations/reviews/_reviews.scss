@@ -79,10 +79,10 @@
         }
     }
 
-    &__form .#{$namespace}form__field--half{
+    &__form .#{$namespace}form__field--half {
         min-width: unset;
 
-        @include media('>=tablet'){
+        @include media('>=tablet') {
             min-width: 37rem;
         }
     }
