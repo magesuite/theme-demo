@@ -99,6 +99,26 @@ a {
         background: $colorWhite;
     }
 
+    .#{$namespace}category-page__cc-bottom {
+        padding: 1.5rem;
+
+        @include media('>=tablet') {
+            padding: 2.5rem 1.5rem;
+        }
+
+        .#{$namespace}container--edge-to-edge {
+            max-width: 100% !important;
+            margin: 0 auto !important;
+        }
+
+        .#{$namespace}container__inner {
+            @include media('>=laptop') {
+                padding-left: 0;
+                padding-right: 0;
+            }
+        }
+    }
+
     .#{$namespace}footer {
         background-color: $color-footer-background;
     }

@@ -21,8 +21,49 @@
     }
 
     &--cms-pages {
-        #{$root}__slides {
-            justify-content: space-between !important;
+
+        &#{$root}--items-in-row-4,
+        &#{$root}--items-in-row-2 {
+            #{$root}__slide {
+                &:nth-child(2n + 1){
+                    margin-right: 0.7rem;
+                }
+            }
+        }
+
+        @include media('>=tablet') {
+            &#{$root}--items-in-row-2 {
+                #{$root}__slide {
+                    &:nth-child(2n + 1) {
+                        margin-right: 1rem;
+                    }
+
+                    &:nth-child(n + 3) {
+                        margin-top: 1rem !important;
+                    }
+                }
+            }
+
+            &#{$root}--items-in-row-4 {
+                #{$root}__slide {
+                    width: calc(100% / 4 - 1rem) !important;
+
+                    &:nth-child(4n + 1),
+                    &:nth-child(4n + 2),
+                    &:nth-child(4n + 3) {
+                        margin-right: 1.33rem;
+                    }
+
+                    &:nth-child(4n + 4) {
+                        margin-right: 0;
+                    }
+
+                    &:nth-child(n + 5) {
+                        margin-top: 1.33rem;
+                    }
+                }
+            }
+
         }
 
         #{$root}__content {
@@ -66,11 +107,6 @@
             &:not(#{$root}--slider) {
                 #{$root}__slide {
                     width: calc(50% - 1rem);
-
-                    //CMS teasers spaces
-                    &:nth-child(n + 3) {
-                        margin-top: 2rem !important;
-                    }
                 }
             }
         }
@@ -79,11 +115,6 @@
             &:not(#{$root}--slider) {
                 #{$root}__slide {
                     width: calc(33.3% - 1.33rem);
-
-                    //CMS teasers spaces
-                    &:nth-child(n + 4) {
-                        margin-top: 2rem;
-                    }
                 }
             }
         }
@@ -92,11 +123,6 @@
             &:not(#{$root}--slider) {
                 #{$root}__slide {
                     width: calc(100% / 4 - 1rem);
-
-                    //CMS teasers spaces
-                    &:nth-child(n + 5) {
-                        margin-top: 1.33rem !important;
-                    }
                 }
             }
         }
