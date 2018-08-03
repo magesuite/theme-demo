@@ -218,7 +218,7 @@
 
         &-timemarker-content-container {
             width: 15rem;
-            height: 4rem !important;
+            height: 5rem !important;
             margin-top: 0.5rem;
         }
 
@@ -290,13 +290,17 @@
             font-weight: 300 !important;
             opacity: 1 !important;
             margin: 5rem 0 0 !important;
-            width: 4rem !important;
+            width: 5rem !important;
+        }
+
+        &-slidenav-next {
+            text-align: left;
         }
 
         &-slidenav-content-container {
-            width: 4rem;
+            width: 5rem !important;
             height: 2rem;
-            left: -1rem;
+            left: 0;
         }
 
         &-timenav {
@@ -316,5 +320,11 @@
                 rgba(234, 234, 234, 1) 100%
             );
         }
+    }
+}
+
+.tl-timenav {
+    @include media('<tablet') {
+        max-height: 19.1rem;
     }
 }
