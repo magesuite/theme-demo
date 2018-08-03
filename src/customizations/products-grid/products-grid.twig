@@ -72,14 +72,24 @@
     {% endif %}
 
     {% set warningIcons ='' %}
-    {% for ghs in product.ghs %}
-        {% set warningIcons = warningIcons ~
+    {% if product.ghs is iterable %}
+        {% for ghs in product.ghs %}
+            {% set warningIcons = warningIcons ~ 
+                '<svg class="cs-warnings__icon">
+                    <use href="#' ~ ghs|lower ~ '" xlink:href="#' ~ ghs|lower ~ '">
+                    </use>
+                </svg>'
+            %}
+        {% endfor %}
+    {% else %}
+        {% set warningIcons = warningIcons ~ 
             '<svg class="cs-warnings__icon">
-                <use href="#' ~ ghs|lower ~ '" xlink:href="#' ~ ghs|lower ~ '">
+                <use href="#' ~ product.ghs|lower ~ '" xlink:href="#' ~ product.ghs|lower ~ '">
                 </use>
-            </svg>'            
+            </svg>'
         %}
-    {% endfor %}
+    {% endif %}
+
 
     {% set warningLink = '' %}
     {% if product.ghs|length > 0 %}
