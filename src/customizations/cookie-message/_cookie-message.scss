@@ -9,6 +9,15 @@
         span {
             vertical-align: middle;
             vertical-align: -webkit-baseline-middle;
+
+            @media not all and (min-resolution:.001dpcm) {
+                @supports (-webkit-appearance:none) and (stroke-color:transparent) {
+                    @include media('<=laptop') {
+                        transform: translateY(-0.2rem);
+                        display: inline-block;
+                    }
+                }
+            }
         }
     }
 }
