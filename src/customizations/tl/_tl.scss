@@ -321,47 +321,51 @@
             );
         }
 
+        // Only for edge
+        @supports (-ms-ime-align: auto) {
 
-        &-menubar-button {
-            padding: 0.4rem 1.1rem 0;
+            .tl-menubar-button {
+                padding: 0.4rem 1.1rem 0;
 
-            &:hover {
-                .tl-icon-zoom-in {
-                    background-image: url('images/timeline_zoom_in_hover.png');
-                }
+                &:hover {
+                    .tl-icon-zoom-in {
+                        background-image: url('images/timeline_zoom_in_hover.png');
+                    }
 
-                .tl-icon-zoom-out {
-                    background-image: url('images/timeline_zoom_out_hover.png');
-                }
+                    .tl-icon-zoom-out {
+                        background-image: url('images/timeline_zoom_out_hover.png');
+                    }
 
-                .tl-icon-goback {
-                    background-image: url('images/timeline_back_hover.png');
+                    .tl-icon-goback {
+                        background-image: url('images/timeline_back_hover.png');
+                    }
                 }
             }
-        }
-        &-menubar-button span {
-            display: inline-block;
-            width: 2.1rem;
-            height: 2.3rem;
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-position: center;
 
-            &:after {
-                display: none;
+            .tl-menubar-button span {
+                display: inline-block;
+                width: 2.1rem;
+                height: 2.3rem;
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+
+                &:after {
+                    display: none;
+                }
             }
-        }
 
-        &-icon-zoom-in {
-            background-image: url('images/timeline_zoom_in.png');
-        }
+            .tl-icon-zoom-in {
+                background-image: url('images/timeline_zoom_in.png');
+            }
 
-        &-icon-zoom-out {
-            background-image: url('images/timeline_zoom_out.png');
-        }
+            .tl-icon-zoom-out {
+                background-image: url('images/timeline_zoom_out.png');
+            }
 
-        &-icon-goback {
-            background-image: url('images/timeline_back.png');
+            .tl-icon-goback {
+                background-image: url('images/timeline_back.png');
+            }
         }
 
     }
