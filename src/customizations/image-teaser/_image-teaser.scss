@@ -21,11 +21,10 @@
     }
 
     &--cms-pages {
-
         &#{$root}--items-in-row-4,
         &#{$root}--items-in-row-2 {
             #{$root}__slide {
-                &:nth-child(2n + 1){
+                &:nth-child(2n + 1) {
                     margin-right: 0.7rem;
                 }
             }
@@ -63,7 +62,6 @@
                     }
                 }
             }
-
         }
 
         #{$root}__content {

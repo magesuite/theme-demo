@@ -80,4 +80,10 @@
         margin-top: 0;
         position: absolute;
     }
+
+    &__no-review {
+        @include media('>=tablet') {
+            padding-bottom: 0.5rem;
+        }
+    }
 }
