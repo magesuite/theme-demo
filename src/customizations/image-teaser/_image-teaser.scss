@@ -20,6 +20,17 @@
         padding-top: 1rem;
     }
 
+    // Tablet in vertical position is too thin to show text on slide without image. There is and adjustment below to show full headline, text and button
+    &--items-in-row-2
+        #{$root}__slide:not(#{$root}__slide--image-uploaded)
+        #{$root}__content-wrapper {
+        @include media('>=tablet', '<laptop') {
+            position: static;
+            left: 0;
+            transform: none;
+        }
+    }
+
     &--cms-pages {
         &#{$root}--items-in-row-4,
         &#{$root}--items-in-row-2 {
