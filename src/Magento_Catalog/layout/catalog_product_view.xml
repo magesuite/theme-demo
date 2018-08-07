@@ -45,7 +45,7 @@
         </referenceBlock>
 
         <referenceContainer name="cc-content.container">
-            <block class="Magento\Catalog\Block\Product\View\Attributes" name="product.warnings" template="Magento_Catalog::product/view/warnings.phtml"/>
+            <block class="Magento\Catalog\Block\Product\View\Attributes" name="product.hints" template="Magento_Catalog::product/view/hints.phtml"/>
         </referenceContainer>
 
         <!--remove special attributes and add product highlights-->

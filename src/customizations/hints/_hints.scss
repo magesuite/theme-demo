@@ -1,0 +1,15 @@
+.#{$namespace}hints {
+    $root: &;
+
+        &__content{
+        font-size: 1.5rem;
+        color: $color-paragraph;
+        padding-bottom: 1.2rem;
+        text-align: justify;
+        text-justify: inter-word;
+
+        @include media('<phone-lg') {
+            font-size: 1.2rem;
+        }
+    }
+}
