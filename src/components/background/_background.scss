@@ -19,6 +19,11 @@
             padding-bottom: 3rem;
         }
 
+        @include media('>=tablet', '<laptop') {
+            margin-left: -1.5rem;
+            margin-right: -1.5rem;
+        }
+
         @include media('>=laptop') {
             width: calc(100% + 3rem);
             margin: $base-space -1.5rem;
