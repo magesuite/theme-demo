@@ -137,3 +137,37 @@ a {
 .pccform {
     margin-top: 3rem !important;
 }
+
+.#{$namespace}cart-page {
+    &__banners {
+        @include media('<tablet') {
+            padding: 0 1.5rem;
+        }
+
+        img {
+            @include media('<laptop') {
+                margin-bottom: 1rem;
+            }
+        }
+
+        @include media('>=laptop') {
+            display: flex;
+
+            img {
+                align-self: center;
+                max-width: 50%;
+            }
+        }
+
+        p {
+            @include media('>=tablet') {
+                display: flex;
+                max-width: 50%;
+
+                img {
+                    align-self: center;
+                }
+            }
+        }
+    }
+}
