@@ -51,10 +51,14 @@
     &__wrapper {
         display: flex;
         flex-wrap: wrap;
-        margin-bottom: 4.8rem;
+        margin-bottom: 1.5rem;
 
         @include media('>=phone-lg') {
             justify-content: space-between;
+        }
+
+        @include media('>=tablet') {
+            margin-bottom: 4.8rem;
         }
     }
 
