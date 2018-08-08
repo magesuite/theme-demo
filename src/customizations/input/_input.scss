@@ -181,6 +181,7 @@
         .#{$namespace}checkout__step-content &.mage-error,
         .#{$namespace}checkout__step-content ._error & {
             display: none !important;
+            color: $color-error;
         }
 
         .#{$namespace}checkout__step-content #{$root}--warning & {
