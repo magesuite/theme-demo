@@ -24,10 +24,19 @@
     &--items-in-row-2
         #{$root}__slide:not(#{$root}__slide--image-uploaded)
         #{$root}__content-wrapper {
-        @include media('>=tablet', '<laptop') {
+        @include media('>=tablet', '<laptop-lg') {
             position: static;
             left: 0;
             transform: none;
+            padding-top: 0;
+        }
+    }
+
+    &--items-in-row-2
+    #{$root}__slide:not(#{$root}__slide--image-uploaded)
+    #{$root}__headline {
+        @include media('>=tablet', '<laptop-lg') {
+            padding-top: 0;
         }
     }
 

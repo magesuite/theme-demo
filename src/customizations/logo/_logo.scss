@@ -5,10 +5,14 @@
         width: auto;
         height: 100%;
         align-self: center;
-        max-height: 6.8rem;
+
+        @include media('<tablet') {
+            max-height: 4.5rem;
+        }
 
         @include media('>=tablet') {
             height: auto;
+            max-height: 6.8rem;
         }
 
         .ie11 & {
