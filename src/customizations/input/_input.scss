@@ -6,7 +6,7 @@
     &._required,
     &.required-entry {
         #{$root}__label {
-            &:after {
+            &::after {
                 color: $color-error;
             }
         }
@@ -46,7 +46,7 @@
         &._error {
             position: relative;
 
-            &:after {
+            &::after {
                 display: block;
                 content: '!';
                 position: absolute;
@@ -136,18 +136,18 @@
     }
 
     &__radio[type='radio'] {
-        &:checked + #{$root}__label:before,
-        &:checked + #{$root}__label:after {
+        &:checked + #{$root}__label::before,
+        &:checked + #{$root}__label::after {
             color: $color-radio;
             border-color: $color-radio;
         }
 
-        &:hover:not(:disabled) + #{$root}__label:before {
+        &:hover:not(:disabled) + #{$root}__label::before {
             border-color: $color-radio-hover;
         }
 
-        &:checked + #{$root}__label:after,
-        .selected-item #{$root}__label:after {
+        &:checked + #{$root}__label::after,
+        .selected-item #{$root}__label::after {
             border-radius: 50%;
             width: 0.7rem;
             height: 0.7rem;
@@ -223,14 +223,14 @@
         #{$root}__label {
             padding-left: 2.2rem;
 
-            &:before {
+            &::before {
                 width: 1.65rem;
                 height: 1.65rem;
                 border: 1px solid darken($colorGallery, 8%);
                 line-height: 1.6rem;
             }
 
-            &:after {
+            &::after {
                 width: 0.7rem;
                 height: 0.7rem;
                 border-radius: 50%;
@@ -238,7 +238,7 @@
         }
 
         #{$root}__radio:disabled + #{$root}__label {
-            &:before {
+            &::before {
                 background: $colorGallery;
             }
         }
@@ -248,11 +248,11 @@
         font-size: 1rem;
 
         #{$root}__checkbox {
-            &:hover:not(:disabled) + #{$root}__label:before {
+            &:hover:not(:disabled) + #{$root}__label::before {
                 border-color: $color-checkbox-hover;
             }
 
-            &:checked + #{$root}__label:before {
+            &:checked + #{$root}__label::before {
                 background-color: $color-checkbox;
                 background-image: url('images/checkbox-tick.svg');
                 background-repeat: no-repeat;
@@ -260,7 +260,7 @@
                 border-color: $color-checkbox;
             }
 
-            &[type='checkbox']:disabled + #{$root}__label:before {
+            &[type='checkbox']:disabled + #{$root}__label::before {
                 background: $colorGallery;
                 border-color: $color-checkbox;
             }
@@ -275,7 +275,7 @@
                 font-size: 1.3rem;
             }
 
-            &:before {
+            &::before {
                 border-width: 1px;
                 border-color: $color-input-border;
                 border-style: solid;
@@ -284,11 +284,15 @@
                 height: 2rem;
                 background-size: 1rem auto;
             }
+
+            &:hover::before {
+                border-color: $color-checkbox-hover;
+            }
         }
 
         &._error #{$root}__label,
         #{$root}__checkbox.mage-error + #{$root}__label {
-            &:before {
+            &::before {
                 border-color: $color-error;
             }
         }
