@@ -5,6 +5,13 @@
     padding-top: $base-space;
     padding-bottom: $base-space;
 
+    .#{$namespace}grid-product {
+        @include media('<tablet') {
+            width: 100%;
+            max-width: 30rem;
+        }
+    }
+
     &__nav {
         border-radius: 0;
         box-shadow: none;
