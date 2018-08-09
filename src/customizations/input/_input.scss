@@ -12,6 +12,10 @@
         }
     }
 
+    div.mage-error[generated] {
+        color: $color-error;
+    }
+
     &__label {
         font-size: 1.4rem;
         font-weight: 700;
