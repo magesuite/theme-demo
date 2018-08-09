@@ -13,6 +13,12 @@
         &-lang-switcher {
             padding: 2rem 1.8rem;
         }
+
+        #{$root}__list #{$root}__item {
+            &:nth-child(2) {
+                display: none;
+            }
+        }
     }
 
     &__icon {
