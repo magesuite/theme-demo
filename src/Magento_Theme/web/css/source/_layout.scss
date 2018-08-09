@@ -171,3 +171,10 @@ a {
         }
     }
 }
+
+.cms-no-route,
+.cms-noroute-index {
+    .page-title-wrapper {
+        display: none;
+    }
+}
