@@ -13,12 +13,6 @@ $ghs = explode(',', $product->getGhs());
 $hazardNote = $product->getData('hazard_note');
 ?>
 
-<?php if((!is_null($mixture)) || (!is_null($ingredients)) || (strlen($ghs[0]) > 0)) : ?>
-    <div class="cs-headline cs-hints__headline">
-        <h2 class="cs-headline__title"><?php /* @escapeNotVerified */  echo __('Hints'); ?> </h2>
-    </div>
-<?php endif; ?>
-
 <?php if(!is_null($mixture)) : ?>
     <div class="cs-hints__mixture">
         <div class="cs-headline cs-hints__headline">
