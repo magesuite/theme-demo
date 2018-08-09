@@ -33,8 +33,8 @@
     }
 
     &--items-in-row-2
-    #{$root}__slide:not(#{$root}__slide--image-uploaded)
-    #{$root}__headline {
+        #{$root}__slide:not(#{$root}__slide--image-uploaded)
+        #{$root}__headline {
         @include media('>=tablet', '<laptop-lg') {
             padding-top: 0;
         }
