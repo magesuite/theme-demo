@@ -13,6 +13,8 @@ import 'vendors';
 import $ from 'jquery';
 
 import '../../theme-creativeshop/src/components/collapse/collapse';
+import { Flyout } from '../../theme-creativeshop/src/components/flyout/class.flyout';
+export { Flyout };
 
 import AddressAutofill from './customizations/address-autofill/address-autofill';
 export { AddressAutofill };
