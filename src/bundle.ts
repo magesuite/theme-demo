@@ -33,6 +33,7 @@ import './customizations/aftersearch-nav/aftersearch-nav-filter';
 import '../../theme-creativeshop/src/customizations/aftersearch-nav/aftersearch-nav';
 import '../../theme-creativeshop/src/customizations/brand-carousel/brand-carousel';
 import '../../theme-creativeshop/src/customizations/header-search/header-search';
+import '../../theme-creativeshop/src/customizations/hero/hero';
 import '../../theme-creativeshop/src/customizations/item-cloner/item-cloner';
 import '../../theme-creativeshop/src/customizations/offcanvas-navigation/offcanvas-navigation';
 import '../../theme-creativeshop/src/customizations/offcanvas/offcanvas';
@@ -45,5 +46,3 @@ import '../../theme-creativeshop/src/customizations/dailydeal/dailydeal';
 import '../../theme-creativeshop/src/customizations/plugincompany-contactforms/plugincompany-contactforms';
 import '../../theme-creativeshop/src/customizations/video-player/video-player';
 import '../../theme-creativeshop/src/customizations/searchresults-switcher/searchresults-switcher';
-
-import './customizations/hero/hero';
