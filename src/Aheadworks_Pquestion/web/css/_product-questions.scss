@@ -15,7 +15,6 @@
         }
     }
 
-
     &-list__no-questions,
     &-question__question {
         box-sizing: border-box;
@@ -37,7 +36,6 @@
     }
 
     &-form {
-
         &__field-checkbox {
             #{$root}-forms__label {
                 span {
@@ -49,18 +47,16 @@
         .#{$namespace}button.submit {
             @extend .#{$namespace}button--look_default;
         }
-
     }
 
     &-question {
-
         &-title-mobile {
             @include media('<tablet') {
                 font-size: 2.2rem !important;
                 text-align: center;
 
                 &::after,
-                &::before{
+                &::before {
                     display: none !important;
                 }
             }
@@ -94,20 +90,17 @@
     }
 
     &-list {
-
         &__add-question-button {
             display: block !important;
         }
 
         &__question,
         &__answer {
-
             &-label {
                 font-size: 1.3rem;
 
                 @include media('>=tablet') {
                     font-size: 1.2rem;
-
                 }
             }
         }
@@ -156,7 +149,6 @@
         }
 
         &__helpfulness {
-
             &--horizontal {
                 margin-top: 1rem;
 
@@ -174,7 +166,6 @@
             }
 
             &-wrapper {
-
                 @include media('>=tablet') {
                     flex: 0 0 11rem;
                 }
@@ -219,6 +210,4 @@
             }
         }
     }
-
 }
-
