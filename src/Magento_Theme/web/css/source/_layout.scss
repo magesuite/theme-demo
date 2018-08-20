@@ -156,6 +156,7 @@ a {
             img {
                 align-self: center;
                 max-width: 50%;
+                flex-shrink: 0;
             }
         }
 
@@ -166,6 +167,8 @@ a {
 
                 img {
                     align-self: center;
+                    max-width: 50%;
+                    flex-shrink: 0;
                 }
             }
         }
