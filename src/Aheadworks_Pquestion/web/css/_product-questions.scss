@@ -90,6 +90,12 @@
     }
 
     &-list {
+
+        &__please-login-note {
+            color: $colorBoulder;
+            font-size: 1.5rem;
+        }
+
         &__add-question-button {
             display: block !important;
         }
@@ -98,11 +104,16 @@
         &__answer {
             &-label {
                 font-size: 1.3rem;
+                color: $color-qa-label;
 
                 @include media('>=tablet') {
                     font-size: 1.2rem;
                 }
             }
+        }
+
+        &__answer-label-text {
+            color: $color-qa-label;
         }
 
         &__question {
@@ -138,13 +149,15 @@
                 color: $color-qa-author;
                 font-size: 1.3rem;
             }
-        }
 
-        &__answer {
             &-label {
                 @include media('>=tablet') {
                     padding: 0 2rem 0 3rem;
                 }
+            }
+
+            &-content {
+                color: $color-qa-answer-text;
             }
         }
 
