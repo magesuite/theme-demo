@@ -25,4 +25,16 @@
             color: $color-text-dark !important;
         }
     }
+
+    .#{$namespace}cart-item__badge {
+        width: 3rem;
+        height: 3rem;
+
+        span {
+            margin-left: 0;
+            padding: 0;
+            line-height: 2.8rem;
+        }
+    }
+
 }
