@@ -102,6 +102,12 @@
                 font-size: 1.3rem;
                 color: $color-qa-label;
 
+                .ie11 & {
+                    @include media('>=tablet') {
+                        flex-basis: 10rem;
+                    }
+                }
+
                 @include media('>=tablet') {
                     font-size: 1.2rem;
                 }
