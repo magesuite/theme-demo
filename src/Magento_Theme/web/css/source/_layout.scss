@@ -152,10 +152,11 @@ a {
 
         @include media('>=laptop') {
             display: flex;
+            justify-content: space-between;
 
             img {
                 align-self: center;
-                max-width: 50%;
+                max-width: calc(50% - 0.8rem);
                 flex-shrink: 0;
             }
         }
@@ -163,11 +164,11 @@ a {
         p {
             @include media('>=tablet') {
                 display: flex;
-                max-width: 50%;
+                justify-content: space-between;
 
                 img {
                     align-self: center;
-                    max-width: 50%;
+                    max-width: calc(50% - 0.8rem);
                     flex-shrink: 0;
                 }
             }
