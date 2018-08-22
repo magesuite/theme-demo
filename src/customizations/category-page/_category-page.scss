@@ -8,7 +8,6 @@
     .page-title-wrapper {
         @include media('<tablet') {
             margin-bottom: 0;
-            padding-top: 1.5rem;
         }
 
         .page-title {
@@ -216,12 +215,12 @@
             border-left: none;
         }
 
-        > .#{$namespace}messages {
-            margin-top: 4rem;
+        @include media('<tablet') {
+            padding-top: 1.5rem;
+        }
 
-            @include media('>=tablet') {
-                margin-top: 5.5rem;
-            }
+        > .#{$namespace}messages {
+            margin-top: 1rem;
         }
     }
 
