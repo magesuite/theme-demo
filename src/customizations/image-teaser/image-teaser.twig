@@ -4,6 +4,12 @@
 {% set displayVariant = 'outside' %}
 {% set itemsPerViewMobile = 1 %}
 {% set itemsPerView = currentScenario.desktopLayout.id %}
+
+{# CMS page critical indexing hotfix - Avoid zero division error #}
+{% if itemsPerView == 0 %}
+  {% set itemsPerView = 1 %}
+{% endif %}
+
 {% if currentScenario.mobileLayout.id == 'large' or currentScenario.mobileLayout.id == 'slider' or currentScenario.mobileLayout.id == 'col' %}
     {% set itemsPerRowMobile = 1 %}
 {% endif %}
