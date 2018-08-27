@@ -2,7 +2,7 @@
     $root: &;
 
     @include media('<tablet') {
-        padding-top: 6rem;
+        padding-top: 0;
 
         .catalog-category-view &,
         .catalogsearch-result-index & {
