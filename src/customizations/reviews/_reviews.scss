@@ -75,6 +75,10 @@
             margin-left: 22%;
             width: 78%;
         }
+
+        .#{$namespace}form__buttons .#{$namespace}button {
+            @extend .#{$namespace}button--look_default;
+        }
     }
 
     &__content {
@@ -117,6 +121,11 @@
 
     @include media('>=laptop') {
         width: 20%;
+    }
+
+    .#{$namespace}button {
+        margin-top: 1rem;
+        @extend .#{$namespace}button--look_default;
     }
 
     &__note-left,
