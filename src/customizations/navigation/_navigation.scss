@@ -37,6 +37,15 @@
             }
         }
 
+        &:not(#{$root}__item--with-flyout)  {
+            border-bottom-left-radius: 0.5rem;
+            border-bottom-right-radius: 0.5rem;
+
+            &:hover {
+                border-bottom-color: $color-line;
+            }
+        }
+
         &:first-of-type {
             .#{$namespace}navigation__flyout--visible {
                 border-top-left-radius: 0;
