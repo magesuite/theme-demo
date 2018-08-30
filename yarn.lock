@@ -1566,15 +1566,9 @@ create-error-class@^3.0.0, create-error-class@^3.0.1:
   dependencies:
     capture-stack-trace "^1.0.0"
 
-"creative-patterns@git+ssh://git@gitlab.creativestyle.pl:frontend/creative-patterns.git#develop":
-  version "2.19.3"
-  resolved "git+ssh://git@gitlab.creativestyle.pl:frontend/creative-patterns.git#18ad58acc6697cc0f6646fcab8a7424950262376"
-  dependencies:
-    include-media "^1.4.9"
-
-"creative-patterns@git+ssh://git@gitlab.creativestyle.pl:frontend/creative-patterns.git#v2.8.4":
-  version "2.8.4"
-  resolved "git+ssh://git@gitlab.creativestyle.pl:frontend/creative-patterns.git#e9d95d88650992b402fe3de59987fe44055b1717"
+"creative-patterns@git+ssh://git@gitlab.creativestyle.pl:frontend/creative-patterns.git#2.24.2", "creative-patterns@git+ssh://git@gitlab.creativestyle.pl:frontend/creative-patterns.git#v2.24.2 ":
+  version "2.24.2"
+  resolved "git+ssh://git@gitlab.creativestyle.pl:frontend/creative-patterns.git#8a8326b4686c6cee7bc7e365cdcdf81411353a9f"
   dependencies:
     include-media "^1.4.9"
 
@@ -7310,16 +7304,16 @@ tfunk@^3.0.1:
     chalk "^1.1.1"
     object-path "^0.9.0"
 
-"theme-creativeshop@git+ssh://git@gitlab.creativestyle.pl:m2c/theme-creativeshop.git#develop":
-  version "3.13.2"
-  resolved "git+ssh://git@gitlab.creativestyle.pl:m2c/theme-creativeshop.git#0e674126532f533a9ceff76dffa96ce6ddd6b079"
+"theme-creativeshop@git+ssh://git@gitlab.creativestyle.pl:m2c/theme-creativeshop.git#4.37.4":
+  version "4.37.3"
+  resolved "git+ssh://git@gitlab.creativestyle.pl:m2c/theme-creativeshop.git#941a0a36198dc5cf3e147f9a5d03e83c410683f0"
   dependencies:
     "@types/jquery" "^3.2.13"
     autoprefixer "^7.1.5"
     babel-preset-env "^1.6.0"
     babel-register "^6.26.0"
     browser-sync "^2.18.13"
-    creative-patterns "git+ssh://git@gitlab.creativestyle.pl:frontend/creative-patterns.git#v2.8.4"
+    creative-patterns "git+ssh://git@gitlab.creativestyle.pl:frontend/creative-patterns.git#v2.24.2 "
     del "^3.0.0"
     eslint "^4.8.0"
     eslint-config-prettier "^2.6.0"
