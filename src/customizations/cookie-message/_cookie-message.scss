@@ -1,9 +1,21 @@
 .#{$namespace}cookie-message {
     $root: &;
+    flex-wrap: wrap;
+
+    @include media('>=phone'){
+        flex-wrap: nowrap;
+    }
 
     #{$root}__button {
+        margin-top: 1rem;
+        padding: 0.8rem 1.5rem 1rem;
+
+        @include media('>=phone'){
+            margin-top: 0;
+        }
+
         @include media('>=phone-lg') {
-            padding: 0.9rem 2.5rem 1rem !important;
+            padding: 0.8rem 2.5rem 1.1rem !important;
         }
 
         span {
