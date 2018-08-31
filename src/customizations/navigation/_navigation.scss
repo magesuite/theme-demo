@@ -37,7 +37,7 @@
             }
         }
 
-        &:not(#{$root}__item--with-flyout)  {
+        &:not(#{$root}__item--with-flyout) {
             border-bottom-left-radius: 0.5rem;
             border-bottom-right-radius: 0.5rem;
 

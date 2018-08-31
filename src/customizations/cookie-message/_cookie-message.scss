@@ -2,7 +2,7 @@
     $root: &;
     flex-wrap: wrap;
 
-    @include media('>=phone'){
+    @include media('>=phone') {
         flex-wrap: nowrap;
     }
 
@@ -10,7 +10,7 @@
         margin-top: 1rem;
         padding: 0.8rem 1.5rem 1rem;
 
-        @include media('>=phone'){
+        @include media('>=phone') {
             margin-top: 0;
         }
 
