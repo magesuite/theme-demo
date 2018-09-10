@@ -55,5 +55,13 @@
         </referenceContainer>
 
         <move element="product.info.review" destination="product.info.main" before="product.details.specials" />
+
+        <referenceContainer name="product.info.price">
+            <block class="Magento\Cms\Block\Block" name="product.info.price.fares">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">pdp_fares_info</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
     </body>
 </page>

@@ -29,6 +29,17 @@
     }
 }
 
+.#{$namespace}price--fares-info{
+    font-size: 1.2rem;
+    text-decoration: none;
+
+    &,
+    &:visited,
+    &:hover {
+        color: $color-base-price;
+    }
+}
+
 .#{$namespace}price--pdp {
     border-bottom: none;
     margin-bottom: 0;
