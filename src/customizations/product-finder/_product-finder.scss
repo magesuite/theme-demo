@@ -1,0 +1,131 @@
+.#{$namespace}product-finder {
+    $root: &;
+
+    padding-bottom: 6rem !important;
+
+    &__step-header {
+        margin-top: 0;
+    }
+
+    &__step-title {
+        &:before,
+        &:after {
+            background: transparent;
+        }
+    }
+
+    &__back-button {
+        border: none !important;
+        bottom: 0;
+        left: 0;
+        transform: translateY(0);
+        padding-left: 0.4rem;
+        color: $color-first;
+
+        &:before {
+            display: inline-block;
+            content: '';
+            width: 1.8rem;
+            height: 1.3rem;
+            background-image: url('images/icon_arrow-left.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            margin-right: 0.3rem;
+            transform: translateY(0.1rem);
+        }
+    }
+
+    &__step {
+        &--options-desktop_1 {
+            #{$root}__step-options {
+                @include media('>=laptop') {
+                    max-width: 27rem;
+                    margin: 0 auto;
+                }
+            }
+        }
+
+        &--options-desktop_2 {
+            #{$root}__step-options {
+                @include media('>=laptop') {
+                    max-width: 55rem;
+                    margin: 0 auto;
+                }
+            }
+        }
+
+        &--options-tablet_2 {
+            #{$root}__step-options {
+                @include media('>=tablet', '<laptop') {
+                    max-width: 55rem;
+                    margin: 0 auto;
+                }
+            }
+        }
+
+        &--options-mobile_2 {
+            #{$root}__step-options {
+                @include media('<tablet') {
+                    max-width: 55rem;
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+
+    &__step-options {
+        @media only screen and (min-width: 670px) and (max-width: 1023px) {
+            max-width: 60rem;
+            margin: 0 auto;
+        }
+    }
+
+    &__step-option {
+        border: 1px solid $color-line;
+        border-radius: 0.5rem;
+
+        &:hover {
+            border: 1px solid $color-first;
+
+            #{$root}__option-label {
+                color: $color-first;
+            }
+        }
+    }
+
+    &__option-content {
+        display: flex;
+        padding-top: 1.5rem;
+        justify-content: center;
+        box-sizing: border-box;
+    }
+
+    &__option-image:not(:only-child) {
+        margin: 0 auto;
+        max-height: calc(100% - 10rem);
+    }
+
+    &__option-label {
+        margin-top: 0;
+        margin-bottom: 0;
+        font-size: 1.4rem;
+        line-height: 120%;
+        padding: 1.5rem;
+        box-sizing: border-box;
+
+        &:only-child {
+            padding: 0 1.5rem;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        @include media('>=phone-lg') {
+            font-size: 1.5rem;
+        }
+
+        @include media('>=tablet') {
+            font-size: 1.8rem;
+        }
+    }
+}
