@@ -6,7 +6,8 @@
 .#{$namespace}footer-list {
     $root: &;
 
-    &__link {
+    &__link,
+    a {
         font-size: 1.4rem;
         color: $color-footer-text;
 
