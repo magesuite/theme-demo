@@ -209,14 +209,16 @@
                 box-sizing: border-box;
 
                 &--up {
-                    &:hover {
+                    &:hover,
+                    #{$root}-list__helpfulness-icon_like_voted & {
                         fill: $color-success;
                         border-color: $color-success;
                     }
                 }
 
                 &--down {
-                    &:hover {
+                    &:hover,
+                    #{$root}-list__helpfulness-icon_dislike_voted & {
                         fill: $color-error;
                         border-color: $color-error;
                     }
