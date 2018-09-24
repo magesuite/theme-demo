@@ -4,4 +4,15 @@
     &__bottom {
         border-top: 2px solid $color-line;
     }
+
+    &__block {
+
+        &.reviews {
+            .#{$namespace}table__col.summary {
+                @include media('>=laptop') {
+                    padding-top: 1.7rem;
+                }
+            }
+        }
+    }
 }
