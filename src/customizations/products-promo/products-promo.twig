@@ -63,24 +63,30 @@
                     </div>' } ] ) %}
             {% endif %}
 
-                {% set warningIcons ='' %}
-                {% for ghs in product.ghs %}
-                    {% set warningIcons = warningIcons ~
-                        '<svg class="cs-warnings__icon">
-                            <use href="#' ~ ghs|lower ~ '" xlink:href="#' ~ ghs|lower ~ '">
-                            </use>
-                        </svg>'            
-                    %}
-                {% endfor %}
+            {% set biocidalProduct = '' %}
 
-                {% set warningLink = '' %}
-                {% if product.ghs|length > 0 %}
-                    {% set warningLink = '
-                        <a href="' ~ product.url ~ '#warnings-section" class="cs-grid-product__warning-text">
-                            ' ~ translate('hints') ~ '
-                        </a>'
-                    %}
-                {% endif %}
+            {% if product.biozid_product %}
+                {% set biocidalProduct = '<div class="cs-grid-product__biocidalproduct baseprice">| ' ~ translate('biocidal product') ~ '<sup>*</sup></div>' %}
+            {% endif %}
+
+            {% set warningIcons ='' %}
+            {% for ghs in product.ghs %}
+                {% set warningIcons = warningIcons ~
+                    '<svg class="cs-warnings__icon">
+                        <use href="#' ~ ghs|lower ~ '" xlink:href="#' ~ ghs|lower ~ '">
+                        </use>
+                    </svg>'
+                %}
+            {% endfor %}
+
+            {% set warningLink = '' %}
+            {% if product.ghs|length > 0 %}
+                {% set warningLink = '
+                    <a href="' ~ product.url ~ '#warnings-section" class="cs-grid-product__warning-text">
+                        ' ~ translate('hints') ~ '
+                    </a>'
+                %}
+            {% endif %}
 
             {% set content %}
                 {% include locate( 'grid-product/grid-product.twig' ) with {
@@ -101,7 +107,7 @@
                         after: {
                             name: '
                             <div class="cs-grid-product__info">
-                                ' ~ product.price ~ '
+                                ' ~ product.price ~ biocidalProduct ~ '
                                 ' ~ bottompart ~'
                             </div>',
                             price: 
