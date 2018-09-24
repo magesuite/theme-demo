@@ -71,6 +71,12 @@
                     </div>' } ] ) %}
     {% endif %}
 
+    {% set biocidalProduct = '' %}
+
+    {% if product.biozid_product %}
+        {% set biocidalProduct = '<div class="cs-grid-product__biocidalproduct baseprice">| ' ~ translate('biocidal product') ~ '<sup>*</sup></div>' %}
+    {% endif %}
+
     {% set warningIcons ='' %}
     {% if product.ghs is iterable %}
         {% for ghs in product.ghs %}
@@ -117,7 +123,7 @@
                 after: {
                     name: '
                     <div class="cs-grid-product__info">
-                        ' ~ product.price ~ '
+                        ' ~ product.price ~ biocidalProduct ~ '
                         ' ~ bottompart ~'
                     </div>',
                     price: 
