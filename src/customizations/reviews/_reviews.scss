@@ -94,6 +94,10 @@
             min-width: 37rem;
         }
     }
+
+    &__form &__review-field {
+        padding-top: 1.2rem;
+    }
 }
 
 #product-review-container {
