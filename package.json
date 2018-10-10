@@ -15,7 +15,7 @@
     "license": "ISC",
     "dependencies": {
         "axios": "^0.16.2",
-        "creative-patterns": "git+ssh://git@gitlab.creativestyle.pl:frontend/creative-patterns.git#2.24.2",
-        "theme-creativeshop": "git+ssh://git@gitlab.creativestyle.pl:m2c/theme-creativeshop.git#4.37.4"
+        "creative-patterns": "git+ssh://git@gitlab.creativestyle.pl:frontend/creative-patterns.git#2.29.0",
+        "theme-creativeshop": "git+ssh://git@gitlab.creativestyle.pl:m2c/theme-creativeshop.git#4.41.1"
     }
 }
