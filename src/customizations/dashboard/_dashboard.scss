@@ -6,7 +6,6 @@
     }
 
     &__block {
-
         &.reviews {
             .#{$namespace}table__col.summary {
                 @include media('>=laptop') {

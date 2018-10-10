@@ -1,3 +1,5 @@
+$product-finder-step-option-gap: 1rem;
+
 .#{$namespace}product-finder {
     $root: &;
 
@@ -11,6 +13,10 @@
         &:before,
         &:after {
             background: transparent;
+        }
+
+        @include media('<tablet') {
+            font-size: 2rem;
         }
     }
 
@@ -32,6 +38,89 @@
             background-repeat: no-repeat;
             margin-right: 0.3rem;
             transform: translateY(0.1rem);
+        }
+    }
+
+    &__step-options {
+        justify-content: center;
+
+        @media only screen and (min-width: 670px) and (max-width: 1023px) {
+            max-width: 60rem;
+            margin: 0 auto;
+        }
+    }
+
+    &__step-option {
+        border: 1px solid $color-line;
+        border-radius: 0.5rem;
+        margin-left: $product-finder-step-option-gap;
+
+        @for $i from 1 to $product-finder-step-option-max-per-row + 1 {
+            $step-option-num-of-gaps: $i - 1;
+
+            #{$root}__step--options-mobile_#{$i} & {
+                @include media('<tablet') {
+                    &:nth-child(#{$i}n + 1) {
+                        margin-left: 0;
+                    }
+                }
+            }
+
+            #{$root}__step--options-tablet_#{$i} & {
+                @include media('>=tablet', '<laptop') {
+                    &:nth-child(#{$i}n + 1) {
+                        margin-left: 0;
+                    }
+                }
+            }
+
+            #{$root}__step--options-desktop_#{$i} & {
+                @include media('>=laptop') {
+                    &:nth-child(#{$i}n + 1) {
+                        margin-left: 0;
+                    }
+                }
+            }
+        }
+
+        &:hover {
+            border: 1px solid $color-first;
+
+            #{$root}__option-label {
+                color: $color-first;
+            }
+        }
+    }
+
+    &__option-content {
+        display: flex;
+        box-sizing: border-box;
+        justify-content: flex-start;
+        padding-top: 0;
+    }
+
+    &__option-label {
+        margin-top: 0;
+        margin-bottom: 0;
+        font-size: 1.4rem;
+        line-height: 120%;
+        padding: 1.5rem;
+        box-sizing: border-box;
+
+        &:only-child {
+            padding: 0 1.5rem;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 0;
+        }
+
+        @include media('>=phone-lg') {
+            font-size: 1.5rem;
+        }
+
+        @include media('>=tablet') {
+            font-size: 1.8rem;
         }
     }
 
@@ -71,61 +160,372 @@
                 }
             }
         }
-    }
 
-    &__step-options {
-        @media only screen and (min-width: 670px) and (max-width: 1023px) {
-            max-width: 60rem;
-            margin: 0 auto;
-        }
-    }
+        &--colors-intro {
+            #{$root}__step-options {
+                @media only screen and (min-width: 500px) and (max-width: 767px) {
+                    max-width: 50rem;
+                    margin: 0 auto;
+                }
 
-    &__step-option {
-        border: 1px solid $color-line;
-        border-radius: 0.5rem;
+                @include media('>=tablet', '<laptop') {
+                    max-width: 65rem;
+                    margin: 0 auto;
+                }
+            }
 
-        &:hover {
-            border: 1px solid $color-first;
+            #{$root}__option-sizer {
+                padding-bottom: 9.5rem;
+
+                @include media('>=tablet') {
+                    padding-bottom: 45%;
+                }
+            }
+
+            #{$root}__option-content {
+                justify-content: center;
+            }
 
             #{$root}__option-label {
-                color: $color-first;
+                margin-top: 0;
+                margin-bottom: 0;
+                font-size: 1.4rem;
+                line-height: 120%;
+                padding: 0 1.5rem;
+                box-sizing: border-box;
+
+                @include media('>=phone-lg') {
+                    font-size: 1.5rem;
+                }
+
+                @include media('>=tablet') {
+                    font-size: 1.8rem;
+                }
+
+                .ie11 & {
+                    left: 0;
+                }
+            }
+
+            #{$root}__step-option {
+                @include media('<laptop') {
+                    margin-left: 0;
+
+                    &:nth-child(2n + 2) {
+                        margin-left: 1rem;
+                    }
+                }
+
+                @include media('>=laptop') {
+                    .ie11 & {
+                        flex-basis: calc(24% - 0.75rem);
+                    }
+                }
             }
         }
-    }
 
-    &__option-content {
-        display: flex;
-        padding-top: 1.5rem;
-        justify-content: center;
-        box-sizing: border-box;
-    }
+        // Fabric step (material)
+        &--farbric {
+            #{$root}__step-options {
+                @media only screen and (min-width: 670px) and (max-width: 1023px) {
+                    max-width: 60rem;
+                    margin: 0 auto;
+                }
+            }
 
-    &__option-image:not(:only-child) {
-        margin: 0 auto;
-        max-height: calc(100% - 10rem);
-    }
+            #{$root}__step-option {
+                @include media('>phone-lg', '<laptop') {
+                    flex-basis: calc(33.333333% - 1.2rem);
 
-    &__option-label {
-        margin-top: 0;
-        margin-bottom: 0;
-        font-size: 1.4rem;
-        line-height: 120%;
-        padding: 1.5rem;
-        box-sizing: border-box;
+                    &:nth-child(3n + 1) {
+                        margin-left: 0;
+                    }
+                }
 
-        &:only-child {
-            padding: 0 1.5rem;
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
+                @include media('>=laptop') {
+                    flex-basis: calc(16.666666% - 1.2rem);
+                }
+
+                @include media('<=phone-lg') {
+                    margin-left: 0;
+
+                    &:nth-child(2n + 2) {
+                        margin-left: 1rem;
+                    }
+                }
+            }
+
+            #{$root}__option-content {
+                display: block;
+            }
+
+            #{$root}__option-label {
+                font-size: 1.6rem;
+                padding-left: 1rem;
+                padding-right: 1rem;
+                line-height: 110%;
+                box-sizing: border-box;
+                position: absolute;
+                bottom: 0;
+            }
+
+            #{$root}__option-image {
+                transform: translateY(1.5rem);
+                max-width: 6rem;
+                max-height: 6rem;
+                padding: 0;
+
+                @include media('>=phone') {
+                    transform: translateY(3rem);
+                    max-width: 7.5rem;
+                    max-height: 7.5rem;
+                }
+
+                @include media('>phone-lg') {
+                    transform: translateY(1rem);
+                    max-width: 7.5rem;
+                    max-height: 7.5rem;
+                }
+
+                @media only screen and (min-width: 550px) {
+                    transform: translateY(2rem);
+                    max-width: 8rem;
+                    max-height: 8rem;
+                }
+
+                @include media('>=tablet') {
+                    transform: translateY(4rem);
+                    max-width: 9rem;
+                    max-height: 9rem;
+                }
+
+                @include media('>=laptop') {
+                    transform: translateY(2.7rem);
+                    max-width: 8rem;
+                    max-height: 8rem;
+                }
+            }
         }
 
-        @include media('>=phone-lg') {
-            font-size: 1.5rem;
+        // Colors step
+        &--colors {
+            #{$root}__step-options {
+                @include media('>=tablet', '<laptop') {
+                    &::after {
+                        content: '';
+                        flex: auto;
+                    }
+                }
+
+                @include media('<=phone-lg') {
+                    margin-left: 0;
+
+                    &:nth-child(2n + 2) {
+                        margin-left: 1rem;
+                    }
+                }
+            }
+
+            #{$root}__option-content {
+                padding: 0.3rem 0.5rem;
+                box-sizing: border-box;
+            }
+
+            #{$root}__option-sizer {
+                padding-bottom: 39%;
+
+                @include media('>tablet') {
+                    padding-bottom: 39%;
+                }
+
+                @include media('>=laptop') {
+                    padding-bottom: 39%;
+                }
+
+                @include media('>=laptop-lg') {
+                    padding-bottom: 6.5rem;
+                }
+            }
+
+            #{$root}__step-option {
+                @media only screen and (min-width: 475px) and (max-width: 599px) {
+                    flex-basis: calc(33.333333% - 1rem);
+                }
+
+                @media only screen and (min-width: 600px) and (max-width: 767px) {
+                    flex-basis: calc(25% - 1.2rem);
+                }
+
+                @include media('>=laptop') {
+                    flex-basis: calc(16.666666% - 1.2rem);
+                }
+
+                @include media('>=tablet', '<laptop') {
+                    &:nth-child(4n + 1) {
+                        margin-left: 0;
+                    }
+                }
+
+                @include media('>=laptop') {
+                    &:nth-child(6n + 1) {
+                        margin-left: 0;
+                    }
+                }
+            }
         }
 
-        @include media('>=tablet') {
-            font-size: 1.8rem;
+        // Back to / another color step
+        &--double-choice {
+            #{$root}__step-options {
+                max-width: 40rem !important;
+                margin: 0 auto;
+                justify-content: space-between;
+            }
+
+            #{$root}__option-image {
+                max-height: 7.5rem;
+                margin-top: 1.5rem;
+
+                @include media('>=phone') {
+                    max-height: 9rem;
+                    margin-top: 2.5rem;
+                }
+
+                @include media('>=phone-lg') {
+                    max-height: 10.5rem;
+                    margin-top: 2.5rem;
+                }
+            }
+
+            #{$root}__step-option {
+                max-width: 18rem;
+                max-height: 18rem;
+            }
+
+            #{$root}__option-label {
+                font-size: 1.6rem;
+                padding-left: 1rem;
+                padding-right: 1rem;
+                line-height: 110%;
+            }
+        }
+
+        // Back to black/Back to blue step
+        &--double-colors {
+            #{$root}__step-options {
+                max-width: 45rem !important;
+                margin: 0 auto;
+            }
+
+            #{$root}__step-option {
+                @include media('>=laptop') {
+                    .ie11 & {
+                        flex-basis: calc(49% - 0.75rem);
+                    }
+                }
+
+                @include media('<=phone-lg') {
+                    margin-left: 0;
+
+                    &:nth-child(2n + 2) {
+                        margin-left: 1rem;
+                    }
+                }
+            }
+
+            #{$root}__option-sizer {
+                padding-bottom: 39%;
+
+                @include media('>tablet') {
+                    padding-bottom: 39%;
+                }
+
+                @include media('>=laptop') {
+                    padding-bottom: 39%;
+                }
+
+                @include media('>=laptop-lg') {
+                    padding-bottom: 38%;
+                }
+            }
+
+            #{$root}__option-content {
+                padding: 0.3rem 0.5rem;
+                box-sizing: border-box;
+            }
+        }
+
+        &--icons {
+            #{$root}__step-options {
+                @media only screen and (min-width: 670px) and (max-width: 1023px) {
+                    max-width: 100%;
+                }
+            }
+
+            #{$root}__step-option {
+                @include media('<=phone-lg') {
+                    flex-basis: calc(50% - 1rem) !important;
+                    margin-left: 0 !important;
+
+                    &:nth-child(2n + 2) {
+                        margin-left: 1rem !important;
+                    }
+                }
+            }
+
+            #{$root}__option-sizer {
+                padding-bottom: 75%;
+
+                @media only screen and (max-width: 375px) {
+                    padding-bottom: 85%;
+                }
+            }
+
+            #{$root}__option-content {
+                justify-content: center;
+            }
+
+            #{$root}__option-image:not(:only-child) {
+                margin: 0 auto;
+                max-height: calc(100% - 4.5rem);
+
+                @media only screen and (max-width: 375px) {
+                    max-height: calc(100% - 4rem);
+                }
+            }
+
+            #{$root}__option-label {
+                font-size: 1.3rem;
+                display: flex;
+                justify-content: center;
+                align-items: flex-end;
+                padding: 0 0.5rem;
+                margin-top: 0;
+
+                @include media('>=tablet') {
+                    font-size: 1.5rem;
+                }
+            }
+        }
+
+        &--long-texts {
+            #{$root}__option-image:not(:only-child) {
+                max-height: calc(100% - 6rem);
+
+                @include media('<tablet') {
+                    max-height: calc(100% - 5rem);
+                }
+            }
+
+            #{$root}__option-sizer {
+                @include media('<laptop-lg') {
+                    padding-bottom: 90%;
+                }
+
+                @include media('<tablet') {
+                    padding-bottom: 90%;
+                }
+            }
         }
     }
 }
