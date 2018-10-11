@@ -7304,9 +7304,9 @@ tfunk@^3.0.1:
     chalk "^1.1.1"
     object-path "^0.9.0"
 
-"theme-creativeshop@git+ssh://git@gitlab.creativestyle.pl:m2c/theme-creativeshop.git#4.41.1":
-  version "4.41.0"
-  resolved "git+ssh://git@gitlab.creativestyle.pl:m2c/theme-creativeshop.git#bf7ad223e51851229e72fe7ce877ad9d34afc951"
+"theme-creativeshop@git+ssh://git@gitlab.creativestyle.pl:m2c/theme-creativeshop.git#4.42.0":
+  version "4.42.0"
+  resolved "git+ssh://git@gitlab.creativestyle.pl:m2c/theme-creativeshop.git#657fbc487fc26e45dcfadad961aab100ae2134f2"
   dependencies:
     "@types/jquery" "^3.2.13"
     autoprefixer "^7.1.5"
