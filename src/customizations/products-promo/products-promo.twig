@@ -70,8 +70,9 @@
             {% endif %}
 
             {% set warningIcons ='' %}
+            {% set warningLink ='' %}
 
-            {% if product.ghs is iterable %}
+            {% if product.ghs %}
                 {% for ghs in product.ghs %}
                     {% set warningIcons = warningIcons ~
                         '<svg class="cs-warnings__icon">
@@ -80,17 +81,6 @@
                         </svg>'
                     %}
                 {% endfor %}
-            {% else %}
-                {% set warningIcons = warningIcons ~
-                    '<svg class="cs-warnings__icon">
-                        <use href="#' ~ product.ghs|lower ~ '" xlink:href="#' ~ product.ghs|lower ~ '">
-                        </use>
-                    </svg>'
-                %}
-            {% endif %}
-
-            {% set warningLink = '' %}
-            {% if product.ghs|length > 0 %}
                 {% set warningLink = '
                     <a href="' ~ product.url ~ '#warnings-section" class="cs-grid-product__warning-text">
                         ' ~ translate('hints') ~ '
