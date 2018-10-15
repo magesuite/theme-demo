@@ -327,24 +327,14 @@ $product-finder-step-option-gap: 1rem;
             }
 
             #{$root}__option-content {
-                padding: 0.3rem 0.5rem;
+                padding: 0.4rem;
                 box-sizing: border-box;
+                position: relative;
+                width: 100%;
             }
 
             #{$root}__option-sizer {
-                padding-bottom: 39%;
-
-                @include media('>tablet') {
-                    padding-bottom: 39%;
-                }
-
-                @include media('>=laptop') {
-                    padding-bottom: 39%;
-                }
-
-                @include media('>=laptop-lg') {
-                    padding-bottom: 6.5rem;
-                }
+                display: none;
             }
 
             #{$root}__step-option {
@@ -379,7 +369,6 @@ $product-finder-step-option-gap: 1rem;
             #{$root}__step-options {
                 max-width: 40rem !important;
                 margin: 0 auto;
-                justify-content: space-between;
             }
 
             #{$root}__option-image {
