@@ -1,6 +1,8 @@
 .#{$namespace}info-page {
     &__section {
         @include media('>=tablet') {
+            width: 50%;
+
             &:nth-child(2n + 2) {
                 border-left: 1px solid $color-line;
             }
