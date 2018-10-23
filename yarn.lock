@@ -1566,9 +1566,9 @@ create-error-class@^3.0.0, create-error-class@^3.0.1:
   dependencies:
     capture-stack-trace "^1.0.0"
 
-"creative-patterns@git+ssh://git@gitlab.creativestyle.pl:frontend/creative-patterns.git#2.29.0", "creative-patterns@git+ssh://git@gitlab.creativestyle.pl:frontend/creative-patterns.git#v2.29.0":
-  version "2.29.0"
-  resolved "git+ssh://git@gitlab.creativestyle.pl:frontend/creative-patterns.git#a3b05251cccf72c0462518e00df82e533a62f182"
+"creative-patterns@git+ssh://git@gitlab.creativestyle.pl:frontend/creative-patterns.git#2.29.3", "creative-patterns@git+ssh://git@gitlab.creativestyle.pl:frontend/creative-patterns.git#v2.29.3":
+  version "2.29.3"
+  resolved "git+ssh://git@gitlab.creativestyle.pl:frontend/creative-patterns.git#eccbc8a667cb1ec7a8c8f4d1b49f42c53141a7d8"
   dependencies:
     include-media "^1.4.9"
 
@@ -7304,16 +7304,16 @@ tfunk@^3.0.1:
     chalk "^1.1.1"
     object-path "^0.9.0"
 
-"theme-creativeshop@git+ssh://git@gitlab.creativestyle.pl:m2c/theme-creativeshop.git#4.42.0":
-  version "4.42.0"
-  resolved "git+ssh://git@gitlab.creativestyle.pl:m2c/theme-creativeshop.git#657fbc487fc26e45dcfadad961aab100ae2134f2"
+"theme-creativeshop@git+ssh://git@gitlab.creativestyle.pl:m2c/theme-creativeshop.git#4.43.2":
+  version "4.43.2"
+  resolved "git+ssh://git@gitlab.creativestyle.pl:m2c/theme-creativeshop.git#3114233ab2c09e40ed1a791f2bfd3fbad817bf49"
   dependencies:
     "@types/jquery" "^3.2.13"
     autoprefixer "^7.1.5"
     babel-preset-env "^1.6.0"
     babel-register "^6.26.0"
     browser-sync "^2.18.13"
-    creative-patterns "git+ssh://git@gitlab.creativestyle.pl:frontend/creative-patterns.git#v2.29.0"
+    creative-patterns "git+ssh://git@gitlab.creativestyle.pl:frontend/creative-patterns.git#v2.29.3"
     del "^3.0.0"
     eslint "^4.8.0"
     eslint-config-prettier "^2.6.0"
