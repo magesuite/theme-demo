@@ -7,7 +7,7 @@
     margin-bottom: 0;
     padding-bottom: 0;
 
-    @include media('>=tablet'){
+    @include media('>=tablet') {
         padding-bottom: $base-space;
     }
 
