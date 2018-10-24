@@ -333,6 +333,12 @@ $product-finder-step-option-gap: 1rem;
                 width: 100%;
             }
 
+            #{$root}__option-image {
+                .ie11 & {
+                    max-height: 5.8rem;
+                }
+            }
+
             #{$root}__option-sizer {
                 display: none;
             }
