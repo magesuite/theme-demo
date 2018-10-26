@@ -61,6 +61,12 @@
 .fotorama {
     $root: &;
 
+    &__stage__shaft {
+        @include media('>=tablet', '<laptop') {
+            padding-left: 0;
+        }
+    }
+
     &__nav-wrap {
         &--vertical {
             box-sizing: border-box;
@@ -75,8 +81,10 @@
     }
 
     &__nav--thumbs &__nav__frame {
-        width: 7.6rem !important;
-        height: 7.6rem !important;
+        @include media('>=tablet') {
+            width: 7.6rem !important;
+            height: 7.6rem !important;
+        }
     }
 
     &__nav-wrap--vertical {
