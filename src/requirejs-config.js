@@ -8,6 +8,10 @@ var config = {
             'Magento_Search/form-mini': {
                 'Magento_Search/form-mini-ext-search': true,
             },
+            'Magento_Checkout/js/model/shipping-rate-processor/new-address': {
+                'Magento_Checkout/js/model/shipping-rate-processor/new-address-ext': true,
+            },
+
         },
     },
 };
