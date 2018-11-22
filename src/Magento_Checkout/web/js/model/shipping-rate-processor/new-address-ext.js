@@ -30,6 +30,7 @@ define([
 
         $(document).one('click', 'select[name=repertus_address_type]', function() {
           $select = $('select[name=repertus_address_type]');
+          shippingService.setShippingRates(filterMethods(storedResult));
           $select.on('change', function() {
             shippingService.setShippingRates(filterMethods(storedResult));
             $('input[name=shipping_method]').prop('disabled', false);
