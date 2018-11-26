@@ -1,4 +1,5 @@
 define([
+  'rjsResolver',
   'Magento_Checkout/js/model/resource-url-manager',
   'Magento_Checkout/js/model/quote',
   'mage/storage',
@@ -6,7 +7,7 @@ define([
   'Magento_Checkout/js/model/shipping-rate-registry',
   'Magento_Checkout/js/model/error-processor',
   'jquery'
-], function(resourceUrlManager, quote, storage, shippingService, rateRegistry, errorProcessor, $) {
+], function(resolver,resourceUrlManager, quote, storage, shippingService, rateRegistry, errorProcessor, $) {
   'use strict';
 
   return function(NewAddress) {
@@ -26,16 +27,18 @@ define([
             return result;
           }
         }
-        var cache, serviceUrl, payload, storedResult, $select;
 
-        $(document).one('click', 'select[name=repertus_address_type]', function() {
-          $select = $('select[name=repertus_address_type]');
-          shippingService.setShippingRates(filterMethods(storedResult));
-          $select.on('change', function() {
-            shippingService.setShippingRates(filterMethods(storedResult));
-            $('input[name=shipping_method]').prop('disabled', false);
+        function initSelectListening() {
+          $('select[name=repertus_address_type]').on('change', function() {
+            var filteredMethods = filterMethods(storedResult);
+            shippingService.setShippingRates(filteredMethods);
+            $('input[name=shipping_method]').prop('disabled', false).prop('checked', true);
+
           });
-        });
+        }
+        var cache, serviceUrl, payload, storedResult;
+
+        resolver(initSelectListening);
 
         shippingService.isLoading(true);
         cache = rateRegistry.get(address.getCacheKey());
