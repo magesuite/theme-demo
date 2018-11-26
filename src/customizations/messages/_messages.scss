@@ -55,6 +55,12 @@
                 color: $color-error;
             }
         }
+
+        @include media('<tablet'){
+            .#{$namespace}dashboard & {
+                margin-top: 1rem;
+            }
+        }
     }
 
     &__text {
