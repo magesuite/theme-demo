@@ -3,6 +3,14 @@
 
     background: $colorWhite;
 
+    @include media('>=laptop') {
+        .ie11 .#{$namespace}products-promo & {
+            max-width: 27rem !important;
+            margin: 0 auto;
+            padding: 0 !important;
+        }
+    }
+
     &:before {
         border-radius: 0.5rem;
     }
@@ -88,7 +96,15 @@
 
         .ie11 .#{$namespace}products-promo & {
             @include media('>=laptop-lg') {
-                padding-right: 0.8rem;
+                padding-right: 0;
+                .price-box {
+                    margin-top: 0.9rem !important;
+                }
+
+                .baseprice,
+                #{$root}__biocidalproduct {
+                    top: 3.5rem !important;
+                }
             }
         }
     }
@@ -127,14 +143,18 @@
 }
 
 // Item cloner tile should the same modification on ie11 for carousels on pdp
-.ie11 .catalog-product-view .#{$namespace}item-cloner {
+.ie11 .#{$namespace}item-cloner {
     .#{$namespace}grid-product {
-        padding-right: 0.3rem;
-    }
-
-    .#{$namespace}grid-product__info {
         @include media('>=laptop-lg') {
-            padding-right: 0.8rem;
+            padding-right: 0;
+            .price-box {
+                margin-top: 0.9rem !important;
+            }
+
+            .baseprice,
+            .#{$namespace}grid-product__biocidalproduct {
+                top: 3.5rem !important;
+            }
         }
     }
 }
