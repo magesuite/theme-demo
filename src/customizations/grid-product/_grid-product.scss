@@ -103,7 +103,7 @@
 
                 .baseprice,
                 #{$root}__biocidalproduct {
-                    top: 3.5rem !important;
+                    margin-top: 0.5rem !important;
                 }
             }
         }
@@ -143,7 +143,7 @@
 }
 
 // Item cloner tile should the same modification on ie11 for carousels on pdp
-.ie11 .#{$namespace}item-cloner {
+.ie11 .catalog-product-view .#{$namespace}item-cloner {
     .#{$namespace}grid-product {
         @include media('>=laptop-lg') {
             padding-right: 0;
@@ -153,7 +153,7 @@
 
             .baseprice,
             .#{$namespace}grid-product__biocidalproduct {
-                top: 3.5rem !important;
+                margin-top: 0.5rem !important;
             }
         }
     }
