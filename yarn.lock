@@ -1566,9 +1566,15 @@ create-error-class@^3.0.0, create-error-class@^3.0.1:
   dependencies:
     capture-stack-trace "^1.0.0"
 
-"creative-patterns@git+ssh://git@gitlab.creativestyle.pl:frontend/creative-patterns.git#2.29.5", "creative-patterns@git+ssh://git@gitlab.creativestyle.pl:frontend/creative-patterns.git#v2.29.5":
-  version "2.29.5"
-  resolved "git+ssh://git@gitlab.creativestyle.pl:frontend/creative-patterns.git#147c99d251704a7b7e9eb847e655d2bb588debad"
+"creative-patterns@git+ssh://git@gitlab.creativestyle.pl:frontend/creative-patterns.git#2.30.1":
+  version "2.30.1"
+  resolved "git+ssh://git@gitlab.creativestyle.pl:frontend/creative-patterns.git#8f442902055bf1b98f5ac420913ac9837b13cac1"
+  dependencies:
+    include-media "^1.4.9"
+
+"creative-patterns@git+ssh://git@gitlab.creativestyle.pl:frontend/creative-patterns.git#v2.30.0":
+  version "2.30.0"
+  resolved "git+ssh://git@gitlab.creativestyle.pl:frontend/creative-patterns.git#7a479c0d458790eeb5445422819155d17260eb14"
   dependencies:
     include-media "^1.4.9"
 
@@ -7304,16 +7310,16 @@ tfunk@^3.0.1:
     chalk "^1.1.1"
     object-path "^0.9.0"
 
-"theme-creativeshop@git+ssh://git@gitlab.creativestyle.pl:m2c/theme-creativeshop.git#4.45.0":
-  version "4.45.0"
-  resolved "git+ssh://git@gitlab.creativestyle.pl:m2c/theme-creativeshop.git#65db06ddceb25fcef261209144b833bbb2b06212"
+"theme-creativeshop@git+ssh://git@gitlab.creativestyle.pl:m2c/theme-creativeshop.git#4.46.4":
+  version "4.46.4"
+  resolved "git+ssh://git@gitlab.creativestyle.pl:m2c/theme-creativeshop.git#d9f1ea09020e59a5f523cc54f23acf1ab7b84eec"
   dependencies:
     "@types/jquery" "^3.2.13"
     autoprefixer "^7.1.5"
     babel-preset-env "^1.6.0"
     babel-register "^6.26.0"
     browser-sync "^2.18.13"
-    creative-patterns "git+ssh://git@gitlab.creativestyle.pl:frontend/creative-patterns.git#v2.29.5"
+    creative-patterns "git+ssh://git@gitlab.creativestyle.pl:frontend/creative-patterns.git#v2.30.0"
     del "^3.0.0"
     eslint "^4.8.0"
     eslint-config-prettier "^2.6.0"
