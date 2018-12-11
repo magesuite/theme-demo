@@ -54,6 +54,8 @@
             background-color: $colorWhite;
             text-transform: none;
             font-size: 1.4rem;
+            box-sizing: border-box;
+            height: 3.5rem;
         }
     }
 
@@ -167,6 +169,34 @@
 
     /* Horizontal */
     &--horizontal-full {
+        #{$root}__filter-row {
+            /* Portrait */
+            @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
+                flex-basis: 17.5rem;
+            }
+
+            /* Landscape */
+            @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
+                flex-basis: 15.9rem;
+            }
+
+            @media only screen and (min-width: 1200px) {
+                flex-basis: 18.2rem;
+
+                .ie11 & {
+                    flex-basis: 17.4rem;
+                }
+            }
+
+            @include media('>=laptop-lg') {
+                flex-basis: 18.2rem;
+
+                .ie11 & {
+                    flex-basis: 17.4rem;
+                }
+            }
+        }
+
         #{$root}__filters {
             @include media('>=tablet') {
                 border-top: none;
