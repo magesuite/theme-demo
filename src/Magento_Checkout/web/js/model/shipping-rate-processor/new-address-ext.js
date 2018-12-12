@@ -6,22 +6,22 @@ define([
   'Magento_Checkout/js/model/shipping-service',
   'Magento_Checkout/js/model/shipping-rate-registry',
   'Magento_Checkout/js/model/error-processor',
+  'Magento_Customer/js/model/customer',
   'jquery'
-], function(resolver,resourceUrlManager, quote, storage, shippingService, rateRegistry, errorProcessor, $) {
+], function(resolver,resourceUrlManager, quote, storage, shippingService, rateRegistry, errorProcessor, customer, $) {
   'use strict';
 
   return function(NewAddress) {
     return _.extend({}, NewAddress, {
       getRates: function (address) {
-
         function filterMethods(result) {
           var $select = $('select[name=repertus_address_type]');
-          if(result && $select.length && (parseInt($select.val()) === 1 || parseInt($select.val()) === 2)) {
+          if($select.length && (parseInt($select.val()) === 1 || parseInt($select.val()) === 2)) {
             return result.filter(function(method) {
-              return method.carrier_code.toLowerCase().indexOf('dhl') !== -1
-              || method.carrier_title.toLowerCase().indexOf('dhl') !== -1
-              || method.method_code.toLowerCase().indexOf('dhl') !== -1
-              || method.method_title ? method.method_title.toLowerCase().indexOf('dhl') !== -1 : false;
+              return (method.carrier_code ? method.carrier_code.toLowerCase().indexOf('dhl') !== -1 : false)
+              || (method.carrier_title ? method.carrier_title.toLowerCase().indexOf('dhl') !== -1 : false)
+              || (method.method_code ? method.method_code.toLowerCase().indexOf('dhl') !== -1 : false)
+              || (method.method_title ? method.method_title.toLowerCase().indexOf('dhl') !== -1 : false);
             });
           } else {
             return result;
@@ -36,9 +36,12 @@ define([
 
           });
         }
+
         var cache, serviceUrl, payload, storedResult;
 
-        resolver(initSelectListening);
+        if (!customer.isLoggedIn()) {
+          resolver(initSelectListening);
+        }
 
         shippingService.isLoading(true);
         cache = rateRegistry.get(address.getCacheKey());
