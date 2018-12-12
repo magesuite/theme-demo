@@ -16,7 +16,7 @@ define([
 
         function filterMethods(result) {
           var $select = $('select[name=repertus_address_type]');
-          if($select.length && (parseInt($select.val()) === 1 || parseInt($select.val()) === 2)) {
+          if(result && $select.length && (parseInt($select.val()) === 1 || parseInt($select.val()) === 2)) {
             return result.filter(function(method) {
               return method.carrier_code.toLowerCase().indexOf('dhl') !== -1
               || method.carrier_title.toLowerCase().indexOf('dhl') !== -1
