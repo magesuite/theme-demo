@@ -1,9 +1,0 @@
-.#{$namespace}form {
-    $root: &;
-
-    &__fieldset-inner {
-        @include media('>=tablet') {
-            border-bottom: 1px solid $color-line;
-        }
-    }
-}

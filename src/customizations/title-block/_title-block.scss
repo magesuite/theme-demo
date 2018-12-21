@@ -1,7 +1,0 @@
-.#{$namespace}title-block {
-    $root: &;
-
-    &--bordered {
-        border-bottom: 1px solid $color-line;
-    }
-}

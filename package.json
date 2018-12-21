@@ -1,7 +1,7 @@
 {
-    "name": "theme-brh",
+    "name": "theme-demo",
     "version": "1.0.0",
-    "description": "Theme BRH parent",
+    "description": "magesuite demo shop theme",
     "scripts": {
         "build": "gulp build --env production",
         "serve": "gulp serve",
