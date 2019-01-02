@@ -1,1 +1,1 @@
-# Magento 2 theme BRH - parent
+# Magento 2 theme demo
