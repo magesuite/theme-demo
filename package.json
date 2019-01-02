@@ -1,7 +1,7 @@
 {
-    "name": "theme-brh",
+    "name": "theme-demo",
     "version": "1.0.0",
-    "description": "Theme BRH parent",
+    "description": "magesuite demo shop theme",
     "scripts": {
         "build": "gulp build --env production",
         "serve": "gulp serve",
@@ -15,9 +15,7 @@
     "license": "ISC",
     "dependencies": {
         "axios": "^0.16.2",
-        "creative-patterns":
-            "git+ssh://git@gitlab.creativestyle.pl:frontend/creative-patterns.git#develop",
-        "theme-creativeshop":
-            "git+ssh://git@gitlab.creativestyle.pl:m2c/theme-creativeshop.git#develop"
+        "creative-patterns": "git+ssh://git@gitlab.creativestyle.pl:frontend/creative-patterns.git#2.30.1",
+        "theme-creativeshop": "git+ssh://git@gitlab.creativestyle.pl:m2c/theme-creativeshop.git#4.46.4"
     }
 }

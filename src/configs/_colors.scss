@@ -1,3 +1,33 @@
-// We need to name color more by their position in that project. Variable should have default flah here
+// Name that color - @see http://chir.ag/projects/name-that-color/
+// Colors declarations - $colorNameCamelCase: #hexrgb / function(args..);
 
-$colorWhite: #fff !default;
+// Main colors
+//$colorRed: #ff0000;
+//$colorDarkRed: darken($colorRed, 8%);
+
+// Additional colors
+//$colorBlue: #0000ff;
+
+// Greys palette
+//$colorWoodsmoke: #151616;
+//$colorGray: #8e8e8e;
+//$colorAlto: #d0d0d0;
+//$colorWhite: #fff;
+
+// Assigning colors to roles - $color-role-lisp-case: $colorNameCamelCase;
+
+// Primary colors
+//$color-first: $colorRed;
+//$color-first-hover: $colorDarkRed;
+
+// Secondary colors
+
+// Headline
+//$color-headline: $colorWoodsmoke;
+//$color-subheadline: $colorGray;
+
+// Footer
+//$color-footer-background: $colorWhite;
+//$color-footer-text: $colorWoodsmoke;
+//$color-footer-text-hover: $colorScooter;
+//$color-footer-text-light: $colorGray;
