@@ -5,6 +5,6 @@
  */
 \Magento\Framework\Component\ComponentRegistrar::register(
     \Magento\Framework\Component\ComponentRegistrar::THEME,
-    'frontend/Creativestyle/theme-brh',
+    'frontend/Creativestyle/theme-demo',
     __DIR__
 );

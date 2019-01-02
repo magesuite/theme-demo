@@ -1,6 +1,6 @@
 {
-    "name": "creativestyle/theme-brh",
-    "description": "Magento 2 theme BRH parent",
+    "name": "creativestyle/theme-demo",
+    "description": "Magento 2 theme demo",
     "license": [
         "OSL-3.0",
         "AFL-3.0"
