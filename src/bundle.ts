@@ -21,47 +21,47 @@ import $ from 'jquery';
 // Components
 // =============================================================================
 
-import './components/collapse/collapse';
-import './components/dropdown/dropdown';
-import './components/filter-horizontal/filter-horizontal';
+import '../../theme-creativeshop/src/components/collapse/collapse';
+import '../../theme-creativeshop/src/components/dropdown/dropdown';
+import '../../theme-creativeshop/src/components/filter-horizontal/filter-horizontal';
 
-import { Flyout } from './components/flyout/class.flyout';
+import { Flyout } from '../../theme-creativeshop/src/components/flyout/class.flyout';
 export { Flyout };
 
 // =============================================================================
 // Customizations
 // =============================================================================
 
-import './customizations/header-search/header-search';
-import Select from './customizations/select/select';
+import '../../theme-creativeshop/src/customizations/header-search/header-search';
+import Select from '../../theme-creativeshop/src/customizations/select/select';
 export { Select };
-import { init as collapsibleText } from './components/collapsible-text/collapsible-text';
+import { init as collapsibleText } from '../../theme-creativeshop/src/components/collapsible-text/collapsible-text';
 collapsibleText();
-import './customizations/navigation/navigation';
-import './customizations/offcanvas-navigation/offcanvas-navigation';
-import './customizations/offcanvas/offcanvas';
-import { QtyIncrementCollection } from './customizations/qty-increment/qty-increment';
+import '../../theme-creativeshop/src/customizations/navigation/navigation';
+import '../../theme-creativeshop/src/customizations/offcanvas-navigation/offcanvas-navigation';
+import '../../theme-creativeshop/src/customizations/offcanvas/offcanvas';
+import { QtyIncrementCollection } from '../../theme-creativeshop/src/customizations/qty-increment/qty-increment';
 new QtyIncrementCollection();
-import './customizations/aftersearch-nav/aftersearch-nav';
-import './customizations/hero/hero';
-import './customizations/image-teaser/image-teaser';
-import './customizations/products-promo/products-promo';
-import './customizations/brand-carousel/brand-carousel';
-import './customizations/category-links/category-links';
-import './customizations/sticky-block/sticky-block';
-import './customizations/pagination/pagination';
-import './customizations/reviews/reviews';
-import './customizations/item-cloner/item-cloner';
-import './customizations/grid-layout/grid-layout';
-import './customizations/product-finder/product-finder';
-import './customizations/indicators/fast-shipping-init';
-import './customizations/dailydeal/dailydeal';
-import './customizations/daily-deal-teaser/daily-deal-teaser';
-import './customizations/plugincompany-contactforms/plugincompany-contactforms';
-import './customizations/cart/cart';
-import './customizations/video-player/video-player';
-import './customizations/searchresults-switcher/searchresults-switcher';
-import AddressAutofill from './customizations/address-autofill/address-autofill';
+import '../../theme-creativeshop/src/customizations/aftersearch-nav/aftersearch-nav';
+import '../../theme-creativeshop/src/customizations/hero/hero';
+import '../../theme-creativeshop/src/customizations/image-teaser/image-teaser';
+import '../../theme-creativeshop/src/customizations/products-promo/products-promo';
+import '../../theme-creativeshop/src/customizations/brand-carousel/brand-carousel';
+import '../../theme-creativeshop/src/customizations/category-links/category-links';
+import '../../theme-creativeshop/src/customizations/sticky-block/sticky-block';
+import '../../theme-creativeshop/src/customizations/pagination/pagination';
+import '../../theme-creativeshop/src/customizations/reviews/reviews';
+import '../../theme-creativeshop/src/customizations/item-cloner/item-cloner';
+import '../../theme-creativeshop/src/customizations/grid-layout/grid-layout';
+import '../../theme-creativeshop/src/customizations/product-finder/product-finder';
+import '../../theme-creativeshop/src/customizations/indicators/fast-shipping-init';
+import '../../theme-creativeshop/src/customizations/dailydeal/dailydeal';
+import '../../theme-creativeshop/src/customizations/daily-deal-teaser/daily-deal-teaser';
+import '../../theme-creativeshop/src/customizations/plugincompany-contactforms/plugincompany-contactforms';
+import '../../theme-creativeshop/src/customizations/cart/cart';
+import '../../theme-creativeshop/src/customizations/video-player/video-player';
+import '../../theme-creativeshop/src/customizations/searchresults-switcher/searchresults-switcher';
+import AddressAutofill from '../../theme-creativeshop/src/customizations/address-autofill/address-autofill';
 export { AddressAutofill };
 
 // Sometimes there is a need to apply different styling for mobile/tablet devices and body class is necessary
