@@ -9,6 +9,6 @@
         "php": "~5.6.0|7.0.2|~7.0.6|~7.1.0",
         "magento/theme-frontend-blank": "^100.2.0",
         "magento/framework": "^101.0.0",
-        "creativestyle/theme-creativeshop": "4.46.4"
+        "creativestyle/theme-creativeshop": "dev-develop-m2.2"
     }
 }
