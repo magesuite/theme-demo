@@ -1,0 +1,36 @@
+//cs-blog-page is a body class Below are some modifications (using cascade)
+.#{$namespace}blog-page {
+    $root: &;
+
+    #maincontent {
+        @include media('>=tablet') {
+            padding-top: 0;
+        }
+    }
+
+    .#{$namespace}image-teaser--items-in-row-1
+        .#{$namespace}image-teaser__wrapper--content-display-inside
+        .#{$namespace}image-teaser__content-wrapper {
+        max-width: 75rem;
+        box-sizing: border-box;
+
+        @include media('>=tablet') {
+            padding: 2rem 2rem 5.5rem 4.5rem;
+        }
+
+        .#{$namespace}image-teaser__headline {
+            @include media('<tablet') {
+                font-size: 1.8rem;
+            }
+        }
+    }
+
+    .#{$namespace}separator {
+        margin-bottom: 2rem;
+
+        @include media('<tablet') {
+            width: calc(100% + 3rem);
+            margin-left: -1.5rem;
+        }
+    }
+}
