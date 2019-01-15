@@ -1,0 +1,15 @@
+.#{$namespace}paragraph {
+    &--mode-optimal {
+        max-width: 70rem;
+
+        p,
+        a {
+            font-size: 1.7rem;
+            line-height: 2.7rem;
+        }
+
+        h3 {
+            font-size: 1.8rem;
+        }
+    }
+}

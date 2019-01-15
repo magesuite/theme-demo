@@ -1,0 +1,20 @@
+.#{$namespace}image-teaser {
+    $root: &;
+
+    &--cms-pages {
+        #{$root}__headline {
+            color: $colorWhite;
+            font-weight: 500;
+        }
+
+        #{$root}__slides {
+            justify-content: space-between !important;
+        }
+
+        #{$root}__slide {
+            @include media('>=tablet') {
+                width: calc(50% - 0.5rem) !important;
+            }
+        }
+    }
+}
