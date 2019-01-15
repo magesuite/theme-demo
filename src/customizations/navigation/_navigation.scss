@@ -1,0 +1,13 @@
+.#{$namespace}navigation {
+    $root: &;
+
+    &__teaser {
+        &-headline {
+            color: $colorWhite;
+
+            @include media('>=laptop') {
+                font-size: 3.8rem;
+            }
+        }
+    }
+}
