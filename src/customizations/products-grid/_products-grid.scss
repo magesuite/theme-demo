@@ -1,0 +1,45 @@
+.#{$namespace}products-grid {
+    $root: &;
+
+    &__hero {
+        &-headline {
+            @include media('>=tablet') {
+                font-size: 2.33vw;
+            }
+    
+            @include media('>=laptop') {
+                font-size: 3.1rem;
+            }
+    
+            @include media('>=desktop') {
+                font-size: 3.5rem;
+            }
+    
+            @include media('>=tv') {
+                font-size: 3.8rem;
+                margin-bottom: 0;
+            }
+        }
+    
+        &-subheadline {
+            margin: 0.75vw 0;
+            font-size: 3.3vw;
+    
+            @include media('>=tablet') {
+                font-size: 1.61vw;
+            }
+    
+            @include media('>=laptop') {
+                font-size: 1.7rem;
+            }
+    
+            @include media('>=desktop') {
+                font-size: 2rem;
+            }
+    
+            @include media('>=tv') {
+                font-size: 2.2rem;
+            }
+        }
+    }
+}

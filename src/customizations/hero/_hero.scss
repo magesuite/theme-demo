@@ -22,6 +22,7 @@
 
         @include media('>=tv') {
             font-size: 5.1rem;
+            margin-bottom: 0;
         }
     }
 
@@ -42,7 +43,7 @@
         }
 
         @include media('>=tv') {
-            font-size: 3.8rem;
+            font-size: 3.4rem;
         }
     }
 }
